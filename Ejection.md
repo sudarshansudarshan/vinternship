@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Ejection Policy
+parent: Support
 permalink: /ejection_policy/
 ---
 

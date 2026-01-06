@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Vlogs
+parent: Activity
 permalink: /vlogs/
 ---
 

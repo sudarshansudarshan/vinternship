@@ -1,6 +1,7 @@
 ---
 layout: page
 title: FAQ
+parent: Support
 permalink: /faq/
 order: 2
 ---

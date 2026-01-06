@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Genie
+parent: Support
 permalink: /genie/
 ---
 

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Blogs
+parent: Activity
 permalink: /blogs/
 ---
 
