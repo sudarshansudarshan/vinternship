@@ -46,13 +46,16 @@ The Internship ID will be mentioned in the offer letter sent by NPTEL POC.
 **2.1 Can we opt for an on-campus/offline internship?**  
 The program will be conducted strictly in **online mode**.
 
-**2.2 Is attendance tracked in this internship?**  
+**2.2 Can we watch recordings of live sessions?**  
+Recordings are **not provided**. Please plan to attend the sessions live so you don’t miss announcements or instructions.
+
+**2.3 Is attendance tracked in this internship?**  
 Attendance is compulsory for the standups that are scheduled for every Monday, Wednesday and Friday at 8:45 PM. For other activities also, the attendance is tracked. Attendance will be counted **only if your camera remains ON for the entire Zoom session**. If the camera is not switched on for a sustained duration, the session may **not be considered as full attendance**.
 
-**2.3 Do I need to use a specific name or email for the internship?**  
+**2.4 Do I need to use a specific name or email for the internship?**  
 Yes. You must use the **same name and email ID** used during registration across all platforms (ViBe, GitHub, Cliq, etc.) for proper tracking of your progress.
 
-**2.4 Should I fill the attendance form attached to the NPTEL offer letter?**  
+**2.5 Should I fill the attendance form attached to the NPTEL offer letter?**  
 Yes. You must fill the **Google Form provided in the NPTEL offer letter** **every day** during your internship (**except Sundays**).
 
 Guidelines:
@@ -60,12 +63,12 @@ Guidelines:
 - The form should be preferably filled **in the evening**, after completing the day’s work
 - This form is **mandatory** for marking your attendance on **NPTEL’s side** throughout the internship
 
-**2.5 I forgot to fill the attendance form attached to the NPTEL offer letter yesterday. What should I do now?**  
+**2.6 I forgot to fill the attendance form attached to the NPTEL offer letter yesterday. What should I do now?**  
 Unfortunately, there is nothing that can be done, as the form is used for **NPTEL’s official database** and attendance **cannot be recorded for the previous day**. The previous day will be considered as a leave and two such days will automatically lead to termination.
 
 Please ensure that the form is filled **daily** going forward to avoid missing attendance again.
 
-**2.6 How can I avail the one-day leave allowed during the internship?**  
+**2.7 How can I avail the one-day leave allowed during the internship?**  
 Taking leave is **discouraged**, as you may miss important updates shared during live sessions or fall behind in your progress. It will be **your own responsibility** to complete the work missed on the leave day.
 
 However, if you must take the leave, follow the steps below:
