@@ -12,7 +12,7 @@ layout: home
 **Quick Guide:** To get a complete overview of the program structure and learning journey, start with the [Introduction](./intro/). Review the [FAQ](./faq/) to understand detailed policies and common questions. For current updates, deadlines, important messages, and upcoming activities, regularly check [Announcements](./announcements/). Visit the [Case Studies](./case-studies/) section for your MERN practice problems, and explore the [Projects](./projects/) section to discover and track the larger internship projects you may want to work on. For course completion criteria, and deadlines, check the [Milestones](./milestones/) page to keep an eye on the deadlines. When new activities are announced (such as LinkedIn Posts, Blogs, Vlogs, and Endorsements), use the **Activity** links in the top navigation to access detailed instructions. For additional references, guides, and helpful materials, visit the **Resources** section in the navigation. 
 
 ## 📊 Pinternship Live Dashboard
-➡️ [Open Live Dashboard](../dashboard.html)
+➡️ [Open Live Dashboard](./dashboard.html)
 
 ## 📢 Announcements
 
