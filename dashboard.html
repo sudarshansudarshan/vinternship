@@ -207,6 +207,14 @@
     font-size: 12px;
     color: #6b7280;
   }
+  .hp-inner-view {
+  display: none;
+}
+
+.hp-inner-view.active {
+  display: block;
+}
+
 
   /* Percentile band row colors (pastels) */
   .band-top { background: #C8E6C9; }     /* soft green */
@@ -392,21 +400,47 @@
 <!-- Health Points Tab -->
 <div class="tab-content" id="tab-health">
   <div class="dashboard-inner">
-    <div class="dashboard-view" style="width:100%;">
 
-      <div class="status-row">
-        <div class="pill">Health Points Leaderboard</div>
-        <div class="search">
-          <input id="hp-search" placeholder="Search name or email…" />
-          <span class="muted" id="hp-meta"></span>
+    <!-- LEFT MENU -->
+    <div class="dashboard-menu">
+      <div class="menu-item active" data-hp-inner="dashboard">HP Dashboard</div>
+      <div class="menu-item" data-hp-inner="individual">Individual HP</div>
+      <div class="menu-item" data-hp-inner="reasons">Add / Delete Reasons</div>
+    </div>
+
+    <!-- RIGHT VIEW -->
+    <div class="dashboard-view" id="hp-view">
+
+      <!-- HP DASHBOARD (default) -->
+      <div class="hp-inner-view active" id="hp-dashboard-view">
+        <div class="status-row">
+          <div class="pill">Health Points Leaderboard</div>
+          <div class="search">
+            <input id="hp-search" placeholder="Search name or email…" />
+            <span class="muted" id="hp-meta"></span>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table id="hp-table">
+            <thead></thead>
+            <tbody></tbody>
+          </table>
         </div>
       </div>
 
-      <div class="table-wrap">
-        <table id="hp-table">
-          <thead></thead>
-          <tbody></tbody>
-        </table>
+      <!-- INDIVIDUAL HP -->
+      <div class="hp-inner-view" id="hp-individual-view">
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQcZjQcLbb54CiTt9G2e_tWL93gPcwsdBCMOxUeKrXpIOSiM5z05oVkOVa6EuswyvVdpA_LFxxUIG9Q/pubhtml?gid=713252598&amp;single=true&amp;widget=true&amp;headers=false"
+          style="width:100%; height:80vh; border:none; border-radius:12px;">
+        </iframe>
+      </div>
+
+      <!-- ADD / DELETE REASONS -->
+      <div class="hp-inner-view" id="hp-reasons-view">
+       <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQcZjQcLbb54CiTt9G2e_tWL93gPcwsdBCMOxUeKrXpIOSiM5z05oVkOVa6EuswyvVdpA_LFxxUIG9Q/pubhtml?gid=1449701238&amp;single=true&amp;widget=true&amp;headers=false"
+          style="width:100%; height:80vh; border:none; border-radius:12px;">
+        </iframe>
       </div>
 
     </div>
@@ -875,6 +909,39 @@ function renderCSProgress() {
     // render view
     renderLeaderboardView(key);
   }
+// ========= HEALTH POINTS INNER TABS =========
+function activateHPInner(key) {
+  // menu active state
+  document.querySelectorAll('#tab-health .menu-item')
+    .forEach(m => m.classList.remove('active'));
+
+  document.querySelector(`#tab-health .menu-item[data-hp-inner="${key}"]`)
+    .classList.add('active');
+
+  // views
+  document.querySelectorAll('.hp-inner-view')
+    .forEach(v => v.classList.remove('active'));
+
+  if (key === 'dashboard') {
+    document.getElementById('hp-dashboard-view').classList.add('active');
+    if (!hpData) loadHealthPoints();
+  }
+
+  if (key === 'individual') {
+    document.getElementById('hp-individual-view').classList.add('active');
+  }
+
+  if (key === 'reasons') {
+    document.getElementById('hp-reasons-view').classList.add('active');
+  }
+}
+
+// left menu click binding
+document.querySelectorAll('#tab-health .menu-item').forEach(item => {
+  item.addEventListener('click', () => {
+    activateHPInner(item.dataset.hpInner);
+  });
+});
 
   // Top tabs
   document.querySelectorAll(".tab").forEach(tab => {
