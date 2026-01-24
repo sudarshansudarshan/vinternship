@@ -104,6 +104,32 @@
     overflow: auto;
   }
 
+  /* Toggle Sidebar */
+  .toggle-sidebar-lb {
+    display: none;
+    background: transparent;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .toggle-sidebar-hp {
+    display: none;
+    background: transparent;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .toggle-bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background: #1a237e;
+    transition: all 0.3s ease-in-out;
+  }
+
   /* Cards / Status */
   .status-row {
     display: flex;
@@ -299,6 +325,60 @@
   width: 80px;           /* same visual weight as back button */
 }
 
+@media (max-width: 1100px) {
+  /* LB */
+  .toggle-sidebar-lb {
+    display: block;
+  }
+
+  .sidebar-view-lb {
+    display: none;
+  }
+
+  .sidebar-view-lb.active-lb-sidebar {
+    display: block;
+  }
+
+  /* Hamburger to X */
+  .toggle-sidebar-lb.active-lb-sidebar .toggle-bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .toggle-sidebar-lb.active-lb-sidebar .toggle-bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .toggle-sidebar-lb.active-lb-sidebar .toggle-bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* HP */
+  .toggle-sidebar-hp {
+    display: block;
+  }
+
+  .sidebar-view-hp {
+    display: none;
+  }
+
+  .sidebar-view-hp.active-hp-sidebar {
+    display: block;
+  }
+
+  /* Hamburger to X */
+  .toggle-sidebar-hp.active-hp-sidebar .toggle-bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .toggle-sidebar-hp.active-hp-sidebar .toggle-bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .toggle-sidebar-hp.active-hp-sidebar .toggle-bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
 </style>
 </head>
 
@@ -328,7 +408,7 @@
 <!-- Leaderboard Tab -->
 <div class="tab-content active" id="tab-leaderboard">
   <div class="dashboard-inner">
-    <div class="dashboard-menu">
+    <div class="dashboard-menu sidebar-view-lb">
       <div class="menu-item active" data-inner="state">State-wise</div>
       <div class="menu-item" data-inner="institute">Institute-wise</div>
       <div class="menu-item" data-inner="cohort">Cohort-wise</div>
@@ -336,6 +416,13 @@
 
     <div class="dashboard-view">
       <div class="status-row">
+
+        <button class="toggle-sidebar-lb">
+          <span class="toggle-bar"></span>
+          <span class="toggle-bar"></span>
+          <span class="toggle-bar"></span>
+        </button>
+
         <div class="pill" id="lb-pill">Loading…</div>
         <div class="search">
           <input id="lb-search" placeholder="Search…" />
@@ -402,7 +489,7 @@
   <div class="dashboard-inner">
 
     <!-- LEFT MENU -->
-    <div class="dashboard-menu">
+    <div class="dashboard-menu sidebar-view-hp">
       <div class="menu-item active" data-hp-inner="dashboard">HP Dashboard</div>
       <div class="menu-item" data-hp-inner="individual">Individual HP</div>
       <div class="menu-item" data-hp-inner="reasons">Add / Delete Reasons</div>
@@ -415,7 +502,14 @@
       <!-- HP DASHBOARD (default) -->
       <div class="hp-inner-view active" id="hp-dashboard-view">
         <div class="status-row">
-          <div class="pill">Health Points Leaderboard</div>
+
+          <button class="toggle-sidebar-hp">
+            <span class="toggle-bar"></span>
+            <span class="toggle-bar"></span>
+            <span class="toggle-bar"></span>
+          </button>
+
+          <div class="pill">HEALTH POINT LEADERBOARD</div>
           <div class="search">
             <input id="hp-search" placeholder="Search name or email…" />
             <span class="muted" id="hp-meta"></span>
@@ -432,6 +526,18 @@
 
       <!-- INDIVIDUAL HP -->
       <div class="hp-inner-view" id="hp-individual-view">
+
+        <div class="status-row">
+
+          <button class="toggle-sidebar-hp">
+            <span class="toggle-bar"></span>
+            <span class="toggle-bar"></span>
+            <span class="toggle-bar"></span>
+          </button>
+
+          <div class="pill">INDIVIDUAL HP</div>
+        </div>
+
         <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ79pSfFZwUx_itD60OLLa4UitpSfsxoBgdsisRcnU683O_jTzdPrJle5MjGbYsj0YQziU0vyk4O2Hg/pubhtml?gid=713252598&amp;single=true&amp;widget=true&amp;headers=false"
           style="width:100%; height:80vh; border:none; border-radius:12px;">
         </iframe>
@@ -439,12 +545,36 @@
 
       <!-- ADD / DELETE REASONS -->
       <div class="hp-inner-view" id="hp-reasons-view">
+
+        <div class="status-row">
+
+          <button class="toggle-sidebar-hp">
+            <span class="toggle-bar"></span>
+            <span class="toggle-bar"></span>
+            <span class="toggle-bar"></span>
+          </button>
+
+          <div class="pill">ADD / DELETE REASONS</div>
+        </div>
+
        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ79pSfFZwUx_itD60OLLa4UitpSfsxoBgdsisRcnU683O_jTzdPrJle5MjGbYsj0YQziU0vyk4O2Hg/pubhtml?gid=1449701238&amp;single=true&amp;widget=true&amp;headers=false"
           style="width:100%; height:80vh; border:none; border-radius:12px;">
         </iframe>
       </div>
     <!-- Attendance -->
       <div class="hp-inner-view" id="hp-attendance-view">
+
+        <div class="status-row">
+
+          <button class="toggle-sidebar-hp">
+            <span class="toggle-bar"></span>
+            <span class="toggle-bar"></span>
+            <span class="toggle-bar"></span>
+          </button>
+
+          <div class="pill">ATTENDANCE</div>
+        </div>
+
        <iframe src=""
           style="width:100%; height:80vh; border:none; border-radius:12px;">will come soon
         </iframe>
@@ -970,6 +1100,33 @@ document.querySelectorAll('#tab-health .menu-item').forEach(item => {
 
   // Boot
   loadAPI();
+
+  // Toggle LB
+  const TOGGLE_SIDEBAR_LB = document.querySelector(".toggle-sidebar-lb");
+  const SIDEBAR_VIEW_LB = document.querySelector(".sidebar-view-lb");
+  if(TOGGLE_SIDEBAR_LB && SIDEBAR_VIEW_LB) {
+    TOGGLE_SIDEBAR_LB.addEventListener("click", () => {
+      TOGGLE_SIDEBAR_LB.classList.toggle("active-lb-sidebar");
+      SIDEBAR_VIEW_LB.classList.toggle("active-lb-sidebar");
+    });
+  }
+
+  // Toggle HP
+  const SIDEBAR_VIEW_HP = document.querySelector(".sidebar-view-hp");
+  const TOGGLE_SIDEBAR_HP_ALL = document.querySelectorAll(".toggle-sidebar-hp");
+
+  if (SIDEBAR_VIEW_HP && TOGGLE_SIDEBAR_HP_ALL.length) {
+    TOGGLE_SIDEBAR_HP_ALL.forEach(btn => {
+      btn.addEventListener("click", () => {
+        SIDEBAR_VIEW_HP.classList.toggle("active-hp-sidebar");
+
+        // Sync animation class across all HP buttons
+        TOGGLE_SIDEBAR_HP_ALL.forEach(b =>
+          b.classList.toggle("active-hp-sidebar")
+        );
+      });
+    });
+  }
 </script>
 
 </body>
