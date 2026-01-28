@@ -48,4 +48,7 @@ collections:
   cohorts:
     output: true
     permalink: /:name/
+  blogs:
+    output: true
+    permalink: /blogs/:slug/
 
