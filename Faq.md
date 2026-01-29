@@ -46,10 +46,10 @@ The Internship ID will be mentioned in the offer letter sent by NPTEL POC.
 The program will be conducted strictly in **online mode**.
 
 **2.2 Is attendance tracked in this internship?**  
-Attendance is compulsory for all the standups, please check your Cohort page on the landing page for days and timing of standup for your cohort. Attendance is tracked for all the live session activities. Attendance will be counted **only if your camera remains ON for the entire Zoom session**. If the camera is not switched on for a sustained duration, the session may **not be considered as full attendance**.
+Attendance is NOT compulsory for all the standups and the live sessions. Please check your Cohort page on the landing page for days and timing of standup for your cohort. However, attendance is tracked for all the standups and live session activities. Attendance will be counted **only if your camera remains ON for the entire Zoom session**. If the camera is not switched on for a sustained duration, the session may **not be considered as full attendance**.
 
 **2.3 Do I need to use a specific name or email for the internship?**  
-Yes. You must use the **same name and email ID** used during registration across all platforms (ViBe, GitHub, Cliq, Zoom etc.) for automated tracking of your progress.
+Yes. You must use the **same name and email ID** used during registration across all platforms (ViBe, GitHub, Zoom etc.) for automated tracking of your progress.
 
 **2.4 Should I fill the attendance form attached to the NPTEL offer letter?**  
 Yes. You must fill the **Google Form provided in the NPTEL offer letter** **every day** during your internship (**except Sundays**).
@@ -70,8 +70,7 @@ Taking leave is **discouraged**, as you may miss important updates shared during
 
 However, if you must take the leave, follow the steps below:
 
-- Write a message in the **main Cliq Channel/Thread** stating the reason for your leave
-- Tag **@Nitin Sankar A** sir, **@Jinal Gupta** ma’am, and **@Harshdeep R** ma’am in the message
+- Write a mail to the **Support Desk** stating the reason for your leave
 - Post the request **at least one day in advance**
 - Clearly mention:
   - The **reason** for the leave
@@ -97,10 +96,14 @@ Yes, your project mentors can schedule a meeting based on the doubts and issues 
 ## 4. Support and Resolution Protocol
 
 **4.1 Where do I raise my concern initially?**  
-Initially, try to get your query resolved from the FAQ. Check the Broadcast cliq channel, else from your fellow interns in the Discussion Cliq channel/thread. If the query is still not resolved, you can email your query to the email ID below.
+Initially, try to get your query resolved from the FAQ and ViSakha. Check the Broadcast telegram channel, else from your fellow interns in the breakout sessions. If the query is still not resolved, you can email your query to the email ID below.
 
-Email **pinternship-support@vicharanashala.zohodesk.in**.  
+Email **vinternship@vicharanashala.zohodesk.in**.  
 Responses are provided **within 2 hours** between **9:00 AM and 9:00 PM**.
+Please ensure that the subject of the email follows the structure," Cohort name, NPTELID, full name, and your email subject”.
+
+**4.2 What if the mail is not addressed within 24 hours?**  
+If you do not receive a response within 24 hours, you may raise a second ticket with the subject line: “Attention Please – Follow-up on Ticket #[Original Ticket Number]”. This ticket will be escalated to our Mentors Team, who will assume responsibility for it. They will schedule a call discussion to ensure your issue is clearly understood and resolved directly.
 
 ---
 
@@ -197,7 +200,7 @@ If the issue persists after trying all steps, **record the issue** and email it 
 
 **7.6 I have completed all videos and quizzes in the ViBe course, but my progress is still showing less than 100%. What should I do?**  
 
-Please do not worry. This is a **dashboard-level technical issue** that has already been acknowledged by the support team and communicated in the Cliq threads. The team is actively working on resolving it, and your progress will be **updated automatically** once the issue is fixed.
+Please do not worry. This is a **dashboard-level technical issue** that has already been acknowledged by the support team. The team is actively working on resolving it, and your progress will be **updated automatically** once the issue is fixed.
 
 In the meantime, you may try the following steps once:
 
@@ -238,7 +241,7 @@ After completing all ViBe MERN modules:
 3. Read the entire documentation carefully to understand the concept and tasks to be performed.
 4. Try to understand each case study first, then attempt to code a solution for it.
 5. Open a code editor (for example, **VS Code**) and implement the tasks.
-5. Getting stuck is normal. You can ask questions on Cliq, revisit the ViBe videos, and discuss with others.
+5. Getting stuck is normal. You can ask questions to peers on breakout sessions, revisit the ViBe videos, and discuss with others.
 7. Submit your work using the submission link provided on your cohort specific page.
 
 **8.4 What comes after Case Studies?**  
