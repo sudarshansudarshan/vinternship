@@ -28,7 +28,8 @@ Utilize [Vi-Sakha](https://sakha.vicharanashala.ai/){:target="_blank"} to find a
 Discuss with your peers in the **breakout rooms**. Your fellow interns might have faced and solved the same issue.
 
 ### 4. Support Desk
-If your query remains unresolved, write to the Support Desk at **vinternship@vicharanashala.zohodesk.in**. Our support team will respond within **2 hours** of your submission (between 9 AM to 9 PM). Any question submitted beyond 9 PM will be answered the next day.
+If your query remains unresolved, write to the Support Desk at **vinternship@vicharanashala.zohodesk.in**. Our support team will respond within **2 hours** of your submission (between 9 AM to 9 PM). Any question submitted beyond 9 PM will be answered the next day. Please ensure that the subject of the email follows the structure *"CohortName_NPTELID/FullName_YourEmailSubject"*.
+
 
 If you do not receive a response within 24 hours, you may raise a second ticket with the subject line: *"Attention Please – Follow-up on Ticket #[Original Ticket Number]"*. This ticket will be escalated to our Mentors Team, who will assume responsibility for it. They will schedule a call discussion to ensure your issue is clearly understood and resolved directly.
 
