@@ -18,5 +18,5 @@ Grateful for the journey so far, and looking forward to what’s next.
 
 ---
 
-Author: [Lahari Reddy](www.linkedin.com/in/lahari-reddy-279b8b317){:target="_blank"}
+Author: [Lahari Reddy](https://www.linkedin.com/in/lahari-reddy-279b8b317){:target="_blank"}
 LinkedIn Article: [Read on LinkedIn](https://www.linkedin.com/pulse/learning-listening-finding-my-voice-iit-ropar-lahari-reddy-ci9nc/){:target="_blank"}
