@@ -19,5 +19,4 @@ I am truly grateful to Prof. Sudarshan Iyengar Sir for his guidance and support,
 
 ---
 Author: [Shuchitha Krishna Mohite](https://www.linkedin.com/in/shuchitha-krishna-mohite-53232726b/){:target="_blank"}
-LinkedIn Article: [Read on LinkedIn](
-https://www.linkedin.com/pulse/consistency-collaboration-growth-my-iit-ropar-krishna-mohite-xtthc){:target="_blank}
+LinkedIn Article: [Read on LinkedIn](https://www.linkedin.com/pulse/consistency-collaboration-growth-my-iit-ropar-krishna-mohite-xtthc){:target="_blank"}
