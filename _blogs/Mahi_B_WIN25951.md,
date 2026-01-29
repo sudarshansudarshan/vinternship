@@ -1,0 +1,85 @@
+---
+title: "When the Right Opportunity Finds You at the Right Time"
+author: Mahi Sinha
+pinternship_id: WIN25951
+---
+
+# When the Right Opportunity Finds You at the Right Time
+
+## Introduction
+
+When I received **97/100 in *The Joy of Computing Using Python***, I was genuinely thrilled. It wasn’t just about the score—it was a validation of the effort, curiosity, and late-night learning that went into it.
+
+Soon after, I discovered that this course also offered a **Winter Internship opportunity** for top performers and certificate holders. Naturally, my excitement doubled. It felt like a door had opened.
+
+But life had other plans—at least for a moment.
+
+---
+
+## A Delay That Changed My Perspective
+
+Around **25th or 26th December**, I learned that students from other colleges had already started their internships and that the last date had passed. I hadn’t received any email. At first, I felt disappointed, confused, and quietly heartbroken.
+
+However, with time, I began to reflect.
+
+December was also the month of our **semester examinations**. Even if I had received the internship opportunity at that moment, I wouldn’t have been able to give it the focus and commitment it deserved. That realization changed my perspective—it made me understand that sometimes, **a delay is not a denial. It’s simply timing doing its job.**
+
+Days passed.
+
+---
+
+## When Everything Finally Aligned
+
+Then, unexpectedly, I received a call from my **Head of Department, Raju Kumar**, informing me that a student from our college had received a Winter Internship email. He asked me to check my inbox—just to be sure.
+
+I searched everywhere. Inbox. Spam. Promotions. Nothing.
+
+And then… there it was.
+
+Right in front of my eyes all along—an email asking me to submit an **NOC for the internship**. The relief, the joy, and the disbelief that followed are hard to put into words. With immense support from my HOD, I completed the process and submitted everything on time.
+
+Soon after, I received my **internship confirmation**.
+
+---
+
+## The First Step Into the Internship World
+
+I was excited—but also nervous. It was my **first internship**, and my mind was filled with “what ifs.”
+
+- What if I get stuck?
+- What if I’m not good enough?
+- What if everyone else knows more than me?
+
+Then came **Thursday, 15th January**—my first stand-up session.
+
+And in that moment, all my nervousness melted away.
+
+---
+
+## Learning Environment & Mentorship
+
+I realized that we wouldn’t be rushed into projects. Instead, we would be **trained, guided, and prepared step by step**. The clarity, structure, and positivity from the mentors—especially **Sudarshan Iyengar, Jinal Gupta, Meenakshi V, Rohit Sharma, Harshdeep R., Sakshi Sharma, Nitin Sankar**, and the entire team—created an environment where learning felt both safe and exciting.
+
+Along this journey, I was also fortunate to receive guidance and support from **seniors from the previous cohort**, who were always willing to help whenever something felt unclear. I’m especially grateful to **Himanshu P Dev, Pratheek G, Jaisree Ragavi J, Tanvi Nagrare**, and others, who patiently helped me across multiple subjects and concepts. Their encouragement and clarity made a significant difference in my learning experience.
+
+---
+
+## Looking Ahead
+
+Now, **two weeks into the internship**, I can confidently say that the journey has been smoother and more enriching than I ever imagined.
+
+I’ve completed **100% of the first stage**, moved into case studies, and learned new concepts without fear or pressure. Along the way, I’ve also made new friends and gained insights that go far beyond technical learning.
+
+With **8 weeks still left**, I’m genuinely excited about what lies ahead—the learning, the challenges, the growth, and the opportunities that will follow.
+
+This journey has taught me an important lesson:
+
+> **When the right opportunity finds you at the right time, everything aligns—and growth happens naturally.**
+
+Grateful for the journey so far. Excited for everything that’s yet to come ✨
+
+---
+
+**Author:** [Mahi Sinha](https://www.linkedin.com/in/mahisinha/){:target="_blank"}
+**LinkedIn Article:** [Read on LinkedIn](https://www.linkedin.com/pulse/when-right-opportunity-finds-you-time-mahi-sinha-zd44c){:target="_blank"}
+
