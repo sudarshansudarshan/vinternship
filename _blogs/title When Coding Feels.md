@@ -28,4 +28,5 @@ Here is to the next eight weeks of keeping this energy alive!
 ---
 
 Author: [Ayush Tripathi](https://www.linkedin.com/in/ayush-tripathi-89265923a/){:target="_blank"}
+
 LinkedIn Article: [Read on LinkedIn](https://www.linkedin.com/pulse/when-coding-feels-like-vibe-ayush-tripathi-cmzxc/?trackingId=3onesqzALUyB5qWPTOBAPQ%3D%3D){:target="_blank"}
