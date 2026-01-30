@@ -4,27 +4,27 @@ author: Sohan Roy Talari
 vinternship_id: WIN251113
 ---
 
-I joined the Vinternship with confidence—but also skepticism.
+I joined the Vinternship with confidence - but also skepticism.
 
 The ViBe platform was unlike anything I had used before: short 1–2 minute videos, frequent quizzes, and constant attention checks.
 At first, I thought it was overdone. Almost unnecessary. I didn’t expect it to change much for me. But slowly, something shifted.
 
-The format didn’t try to impress me—it quietly removed excuses. There was no room to postpone learning or drift through sessions.
+The format didn’t try to impress me - it quietly removed excuses. There was no room to postpone learning or drift through sessions.
 What initially felt unconventional ended up changing how I engaged with learning, pushing me to be more present, attentive, and intentional than I had expected.
 
 What surprised me more was my own pace. While many were still midway through, I had completed the phase. I was the second to finish.
-Finishing early wasn’t about racing others—it was about freeing myself from deadlines. For the first time, the pressure of “catching up” simply disappeared.
+Finishing early wasn’t about racing others - it was about freeing myself from deadlines. For the first time, the pressure of “catching up” simply disappeared.
 
 That confidence was tested during the Case Studies. TypeScript felt familiar. React didn’t. The jump in difficulty made me pause and question my pace.
-But that doubt didn’t last long. I realized that discomfort wasn’t a sign of moving too fast—it was a sign of learning something real.
+But that doubt didn’t last long. I realized that discomfort wasn’t a sign of moving too fast - it was a sign of learning something real.
 
 That’s where clarity came in. I understood that I learn best by building, struggling, and figuring things out before I feel fully ready.
-Case studies didn’t reward speed; they demanded understanding. They made learning visible—not just to others, but to myself.
+Case studies didn’t reward speed; they demanded understanding. They made learning visible - not just to others, but to myself.
 
 This also changed how I participated in breakout rooms. With more exposure, discussions felt deeper. Explaining ideas helped me see gaps in my own thinking.
 Learning became shared, not solitary.
 
-I did move fast—but not blindly. I trusted my adaptability and knew when to slow down. That balance mattered more than speed itself.
+I did move fast - but not blindly. I trusted my adaptability and knew when to slow down. That balance mattered more than speed itself.
 
 What stayed with me after sessions wasn’t motivation or achievement. It was self-awareness. 
 
