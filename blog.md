@@ -56,5 +56,5 @@ I am grateful to **Prof. Sudarshan Iyengar**, **Vicharanashala Lab for Education
 
 ---
 
-**Author:** [Ayush Tripathi](https://www.linkedin.com/in/ayush-tripathi-89265923a/)
-**LinkedIn Article:** [Read on LinkedIn](https://www.linkedin.com/pulse/when-learning-stopped-feeling-like-boredom-ayush-tripathi-mobpc/)
+**Author:** [Ayush Tripathi](https://www.linkedin.com/in/ayush-tripathi-89265923a/){:target="_blank"}
+**LinkedIn Article:** [Read on LinkedIn](https://www.linkedin.com/pulse/when-learning-stopped-feeling-like-boredom-ayush-tripathi-mobpc/){:target="_blank"}
