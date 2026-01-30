@@ -16,7 +16,7 @@ permalink: /protocols_and_policies/
 
 <img src="../support-escalation.png" alt="Escalation Protocol" style="width: 100%; max-width: 600px; margin: 20px auto; display: block;">
 
-The Pinternship programme follows a structured support and grievance redressal mechanism. If you have a query, please follow the steps below in order:
+The Vinternship programme follows a structured support and grievance redressal mechanism. If you have a query, please follow the steps below in order:
 
 ### 1. Telegram Broadcast
 Check the official **Telegram Broadcast Channel** for announcements, instructions, and updates. Often, the answer to your query has already been posted.

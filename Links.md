@@ -17,15 +17,15 @@ links:
       url: "https://forms.gle/7Gkyqfc72Pzrpg5d6"
     - label: "HP Addition/Deduction Form for Euclideans(for VLED team only)"
       url: "https://forms.gle/guEXxPnZcom5TR1a7"
-    - label: "Pinternship T&C and Declaration Form(for Euclideans)"
+    - label: "Vinternship T&C and Declaration Form(for Euclideans)"
       url: "https://zfrmz.in/IlClYEoa5iIOpMRVt3Xc"
-    - label: "Endorsement - NPTEL Pinternship(for Euclideans)"
+    - label: "Endorsement - NPTEL Vinternship(for Euclideans)"
       url: "https://forms.gle/LpaNWG9SiYzshCsw8"
-    - label: "Endorsement Audit Form - NPTEL Pinternship for Euclideans(for VLED team only)"
+    - label: "Endorsement Audit Form - NPTEL Vinternship for Euclideans(for VLED team only)"
       url: "https://forms.gle/9CC6JQz5j7R9ZCyKA"
-    - label: "ViBe QC - NPTEL Pinternship Cohort 1"
+    - label: "ViBe QC - NPTEL Vinternship Cohort 1"
       url: "https://forms.gle/6iAosDo1mEEP3jjk8"
-    - label: "Pinternship T&C and Declaration Form(for Dijkstrians)"
+    - label: "Vinternship T&C and Declaration Form(for Dijkstrians)"
       url: "https://zfrmz.in/IWv4Sqdg9xpyAEPt1v1u"
     - label: "Activity Completion Confirmation Form(for Dijkstrians)"
       url: "https://forms.gle/y3Uujjsmjg771PNf9"
@@ -37,7 +37,7 @@ links:
 
 {% if page.links and page.links.size > 0 %}
 
-Below are some important links related to the Pinternship. Please use them as reference whenever needed:
+Below are some important links related to the Vinternship. Please use them as reference whenever needed:
 
 {% for item in page.links %}
 - [{{ item.label }}]({{ item.url }}){:target="_blank"}

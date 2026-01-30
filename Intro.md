@@ -14,7 +14,7 @@ order: 1
 
 ## About the Program
 
-Welcome to **Pinternship** – a comprehensive **Full-Stack Development Internship Program** conducted under the expert guidance of **Prof. Sudarshan Iyengar** at **IIT Ropar's VLED Lab**.
+Welcome to **Vinternship** – a comprehensive **Full-Stack Development Internship Program** conducted under the expert guidance of **Prof. Sudarshan Iyengar** at **IIT Ropar's VLED Lab**.
 
 This internship is designed for learners who genuinely want to understand how modern web applications are built. Instead of focusing only on theory, the program emphasizes applying concepts in realistic development scenarios and building systems that resemble real production applications.
 
@@ -33,7 +33,7 @@ As you progress, you will also work with concepts such as state management, REST
 
 ## Program Structure
 
-<img src="../Genie-phases.png" alt="Pinternship phases" style="width: 100%; max-width: 600px; margin: 20px auto; display: block;">
+<img src="../Genie-phases.png" alt="Vinternship phases" style="width: 100%; max-width: 600px; margin: 20px auto; display: block;">
 
 The internship is organized into three mandatory components that together form a complete learning journey.
 

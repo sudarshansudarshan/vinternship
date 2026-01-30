@@ -11,7 +11,7 @@ permalink: /blogs/
   }
 </style>
 
-### Writing a Blog as Part of Your Pinternship Journey with VLED Lab
+### Writing a Blog as Part of Your Vinternship Journey with VLED Lab
 
 <small>*(Activity: Call for Blogs)*</small>
 
@@ -32,20 +32,20 @@ What we **are looking for** is your lived experience—your doubts, your growth,
 
 ### Publication
 
-Your blog should first appear on your LinkedIn profile under the article section. You should tag VLED lab and it's members in your article. If we found the article interesting, inspiring and aligning with the Pinternship. We will select your submitted blog and it will be **reviewed by the VLED Lab team**. You will receive **comments and suggestions to help you improve your writing and clarity**. This is part of the learning process—we see writing as something that evolves through feedback, just like code.
+Your blog should first appear on your LinkedIn profile under the article section. You should tag VLED lab and it's members in your article. If we found the article interesting, inspiring and aligning with the Vinternship. We will select your submitted blog and it will be **reviewed by the VLED Lab team**. You will receive **comments and suggestions to help you improve your writing and clarity**. This is part of the learning process—we see writing as something that evolves through feedback, just like code.
 
-After review the selected blogs will be **published on the Pinternship website under the Blogs section**. Additionally, **selected blogs will be recognised for their** thoughtful reflection, originality, and authenticity.
+After review the selected blogs will be **published on the Vinternship website under the Blogs section**. Additionally, **selected blogs will be recognised for their** thoughtful reflection, originality, and authenticity.
 
 ### Submission Instructions
 
-You are first required to publish your blog on your LinkedIn under the [Article](https://www.linkedin.com/article/new/){:target="_blank"} section and then you are required to submit your blog as **Markdown file** to **Pinternship** GitHub repository as a new pull request. Your blog will be rendered as a webpage, so ensure it is readable, well-structured, and personal. Follow the folder structure, naming conventions, and file structure provided below. Each blog must be written individually and should reflect your own journey.
+You are first required to publish your blog on your LinkedIn under the [Article](https://www.linkedin.com/article/new/){:target="_blank"} section and then you are required to submit your blog as **Markdown file** to **Vinternship** GitHub repository as a new pull request. Your blog will be rendered as a webpage, so ensure it is readable, well-structured, and personal. Follow the folder structure, naming conventions, and file structure provided below. Each blog must be written individually and should reflect your own journey.
 
-***Repository:*** [https://github.com/sudarshansudarshan/pinternship](https://github.com/sudarshansudarshan/pinternship){:target="_blank"}
+***Repository:*** [https://github.com/sudarshansudarshan/vinternship](https://github.com/sudarshansudarshan/vinternship){:target="_blank"}
 
 ***Folder Structure:*** Place your blog in the `_blogs/` folder.
 
 ***Naming Convention***
-Your file must be named: `Name_B_PinternshipID.md`, *Example:* `Mohit_B_Pinternship12345.md`
+Your file must be named: `Name_B_VinternshipID.md`, *Example:* `Mohit_B_Vinternship12345.md`
 
 ***File Structure:***
 Your blog file must include front matter at the beginning with the following fields:
@@ -53,7 +53,7 @@ Your blog file must include front matter at the beginning with the following fie
 ---
 title: "Your Blog Title Here"
 author: Your Full Name
-pinternship_id: YOUR_PINTERNSHIP_ID
+vinternship_id: YOUR_VINTERNSHIP_ID
 ---
 ```
 
@@ -72,7 +72,7 @@ LinkedIn Article: [Read on LinkedIn](https://www.linkedin.com/your-article-link/
 ---
 title: "My Learning Journey: Reflections on Growth"
 author: Mohit Kumar
-pinternship_id: PID12345
+vinternship_id: VID12345
 ---
 
 Your blog content here...
@@ -105,7 +105,7 @@ LinkedIn Article: [Read on LinkedIn](https://www.linkedin.com/my-learning-journe
 
 <div style="text-align: center; background-color: #f6f8fa; padding: 2rem; margin-bottom: 2rem; border-radius: 8px; border-left: 4px solid #0366d6;">
   <p style="font-size: 1.1rem; line-height: 1.8; color: #24292e; margin: 0; max-width: 800px; margin-left: auto; margin-right: auto;">
-    Read the thoughtful reflections and experiences shared by our interns. Each blog captures personal journeys, challenges, and insights gained during the Pinternship program.
+    Read the thoughtful reflections and experiences shared by our interns. Each blog captures personal journeys, challenges, and insights gained during the Vinternship program.
   </p>
 </div>
 
@@ -114,7 +114,7 @@ LinkedIn Article: [Read on LinkedIn](https://www.linkedin.com/my-learning-journe
 <div style="margin-bottom: 1.5rem; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
   <details style="margin: 0;">
     <summary style="cursor: pointer; font-size: 1.2rem; font-weight: 600; padding: 1rem 1.5rem; background: linear-gradient(135deg, #3B82F620 0%, #3B82F640 100%); border-left: 4px solid #3B82F6; display: flex; align-items: center; gap: 0.5rem;">
-      <span>{{ blog.title }} - {{ blog.author }} ({{ blog.pinternship_id }})</span>
+      <span>{{ blog.title }} - {{ blog.author }} ({{ blog.vinternship_id }})</span>
     </summary>
     
     <div style="padding: 1.5rem; background-color: white;">

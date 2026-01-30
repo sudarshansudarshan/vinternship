@@ -24,7 +24,7 @@ order: 2
 ## 1. Internship Overview
 
 **1.1 What is this internship about?**  
-Pinternship is organized by VLED Lab at the Indian Institute of Technology Ropar in online mode. It's a comprehensive full-stack development internship program focused on the MERN stack (MongoDB, Express.js, React, Node.js/TypeScript).
+Vinternship is organized by VLED Lab at the Indian Institute of Technology Ropar in online mode. It's a comprehensive full-stack development internship program focused on the MERN stack (MongoDB, Express.js, React, Node.js/TypeScript).
 
 **1.2 Is this internship time-bound or duration-based?**  
 The internship follows a structured timeline with specific milestones and deliverables. The maximum duration of the internship is 2.5 months.
@@ -99,7 +99,7 @@ Yes, your project mentors can schedule a meeting based on the doubts and issues 
 **4.1 Where do I raise my concern initially?**  
 Initially, try to get your query resolved from the FAQ. Check the Broadcast cliq channel, else from your fellow interns in the Discussion Cliq channel/thread. If the query is still not resolved, you can email your query to the email ID below.
 
-Email **pinternship-support@vicharanashala.zohodesk.in**.  
+Email **vinternship-support@vicharanashala.zohodesk.in**.  
 Responses are provided **within 2 hours** between **9:00 AM and 9:00 PM**.
 
 ---
@@ -206,13 +206,40 @@ In the meantime, you may try the following steps once:
 
 If the issue still persists after these steps, no further action is required from your side. Your course completion status will be corrected by the support team shortly.
 
+**7.7 I feel the ViBe content or platform is not good or I am unhappy with the way progress is evaluated. Can I request an exception or bypass the system?**  
+
+ViBe is built and continuously improved by interns and students themselves. It is a free and open-source learning platform, and our goal is to keep it that way by encouraging the community to actively contribute, improve, and strengthen it rather than bypass it.
+
+If a learner strongly feels that the regular ViBe flow does not fairly reflect their understanding, there is a formal alternative evaluation path. However, this path is intentionally rigorous to ensure fairness for everyone.
+
+In such cases, you will be asked to:
+
+- Watch the specified YouTube video content completely (links will be provided).
+- Appear for a three-hour proctored examination based only on that content.
+- Write the exam under strict supervision with:
+  - Two cameras (front and side view), and  
+  - One online human proctor monitoring you live.
+
+This examination becomes the sole basis for evaluation in place of the regular internship track.
+
+The scoring rules are strict:
+
+- **Score below 60%**: You are considered not qualified and must join the next cohort and continue only through the normal ViBe mode.
+- **Score between 60% and 80%**: You get one more chance in the next scheduled exam.
+- **Score above 80%**: You are considered to have passed.
+
+This special exam is conducted once every fortnight, so choosing this route may significantly delay your progress compared to continuing normally on ViBe.
+
+Because this path is far more demanding and time-consuming than simply completing the regular videos, quizzes, and activities, most students find that continuing with the standard ViBe workflow is the faster and better option.
+
+
 ---
 
 
 ## 8. MERN Case Studies
 
 **8.1 What are Case Studies?**  
-Case studies are the **second required component** (Advanced Learning) of the Pinternship program. They are well-structured, documentation-based lessons designed to help you apply what you learned in ViBe training through **hands-on coding**. Each case study focuses on real-world problem-solving, collaborative thinking, and practical implementation to help you become more confident with the technologies covered.
+Case studies are the **second required component** (Advanced Learning) of the Vinternship program. They are well-structured, documentation-based lessons designed to help you apply what you learned in ViBe training through **hands-on coding**. Each case study focuses on real-world problem-solving, collaborative thinking, and practical implementation to help you become more confident with the technologies covered.
 
 Case studies are organized by technology, including:
 - TypeScript Fundamentals
@@ -228,7 +255,7 @@ Each case study includes:
 - Best practices and recommended patterns
 
 **8.2 Are Case Studies mandatory?**  
-Yes. Case studies are a **required component** for completing the Pinternship program. All participants must complete the case studies after finishing ViBe training and before moving to the Projects phase.
+Yes. Case studies are a **required component** for completing the Vinternship program. All participants must complete the case studies after finishing ViBe training and before moving to the Projects phase.
 
 **8.3 How do I get started with Case Studies?**  
 After completing all ViBe MERN modules:
@@ -270,11 +297,12 @@ This collaborative approach is encouraged to enhance learning and problem-solvin
 
 
 **8.8 Where can I view my submission status and access the leaderboard and dashboard?**  
-You can track your submission status, access the leaderboard, and view the dashboard by visiting the Pinternship Live Dashboard section on your cohort specific page.
+You can track your submission status, access the leaderboard, and view the dashboard by visiting the Vinternship Live Dashboard section on your cohort specific page.
 
 **8.9. What next if I completed my Case Studies and I am done with my endorsements?**
-We have some project ideas from the existing open source projects from Vicharanashala Lab for Education Design and Annam.AI listed on the Pinternship website. You can contribute to these real-time open-source projects, working with our developers to build real applications and add new features.
+We have some project ideas from the existing open source projects from Vicharanashala Lab for Education Design and Annam.AI listed on the Vinternship website. You can contribute to these real-time open-source projects, working with our developers to build real applications and add new features.
 
+---
 
 ## 9. Ejection Policy
 

@@ -17,9 +17,9 @@ layout: default
   <h1 style="margin: 0 0 0.5rem 0; color: #24292e;">{{ page.display_name }}</h1>
   <div style="color: #586069; font-size: 0.95rem;">
     {% if page.end_date != "" and page.end_date %}
-      <span>📅 Started: {{ page.start_date }} | Ended: {{ page.end_date }}</span>
+      <span>📅 {% if page.status == "Upcoming" %}Starting{% else %}Started{% endif %}: {{ page.start_date }} | Ended: {{ page.end_date }}</span>
     {% else %}
-      <span>📅 Started: {{ page.start_date }}</span>
+      <span>📅 {% if page.status == "Upcoming" %}Starting{% else %}Started{% endif %}: {{ page.start_date }}</span>
     {% endif %}
     <span style="margin-left: 1rem;">{{ status_icon }} {{ page.status }}</span>
   </div>

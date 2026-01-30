@@ -31,9 +31,9 @@ permalink: /milestones/
 
 ## Course Completion Criteria
 
-The Pinternship program follows a structured learning path with clear milestones to track your progress. Successful completion of the internship requires fulfilling all three mandatory components:
+The Vinternship program follows a structured learning path with clear milestones to track your progress. Successful completion of the internship requires fulfilling all three mandatory components:
 
-<img src="../Genie-phases.png" alt="Pinternship phases" style="width: 100%; max-width: 600px; margin: 20px auto; display: block;">
+<img src="../Genie-phases.png" alt="Vinternship phases" style="width: 100%; max-width: 600px; margin: 20px auto; display: block;">
 
 **1. ViBe Training (Core Learning) -** Complete all training modules on the ViBe platform covering TypeScript, React, Express.js, and MongoDB. This phase builds strong fundamentals before moving to advanced topics.
 

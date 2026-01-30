@@ -12,7 +12,7 @@ permalink: /Conceptnote/
 
 ## Overview
 
-**Pinternship** is a structured **Full-Stack Development Internship Program** conducted under the guidance of **Prof. Sudarshan Iyengar** at IIT Ropar’s VLED Lab.
+**Vinternship** is a structured **Full-Stack Development Internship Program** conducted under the guidance of **Prof. Sudarshan Iyengar** at IIT Ropar’s VLED Lab.
 
 The program is designed to help learners develop strong, practical full-stack development skills using the MERN stack. Instead of focusing only on isolated concepts, the internship follows a guided learning approach that combines structured coursework, applied case studies, and hands-on project development.
 
@@ -22,7 +22,7 @@ Participants progress through TypeScript, React, Express.js, and MongoDB in a lo
 
 ## Program Objectives
 
-The primary objective of Pinternship is to provide a clear and structured learning path for aspiring full-stack developers. The program emphasizes self-paced learning through the ViBe platform while ensuring that participants gain both theoretical understanding and practical experience.
+The primary objective of Vinternship is to provide a clear and structured learning path for aspiring full-stack developers. The program emphasizes self-paced learning through the ViBe platform while ensuring that participants gain both theoretical understanding and practical experience.
 
 By the end of the internship, participants are expected to have strong proficiency in the MERN stack, confidence in applying concepts through case studies, and hands-on experience building real-world projects. The program also aims to identify and support top performers through mentorship, recommendations, and potential internship opportunities.
 
@@ -74,7 +74,7 @@ Collaboration is encouraged to help participants develop communication skills, t
 
 ## Completion Requirements
 
-To successfully complete **Pinternship**, participants must complete all required learning components. This includes finishing every module on the ViBe platform, covering both prerequisite and full-stack development content.
+To successfully complete **Vinternship**, participants must complete all required learning components. This includes finishing every module on the ViBe platform, covering both prerequisite and full-stack development content.
 
 Participants must also complete all assigned case studies that apply ViBe training concepts, and build and deliver the required projects that demonstrate MERN stack proficiency. Progress throughout the program is automatically tracked on the ViBe platform.
 
@@ -95,7 +95,7 @@ Please note that this program does not provide a stipend. All outcomes and oppor
 
 ## Conclusion
 
-**Pinternship** is a comprehensive full-stack development program built around structured learning, practical application, and real-world project experience.
+**Vinternship** is a comprehensive full-stack development program built around structured learning, practical application, and real-world project experience.
 
 What sets this program apart is its balanced approach—combining guided coursework on the ViBe platform, hands-on case studies, project-based learning, and continuous mentorship. The program is designed to nurture skilled full-stack developers who are prepared to build modern, scalable web applications using industry-standard technologies.
 

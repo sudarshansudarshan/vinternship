@@ -20,13 +20,13 @@ header_pages:
 
 
 markdown: kramdown
-title: Pinternship
+title: Vinternship
 email: sudarshan@iitrpr.ac.in
 description: >- # this means to ignore newlines until "baseurl:"
-  Pinternship - A comprehensive full-stack development internship program
+  Vinternship - A comprehensive full-stack development internship program
   covering the MERN stack and modern web technologies. Master TypeScript,
   React, Express.js, and MongoDB through hands-on case studies.
-baseurl: /pinternship/ # the subpath of your site, e.g. /blog
+baseurl: /vinternship/ # the subpath of your site, e.g. /blog
 url: https://sudarshansudarshan.github.io # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: sudarshaniisc
 github_username:  sudarshansudarshan
