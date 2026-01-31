@@ -549,7 +549,8 @@
           >
              View my CS details →
           </button>
-          
+
+        
         <!-- HP DAILY TREND -->
          <h3 style="margin-top:24px;color:#1a237e;">HP Status</h3>
          <div id="my-hp-status" class="pill" style="margin-bottom:12px;"></div>
@@ -999,6 +1000,10 @@ const VIBE_MILESTONES = [
   { label: "Vibe Phase 4", required: 100, deadline: "2026-02-12" }
 ];
 
+// ========= DAILY VIBE RULE =========
+const VIBE_START_DATE = new Date("2026-01-14"); // first day of vibe
+const DAILY_VIBE_REQUIRED = 3.33; // % per day
+
 const CS_MILESTONES = [
   { label: "CS Week 1", cumulative: 6,  deadline: "2026-02-12" },
   { label: "CS Week 2", cumulative: 18, deadline: "2026-02-19" },
@@ -1058,6 +1063,37 @@ function getMyVibeProgress() {
 
   return row ? Number(row["Vibe Progress"]) : 0;
 }
+
+function getExpectedVibeProgressToday() {
+  const today = new Date();
+  const daysPassed = Math.floor(
+    (today - VIBE_START_DATE) / (1000 * 60 * 60 * 24)
+  );
+
+  if (daysPassed <= 0) return 0;
+
+  return Math.min(100, daysPassed * DAILY_VIBE_REQUIRED);
+}
+
+function getDailyVibeCheck() {
+  const actual = getMyVibeProgress();
+  const expected = getExpectedVibeProgressToday();
+
+  if (actual >= expected) {
+    return {
+      onTrack: true,
+      message: `📈 Daily Vibe: On track (${actual.toFixed(1)}% ≥ ${expected.toFixed(1)}%)`
+    };
+  }
+
+  const deficit = (expected - actual).toFixed(1);
+
+  return {
+    onTrack: false,
+    message: `⚠️ Daily Vibe lagging by ${deficit}% (Expected ${expected.toFixed(1)}%)`
+  };
+}
+
 
 function computeVibeStatus() {
   const current = getMyVibeProgress();
@@ -1186,6 +1222,10 @@ const pendingVibe = vibeStatus.find(v => !v.completed);
 const pendingCS = csStatus.find(c => !c.completed);
 
 let messages = [];
+// DAILY VIBE CHECK
+const dailyVibe = getDailyVibeCheck();
+messages.push(dailyVibe.message);
+
 
 if (pendingVibe) {
   if (pendingVibe.isLate) {
@@ -1276,6 +1316,7 @@ document.getElementById("view-my-cs")?.addEventListener("click", () => {
     search.focus();
   }, 300);
 });
+
 
   // ========= UI WIRING =========
   function activateTopTab(key) {
