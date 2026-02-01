@@ -23,4 +23,5 @@ This experience did not just teach me technical skills. It helped me understand 
 ---
 
 Author: [Mithra S](https://www.linkedin.com/in/mithra-s-6a2643329/){:target="_blank"}  
-LinkedIn Article: [Read on LinkedIn](https://www.linkedin.com/article/edit/7423728431122690048/){:target="_blank"}
+LinkedIn Article: [Read on LinkedIn](https://www.linkedin.com/pulse/learning-beyond-comfort-zones-mithra-s-fuzqc){:target="_blank"}
+
