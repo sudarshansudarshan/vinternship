@@ -38,5 +38,6 @@ Vicharanashala Lab for Education Design NPTEL ANNAM.AI Sudarshan Iyengar Silicon
 
 ---
 
-Author: Arya Ansuman Mohapatra (https:https://www.linkedin.com/in/arya-ansuman-mohapatra-959a51318/){:target="_blank"}  
+Author: Arya Ansuman Mohapatra (https://www.linkedin.com/in/arya-ansuman-mohapatra-959a51318/){:target="_blank"}  
 LinkedIn Article: [Read on LinkedIn](https://www.linkedin.com/pulse/learning-when-progress-quiet-arya-ansuman-mohapatra-gsi3c){:target="_blank"}
+
