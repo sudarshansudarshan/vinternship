@@ -4,7 +4,7 @@ author: Tanmaya Mohanty
 vinternship_id: WIN251147
 ---
 
-My Vinternship Journey
+                    My Vinternship Journey
 
 At the start of this Vinternship, I believed I knew how learning worked. Watch lectures, take notes, finish tasks, move on. What I did not expect was how much this internship would quietly challenge that assumption.
 
