@@ -515,26 +515,20 @@ The Self-Healing Endorsement Network rewards **integrity, collaboration, respons
 
 **11.1 How do I access my Individual Health Points (HP) page?**
 You can view your Individual Health Points by following these steps: 
-  ->Go to: https://sudarshansudarshan.github.io/vinternship/
-  ->Navigate to your Cohort-specific page
-  ->In the Dashboard section, click Open Dashboard
-  ->Select the Health Points tab
-  ->Choose Individual HP
+- Go to: https://sudarshansudarshan.github.io/vinternship/
+- Navigate to your Cohort-specific page
+- In the Dashboard section, click Open Dashboard
+- Select the Health Points tab
+- Choose Individual HP
 
 This section displays your personal Health Points status.
 
 **11.2 Where can I find activity deadlines (ViBe / Case Study)?**
 All activity deadlines are available directly on the dashboard: 
-  ->Go to: https://sudarshansudarshan.github.io/vinternship/
-  ->Navigate to your Cohort-specific page
-  ->In the Dashboard section, click Open Dashboard
-  ->Select the Health Points tab
-  ->Choose Individual HP
+- Go to: https://sudarshansudarshan.github.io/vinternship/
+- Navigate to your Cohort-specific page
+- In the Dashboard section, click Open Dashboard
+- Select the Health Points tab
+- Choose Individual HP
 
 👉 The respective deadlines are shown under each activity inside the dashboard.
-<!-- **11.13 Will Bhavna ma’am conduct Viva sessions in the future so that interns can become Jedi (Bronze ticket holders)?**  
-
-No, Bhavna ma'am will unfortunately **not conduct Viva sessions anymore**. She will only perform audit checks in the form of viva to identify defaulters/anomalies.
-Earlier, clearing the Viva conducted by Bhavna ma’am allowed interns to become **Bronze ticket holders**. Since this process has now been discontinued, the **set of existing Jedi (Silver, Bronze, and Gold ticket holders) is fixed**.
-
-No new Jedi will be added through Viva going forward. -->
