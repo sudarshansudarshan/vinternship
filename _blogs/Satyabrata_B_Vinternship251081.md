@@ -40,6 +40,7 @@ Silicon Institute of Technology (SIT), Bhubaneswar
 
 ---
 
-Author: {Satyabrata Dash](https://www.linkedin.com/in/satyabrata-dash-b9a84a292/){:target="_blank"}  
+Author: [Satyabrata Dash](https://www.linkedin.com/in/satyabrata-dash-b9a84a292/){:target="_blank"}  
 LinkedIn Article: [Read on LinkedIn](https://www.linkedin.com/pulse/focus-resilience-code-my-deep-dive-mern-development-satyabrata-dash-vsqlf){:target="_blank"}
+
 
