@@ -28,5 +28,5 @@ Looking back, this internship wasn’t just about the technical stuff. It really
 
 ---
 
-Author: [Mohit Kumar](https://www.linkedin.com/in/shaik-mahaboob-42569b362/){:target="_blank"}
+Author: [Shaik Mahaboob Basha](https://www.linkedin.com/in/shaik-mahaboob-42569b362/){:target="_blank"}
 LinkedIn Article: [Read on LinkedIn](https://www.linkedin.com/pulse/my-internship-experience-shaik-mahaboob-nbroc/?trackingId=JASynvq7Tc%2BOtyEvhvPStA%3D%3D){:target="_blank"}
