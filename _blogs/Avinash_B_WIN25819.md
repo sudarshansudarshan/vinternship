@@ -15,7 +15,7 @@ What made this experience meaningful was the environment around it. Conversation
 This internship didn’t give me a feeling of mastery. Instead, it gave me something more valuable—a comfort with uncertainty. I now understand that learning is not about speed or certainty, but about honesty, patience, and showing up again the next day.
 
 I’m deeply grateful for the opportunity to learn under the guidance of Prof. Sudarshan Iyengar and for the ecosystem created by
-Vicharanashala Lab for Education Design, ANNAM.AI,  and the Indian Institute of Technology, Ropar.
+Vicharanashala Lab for Education Design, ANNAM.AI, and the Indian Institute of Technology, Ropar.
 
 ---
 
