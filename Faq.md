@@ -39,6 +39,11 @@ The program includes scheduled live sessions, workshops, and mentorship meetings
 **1.5 Where can I find the Internship ID?**  
 The Internship ID will be mentioned in the offer letter sent by NPTEL POC.
 
+**1.6 Can I preview the certificate template for non-NPTEL batches?**
+At this time, the certificate template will not be shared prior to the start of the program, as it may vary from cohort to cohort depending on how the program is conducted. Regardless of the format, every certificate issued carries its own value and recognition.
+
+We kindly request students not to worry about the certificate design and instead focus on making the most of the learning experience. We truly appreciate your understanding as we strive to deliver a high-quality program for everyone.
+
 ---
 
 ## 2. Mode of Internship & Attendance
