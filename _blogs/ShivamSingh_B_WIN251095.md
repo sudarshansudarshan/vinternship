@@ -22,7 +22,7 @@ What I appreciate the most is the program's effort to encourage peer interaction
 
 Overall, this internship has been a valuable journey of learning, exploration, and growth—and I'm excited to keep building on this experience.
 
-Grateful for the opportunity that has been given by NPTEL, Indian Institute of Technology, Ropar and Delhi Technological University (Formerly DCE) and looking forward to what lies ahead in future.
+Grateful for the opportunity that has been given by NPTEL, Indian Institute of Technology, Ropar and Delhi Technological University (Formerly DCE) and looking forward to what lies ahead in the future.
 
 ---
 
