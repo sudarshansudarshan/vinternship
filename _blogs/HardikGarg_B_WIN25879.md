@@ -35,5 +35,6 @@ I’m sincerely grateful to NPTEL, the Indian Institute of Technology, Ropar, an
 
 ---
 
-Author: [Hardik Garg](https://www.linkedin.com/feed/){:target="_blank"}
+Author: [Hardik Garg]([https://www.linkedin.com/feed/](https://www.linkedin.com/in/hardik-garg-54a45536a/)){:target="_blank"}
 LinkedIn Article: [Read on LinkedIn](https://www.linkedin.com/pulse/beginning-journey-hardik-garg-swzrc/?trackingId=CbnQnNJSVlEB4RFUv%2BRo%2FA%3D%3D){:target="_blank"}
+
