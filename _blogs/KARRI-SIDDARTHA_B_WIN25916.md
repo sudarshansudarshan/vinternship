@@ -4,7 +4,7 @@ author: Karri Siddartha
 vinternship_id: WIN25916
 ---
 
-The first few months of this year were not easy for me.
+The beginning of this year was mentally challenging for me.
 
 Nothing felt stable. I couldn’t clearly see where I was heading, and mentally, it became harder to move forward. It felt like everything was stuck. During that phase, getting selected for this internship felt like something meaningful. It didn’t solve my problems instantly, but it reminded me that not everything in my life was going wrong. It gave me a sense of direction when I needed it the most.
 
