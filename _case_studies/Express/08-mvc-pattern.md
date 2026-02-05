@@ -65,7 +65,7 @@ Each team works independently:
 
 This separation prevents chaos and lets the library adapt to changes smoothly.
 
-
+## 4. Technical Deep Dive
 
  **A. MVC Pattern: Separating Concerns**
 
@@ -105,11 +105,10 @@ This separation prevents chaos and lets the library adapt to changes smoothly.
 
 ## 5. Step-by-Step Data Modeling & Code Walkthrough
 
-## **A. Project Structure**
 <img src="https://i.postimg.cc/bvSpTRHw/day10.png" width="500px" />
 
 
-## **B. Model: Define the Book Structure**
+**B. Model: Define the Book Structure**
   ```typescript
 // src/models/Book.ts  
 export interface Book {  
@@ -120,7 +119,7 @@ export interface Book {
 }  
   ``` 
 
-## **C. Repository: Separate Storage Logic**
+**C. Repository: Separate Storage Logic**
 
   ```typescript
 // src/repositories/interfaces/IBookRepository.ts  
@@ -151,7 +150,7 @@ export class InMemoryBookRepository implements IBookRepository {
 }  
   ```
 
-## **D. Service: Enforce Business Rules**
+**D. Service: Enforce Business Rules**
 
   ```typescript
 // src/services/BookService.ts  
@@ -173,7 +172,7 @@ export class BookService {
 }  
   ```
  
-## **E. Controller: Handle User Requests**
+**E. Controller: Handle User Requests**
   ```typescript
 // src/controllers/BookController.ts  
 import { Request, Response } from 'express';  
@@ -193,7 +192,7 @@ export class BookController {
 }  
   ```
   
-## **F. Dependency Injection Setup**
+**F. Dependency Injection Setup**
 
   ```typescript
 // src/app.ts  
@@ -229,6 +228,7 @@ app.listen(port, () => {
     
 
 ## 7. Common Pitfalls & Best Practices
+
 | **Pitfall**                              | **Best Practice**                                       |
 |------------------------------------------|----------------------------------------------------------|
 |  Mixing data access in business logic   | Always use repositories for storage access            |

@@ -13,11 +13,11 @@
 <meta property="og:url" content="http://localhost:4001/vinternship/case-studies/02-tsx-typed-components-type-safety/" />
 <meta property="og:site_name" content="Vinternship" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-01-30T19:11:54+05:30" />
+<meta property="article:published_time" content="2026-02-04T15:22:46+05:30" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="TSX &amp; Typed Components: Mastering Type Safety" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-30T19:11:54+05:30","datePublished":"2026-01-30T19:11:54+05:30","description":"1. Problem Statement","headline":"TSX &amp; Typed Components: Mastering Type Safety","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4001/vinternship/case-studies/02-tsx-typed-components-type-safety/"},"url":"http://localhost:4001/vinternship/case-studies/02-tsx-typed-components-type-safety/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-02-04T15:22:46+05:30","datePublished":"2026-02-04T15:22:46+05:30","description":"1. Problem Statement","headline":"TSX &amp; Typed Components: Mastering Type Safety","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4001/vinternship/case-studies/02-tsx-typed-components-type-safety/"},"url":"http://localhost:4001/vinternship/case-studies/02-tsx-typed-components-type-safety/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/vinternship/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4001/vinternship/feed.xml" title="Vinternship" /></head>
 <head><!-- Google tag (gtag.js) -->
@@ -180,6 +180,7 @@ How do you  enforce  <strong>type safety  at every level</strong>—props, state
 <p><strong>A. Props: Contracts  for Component  Input</strong></p>
 
 <p><strong>1. Interfaces  vs. Type Aliases</strong></p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Interface: Extensible via declaration merging  </span>
 <span class="kr">interface</span> <span class="nx">TransactionProps</span> <span class="p">{</span>  
   <span class="nl">id</span><span class="p">:</span> <span class="nx">string</span><span class="p">;</span>  
@@ -204,6 +205,7 @@ How do you  enforce  <strong>type safety  at every level</strong>—props, state
 </ul>
 
 <p><strong>2. Optional vs. Required Props</strong></p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">interface</span> <span class="nx">UserProfileProps</span> <span class="p">{</span>  
   <span class="nl">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">;</span>  
   <span class="nx">age</span><span class="p">?:</span> <span class="nx">number</span><span class="p">;</span> <span class="c1">// Optional  </span>
@@ -215,6 +217,7 @@ How do you  enforce  <strong>type safety  at every level</strong>—props, state
 </ul>
 
 <p><strong>3. Default Props</strong></p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Functional Component  </span>
 <span class="kd">const</span> <span class="nx">Greeting</span><span class="p">:</span> <span class="nx">React</span><span class="p">.</span><span class="nx">FC</span><span class="o">&lt;</span><span class="p">{</span> <span class="nx">message</span><span class="p">?:</span> <span class="nx">string</span> <span class="p">}</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">message</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Hello</span><span class="dl">'</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="p">(</span>  
   <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">message</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/h1&gt; </span><span class="err"> 
@@ -226,6 +229,7 @@ How do you  enforce  <strong>type safety  at every level</strong>—props, state
   <span class="nf">render</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">message</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/h1&gt;; } </span><span class="err"> 
 </span><span class="p">}</span>  
 </code></pre></div></div>
+
 <p><strong>B. State: Typing Component Internal Data</strong></p>
 
 <p><strong>1.  <code class="language-plaintext highlighter-rouge">useState</code>  with Type Inference</strong></p>
@@ -250,16 +254,20 @@ How do you  enforce  <strong>type safety  at every level</strong>—props, state
   <span class="p">}</span>  
 <span class="p">};</span>  
 </code></pre></div></div>
+
 <p><strong>3. Immutable State Patterns</strong></p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Use Readonly/ReadonlyArray to prevent mutations  </span>
 <span class="kr">interface</span> <span class="nx">AccountState</span> <span class="p">{</span>  
   <span class="nx">readonly</span> <span class="nx">transactions</span><span class="p">:</span> <span class="nx">ReadonlyArray</span><span class="o">&lt;</span><span class="nx">Transaction</span><span class="o">&gt;</span><span class="p">;</span>  
 <span class="p">}</span>  
 </code></pre></div></div>
-<p><strong>C. Functional Components: Advanced Typing</strong></p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">**</span><span class="mi">1</span><span class="p">.</span>  <span class="s2">`React.FC`</span>  <span class="nx">vs</span><span class="p">.</span> <span class="nx">Explicit</span> <span class="nx">Return</span> <span class="nx">Types</span><span class="o">**</span>
 
-<span class="c1">// Implicit return type (avoid unless simple)  </span>
+<p><strong>C. Functional Components: Advanced Typing</strong></p>
+
+<p><strong>1.  <code class="language-plaintext highlighter-rouge">React.FC</code>  vs. Explicit Return Types</strong></p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Implicit return type (avoid unless simple)  </span>
 <span class="kd">const</span> <span class="nx">DepositButton</span><span class="p">:</span> <span class="nx">React</span><span class="p">.</span><span class="nx">FC</span><span class="o">&lt;</span><span class="p">{</span> <span class="na">onClick</span><span class="p">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="k">void</span> <span class="p">}</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">onClick</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="p">(</span>  
   <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">onClick</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Deposit</span><span class="o">&lt;</span><span class="sr">/button&gt; </span><span class="err"> 
 </span><span class="p">);</span>  
@@ -271,6 +279,7 @@ How do you  enforce  <strong>type safety  at every level</strong>—props, state
 </code></pre></div></div>
 
 <p><strong>2. Generics in Functional Components</strong></p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">type</span> <span class="nx">CurrencyConverterProps</span><span class="o">&lt;</span><span class="nx">T</span> <span class="kd">extends</span> <span class="nx">string</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">{</span>  
   <span class="na">currencies</span><span class="p">:</span> <span class="nx">T</span><span class="p">[];</span>  
   <span class="nl">onConvert</span><span class="p">:</span> <span class="p">(</span><span class="na">amount</span><span class="p">:</span> <span class="nx">number</span><span class="p">,</span> <span class="na">from</span><span class="p">:</span> <span class="nx">T</span><span class="p">,</span> <span class="na">to</span><span class="p">:</span> <span class="nx">T</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">number</span><span class="p">;</span>  
@@ -287,6 +296,7 @@ How do you  enforce  <strong>type safety  at every level</strong>—props, state
 <p><strong>D. Class Components: Full Type System Integration</strong></p>
 
 <p><strong>1. Props and State Type Parameters</strong></p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">interface</span> <span class="nx">AccountProps</span> <span class="p">{</span>  
   <span class="nl">accountId</span><span class="p">:</span> <span class="nx">string</span><span class="p">;</span>  
 <span class="p">}</span>  
@@ -301,16 +311,22 @@ How do you  enforce  <strong>type safety  at every level</strong>—props, state
   <span class="c1">// Lifecycle methods with type context  </span>
 <span class="p">}</span>  
 </code></pre></div></div>
+
 <p><strong>2. Typing Lifecycle Methods</strong></p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">componentDidUpdate</span><span class="p">(</span><span class="nx">prevProps</span><span class="p">:</span> <span class="nx">AccountProps</span><span class="p">,</span> <span class="nx">prevState</span><span class="p">:</span> <span class="nx">AccountState</span><span class="p">)</span> <span class="p">{</span>  
   <span class="k">if </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">accountId</span> <span class="o">!==</span> <span class="nx">prevProps</span><span class="p">.</span><span class="nx">accountId</span><span class="p">)</span> <span class="p">{</span>  
     <span class="c1">// Fetch new account data  </span>
   <span class="p">}</span>  
 <span class="p">}</span>  
 </code></pre></div></div>
+
+<hr />
+
 <h2 id="5-step-by-step-data-modeling--code-walkthrough">5. Step-by-Step Data Modeling &amp; Code Walkthrough</h2>
 
 <p><strong>A. Transaction List Component (Functional)</strong></p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">interface</span> <span class="nx">Transaction</span> <span class="p">{</span>  
   <span class="nl">id</span><span class="p">:</span> <span class="nx">string</span><span class="p">;</span>  
   <span class="nl">amount</span><span class="p">:</span> <span class="nx">number</span><span class="p">;</span>  
@@ -377,6 +393,8 @@ How do you  enforce  <strong>type safety  at every level</strong>—props, state
 <span class="p">}</span>  
 </code></pre></div></div>
 
+<hr />
+
 <h2 id="6-interactive-challenge--mini-project">6. Interactive Challenge / Mini-Project</h2>
 
 <p><strong>Your Task:</strong><br />
@@ -411,14 +429,42 @@ Build a  <code class="language-plaintext highlighter-rouge">BudgetTracker</code>
   </li>
 </ol>
 
+<hr />
+
 <h2 id="7-common-pitfalls--best-practices">7. Common Pitfalls &amp; Best Practices</h2>
-<p>| Pitfall                             | Best Practice                                      |
-|————————————-|—————————————————-|
-| Using <code class="language-plaintext highlighter-rouge">any</code> for props/state         | Always define explicit types                       |
-| Optional props without defaults     | Use <code class="language-plaintext highlighter-rouge">Required&lt;T&gt;</code> or <code class="language-plaintext highlighter-rouge">defaultProps</code>                |
-| Mutating state directly             | Use read-only types and immutable updates          |
-| Ignoring type inference             | Let TypeScript infer when possible                 |
-| Complex unions without validation   | Use <code class="language-plaintext highlighter-rouge">Zod</code> or <code class="language-plaintext highlighter-rouge">Yup</code> for runtime validation          |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pitfall</th>
+      <th>Best Practice</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Using <code class="language-plaintext highlighter-rouge">any</code> for props/state</td>
+      <td>Always define explicit types</td>
+    </tr>
+    <tr>
+      <td>Optional props without defaults</td>
+      <td>Use <code class="language-plaintext highlighter-rouge">Required&lt;T&gt;</code> or <code class="language-plaintext highlighter-rouge">defaultProps</code></td>
+    </tr>
+    <tr>
+      <td>Mutating state directly</td>
+      <td>Use read-only types and immutable updates</td>
+    </tr>
+    <tr>
+      <td>Ignoring type inference</td>
+      <td>Let TypeScript infer when possible</td>
+    </tr>
+    <tr>
+      <td>Complex unions without validation</td>
+      <td>Use <code class="language-plaintext highlighter-rouge">Zod</code> or <code class="language-plaintext highlighter-rouge">Yup</code> for runtime validation</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
 
 <h2 id="8-optional-programmers-workflow-checklist">8. Optional: Programmer’s Workflow Checklist</h2>
 

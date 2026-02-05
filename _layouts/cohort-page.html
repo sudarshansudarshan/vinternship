@@ -69,7 +69,7 @@ layout: default
       <summary style="cursor: pointer; padding: 1.5rem; background-color: #f6f8fa; border-left: 4px solid #{{ status_color }}; list-style: none;">
         <div>
           <h3 style="margin: 0 0 0.5rem 0; color: #24292e;">{{ announcement.title }}</h3>
-          <div style="color: #586069; font-size: 0.9rem; margin-bottom: 0.5rem;">📅 {{ announcement.date }}</div>
+          <div style="color: #586069; font-size: 0.9rem; margin-bottom: 0.5rem;">📢 Announced on: {{ announcement.date }} | ⏰ Deadline: {{ announcement.deadline }}</div>
           {% if announcement.description %}
             <div style="color: #586069; font-size: 0.95rem;">{{ announcement.description }}</div>
           {% endif %}

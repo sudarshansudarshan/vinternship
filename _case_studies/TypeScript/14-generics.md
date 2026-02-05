@@ -66,7 +66,7 @@ Imagine you have a magical toolbox that can change shape to hold any tool you ne
 
 Generics in TypeScript work like this magical toolbox. You write one tool or function, and it adapts to whatever data you give it-without losing track of what’s inside.
 
-## What Are Generics?
+## **What Are Generics?**
 
 Generics allow you to write  **reusable components**  that work with multiple types while retaining type information.
 They are a form of  **parametric polymorphism**: you write code with type “parameters” (like  `<T>`) that are filled in with actual types when your code is used.
@@ -75,13 +75,14 @@ They are a form of  **parametric polymorphism**: you write code with type “par
     
 -   **With generics:**  You write it once, and TypeScript ensures it works for any type you specify
 
-A  **type parameter**  is a placeholder for a type, just like a function parameter is a placeholder for a value.
+- A  **type parameter**  is a placeholder for a type, just like a function parameter is a placeholder for a value.
   ```typescript
 function identity<T>(value: T): T {
   return value;
 }
-  ```
-  -   `T`  is a type parameter.
+```
+
+-   `T`  is a type parameter.
     
 -   `identity<number>(42)`  returns a  `number`.
     
@@ -92,15 +93,20 @@ function identity<T>(value: T): T {
 ## **Type Inference with Generics**
 
 TypeScript is smart:  
+
 If you call  `identity("test")`, it knows  `T`  is  `string`  and enforces that everywhere inside the function.
-  ```typescript
+
+```typescript
 const result = identity("test"); // Type: string
-  ```
-  If you try to use  `identity<number>("oops")`, TypeScript will error:
+```
+
+If you try to use  `identity<number>("oops")`, TypeScript will error:
 
 > Argument of type 'string' is not assignable to parameter of type 'number'.
+
 ## **Generic Functions vs. Any**
 Compare:
+
   ```typescript
 function echoAny(arg: any): any { return arg; }
 function echoGeneric<T>(arg: T): T { return arg; }
@@ -108,6 +114,7 @@ function echoGeneric<T>(arg: T): T { return arg; }
 let x = echoAny(123); // x: any (no type safety)
 let y = echoGeneric(123); // y: number (type-safe)
   ```
+
 **Generics preserve type information,  `any`  does not.**
 
 ## **Generic Classes**
@@ -186,7 +193,6 @@ type User = { id: string; name: string; age: number; };
 type UserPreview = Pick<User, "id" | "name">; // { id: string; name: string }
   ```
 
-## Example: Generic Function
 
 ## 4. Step-by-Step Data Modeling
 
@@ -300,7 +306,7 @@ const firstLessonFeedback = getFirstItem(lessonFeedback.getAllFeedback()); // Le
  -   The function works for any array type.
     
 -   TypeScript always knows what type you’re working with.
-- 
+
 | Feature         | Syntax Example                           | Purpose                          |
 |-----------------|------------------------------------------|----------------------------------|
 | Generic Func    | `function f<T>(x: T): T { ... }`         | Reusable, type-safe functions   |

@@ -13,11 +13,11 @@
 <meta property="og:url" content="http://localhost:4001/vinternship/case-studies/05-routing-controllers/" />
 <meta property="og:site_name" content="Vinternship" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-01-30T19:11:54+05:30" />
+<meta property="article:published_time" content="2026-02-04T15:22:46+05:30" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Routing Controllers" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-30T19:11:54+05:30","datePublished":"2026-01-30T19:11:54+05:30","description":"1. Problem Statement: The Overwhelmed Bakery","headline":"Routing Controllers","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4001/vinternship/case-studies/05-routing-controllers/"},"url":"http://localhost:4001/vinternship/case-studies/05-routing-controllers/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-02-04T15:22:46+05:30","datePublished":"2026-02-04T15:22:46+05:30","description":"1. Problem Statement: The Overwhelmed Bakery","headline":"Routing Controllers","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4001/vinternship/case-studies/05-routing-controllers/"},"url":"http://localhost:4001/vinternship/case-studies/05-routing-controllers/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/vinternship/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4001/vinternship/feed.xml" title="Vinternship" /></head>
 <head><!-- Google tag (gtag.js) -->
@@ -282,6 +282,8 @@ How do you redesign the bakery’s workflow so that:</p>
 <span class="nx">app</span><span class="p">.</span><span class="nf">use</span><span class="p">(</span><span class="dl">"</span><span class="s2">/inventory</span><span class="dl">"</span><span class="p">,</span> <span class="nx">InventoryController</span><span class="p">);</span>
 </code></pre></div></div>
 
+<h2 id="4-technical-deep-dive">4. Technical Deep Dive</h2>
+
 <p><strong>A. Organizing Workflows with Routing Controllers</strong></p>
 
 <p><strong>Problem:</strong>  Orders were handled by anyone, leading to chaos.<br />
@@ -331,12 +333,34 @@ How do you redesign the bakery’s workflow so that:</p>
 <p><strong>Problem:</strong>  Mistakes like nut allergies or oversold stock slipped through.<br />
 <strong>Solution:</strong>  Add checkpoints to inspect orders before they’re processed.</p>
 
-<p><strong>1. Types of Checkpoints</strong>
-| Checkpoint         | Purpose                                    | Example            |
-|——————–|——————————————–|——————–|
-| Allergy Check      | Scans for nuts, gluten, etc.              | allergyMiddleware  |
-| Inventory Check    | Ensures stock levels are sufficient       | inventoryMiddleware|
-| Logging            | Tracks order timelines                    | loggingMiddleware  |</p>
+<p><strong>1. Types of Checkpoints</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Checkpoint</th>
+      <th>Purpose</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Allergy Check</td>
+      <td>Scans for nuts, gluten, etc.</td>
+      <td>allergyMiddleware</td>
+    </tr>
+    <tr>
+      <td>Inventory Check</td>
+      <td>Ensures stock levels are sufficient</td>
+      <td>inventoryMiddleware</td>
+    </tr>
+    <tr>
+      <td>Logging</td>
+      <td>Tracks order timelines</td>
+      <td>loggingMiddleware</td>
+    </tr>
+  </tbody>
+</table>
 
 <p><strong>2. Custom Checkpoint Example</strong></p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Allergy Check Middleware</span>
@@ -537,12 +561,33 @@ We’ll fix that by defining a clear, digital structure for every order-so nothi
 </ul>
 
 <h2 id="7-common-pitfalls--best-practices">7. Common Pitfalls &amp; Best Practices</h2>
-<p>| Pitfall                | Best Practice                                |
-|————————|———————————————-|
-| Mixing unrelated routes | Group related routes in controllers         |
-| Duplicating logic       | Use shared services/inject dependencies     |
-| Not using base routes   | Always prefix controllers with a base       |
-| Inconsistent responses  | Standardize response format                 |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pitfall</th>
+      <th>Best Practice</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mixing unrelated routes</td>
+      <td>Group related routes in controllers</td>
+    </tr>
+    <tr>
+      <td>Duplicating logic</td>
+      <td>Use shared services/inject dependencies</td>
+    </tr>
+    <tr>
+      <td>Not using base routes</td>
+      <td>Always prefix controllers with a base</td>
+    </tr>
+    <tr>
+      <td>Inconsistent responses</td>
+      <td>Standardize response format</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="8-quick-recap--key-takeaways">8. Quick Recap &amp; Key Takeaways</h2>
 

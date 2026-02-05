@@ -13,11 +13,11 @@
 <meta property="og:url" content="http://localhost:4001/vinternship/case-studies/08-mvc-pattern/" />
 <meta property="og:site_name" content="Vinternship" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-01-30T19:11:54+05:30" />
+<meta property="article:published_time" content="2026-02-04T15:22:46+05:30" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="MVC Pattern" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-30T19:11:54+05:30","datePublished":"2026-01-30T19:11:54+05:30","description":"1. Problem Statement","headline":"MVC Pattern","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4001/vinternship/case-studies/08-mvc-pattern/"},"url":"http://localhost:4001/vinternship/case-studies/08-mvc-pattern/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-02-04T15:22:46+05:30","datePublished":"2026-02-04T15:22:46+05:30","description":"1. Problem Statement","headline":"MVC Pattern","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4001/vinternship/case-studies/08-mvc-pattern/"},"url":"http://localhost:4001/vinternship/case-studies/08-mvc-pattern/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/vinternship/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4001/vinternship/feed.xml" title="Vinternship" /></head>
 <head><!-- Google tag (gtag.js) -->
@@ -195,6 +195,8 @@ How do you redesign the system so that:</p>
 
 <p>This separation prevents chaos and lets the library adapt to changes smoothly.</p>
 
+<h2 id="4-technical-deep-dive">4. Technical Deep Dive</h2>
+
 <p><strong>A. MVC Pattern: Separating Concerns</strong></p>
 
 <table>
@@ -278,10 +280,9 @@ How do you redesign the system so that:</p>
 
 <h2 id="5-step-by-step-data-modeling--code-walkthrough">5. Step-by-Step Data Modeling &amp; Code Walkthrough</h2>
 
-<h2 id="a-project-structure"><strong>A. Project Structure</strong></h2>
 <p><img src="https://i.postimg.cc/bvSpTRHw/day10.png" width="500px" /></p>
 
-<h2 id="b-model-define-the-book-structure"><strong>B. Model: Define the Book Structure</strong></h2>
+<p><strong>B. Model: Define the Book Structure</strong></p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// src/models/Book.ts  </span>
 <span class="k">export</span> <span class="kr">interface</span> <span class="nx">Book</span> <span class="p">{</span>  
   <span class="nl">id</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>  
@@ -291,7 +292,7 @@ How do you redesign the system so that:</p>
 <span class="p">}</span>  
 </code></pre></div></div>
 
-<h2 id="c-repository-separate-storage-logic"><strong>C. Repository: Separate Storage Logic</strong></h2>
+<p><strong>C. Repository: Separate Storage Logic</strong></p>
 
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// src/repositories/interfaces/IBookRepository.ts  </span>
 <span class="k">export</span> <span class="kr">interface</span> <span class="nx">IBookRepository</span> <span class="p">{</span>  
@@ -321,7 +322,7 @@ How do you redesign the system so that:</p>
 <span class="p">}</span>  
 </code></pre></div></div>
 
-<h2 id="d-service-enforce-business-rules"><strong>D. Service: Enforce Business Rules</strong></h2>
+<p><strong>D. Service: Enforce Business Rules</strong></p>
 
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// src/services/BookService.ts  </span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">IBookRepository</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">../repositories/interfaces/IBookRepository</span><span class="dl">'</span><span class="p">;</span>  
@@ -342,7 +343,7 @@ How do you redesign the system so that:</p>
 <span class="p">}</span>  
 </code></pre></div></div>
 
-<h2 id="e-controller-handle-user-requests"><strong>E. Controller: Handle User Requests</strong></h2>
+<p><strong>E. Controller: Handle User Requests</strong></p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// src/controllers/BookController.ts  </span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">Request</span><span class="p">,</span> <span class="nx">Response</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">express</span><span class="dl">'</span><span class="p">;</span>  
 <span class="k">import</span> <span class="p">{</span> <span class="nx">BookService</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">../services/BookService</span><span class="dl">'</span><span class="p">;</span>  
@@ -361,7 +362,7 @@ How do you redesign the system so that:</p>
 <span class="p">}</span>  
 </code></pre></div></div>
 
-<h2 id="f-dependency-injection-setup"><strong>F. Dependency Injection Setup</strong></h2>
+<p><strong>F. Dependency Injection Setup</strong></p>
 
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// src/app.ts  </span>
 <span class="k">import</span> <span class="nx">express</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">express</span><span class="dl">'</span><span class="p">;</span>  
@@ -400,11 +401,29 @@ How do you redesign the system so that:</p>
 </ul>
 
 <h2 id="7-common-pitfalls--best-practices">7. Common Pitfalls &amp; Best Practices</h2>
-<p>| <strong>Pitfall</strong>                              | <strong>Best Practice</strong>                                       |
-|——————————————|———————————————————-|
-|  Mixing data access in business logic   | Always use repositories for storage access            |
-|  Hardcoding storage details             |  Depend on interfaces, not implementations             |
-|  Not testing with mocks                 |  Use fake repositories for unit tests                  |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Pitfall</strong></th>
+      <th><strong>Best Practice</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mixing data access in business logic</td>
+      <td>Always use repositories for storage access</td>
+    </tr>
+    <tr>
+      <td>Hardcoding storage details</td>
+      <td>Depend on interfaces, not implementations</td>
+    </tr>
+    <tr>
+      <td>Not testing with mocks</td>
+      <td>Use fake repositories for unit tests</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="8-quick-recap--key-takeaways">8. Quick Recap &amp; Key Takeaways</h2>
 

@@ -85,9 +85,9 @@ By the end of  this tutorial, you will:
 -   Performance: Components subscribe  only to the state  they use.
     
 
-----------
 
- **B. Defining Slices: Example  Types**
+**B. Defining Slices: Example  Types**
+
 ```js
 // store/slices/userSlice.ts
 export interface UserSlice {
@@ -153,7 +153,6 @@ export const useDesignHubStore = create<DesignHubStore>()(
 -   **Order matters:**  Middleware like  `devtools`  and  `persist`  can wrap the whole store or individual slices.
     
 
-----------
 
 **D. Using Slices in Components**
 ```js
@@ -185,11 +184,13 @@ function FileList() {
   );
 }
 ```
- **E. Testing and Maintaining Slices**
+
+**E. Testing and Maintaining Slices**
 
 -   Slices can be tested independently by calling their factory functions with mock  `set`  and  `get`.
     
 -   Example (Jest)
+
 ```js
 import { createUserSlice } from './userSlice';
 
@@ -201,9 +202,13 @@ test('setUser sets user', () => {
   expect(state.user.name).toBe('Sam');
 });
 ```
+
+---
+
 ## 5. Step-by-Step Data Modeling & Code Walkthrough
 
 **A. Create Feature Slices**
+
 ```js
 // store/slices/commentSlice.ts
 export interface Comment {
@@ -223,7 +228,9 @@ export const createCommentSlice = (set, get) => ({
   getCommentsByFile: (fileId) => get().comments.filter((c) => c.fileId === fileId),
 });
 ```
- **B. Combine All Slices in the Store**
+
+**B. Combine All Slices in the Store**
+
 ```js
 import { create } from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
@@ -246,7 +253,9 @@ export const useDesignHubStore = create<DesignHubStore>()(
   )
 );
 ```
- **C. Using Slices in the App**
+
+**C. Using Slices in the App**
+
 ```js
 function CommentsPanel({ fileId }) {
   const comments = useDesignHubStore((s) => s.getCommentsByFile(fileId));
@@ -267,6 +276,8 @@ function CommentsPanel({ fileId }) {
 }
 ```
 
+---
+
 ## 6. Interactive Challenge / Mini-Project
 
 **Your Turn!**
@@ -281,6 +292,8 @@ function CommentsPanel({ fileId }) {
     
 3.  Build a  `NotificationsPanel`  component that displays unread notifications and lets users mark them as read.
 
+---
+
 ## 7. Common Pitfalls & Best Practices
 ## Common Pitfalls & Best Practices (Zustand Slices)
 
@@ -294,7 +307,7 @@ function CommentsPanel({ fileId }) {
 
 
 
-----------
+---
 
 ## 8. Optional: Programmer’s Workflow Checklist
 

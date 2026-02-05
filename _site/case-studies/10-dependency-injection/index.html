@@ -13,11 +13,11 @@
 <meta property="og:url" content="http://localhost:4001/vinternship/case-studies/10-dependency-injection/" />
 <meta property="og:site_name" content="Vinternship" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-01-30T19:11:54+05:30" />
+<meta property="article:published_time" content="2026-02-04T15:22:46+05:30" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Dependency Injection" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-30T19:11:54+05:30","datePublished":"2026-01-30T19:11:54+05:30","description":"1. Problem Statement Making a Healthcare Appointment System Modular and Testable; Growing Clinic’s Scheduling Headaches","headline":"Dependency Injection","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4001/vinternship/case-studies/10-dependency-injection/"},"url":"http://localhost:4001/vinternship/case-studies/10-dependency-injection/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-02-04T15:22:46+05:30","datePublished":"2026-02-04T15:22:46+05:30","description":"1. Problem Statement Making a Healthcare Appointment System Modular and Testable; Growing Clinic’s Scheduling Headaches","headline":"Dependency Injection","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4001/vinternship/case-studies/10-dependency-injection/"},"url":"http://localhost:4001/vinternship/case-studies/10-dependency-injection/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/vinternship/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4001/vinternship/feed.xml" title="Vinternship" /></head>
 <head><!-- Google tag (gtag.js) -->
@@ -193,7 +193,7 @@ How can you design your appointment system so each part (scheduling, notificatio
 
 <h2 id="4-technical-deep-dive">4. Technical Deep Dive</h2>
 
-<h2 id="a-what-is-dependency-injection-di"><strong>A. What Is Dependency Injection (DI)?</strong></h2>
+<p><strong>A. What Is Dependency Injection (DI)?</strong></p>
 
 <p><strong>Dependency Injection</strong>  is a programming technique where an object receives the objects (dependencies) it needs from an external source, rather than creating them itself</p>
 
@@ -227,9 +227,14 @@ How can you design your appointment system so each part (scheduling, notificatio
   <li>
     <p>Makes code easier to test (inject mocks).</p>
   </li>
-  <li>Enables swapping implementations with minimal code changes.
-    <h2 id="b-types-of-dependency-injection"><strong>B. Types of Dependency Injection</strong></h2>
+  <li>
+    <p>Enables swapping implementations with minimal code changes.</p>
   </li>
+</ul>
+
+<p><strong>B. Types of Dependency Injection</strong></p>
+
+<ul>
   <li>
     <p><strong>Constructor Injection (most common and recommended):</strong><br />
 Dependencies are passed as parameters to the class constructor.</p>
@@ -256,12 +261,15 @@ Dependencies are passed as parameters to the class constructor.</p>
     <p><strong>Setter Injection:</strong><br />
 Dependencies are set via setter methods after object creation.</p>
   </li>
-  <li><strong>Property Injection:</strong><br />
-Dependencies are set directly on public properties (less common in TypeScript/Node).</li>
+  <li>
+    <p><strong>Property Injection:</strong><br />
+Dependencies are set directly on public properties (less common in TypeScript/Node).</p>
+  </li>
 </ul>
 
 <p><strong>Constructor injection is preferred</strong>  for clarity, safety, and testability.</p>
-<h2 id="c-how-does-an-ioc-container-work"><strong>C. How Does an IoC Container Work?</strong></h2>
+
+<p><strong>C. How Does an IoC Container Work?</strong></p>
 
 <p>An  <strong>IoC container</strong>  (like TypeDI) manages the creation, configuration, and lifecycle of your services and their dependencies.</p>
 
@@ -296,10 +304,14 @@ Dependencies are set directly on public properties (less common in TypeScript/No
       </li>
       <li>
         <p>Scoped: Instance per request/context.</p>
-        <h2 id="d-advanced-usage-with-typedi"><strong>D. Advanced Usage with TypeDI</strong></h2>
       </li>
     </ul>
   </li>
+</ul>
+
+<p><strong>D. Advanced Usage with TypeDI</strong></p>
+
+<ul>
   <li>
     <p><strong>Service Tokens:</strong><br />
 Instead of using classes directly, you can use tokens (symbols or strings) for even looser coupling.</p>
@@ -322,7 +334,7 @@ Use  <code class="language-plaintext highlighter-rouge">Container.reset()</code>
   </li>
 </ul>
 
-<h2 id="e-why-diioc-is-essential-for-scalable-systems"><strong>E. Why DI/IoC is Essential for Scalable Systems</strong></h2>
+<p><strong>E. Why DI/IoC is Essential for Scalable Systems</strong></p>
 
 <ul>
   <li>
@@ -333,7 +345,7 @@ Use  <code class="language-plaintext highlighter-rouge">Container.reset()</code>
   </li>
 </ul>
 
-<h2 id="f-using-typedi-for-di-in-nodejsexpress"><strong>F. Using TypeDI for DI in Node.js/Express</strong></h2>
+<p><strong>F. Using TypeDI for DI in Node.js/Express</strong></p>
 
 <p><strong>1. Install Prerequisites</strong></p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> npm <span class="nb">install </span>typedi reflect-metadata

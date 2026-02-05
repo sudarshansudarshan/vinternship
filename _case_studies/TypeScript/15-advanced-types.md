@@ -162,8 +162,9 @@ type AnyUser = Learner | Instructor | Admin; // Union: one or the other
 
 ## 5. Live Code Walkthrough (Step-by-Step, Explained)
 
-## **A. Union Types: One or the Other**
- ```typescript
+**A. Union Types: One or the Other**
+
+```typescript
 function printUserInfo(user: AnyUser) {
   if ("quizzesCompleted" in user) {
     console.log(`Learner: ${user.quizzesCompleted} quizzes completed`);
@@ -173,25 +174,26 @@ function printUserInfo(user: AnyUser) {
     console.log(`Admin: Access - ${user.accessLevel}`);
   }
 }
- ```
+```
 
 -   **Union types**  let you accept different shapes and handle each safely.
-## **B. Intersection Types: Both at Once**
- ```typescript
+
+**B. Intersection Types: Both at Once**
+```typescript
 const alice: MultiRoleUser = {
   id: "alice123",
   quizzesCompleted: 10,
   coursesTaught: 2
 };
 
- ```
+```
 -   **Intersection types**  let you combine all properties for users with multiple roles.
 
-## **C. Mapped Types: Transform Data Shapes**
+**C. Mapped Types: Transform Data Shapes**
 
 Suppose you want to track module progress for each learner:
 
- ```typescript
+```typescript
 type ModuleStatus = "not-started" | "in-progress" | "completed";
 
 // For any list of module IDs, generate a progress map:
@@ -205,21 +207,22 @@ type MyProgress = ProgressMap<MyModules>;
 // Result: { quiz1: ModuleStatus; video2: ModuleStatus; assignment3: ModuleStatus }
  ```
 
-## **D. Conditional Types: Adapting to Data**
+**D. Conditional Types: Adapting to Data**
 
 Suppose you want to allow feedback only if a module is completed:
 
- ```typescript
+```typescript
 type FeedbackAllowed<T extends ModuleStatus> = T extends "completed" ? string : never;
 
 type FeedbackForQuiz = FeedbackAllowed<"completed">; // string
 type FeedbackForVideo = FeedbackAllowed<"in-progress">; // never
- ```
-## **E. Utility Types: Quick Type Transformations**
+```
+
+**E. Utility Types: Quick Type Transformations**
 
 Suppose you want a type where all fields are optional for a draft report:
 
- ```typescript
+```typescript
 type LearnerReport = {
   name: string;
   score: number;
@@ -229,9 +232,9 @@ type DraftReport = Partial<LearnerReport>; // All fields now optional
  ```
 Or make a type where all fields are read-only:
 
- ```typescript
+```typescript
 type ReadonlyReport = Readonly<LearnerReport>;
- ```
+```
 
 ## 6. Challenge 
 

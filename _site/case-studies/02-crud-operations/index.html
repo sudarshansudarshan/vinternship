@@ -13,11 +13,11 @@
 <meta property="og:url" content="http://localhost:4001/vinternship/case-studies/02-crud-operations/" />
 <meta property="og:site_name" content="Vinternship" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-01-30T19:11:54+05:30" />
+<meta property="article:published_time" content="2026-02-04T15:22:46+05:30" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="CRUD Operations" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-30T19:11:54+05:30","datePublished":"2026-01-30T19:11:54+05:30","description":"1. Problem Statement","headline":"CRUD Operations","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4001/vinternship/case-studies/02-crud-operations/"},"url":"http://localhost:4001/vinternship/case-studies/02-crud-operations/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-02-04T15:22:46+05:30","datePublished":"2026-02-04T15:22:46+05:30","description":"1. Problem Statement","headline":"CRUD Operations","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4001/vinternship/case-studies/02-crud-operations/"},"url":"http://localhost:4001/vinternship/case-studies/02-crud-operations/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/vinternship/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4001/vinternship/feed.xml" title="Vinternship" /></head>
 <head><!-- Google tag (gtag.js) -->
@@ -174,9 +174,11 @@ How do you ensure the system can efficiently create, read, update, and delete me
 
 <p><strong>MongoDB’s CRUD operations are your digital tools for managing this ever-changing board—instantly, reliably, and at scale.</strong></p>
 
+<hr />
+
 <h2 id="4-technical-deep-dive">4. Technical Deep Dive</h2>
 
-<h2 id="a-mongodb-crud-basics"><strong>A. MongoDB CRUD Basics</strong></h2>
+<p><strong>A. MongoDB CRUD Basics</strong></p>
 
 <ul>
   <li>
@@ -187,13 +189,15 @@ How do you ensure the system can efficiently create, read, update, and delete me
   </li>
   <li>
     <p><strong>Indexes</strong>: Improve query performance (e.g., indexing  <code class="language-plaintext highlighter-rouge">category</code>  or  <code class="language-plaintext highlighter-rouge">price</code>).</p>
-    <h2 id="b--insertone-adding-products"><strong>B.  <code class="language-plaintext highlighter-rouge">insertOne</code>: Adding Products</strong></h2>
   </li>
 </ul>
+
+<p><strong>B.  <code class="language-plaintext highlighter-rouge">insertOne</code>: Adding Products</strong></p>
 
 <p><strong>Purpose</strong>: Add a single document to a collection.</p>
 
 <p><strong>Syntax</strong>:</p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nf">insertOne</span><span class="p">({</span>  
   <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Wireless Headphones</span><span class="dl">"</span><span class="p">,</span>  
   <span class="na">category</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Electronics</span><span class="dl">"</span><span class="p">,</span>  
@@ -202,6 +206,7 @@ How do you ensure the system can efficiently create, read, update, and delete me
   <span class="na">ratings</span><span class="p">:</span> <span class="p">[</span><span class="mf">4.5</span><span class="p">,</span> <span class="mf">4.7</span><span class="p">,</span> <span class="mf">4.8</span><span class="p">]</span>  
 <span class="p">});</span>  
 </code></pre></div></div>
+
 <p><strong>Key Notes</strong>:</p>
 
 <ul>
@@ -213,11 +218,12 @@ How do you ensure the system can efficiently create, read, update, and delete me
   </li>
 </ul>
 
-<h2 id="c--find-querying-products"><strong>C.  <code class="language-plaintext highlighter-rouge">find</code>: Querying Products</strong></h2>
+<p><strong>C.  <code class="language-plaintext highlighter-rouge">find</code>: Querying Products</strong></p>
 
 <p><strong>Purpose</strong>: Retrieve documents matching criteria.</p>
 
 <p><strong>Syntax</strong>:</p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Find all electronics in stock  </span>
 <span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nf">find</span><span class="p">({</span>  
   <span class="na">category</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Electronics</span><span class="dl">"</span><span class="p">,</span>  
@@ -233,6 +239,7 @@ How do you ensure the system can efficiently create, read, update, and delete me
 <span class="c1">// Sorting: Highest price first  </span>
 <span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nf">find</span><span class="p">().</span><span class="nf">sort</span><span class="p">({</span> <span class="dl">"</span><span class="s2">price.value</span><span class="dl">"</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span> <span class="p">});</span>  
 </code></pre></div></div>
+
 <p><strong>Operators</strong>:</p>
 
 <ul>
@@ -247,13 +254,12 @@ How do you ensure the system can efficiently create, read, update, and delete me
   </li>
 </ul>
 
-<hr />
-
-<h2 id="d--updateone-modifying-products"><strong>D.  <code class="language-plaintext highlighter-rouge">updateOne</code>: Modifying Products</strong></h2>
+<p><strong>D.  <code class="language-plaintext highlighter-rouge">updateOne</code>: Modifying Products</strong></p>
 
 <p><strong>Purpose</strong>: Update a single document matching a filter.</p>
 
 <p><strong>Syntax</strong>:</p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Update stock quantity for a product  </span>
 <span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nf">updateOne</span><span class="p">(</span>  
   <span class="p">{</span> <span class="na">_id</span><span class="p">:</span> <span class="nc">ObjectId</span><span class="p">(</span><span class="dl">"</span><span class="s2">...</span><span class="dl">"</span><span class="p">)</span> <span class="p">},</span>  
@@ -272,6 +278,7 @@ How do you ensure the system can efficiently create, read, update, and delete me
   <span class="p">{</span> <span class="na">$set</span><span class="p">:</span> <span class="p">{</span> <span class="dl">"</span><span class="s2">price.discount</span><span class="dl">"</span><span class="p">:</span> <span class="mi">15</span> <span class="p">}</span> <span class="p">}</span>  
 <span class="p">);</span>  
 </code></pre></div></div>
+
 <p><strong>Key Notes</strong>:</p>
 
 <ul>
@@ -283,13 +290,12 @@ How do you ensure the system can efficiently create, read, update, and delete me
   </li>
 </ul>
 
-<hr />
-
-<h2 id="e--deleteone-removing-products"><strong>E.  <code class="language-plaintext highlighter-rouge">deleteOne</code>: Removing Products</strong></h2>
+<p><strong>E.  <code class="language-plaintext highlighter-rouge">deleteOne</code>: Removing Products</strong></p>
 
 <p><strong>Purpose</strong>: Delete a single document matching a filter.</p>
 
 <p><strong>Syntax</strong>:</p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Delete a discontinued product  </span>
 <span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nf">deleteOne</span><span class="p">({</span>  
   <span class="na">_id</span><span class="p">:</span> <span class="nc">ObjectId</span><span class="p">(</span><span class="dl">"</span><span class="s2">...</span><span class="dl">"</span><span class="p">)</span>  
@@ -300,6 +306,7 @@ How do you ensure the system can efficiently create, read, update, and delete me
   <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Outdated Model XYZ</span><span class="dl">"</span>  
 <span class="p">});</span>  
 </code></pre></div></div>
+
 <p><strong>Key Notes</strong>:</p>
 
 <ul>
@@ -315,7 +322,7 @@ How do you ensure the system can efficiently create, read, update, and delete me
 
 <h2 id="5-step-by-step-code-walkthrough">5. Step-by-Step Code Walkthrough</h2>
 
-<h2 id="a-define-the-product-schema"><strong>A. Define the Product Schema</strong></h2>
+<p><strong>A. Define the Product Schema</strong></p>
 
 <p>// Sample product document</p>
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>  
@@ -328,7 +335,9 @@ How do you ensure the system can efficiently create, read, update, and delete me
   <span class="nx">tags</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">fitness</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">bluetooth</span><span class="dl">"</span><span class="p">]</span>  
 <span class="p">}</span>  
 </code></pre></div></div>
-<h2 id="b-insert-a-new-product"><strong>B. Insert a New Product</strong></h2>
+
+<p><strong>B. Insert a New Product</strong></p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nf">insertOne</span><span class="p">({</span>  
   <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">4K Smart TV</span><span class="dl">"</span><span class="p">,</span>  
   <span class="na">category</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Electronics</span><span class="dl">"</span><span class="p">,</span>  
@@ -337,6 +346,7 @@ How do you ensure the system can efficiently create, read, update, and delete me
   <span class="na">tags</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">television</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">streaming</span><span class="dl">"</span><span class="p">]</span>  
 <span class="p">});</span>  
 </code></pre></div></div>
+
 <p><strong>Output</strong>:</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">  
@@ -344,7 +354,9 @@ How do you ensure the system can efficiently create, read, update, and delete me
   </span><span class="err">insertedId:</span><span class="w"> </span><span class="err">ObjectId(</span><span class="s2">"665f4d7e8b3e6c1e24a7b3e2"</span><span class="err">)</span><span class="w">  
 </span><span class="p">}</span><span class="w">  
 </span></code></pre></div></div>
-<h2 id="c-query-products"><strong>C. Query Products</strong></h2>
+
+<p><strong>C. Query Products</strong></p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Find all TVs under $600  </span>
 <span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nf">find</span><span class="p">({</span>  
   <span class="na">category</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Electronics</span><span class="dl">"</span><span class="p">,</span>  
@@ -359,7 +371,8 @@ How do you ensure the system can efficiently create, read, update, and delete me
 <span class="p">);</span>  
 </code></pre></div></div>
 
-<h2 id="d-update-product-stock"><strong>D. Update Product Stock</strong></h2>
+<p><strong>D. Update Product Stock</strong></p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Reduce stock by 1 when purchased  </span>
 <span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nf">updateOne</span><span class="p">(</span>  
   <span class="p">{</span> <span class="na">_id</span><span class="p">:</span> <span class="nc">ObjectId</span><span class="p">(</span><span class="dl">"</span><span class="s2">665f4d7e8b3e6c1e24a7b3e2</span><span class="dl">"</span><span class="p">)</span> <span class="p">},</span>  
@@ -372,11 +385,16 @@ How do you ensure the system can efficiently create, read, update, and delete me
   <span class="p">{</span> <span class="na">$push</span><span class="p">:</span> <span class="p">{</span> <span class="na">tags</span><span class="p">:</span> <span class="dl">"</span><span class="s2">sale</span><span class="dl">"</span> <span class="p">}</span> <span class="p">}</span>  
 <span class="p">);</span>  
 </code></pre></div></div>
-<h2 id="e-delete-a-discontinued-product"><strong>E. Delete a Discontinued Product</strong></h2>
+
+<p><strong>E. Delete a Discontinued Product</strong></p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nf">deleteOne</span><span class="p">({</span>  
   <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Legacy DVD Player</span><span class="dl">"</span>  
 <span class="p">});</span>  
 </code></pre></div></div>
+
+<hr />
+
 <h2 id="6-interactive-challenge--mini-project">6. Interactive Challenge / Mini-Project</h2>
 
 <p><strong>Your Turn!</strong></p>
@@ -397,6 +415,8 @@ How do you ensure the system can efficiently create, read, update, and delete me
     <p><strong>Delete</strong>  the dish “Old Special Soup” from the menu.</p>
   </li>
 </ol>
+
+<hr />
 
 <h2 id="7-common-pitfalls--best-practices">7. Common Pitfalls &amp; Best Practices</h2>
 

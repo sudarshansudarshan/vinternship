@@ -79,7 +79,6 @@ By the end of this tutorial, you will:
 -   **Efficient resource use**: Less bandwidth, less memory, especially for large apps and slow networks.
     
 
-----------
 
 **B. Dynamic Imports: The Foundation**
 
@@ -88,6 +87,7 @@ By the end of this tutorial, you will:
 -   Returns a promise that resolves to the module.
     
 -   Can be used conditionally, in event handlers, or anywhere in your code—not just at the top.
+
 ```js
 
 // Only load the math module if needed
@@ -97,13 +97,13 @@ function handleCalculate() {
   });
 }
 -   This reduces the initial bundle size, as  `math`  is only loaded when  `handleCalculate`  is called .
-   ``` 
 
-----------
+``` 
 
- **C. React.lazy() and Suspense: Lazy Loading Components**
 
-## **1. React.lazy()**
+**C. React.lazy() and Suspense: Lazy Loading Components**
+
+**1. React.lazy()**
 
 -   Wraps a dynamic import so you can use it as a component.
     
@@ -129,13 +129,12 @@ function App() {
 -   **Suspense**  provides a fallback UI while the component is loading.
     
 
-----------
-
-## **2. Route-Based Code Splitting**
+**2. Route-Based Code Splitting**
 
 -   Ideal for large, distinct sections (e.g.,  `/courses`,  `/dashboard`,  `/forum`).
     
 -   Each route loads its own bundle.
+
 ```js
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
@@ -158,13 +157,16 @@ function App() {
   );
 }
 ```
+
 - Only the code for the current route is loaded, reducing the initial bundle size. 
 
- **3. Component-Based Code Splitting**
+
+**3. Component-Based Code Splitting**
 
 -   Use for large, rarely-used, or non-essential components (e.g., a chart, modal, or admin panel).
     
 -   Load the component only when needed, even within a page.
+
 ```js
 const Chart = React.lazy(() => import('./Chart'));
 
@@ -181,7 +183,9 @@ function AnalyticsPanel({ showChart }) {
   );
 }
 ```
+
 - This keeps the main bundle lean, loading heavy components only when used.
+
 
 **D. Best Practices and Pitfalls**
 
@@ -213,7 +217,7 @@ function AnalyticsPanel({ showChart }) {
 
 ## 5. Step-by-Step Data Modeling & Code Walkthrough
 
- **A. Lazy Loading a Feature Component**
+**A. Lazy Loading a Feature Component**
 
 ```js
 import React, { Suspense } from 'react';
@@ -239,7 +243,8 @@ function CoursePage() {
 
 - The Quiz code is only loaded when the user clicks "Take Quiz"
 
- **B. Route-Based Code Splitting Example**
+**B. Route-Based Code Splitting Example**
+
 ```js
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
@@ -262,7 +267,8 @@ function EduStreamApp() {
 ```
 - Each page loads its own bundle, reducing initial load time.
 
- **C. Dynamic Import for Conditional Loading**
+**C. Dynamic Import for Conditional Loading**
+
 ```js
 function loadHelpWidget() {
   import('./HelpWidget').then(({ default: HelpWidget }) => {
@@ -288,6 +294,8 @@ function loadHelpWidget() {
     
 4.  Show how to handle loading errors with an error boundary.
 
+---
+
 ## 7. Common Pitfalls & Best Practices
 ## Common Pitfalls & Best Practices (Code Splitting & Lazy Loading)
 
@@ -299,9 +307,9 @@ function loadHelpWidget() {
 | Not handling loading errors                  | Use error boundaries for user-friendly errors                        |
 | Dynamic import paths as variables            | Use static strings for `import()` paths                              |
 
+---
 
-
-## 9. Optional: Programmer’s Workflow Checklist
+## 8. Optional: Programmer’s Workflow Checklist
 
 -   Use  `React.lazy()`  for dynamic imports of components.
     

@@ -13,11 +13,11 @@
 <meta property="og:url" content="http://localhost:4001/vinternship/case-studies/14-generics/" />
 <meta property="og:site_name" content="Vinternship" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-01-30T19:11:54+05:30" />
+<meta property="article:published_time" content="2026-02-04T15:22:46+05:30" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Generics" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-30T19:11:54+05:30","datePublished":"2026-01-30T19:11:54+05:30","description":"1. Problem Statement","headline":"Generics","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4001/vinternship/case-studies/14-generics/"},"url":"http://localhost:4001/vinternship/case-studies/14-generics/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-02-04T15:22:46+05:30","datePublished":"2026-02-04T15:22:46+05:30","description":"1. Problem Statement","headline":"Generics","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4001/vinternship/case-studies/14-generics/"},"url":"http://localhost:4001/vinternship/case-studies/14-generics/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/vinternship/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4001/vinternship/feed.xml" title="Vinternship" /></head>
 <head><!-- Google tag (gtag.js) -->
@@ -201,7 +201,7 @@ Create reusable, flexible tools that work with  <strong>any</strong>  kind of co
 
 <p>Generics in TypeScript work like this magical toolbox. You write one tool or function, and it adapts to whatever data you give it-without losing track of what’s inside.</p>
 
-<h2 id="what-are-generics">What Are Generics?</h2>
+<h2 id="what-are-generics"><strong>What Are Generics?</strong></h2>
 
 <p>Generics allow you to write  <strong>reusable components</strong>  that work with multiple types while retaining type information.
 They are a form of  <strong>parametric polymorphism</strong>: you write code with type “parameters” (like  <code class="language-plaintext highlighter-rouge">&lt;T&gt;</code>) that are filled in with actual types when your code is used.</p>
@@ -213,14 +213,12 @@ They are a form of  <strong>parametric polymorphism</strong>: you write code wit
   <li>
     <p><strong>With generics:</strong>  You write it once, and TypeScript ensures it works for any type you specify</p>
   </li>
-</ul>
-
-<p>A  <strong>type parameter</strong>  is a placeholder for a type, just like a function parameter is a placeholder for a value.</p>
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">identity</span><span class="o">&lt;</span><span class="nx">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nx">value</span><span class="p">:</span> <span class="nx">T</span><span class="p">):</span> <span class="nx">T</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">value</span><span class="p">;</span>
+  <li>A  <strong>type parameter</strong>  is a placeholder for a type, just like a function parameter is a placeholder for a value.
+    <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">identity</span><span class="o">&lt;</span><span class="nx">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nx">value</span><span class="p">:</span> <span class="nx">T</span><span class="p">):</span> <span class="nx">T</span> <span class="p">{</span>
+<span class="k">return</span> <span class="nx">value</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div>
-<ul>
+</code></pre></div>    </div>
+  </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">T</code>  is a type parameter.</p>
   </li>
@@ -230,44 +228,47 @@ They are a form of  <strong>parametric polymorphism</strong>: you write code wit
   <li>
     <p><code class="language-plaintext highlighter-rouge">identity&lt;string&gt;("hello")</code>  returns a  <code class="language-plaintext highlighter-rouge">string</code>.</p>
   </li>
-  <li>
-    <p>TypeScript  <strong>infers</strong>  <code class="language-plaintext highlighter-rouge">T</code>  if you don’t specify it:  <code class="language-plaintext highlighter-rouge">identity(true)</code>  →  <code class="language-plaintext highlighter-rouge">T</code>  is  <code class="language-plaintext highlighter-rouge">boolean</code>.</p>
-  </li>
+  <li>TypeScript  <strong>infers</strong>  <code class="language-plaintext highlighter-rouge">T</code>  if you don’t specify it:  <code class="language-plaintext highlighter-rouge">identity(true)</code>  →  <code class="language-plaintext highlighter-rouge">T</code>  is  <code class="language-plaintext highlighter-rouge">boolean</code>.</li>
 </ul>
 
 <h2 id="type-inference-with-generics"><strong>Type Inference with Generics</strong></h2>
 
-<p>TypeScript is smart:<br />
-If you call  <code class="language-plaintext highlighter-rouge">identity("test")</code>, it knows  <code class="language-plaintext highlighter-rouge">T</code>  is  <code class="language-plaintext highlighter-rouge">string</code>  and enforces that everywhere inside the function.</p>
+<p>TypeScript is smart:</p>
+
+<p>If you call  <code class="language-plaintext highlighter-rouge">identity("test")</code>, it knows  <code class="language-plaintext highlighter-rouge">T</code>  is  <code class="language-plaintext highlighter-rouge">string</code>  and enforces that everywhere inside the function.</p>
+
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nf">identity</span><span class="p">(</span><span class="dl">"</span><span class="s2">test</span><span class="dl">"</span><span class="p">);</span> <span class="c1">// Type: string</span>
 </code></pre></div></div>
+
 <p>If you try to use  <code class="language-plaintext highlighter-rouge">identity&lt;number&gt;("oops")</code>, TypeScript will error:</p>
 
 <blockquote>
   <p>Argument of type ‘string’ is not assignable to parameter of type ‘number’.</p>
-  <h2 id="generic-functions-vs-any"><strong>Generic Functions vs. Any</strong></h2>
-  <p>Compare:
-  ```typescript
-function echoAny(arg: any): any { return arg; }
-function echoGeneric<T>(arg: T): T { return arg; }</T></p>
 </blockquote>
 
-<p>let x = echoAny(123); // x: any (no type safety)
-let y = echoGeneric(123); // y: number (type-safe)</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>**Generics preserve type information,  `any`  does not.**
+<h2 id="generic-functions-vs-any"><strong>Generic Functions vs. Any</strong></h2>
+<p>Compare:</p>
 
-## **Generic Classes**
-You can use generics in classes to make them reusable for any type.
-  ```typescript
-class Box&lt;T&gt; {
-  contents: T;
-  constructor(value: T) {
-    this.contents = value;
-  }
-}
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">echoAny</span><span class="p">(</span><span class="nx">arg</span><span class="p">:</span> <span class="kr">any</span><span class="p">):</span> <span class="kr">any</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">arg</span><span class="p">;</span> <span class="p">}</span>
+<span class="kd">function</span> <span class="nf">echoGeneric</span><span class="o">&lt;</span><span class="nx">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nx">arg</span><span class="p">:</span> <span class="nx">T</span><span class="p">):</span> <span class="nx">T</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">arg</span><span class="p">;</span> <span class="p">}</span>
 
-const stringBox = new Box("hello"); // Box&lt;string&gt;
-const numberBox = new Box(42);      // Box&lt;number&gt;
+<span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="nf">echoAny</span><span class="p">(</span><span class="mi">123</span><span class="p">);</span> <span class="c1">// x: any (no type safety)</span>
+<span class="kd">let</span> <span class="nx">y</span> <span class="o">=</span> <span class="nf">echoGeneric</span><span class="p">(</span><span class="mi">123</span><span class="p">);</span> <span class="c1">// y: number (type-safe)</span>
+</code></pre></div></div>
+
+<p><strong>Generics preserve type information,  <code class="language-plaintext highlighter-rouge">any</code>  does not.</strong></p>
+
+<h2 id="generic-classes"><strong>Generic Classes</strong></h2>
+<p>You can use generics in classes to make them reusable for any type.</p>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Box</span><span class="o">&lt;</span><span class="nx">T</span><span class="o">&gt;</span> <span class="p">{</span>
+  <span class="na">contents</span><span class="p">:</span> <span class="nx">T</span><span class="p">;</span>
+  <span class="nf">constructor</span><span class="p">(</span><span class="na">value</span><span class="p">:</span> <span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">contents</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">stringBox</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Box</span><span class="p">(</span><span class="dl">"</span><span class="s2">hello</span><span class="dl">"</span><span class="p">);</span> <span class="c1">// Box&lt;string&gt;</span>
+<span class="kd">const</span> <span class="nx">numberBox</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Box</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span>      <span class="c1">// Box&lt;number&gt;</span>
 </code></pre></div></div>
 <ul>
   <li>Each instance of  <code class="language-plaintext highlighter-rouge">Box</code>  remembers the type you gave it.</li>
@@ -338,8 +339,6 @@ const numberBox = new Box(42);      // Box&lt;number&gt;
 </code></pre></div>    </div>
   </li>
 </ul>
-
-<h2 id="example-generic-function">Example: Generic Function</h2>
 
 <h2 id="4-step-by-step-data-modeling">4. Step-by-Step Data Modeling</h2>
 
@@ -470,51 +469,52 @@ Without generics, you’d write two almost identical classes:</p>
   <li>
     <p>The function works for any array type.</p>
   </li>
-  <li>TypeScript always knows what type you’re working with.</li>
   <li>
-    <table>
-      <thead>
-        <tr>
-          <th>Feature</th>
-          <th>Syntax Example</th>
-          <th>Purpose</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Generic Func</td>
-          <td><code class="language-plaintext highlighter-rouge">function f&lt;T&gt;(x: T): T { ... }</code></td>
-          <td>Reusable, type-safe functions</td>
-        </tr>
-        <tr>
-          <td>Generic Class</td>
-          <td><code class="language-plaintext highlighter-rouge">class Box&lt;T&gt; { ... }</code></td>
-          <td>Reusable, type-safe classes</td>
-        </tr>
-        <tr>
-          <td>Constraint</td>
-          <td><code class="language-plaintext highlighter-rouge">function f&lt;T extends U&gt;(x: T) { ... }</code></td>
-          <td>Restrict types</td>
-        </tr>
-        <tr>
-          <td>Multiple Params</td>
-          <td><code class="language-plaintext highlighter-rouge">function f&lt;A, B&gt;(a: A, b: B)</code></td>
-          <td>Combine types</td>
-        </tr>
-        <tr>
-          <td>Default Param</td>
-          <td><code class="language-plaintext highlighter-rouge">type Resp&lt;T = string&gt; = ...</code></td>
-          <td>Fallback type</td>
-        </tr>
-        <tr>
-          <td>Utility Types</td>
-          <td><code class="language-plaintext highlighter-rouge">Partial&lt;T&gt;</code>, <code class="language-plaintext highlighter-rouge">Pick&lt;T, K&gt;</code>, etc.</td>
-          <td>Common transformations</td>
-        </tr>
-      </tbody>
-    </table>
+    <p>TypeScript always knows what type you’re working with.</p>
   </li>
 </ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Syntax Example</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Generic Func</td>
+      <td><code class="language-plaintext highlighter-rouge">function f&lt;T&gt;(x: T): T { ... }</code></td>
+      <td>Reusable, type-safe functions</td>
+    </tr>
+    <tr>
+      <td>Generic Class</td>
+      <td><code class="language-plaintext highlighter-rouge">class Box&lt;T&gt; { ... }</code></td>
+      <td>Reusable, type-safe classes</td>
+    </tr>
+    <tr>
+      <td>Constraint</td>
+      <td><code class="language-plaintext highlighter-rouge">function f&lt;T extends U&gt;(x: T) { ... }</code></td>
+      <td>Restrict types</td>
+    </tr>
+    <tr>
+      <td>Multiple Params</td>
+      <td><code class="language-plaintext highlighter-rouge">function f&lt;A, B&gt;(a: A, b: B)</code></td>
+      <td>Combine types</td>
+    </tr>
+    <tr>
+      <td>Default Param</td>
+      <td><code class="language-plaintext highlighter-rouge">type Resp&lt;T = string&gt; = ...</code></td>
+      <td>Fallback type</td>
+    </tr>
+    <tr>
+      <td>Utility Types</td>
+      <td><code class="language-plaintext highlighter-rouge">Partial&lt;T&gt;</code>, <code class="language-plaintext highlighter-rouge">Pick&lt;T, K&gt;</code>, etc.</td>
+      <td>Common transformations</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="6-challenge">6. Challenge</h2>
 

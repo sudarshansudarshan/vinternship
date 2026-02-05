@@ -13,11 +13,11 @@
 <meta property="og:url" content="http://localhost:4001/vinternship/case-studies/09-lazy-loading/" />
 <meta property="og:site_name" content="Vinternship" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-01-30T19:11:54+05:30" />
+<meta property="article:published_time" content="2026-02-04T15:22:46+05:30" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Lazy Loading" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-30T19:11:54+05:30","datePublished":"2026-01-30T19:11:54+05:30","description":"1. Problem Statement","headline":"Lazy Loading","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4001/vinternship/case-studies/09-lazy-loading/"},"url":"http://localhost:4001/vinternship/case-studies/09-lazy-loading/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-02-04T15:22:46+05:30","datePublished":"2026-02-04T15:22:46+05:30","description":"1. Problem Statement","headline":"Lazy Loading","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4001/vinternship/case-studies/09-lazy-loading/"},"url":"http://localhost:4001/vinternship/case-studies/09-lazy-loading/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/vinternship/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4001/vinternship/feed.xml" title="Vinternship" /></head>
 <head><!-- Google tag (gtag.js) -->
@@ -212,8 +212,6 @@ How do you split your React app into smaller bundles and load them only when nee
   </li>
 </ul>
 
-<hr />
-
 <p><strong>B. Dynamic Imports: The Foundation</strong></p>
 
 <ul>
@@ -224,27 +222,24 @@ How do you split your React app into smaller bundles and load them only when nee
     <p>Returns a promise that resolves to the module.</p>
   </li>
   <li>
-    <p>Can be used conditionally, in event handlers, or anywhere in your code—not just at the top.
-```js</p>
+    <p>Can be used conditionally, in event handlers, or anywhere in your code—not just at the top.</p>
   </li>
 </ul>
 
-<p>// Only load the math module if needed
-function handleCalculate() {
-  import(‘./math’).then((math) =&gt; {
-    console.log(math.add(1, 2));
-  });
-}</p>
-<ul>
-  <li>This reduces the initial bundle size, as  <code class="language-plaintext highlighter-rouge">math</code>  is only loaded when  <code class="language-plaintext highlighter-rouge">handleCalculate</code>  is called .
-   ```</li>
-</ul>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1">// Only load the math module if needed</span>
+<span class="kd">function</span> <span class="nf">handleCalculate</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">import</span><span class="p">(</span><span class="dl">'</span><span class="s1">./math</span><span class="dl">'</span><span class="p">).</span><span class="nf">then</span><span class="p">((</span><span class="nx">math</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">math</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">));</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+<span class="o">-</span>   <span class="nx">This</span> <span class="nx">reduces</span> <span class="nx">the</span> <span class="nx">initial</span> <span class="nx">bundle</span> <span class="nx">size</span><span class="p">,</span> <span class="nx">as</span>  <span class="s2">`math`</span>  <span class="nx">is</span> <span class="nx">only</span> <span class="nx">loaded</span> <span class="nx">when</span>  <span class="s2">`handleCalculate`</span>  <span class="nx">is</span> <span class="nx">called</span> <span class="p">.</span>
 
-<hr />
+</code></pre></div></div>
 
 <p><strong>C. React.lazy() and Suspense: Lazy Loading Components</strong></p>
 
-<h2 id="1-reactlazy"><strong>1. React.lazy()</strong></h2>
+<p><strong>1. React.lazy()</strong></p>
 
 <ul>
   <li>
@@ -275,62 +270,70 @@ function handleCalculate() {
   <li><strong>Suspense</strong>  provides a fallback UI while the component is loading.</li>
 </ul>
 
-<hr />
-
-<h2 id="2-route-based-code-splitting"><strong>2. Route-Based Code Splitting</strong></h2>
+<p><strong>2. Route-Based Code Splitting</strong></p>
 
 <ul>
   <li>
     <p>Ideal for large, distinct sections (e.g.,  <code class="language-plaintext highlighter-rouge">/courses</code>,  <code class="language-plaintext highlighter-rouge">/dashboard</code>,  <code class="language-plaintext highlighter-rouge">/forum</code>).</p>
   </li>
   <li>
-    <p>Each route loads its own bundle.
-```js
-import { BrowserRouter as Router, Routes, Route } from ‘react-router-dom’;
-import { Suspense, lazy } from ‘react’;</p>
+    <p>Each route loads its own bundle.</p>
   </li>
 </ul>
 
-<p>const Dashboard = lazy(() =&gt; import(‘./Dashboard’));
-const Courses = lazy(() =&gt; import(‘./Courses’));
-const Forum = lazy(() =&gt; import(‘./Forum’));</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">BrowserRouter</span> <span class="nx">as</span> <span class="nx">Router</span><span class="p">,</span> <span class="nx">Routes</span><span class="p">,</span> <span class="nx">Route</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-router-dom</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Suspense</span><span class="p">,</span> <span class="nx">lazy</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
 
-<p>function App() {
-  return (
-    <Router>
-      &lt;Suspense fallback={&lt;div&gt;Loading page...&lt;/div&gt;}&gt;
-        <Routes>
-          &lt;Route path="/" element={<Dashboard></Dashboard>} /&gt;
-          &lt;Route path="/courses" element={<Courses></Courses>} /&gt;
-          &lt;Route path="/forum" element={<Forum></Forum>} /&gt;
-        </Routes>
-      &lt;/Suspense&gt;
-    </Router>
-  );
-}</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Only the code for the current route is loaded, reducing the initial bundle size. 
+<span class="kd">const</span> <span class="nx">Dashboard</span> <span class="o">=</span> <span class="nf">lazy</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="k">import</span><span class="p">(</span><span class="dl">'</span><span class="s1">./Dashboard</span><span class="dl">'</span><span class="p">));</span>
+<span class="kd">const</span> <span class="nx">Courses</span> <span class="o">=</span> <span class="nf">lazy</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="k">import</span><span class="p">(</span><span class="dl">'</span><span class="s1">./Courses</span><span class="dl">'</span><span class="p">));</span>
+<span class="kd">const</span> <span class="nx">Forum</span> <span class="o">=</span> <span class="nf">lazy</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="k">import</span><span class="p">(</span><span class="dl">'</span><span class="s1">./Forum</span><span class="dl">'</span><span class="p">));</span>
 
- **3. Component-Based Code Splitting**
-
--   Use for large, rarely-used, or non-essential components (e.g., a chart, modal, or admin panel).
-    
--   Load the component only when needed, even within a page.
-```js
-const Chart = React.lazy(() =&gt; import('./Chart'));
-
-function AnalyticsPanel({ showChart }) {
-  return (
-    &lt;div&gt;
-      &lt;h2&gt;Analytics&lt;/h2&gt;
-      {showChart &amp;&amp; (
-        &lt;Suspense fallback={&lt;div&gt;Loading chart...&lt;/div&gt;}&gt;
-          &lt;Chart /&gt;
-        &lt;/Suspense&gt;
-      )}
-    &lt;/div&gt;
-  );
-}
+<span class="kd">function</span> <span class="nf">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return </span><span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">Router</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">Suspense</span> <span class="nx">fallback</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">Loading</span> <span class="nx">page</span><span class="p">...</span><span class="o">&lt;</span><span class="sr">/div&gt;}</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">Routes</span><span class="o">&gt;</span>
+          <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/</span><span class="dl">"</span> <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">Dashboard</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>          <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/courses</span><span class="dl">"</span> <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">Courses</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>          <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/forum</span><span class="dl">"</span> <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">Forum</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="sr">/Routes</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/Suspense</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/Router</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div></div>
+
+<ul>
+  <li>Only the code for the current route is loaded, reducing the initial bundle size.</li>
+</ul>
+
+<p><strong>3. Component-Based Code Splitting</strong></p>
+
+<ul>
+  <li>
+    <p>Use for large, rarely-used, or non-essential components (e.g., a chart, modal, or admin panel).</p>
+  </li>
+  <li>
+    <p>Load the component only when needed, even within a page.</p>
+  </li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">Chart</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nf">lazy</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="k">import</span><span class="p">(</span><span class="dl">'</span><span class="s1">./Chart</span><span class="dl">'</span><span class="p">));</span>
+
+<span class="kd">function</span> <span class="nf">AnalyticsPanel</span><span class="p">({</span> <span class="nx">showChart</span> <span class="p">})</span> <span class="p">{</span>
+  <span class="k">return </span><span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="nx">Analytics</span><span class="o">&lt;</span><span class="sr">/h2</span><span class="err">&gt;
+</span>      <span class="p">{</span><span class="nx">showChart</span> <span class="o">&amp;&amp;</span> <span class="p">(</span>
+        <span class="o">&lt;</span><span class="nx">Suspense</span> <span class="nx">fallback</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">Loading</span> <span class="nx">chart</span><span class="p">...</span><span class="o">&lt;</span><span class="sr">/div&gt;}</span><span class="err">&gt;
+</span>          <span class="o">&lt;</span><span class="nx">Chart</span> <span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="sr">/Suspense</span><span class="err">&gt;
+</span>      <span class="p">)}</span>
+    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
 <ul>
   <li>This keeps the main bundle lean, loading heavy components only when used.</li>
 </ul>
@@ -406,6 +409,7 @@ function AnalyticsPanel({ showChart }) {
 </ul>
 
 <p><strong>B. Route-Based Code Splitting Example</strong></p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">BrowserRouter</span> <span class="nx">as</span> <span class="nx">Router</span><span class="p">,</span> <span class="nx">Routes</span><span class="p">,</span> <span class="nx">Route</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-router-dom</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">Suspense</span><span class="p">,</span> <span class="nx">lazy</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
 
@@ -430,6 +434,7 @@ function AnalyticsPanel({ showChart }) {
 </ul>
 
 <p><strong>C. Dynamic Import for Conditional Loading</strong></p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">loadHelpWidget</span><span class="p">()</span> <span class="p">{</span>
   <span class="k">import</span><span class="p">(</span><span class="dl">'</span><span class="s1">./HelpWidget</span><span class="dl">'</span><span class="p">).</span><span class="nf">then</span><span class="p">(({</span> <span class="na">default</span><span class="p">:</span> <span class="nx">HelpWidget</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="c1">// Render or use HelpWidget as needed</span>
@@ -461,6 +466,8 @@ function AnalyticsPanel({ showChart }) {
     <p>Show how to handle loading errors with an error boundary.</p>
   </li>
 </ol>
+
+<hr />
 
 <h2 id="7-common-pitfalls--best-practices">7. Common Pitfalls &amp; Best Practices</h2>
 <h2 id="common-pitfalls--best-practices-code-splitting--lazy-loading">Common Pitfalls &amp; Best Practices (Code Splitting &amp; Lazy Loading)</h2>
@@ -496,7 +503,9 @@ function AnalyticsPanel({ showChart }) {
   </tbody>
 </table>
 
-<h2 id="9-optional-programmers-workflow-checklist">9. Optional: Programmer’s Workflow Checklist</h2>
+<hr />
+
+<h2 id="8-optional-programmers-workflow-checklist">8. Optional: Programmer’s Workflow Checklist</h2>
 
 <ul>
   <li>

@@ -57,9 +57,11 @@ By the end of this tutorial, you will:
     
 -   **React Router**  is the hospital’s navigation system: It makes sure each patient/doctor/appointment page receives the right information, in the right format, every time.
 
+---
+
 ## 4. Technical Deep Dive
 
- **A. Defining Dynamic Routes with Parameters**
+**A. Defining Dynamic Routes with Parameters**
 
 -   In React Router, you define parameters in the path using  `:paramName`:
 
@@ -69,13 +71,14 @@ By the end of this tutorial, you will:
 -   These parameters are parsed from the URL and made available to your component.
     
 
-----------
+---
 
 **B. Extracting and Typing Route Parameters with  `useParams`**
 
 -   The  `useParams`  hook returns an object with the params from the URL.
     
 -   In TypeScript, you can specify the expected param types using a generic
+
 ```js
 import { useParams } from 'react-router-dom';
 
@@ -95,6 +98,7 @@ const AppointmentDetails: React.FC = () => {
   );
 };
 ```
+
 - If you expect a number, convert and validate:
 
 ```js
@@ -102,9 +106,11 @@ const { appointmentId } = useParams<AppointmentParams>();
 const numericId = Number(appointmentId);
 if (isNaN(numericId)) return <div>Invalid appointment ID</div>;
 ```
+
 **C. Passing and Navigating with Parameters**
 
 -   Use the  `Link`  or  `useNavigate`  to create URLs with params:
+
 ```js
 import { Link } from 'react-router-dom';
 
@@ -112,13 +118,14 @@ import { Link } from 'react-router-dom';
 ```
 
 For programmatic navigation:
+
 ```js
 import { useNavigate } from 'react-router-dom';
 const navigate = useNavigate();
 navigate(`/patients/${patientId}/appointments/${appointmentId}`);
 ```
 
-## **D. Type-Safe Route Config and Advanced Patterns**
+**D. Type-Safe Route Config and Advanced Patterns**
 
 -   Libraries like [react-router-typesafe-routes] and [react-router-typed-object] provide helpers for even stricter typing, including:
     
@@ -137,10 +144,12 @@ navigate(`/patients/${patientId}/appointments/${appointmentId}`);
 | Forgetting to validate param types        | Convert and check (e.g., `parseInt`, `isNaN`)              |
 | Using params before they’re loaded        | Handle undefined cases for async routes                    |
 
+---
 
 ## 5. Step-by-Step Data Modeling & Code Walkthrough
 
- **A. Define Routes with Parameters**
+**A. Define Routes with Parameters**
+
 ```js
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AppointmentDetails from './AppointmentDetails';
@@ -154,8 +163,9 @@ const App = () => (
 );
 ```
 
- **B. Extract and Type Params in the Component**
- ```js
+**B. Extract and Type Params in the Component**
+
+```js
 // AppointmentDetails.tsx
 import { useParams } from 'react-router-dom';
 
@@ -189,7 +199,9 @@ const AppointmentDetails: React.FC = () => {
 
 export default AppointmentDetails;
 ```
- **C. Navigating with Typed Params**
+
+**C. Navigating with Typed Params**
+
 ```js
 import { Link } from 'react-router-dom';
 
@@ -197,6 +209,7 @@ const PatientRow: React.FC<{ patientId: string }> = ({ patientId }) => (
   <Link to={`/patients/${patientId}/appointments/123`}>View Appointment 123</Link>
 );
 ```
+
 **D. Advanced: Type-Safe Navigation with Helper Libraries**
 
 -   With [react-router-typesafe-routes]
@@ -207,11 +220,16 @@ const routes = route({ patient: route({ path: "patients/:patientId" }) });
 // In component:
 const { patientId } = useTypedParams(routes.patient);
 ```
+
 - With [react-router-typed-object]
+
 ```js
 const params = ROUTES["/patients/:patientId/appointments/:appointmentId"].path.useParams();
 // params.patientId and params.appointmentId are typed as string
 ```
+
+---
+
 ## 6. Interactive Challenge / Mini-Project
 
 **Your Turn!**
@@ -224,6 +242,8 @@ const params = ROUTES["/patients/:patientId/appointments/:appointmentId"].path.u
     
 4.  Add a link from a doctor list to a specific doctor/patient page, passing the IDs as parameters.
 
+---
+
 ## 7. Common Pitfalls & Best Practices
 
 ## Common Pitfalls & Best Practices (Routing & Params)
@@ -234,6 +254,8 @@ const params = ROUTES["/patients/:patientId/appointments/:appointmentId"].path.u
 | Not validating param types              | Check and convert as needed                                |
 | Expecting query params in `useParams`   | Use `useSearchParams` for query strings                    |
 | Hardcoding route strings                | Use helper libraries for type-safe navigation              |
+
+---
 
 ## 8. Optional: Programmer’s Workflow Checklist
 
