@@ -13,38 +13,15 @@ layout: home
 
 ---
 
-<div style="display: flex; gap: 1rem; margin: 1rem 0; flex-wrap: wrap;">
-  <div style="flex: 1; min-width: 300px; text-align: center; padding: 0.75rem; background: linear-gradient(135deg, #0088cc15 0%, #0088cc25 100%); border: 2px solid #0088cc; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,136,204,0.1);">
-    <div style="font-size: 0.95rem; color: #24292e; margin-bottom: 0.4rem;">
-      📢 <strong>Join Our Community</strong>
-    </div>
-    <div style="color: #586069; margin-bottom: 0.6rem; font-size: 0.85rem;">
-      Stay updated with common announcements and information
-    </div>
-    <a href="https://t.me/+YZfjSErJWppkZTRl" target="_blank" style="display: inline-block; padding: 0.4rem 1rem; background: #0088cc; color: white; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 0.85rem; transition: all 0.2s; box-shadow: 0 2px 4px rgba(0,136,204,0.3);">
-      💬 Join Vinternship Telegram Channel
-    </a>
-    <div style="color: #586069; margin-top: 0.6rem; font-size: 0.8rem;">
-      For cohort-specific Telegram channels, check the Forms and Links section on cohort-specific pages.
-    </div>
-  </div>
+## 💬 Need Help?
 
-  <div style="flex: 1; min-width: 300px; text-align: center; padding: 0.75rem; background: linear-gradient(135deg, #FF000015 0%, #FF000025 100%); border: 2px solid #FF0000; border-radius: 6px; box-shadow: 0 2px 8px rgba(255,0,0,0.1);">
-    <div style="font-size: 0.95rem; color: #24292e; margin-bottom: 0.4rem;">
-      🎥 <strong>MERN Stack Course</strong>
-    </div>
-    <div style="color: #586069; margin-bottom: 0.6rem; font-size: 0.85rem;">
-      Watch our MERN stack videos on YouTube
-    </div>
-    <a href="https://youtu.be/ksFx_fDMJPY?list=PL4ocL5uCKzQOHnCwuKKZGQ6N0DGXiKSS-" target="_blank" style="display: inline-block; padding: 0.4rem 1rem; background: #FF0000; color: white; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 0.85rem; transition: all 0.2s; box-shadow: 0 2px 4px rgba(255,0,0,0.3);">
-      ▶️ Watch on YouTube
-    </a>
-    <div style="color: #586069; margin-top: 0.6rem; font-size: 0.8rem;">
-      Please note that completing the course on ViBe is required, as we are tracking progress only from there. The playlist is being released to help you learn more efficiently and thoroughly.
-    </div>
-  </div>
+{% include_relative _data/need-help-section.html %}
 
-</div>
+---
+
+## 🔗 Important Links
+
+{% include_relative _data/important-links-section.html %}
 
 ---
 
@@ -93,6 +70,4 @@ Choose your cohort to view general information, live dashboard, announcements, a
 </div>
 {% endif %}
 
-
-<!-- ---
-[Important Links](./important_links/) -->
+---

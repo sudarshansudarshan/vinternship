@@ -24,7 +24,7 @@ links:
     - label: "Endorsement Audit Form - NPTEL Vinternship for Euclideans(for VLED team only)"
       url: "https://forms.gle/9CC6JQz5j7R9ZCyKA"
     - label: "ViBe QC - NPTEL Vinternship (Euclideans)"
-      url: "https://forms.gle/6iAosDo1mEEP3jjk8"
+      url: "https://forms.gle/iDDy9i4V7ugYKKJSA"
     - label: "Vinternship T&C and Declaration Form(for Dijkstrians)"
       url: "https://zfrmz.in/IWv4Sqdg9xpyAEPt1v1u"
     - label: "Activity Completion Confirmation Form(for Dijkstrians)"

@@ -5,7 +5,7 @@ cohort_id: cohort2
 display_name: "Dijkstrians"
 start_date: "22nd Jan 2026"
 end_date: ""
-status: "Active" #"Upcoming"
+status: "Active"
 dashboard_available: true
 color: "059669"
 schedule:
