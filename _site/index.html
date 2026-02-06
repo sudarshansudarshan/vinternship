@@ -64,21 +64,122 @@
 
 <hr />
 
+<h2 id="-need-help">💬 Need Help?</h2>
+
+<div style="padding: 1.5rem; background: #f6f8fa; border-radius: 8px; margin: 1rem 0;">
+  <p style="margin: 0 0 1rem 0; color: #586069; font-size: 0.9rem;">Follow these steps to get your queries resolved:</p>
+  
+  <div style="display: flex; gap: 0.75rem; margin-bottom: 0.75rem; align-items: start;">
+    <span style="background: #28a745; color: white; font-weight: bold; padding: 0.3rem 0.6rem; border-radius: 4px; font-size: 0.85rem;">1</span>
+    <div style="flex: 1;">
+      <strong style="color: #28a745;">Check Telegram Broadcasts</strong> — Check the official channels for announcements and updates.
+    </div>
+  </div>
+  
+  <div style="display: flex; gap: 0.75rem; margin-bottom: 0.75rem; align-items: start;">
+    <span style="background: #0088cc; color: white; font-weight: bold; padding: 0.3rem 0.6rem; border-radius: 4px; font-size: 0.85rem;">2</span>
+    <div style="flex: 1;">
+      <strong style="color: #0088cc;">Ask Vi-Sakha (AI Assistant)</strong> — Get instant answers from our AI assistant. <a href="https://sakha.vicharanashala.ai/" target="_blank" style="font-weight: 600;">🤖 Chat now</a>
+    </div>
+  </div>
+  
+  <div style="display: flex; gap: 0.75rem; margin-bottom: 0.75rem; align-items: start;">
+    <span style="background: #1e3a8a; color: white; font-weight: bold; padding: 0.3rem 0.6rem; border-radius: 4px; font-size: 0.85rem;">3</span>
+    <div style="flex: 1;">
+      <strong style="color: #1e3a8a;">FAQ/Breakout Discussions</strong> — Review the <a href="./faq/" style="font-weight: 600;">FAQ page</a> or engage with peers.
+    </div>
+  </div>
+  
+  <div style="display: flex; gap: 0.75rem; align-items: start;">
+    <span style="background: #dc3545; color: white; font-weight: bold; padding: 0.3rem 0.6rem; border-radius: 4px; font-size: 0.85rem;">4</span>
+    <div style="flex: 1;">
+      <strong style="color: #dc3545;">Support Desk</strong> — Email <a href="mailto:vinternship@vicharanashala.zohodesk.in" style="font-weight: 600;">vinternship@vicharanashala.zohodesk.in</a> with subject: <code style="background: white; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.8rem;">CohortName_NPTELID/FullName_YourSubject</code> <em style="color: #586069; font-size: 0.85rem;">(Response: Within 2hrs, From 9AM-9PM)</em>
+    </div>
+  </div>
+  
+  <div style="text-align: center; padding: 0.75rem; background: #fffbdd; border: 1px solid #f0e68c; border-radius: 6px; margin-top: 1rem;">
+    <p style="margin: 0; color: #856404; font-size: 0.85rem;">
+      📋 For detailed policies, visit <a href="./protocols_and_policies/" style="color: #856404; font-weight: 600;">Protocols and Policies</a>
+    </p>
+  </div>
+</div>
+
+<hr />
+
+<h2 id="-important-links">🔗 Important Links</h2>
+
 <div style="display: flex; gap: 1rem; margin: 1rem 0; flex-wrap: wrap;">
   <div style="flex: 1; min-width: 300px; text-align: center; padding: 0.75rem; background: linear-gradient(135deg, #0088cc15 0%, #0088cc25 100%); border: 2px solid #0088cc; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,136,204,0.1);">
     <div style="font-size: 0.95rem; color: #24292e; margin-bottom: 0.4rem;">
       📢 <strong>Join Our Community</strong>
     </div>
     <div style="color: #586069; margin-bottom: 0.6rem; font-size: 0.85rem;">
-      Stay updated with common announcements and information
+      Stay updated with announcements and information
     </div>
-    <a href="https://t.me/+YZfjSErJWppkZTRl" target="_blank" style="display: inline-block; padding: 0.4rem 1rem; background: #0088cc; color: white; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 0.85rem; transition: all 0.2s; box-shadow: 0 2px 4px rgba(0,136,204,0.3);">
-      💬 Join Vinternship Telegram Channel
-    </a>
+    <button onclick="document.getElementById('telegram-overlay').style.display='flex'" style="padding: 0.4rem 1rem; background: #0088cc; color: white; border: none; border-radius: 4px; font-weight: 600; font-size: 0.85rem; cursor: pointer; box-shadow: 0 2px 4px rgba(0,136,204,0.3); transition: all 0.2s;">
+      💬 Join Vinternship Telegram Channels
+    </button>
     <div style="color: #586069; margin-top: 0.6rem; font-size: 0.8rem;">
-      For cohort-specific Telegram channels, check the Forms and Links section on cohort-specific pages.
+      Access all broadcast and cohort-specific Telegram channels in one place.
     </div>
   </div>
+
+  <!-- Telegram Channels Overlay -->
+<div id="telegram-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 9999; align-items: center; justify-content: center;" onclick="if(event.target.id === 'telegram-overlay') this.style.display='none'">
+  <div style="background: white; border-radius: 12px; padding: 2rem; max-width: 500px; width: 90%; max-height: 80vh; overflow-y: auto; position: relative;" onclick="event.stopPropagation()">
+    <button onclick="document.getElementById('telegram-overlay').style.display='none'" style="position: absolute; top: 1rem; right: 1rem; background: #f6f8fa; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; font-size: 1.2rem; color: #586069; display: flex; align-items: center; justify-content: center;">×</button>
+    
+    <h3 style="margin: 0 0 0.5rem 0; color: #24292e; font-size: 1.3rem;">💬 Join Telegram Channels</h3>
+    <p style="margin: 0 0 1.5rem 0; color: #586069; font-size: 0.9rem;">Select the channels you want to join</p>
+    
+    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+      <a href="https://t.me/+YZfjSErJWppkZTRl" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: linear-gradient(135deg, #0088cc10 0%, #0088cc20 100%); border: 2px solid #0088cc; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+        <div style="background: #0088cc; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-right: 1rem;">📢</div>
+        <div style="flex: 1; text-align: left;">
+          <div style="font-weight: 600; color: #0088cc; font-size: 1rem;">Vinternship Broadcast</div>
+          <div style="color: #586069; font-size: 0.85rem;">Main announcements channel</div>
+        </div>
+      </a>
+      
+      <a href="https://t.me/+iLEyDPEzpexlYTg1" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: linear-gradient(135deg, #8B5CF610 0%, #8B5CF620 100%); border: 2px solid #8B5CF6; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+        <div style="background: #8B5CF6; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-right: 1rem;">🔑</div>
+        <div style="flex: 1; text-align: left;">
+          <div style="font-weight: 600; color: #8B5CF6; font-size: 1rem;">Founders Keepers</div>
+          <div style="color: #586069; font-size: 0.85rem;">Completed (22nd Dec 2025 - 18th Jan 2026)</div>
+        </div>
+      </a>
+      
+      <a href="https://t.me/+qWh5akYsIIFmOGQ9" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: linear-gradient(135deg, #3B82F610 0%, #3B82F620 100%); border: 2px solid #3B82F6; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+        <div style="background: #3B82F6; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-right: 1rem;">📐</div>
+        <div style="flex: 1; text-align: left;">
+          <div style="font-weight: 600; color: #3B82F6; font-size: 1rem;">Euclideans</div>
+          <div style="color: #586069; font-size: 0.85rem;">Started 15th Jan 2026</div>
+        </div>
+      </a>
+      
+      <a href="https://t.me/+f4yUR49LpAo1MmM9" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: linear-gradient(135deg, #05966910 0%, #05966920 100%); border: 2px solid #059669; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+        <div style="background: #059669; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-right: 1rem;">🗺️</div>
+        <div style="flex: 1; text-align: left;">
+          <div style="font-weight: 600; color: #059669; font-size: 1rem;">Dijkstrians</div>
+          <div style="color: #586069; font-size: 0.85rem;">Started 22nd Jan 2026</div>
+        </div>
+      </a>
+      
+      <a href="https://t.me/+v9zXmiosB30wMjNl" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: linear-gradient(135deg, #FBC02D10 0%, #FBC02D20 100%); border: 2px solid #FBC02D; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+        <div style="background: #FBC02D; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-right: 1rem;">🌲</div>
+        <div style="flex: 1; text-align: left;">
+          <div style="font-weight: 600; color: #D4A017; font-size: 1rem;">Kruskalians</div>
+          <div style="color: #586069; font-size: 0.85rem;">Started 1st Feb 2026</div>
+        </div>
+      </a>
+    </div>
+    
+    <p style="margin: 1.5rem 0 0 0; color: #586069; font-size: 0.8rem; text-align: center;">
+      <em>Click outside this box to close</em>
+    </p>
+  </div>
+</div>
+
 
   <div style="flex: 1; min-width: 300px; text-align: center; padding: 0.75rem; background: linear-gradient(135deg, #FF000015 0%, #FF000025 100%); border: 2px solid #FF0000; border-radius: 6px; box-shadow: 0 2px 8px rgba(255,0,0,0.1);">
     <div style="font-size: 0.95rem; color: #24292e; margin-bottom: 0.4rem;">
@@ -91,10 +192,9 @@
       ▶️ Watch on YouTube
     </a>
     <div style="color: #586069; margin-top: 0.6rem; font-size: 0.8rem;">
-      Please note that completing the course on ViBe is required, as we are tracking progress only from there. The playlist is being released to help you learn more efficiently and thoroughly.
+      Please note that completing the course on ViBe is required, as we are tracking progress only from there. The playlist is being released to help you learn more efficiently.
     </div>
   </div>
-
 </div>
 
 <hr />
@@ -173,11 +273,11 @@
         Kruskalians
       </div>
       <div style="display: inline-block; padding: 0.25rem 0.75rem; border-radius: 12px; background: white; color: #FBC02D; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.75rem;">
-        🟡 Upcoming
+        🟢 Active
       </div>
       <div style="color: #586069; font-size: 0.95rem;">
         
-          📅 Starting: 1st Feb 2026
+          📅 Started: 1st Feb 2026
         
       </div>
       <div style="color: #586069; font-size: 0.9rem; margin-top: 0.5rem; font-style: italic;">
@@ -187,8 +287,7 @@
   
 </div>
 
-<!-- ---
-[Important Links](./important_links/) -->
+<hr />
 
 
   

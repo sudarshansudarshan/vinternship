@@ -19,6 +19,7 @@ order: 2
 9. [Ejection Policy](#9-ejection-policy)
 10. [Self-Healing Endorsement Network - Viva/Peer Evaluation System(PES)](#10-self-healing-endorsement-network---vivapeer-evaluation-systempes)
 11. [Health Points and Breakout Sessions](#11-health-points-and-breakout-sessions)
+12. [Dashboard](#12-dashboard)
 
 ---
 
@@ -38,6 +39,11 @@ The program includes scheduled live sessions, workshops, and mentorship meetings
 
 **1.5 Where can I find the Internship ID?**  
 The Internship ID will be mentioned in the offer letter sent by NPTEL POC.
+
+**1.6 Can I preview the certificate template for non-NPTEL batches?**  
+At this time, the certificate template will not be shared prior to the start of the program, as it may vary from cohort to cohort depending on how the program is conducted. Regardless of the format, every certificate issued carries its own value and recognition.
+
+We kindly request students not to worry about the certificate design and instead focus on making the most of the learning experience. We truly appreciate your understanding as we strive to deliver a high-quality program for everyone.
 
 ---
 
@@ -108,7 +114,10 @@ Initially, try to get your query resolved from the FAQ and ViSakha. Check the Br
 ViSakha: https://sakha.vicharanashala.ai/
 
 Email **vinternship@vicharanashala.zohodesk.in**.  
+Mention your Name, Cohort name and Internship ID (If applicable)  
+
 Responses are provided **within 2 hours** between **9:00 AM and 9:00 PM**.
+
 Any question submitted beyond 9 PM will be answered the next day.
 
 **4.2 What if I don’t receive a response in 24 hours?** 
@@ -117,9 +126,12 @@ In the subject line, mention: "Attention Please – Follow-up on Ticket #[Origin
 This ticket will be escalated to our Mentors Team, who will reach out to you for a voice call discussion and try to resolve the issue directly.
 
 **4.3 If my concern still isn’t addressed, how do I escalate further?**  
-After 48 hours of your first ticket (and after raising a follow-up), you can escalate the matter via email to the Internship Sponsor, with CC to Prof. Sudarshan Iyengar directly with the following recipients in CC:
+After 48 hours of your first ticket (and after raising a follow-up), you can escalate the matter via email to the Internship Sponsor, with CC to Prof. Sudarshan Iyengar directly with the following recipients in CC: 
+  
   ->Your department’s faculty reference
+  
   ->Your department HOD
+  
   ->The VLED Team at dled@iitrpr.ac.in
   
 **4.4 Is this process mandatory for all issues?**  
@@ -166,6 +178,38 @@ No, once discontinued, you cannot rejoin the current program. You would need to 
 
 **6.5 How does the Discontinuation Policy differ from the Ejection Policy?**  
 The Discontinuation Policy addresses prolonged inactivity at an administrative level, while the Ejection Policy (see Section 10) is a real-time, algorithm-based mechanism focused on maintaining cohort momentum and learning quality.
+
+**6.6 How do I withdraw from the internship?**
+If you wish to discontinue the internship, please follow the steps below:
+
+**Step 1: Draft a Formal Email**
+
+Write a professional email addressed to:
+
+-> NPTEL Point of Contact (POC)
+-> Your College HOD
+-> DLED
+
+Your email should clearly include:
+
+-> Brief introduction – Your full name and the course/program through which you received the internship.
+-> Reason for discontinuation – State your reason clearly and honestly (academic commitments, personal reasons, health concerns, etc.).
+-> Expression of gratitude – Thank the organizers and mentors for the opportunity and support.
+-> Formal closing – End with your full name and contact details.
+
+**Step 2: Include Your Contact Information**
+
+Make sure to add:
+
+-> Full Name
+-> Roll Number / Registration ID (if applicable)
+-> Course / Department / College Name
+-> Phone Number
+-> Email Address
+
+**Step 3: Send the Email**
+
+Send the email to all concerned parties (POC, HOD, and DLED) and retain a copy for your records.
 
 ---
 
@@ -261,7 +305,29 @@ The scoring rules are strict:
 
 This special exam is conducted once every fortnight, so choosing this route may significantly delay your progress compared to continuing normally on ViBe.
 
-Because this path is far more demanding and time-consuming than simply completing the regular videos, quizzes, and activities, most students find that continuing with the standard ViBe workflow is the faster and better option.
+Because this path is far more demanding and time-consuming than simply completing the regular videos, quizzes, and activities, most students find that continuing with the standard ViBe workflow is the faster and better option. 
+
+**7.7 Is the ViBe consent form compulsory? What if I don’t want to grant camera access?**
+Yes — the consent form is compulsory.
+
+We would like to clearly inform you that providing consent is a mandatory requirement for any candidate enrolling in and continuing a course on the ViBe Learning Platform.
+
+The platform is designed with proctoring enabled throughout the learning process, which requires access to your webcam and microphone. This is essential to ensure:
+
+-> Fairness across all participants
+-> Academic integrity
+-> Active and genuine participation
+
+If you choose not to grant camera and microphone access, you will not be able to proceed with the course, as proctoring is an integral part of the learning and evaluation workflow.
+
+**Privacy & Monitoring Clarification** 
+
+As outlined in the consent form:
+
+-> ViBe does not continuously record videos.
+-> Proctoring operates via real-time monitoring mechanisms during learning and assessments.
+-> All data is handled strictly in accordance with the stated consent terms and applicable data-protection guidelines.
+-> In short, consent is not optional — it is a core requirement for participation on the platform.
 
 
 ---
@@ -313,10 +379,12 @@ After completing case studies, you move ahead to the Endorsement phase. The Self
    (supported formats include `.js`, `.ts`, `.txt`, `.zip`, etc.)
 4. Review your details and submit the form.
 5. Repeat this process for **each lesson** you complete.
+6. Ensure that the upload has been successful.
 
 
 **8.6 What should I do if a lesson contains multiple files?**  
 For lessons (such as React) that involve **multiple files**, compress all related files into a **single ZIP file** and upload the ZIP file during submission.
+Multiple file submissions are not considered.
 
 
 **8.7 Where can I get help if I am stuck with the case studies?**  
@@ -554,12 +622,22 @@ All activity deadlines are available directly on the dashboard:
 👉 The respective deadlines are shown under each activity inside the dashboard and cohort specific pages.
 
 **11.3 When are Zoom breakout rooms opened and who can join?**
-Breakout rooms are usually opened after standups (around 9:45 PM) and are generally accessible to all three cohorts, unless communicated otherwise.
+Breakout rooms are usually opened after standups (around 9:45 PM) and are generally accessible to two cohorts, unless communicated otherwise.
 
 **11.4 How will I know when the breakout rooms are active? Are they compulsory?**
 Announcements will be made in the Telegram channel when breakout rooms go live. Participation is completely optional.
 
 **11.5 What is the purpose of the breakout rooms?**
-They are intended for informal discussions, doubt clarification, collaboration, and peer support among participants.
+They are intended for informal discussions, doubt clarification, collaboration, and peer support amongst participants.
 
 ---
+
+## 12. Dashboard
+**12.1 Why is my dashboard not updated yet?**
+The dashboard is automated and will eventually update. Please wait until the next day as the scripts are programmed to rerun at the midnight for updation.
+
+**12.2 My submission is missing in the dashboard. What should I do?**
+Please ensure that you've submitted the forms required which you can find in the forms and link section in the cohort specific page. It is essential to submit as that is the place of verification for us and the scripts fetch for the dashboard.
+
+**12.3 Dashboard is not loading at the moment. What should I do?**
+The Dashboard is under update and this might cause some glitch in dashboard view. It will be resolved soon once the updates are done.

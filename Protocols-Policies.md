@@ -19,13 +19,17 @@ permalink: /protocols_and_policies/
 The Vinternship programme follows a structured support and grievance redressal mechanism. If you have a query, please follow the steps below in order:
 
 ### 1. Telegram Broadcast
-Check the official **Telegram Broadcast Channel** for announcements, instructions, and updates. Often, the answer to your query has already been posted.
+Start by checking the official **Telegram Broadcast Channel** for the latest announcements, instructions, and program updates. This channel serves as the primary communication hub where important information about deadlines, schedule changes, submission guidelines, and common clarifications are posted regularly. Often, the answer to your query has already been addressed in a recent announcement, saving you time and effort.
 
 ### 2. Ask Vi-Sakha
-Utilize [Vi-Sakha](https://sakha.vicharanashala.ai/){:target="_blank"} to find answers to common questions and immediate assistance.
+Utilize [Vi-Sakha](https://sakha.vicharanashala.ai/){:target="_blank"}, our intelligent AI assistant, for immediate support. Vi-Sakha is trained on the Vinternship program documentation and can provide instant answers to questions about course content, technical concepts, project requirements, platform navigation, and general program policies. This 24/7 available resource offers quick clarifications without waiting for human support.
 
-### 3. Breakout Discussion
-Discuss with your peers in the **breakout rooms**. Your fellow interns might have faced and solved the same issue.
+### 3. FAQ/Breakout Discussions
+Before escalating your query, explore two valuable peer-based resources:
+
+- **Check the [FAQ Page](../faq/)**: Review our comprehensive FAQ section, which addresses common questions about the internship, deadlines, submission guidelines, evaluation criteria, and technical issues. Many common queries are already answered there.
+
+- **Discuss in Breakout Rooms**: Engage with your fellow interns in the designated breakout discussions. Your peers may have encountered and resolved similar challenges. Collaborative problem-solving not only helps you find solutions faster but also strengthens the learning community.
 
 ### 4. Support Desk
 If your query remains unresolved, write to the Support Desk at **vinternship@vicharanashala.zohodesk.in**. Our support team will respond within **2 hours** of your submission (between 9 AM to 9 PM). Any question submitted beyond 9 PM will be answered the next day. Please ensure that the subject of the email follows the structure *"CohortName_NPTELID/FullName_YourEmailSubject"*.

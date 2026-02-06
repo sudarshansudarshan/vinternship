@@ -5,7 +5,7 @@ cohort_id: cohort3
 display_name: "Kruskalians"
 start_date: "1st Feb 2026"
 end_date: ""
-status: "Upcoming"
+status: "Active" #"Upcoming"
 dashboard_available: true
 color: "FBC02D"
 schedule:
@@ -27,3 +27,4 @@ Please do join our [Telegram Channel](https://t.me/+v9zXmiosB30wMjNl){:target="_
 
 ## Forms and links
 - [Telegram Channel](https://t.me/+v9zXmiosB30wMjNl){:target="_blank"}
+- [ViBe Question Review Form](https://forms.gle/d8bWDKW294UQafmF8){:target="_blank"}

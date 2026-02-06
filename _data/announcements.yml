@@ -10,7 +10,7 @@
   deadline: "12th Feb 2026"
   cohorts: ["cohort1"]
   description: "A Small Mission for a Big Impact! Participate in the Question Review Activity to spot mistakes, suggest improvements, and design new questions."
-  content: "A Small Mission for a Big Impact! 🚀 Imagine this course becoming even better—clearer questions ✍️, smarter challenges 🧠, and more innovative thinking 💡. Now imagine you being the reason behind it 👀✨ We’re launching a Question Review Activity, where you can spot mistakes 🔍, suggest improvements 📈, and even design new types of questions 🧩 for the course. Your ideas matter 💬 and your efforts won’t go unnoticed 🏆. Participate actively and earn a generous amount of HP Points ⭐🔥\n\n**Note**: Fill the ViBe Question Review Form for your suggested questions which is available in the Forms and links section of your cohort specific pages."
+  content: "A Small Mission for a Big Impact! 🚀 Imagine this course becoming even better—clearer questions ✍️, smarter challenges 🧠, and more innovative thinking 💡. Now imagine you being the reason behind it 👀✨ We’re launching a Question Review Activity, where you can spot mistakes 🔍, suggest improvements 📈, and even design new types of questions 🧩 for the course. Your ideas matter 💬 and your efforts won’t go unnoticed 🏆. ✨ Participate actively and earn a generous amount of HP Points if your question gets shortlisted! 🔥\n\n**Note**: Fill the ViBe Question Review Form for your suggested questions which is available in the Forms and links section of this page."
 
 - title: "ViBe Learning Activity & HP Opportunity"
   date: "20th Jan 2026"
@@ -33,12 +33,12 @@
   description: "In this activity, students are required to set a clear and professional profile picture in their Zoho account so that it is visible to everyone."
   content: "Explore your Zoho account settings and look for options related to your profile and visibility. You may need to search online or refer to Zoho’s official help resources to find where profile pictures and privacy settings are managed. Ensure your uploaded photo clearly shows your face and is visible to others on the platform.\n\n**Note**: Fill the activity completion form after completing the activity, the form is available in the Forms and links section of your cohort specific pages."
 
-# - title: "Question Review Activity for ViBe Course"
-#   date: "1st Feb 2026"
-#   deadline: "19th Feb 2026"
-#   cohorts: ["cohort2"]
-#   description: "A Small Mission for a Big Impact! Participate in the Question Review Activity to spot mistakes, suggest improvements, and design new questions."
-#   content: "A Small Mission for a Big Impact! 🚀 Imagine this course becoming even better—clearer questions ✍️, smarter challenges 🧠, and more innovative thinking 💡. Now imagine you being the reason behind it 👀✨ We’re launching a Question Review Activity, where you can spot mistakes 🔍, suggest improvements 📈, and even design new types of questions 🧩 for the course. Your ideas matter 💬 and your efforts won’t go unnoticed 🏆. Participate actively and earn a generous amount of HP Points ⭐🔥\n\n**Note**: Fill the ViBe Question Review Form for your suggested questions which is available in the Forms and links section of your cohort specific pages."
+- title: "Question Review Activity for ViBe Course"
+  date: "2nd Feb 2026"
+  deadline: "19th Feb 2026"
+  cohorts: ["cohort2"]
+  description: "A Small Mission for a Big Impact! Participate in the Question Review Activity to spot mistakes, suggest improvements, and design new questions."
+  content: "A Small Mission for a Big Impact! 🚀 Imagine this course becoming even better—clearer questions ✍️, smarter challenges 🧠, and more innovative thinking 💡. Now imagine you being the reason behind it 👀✨ We’re launching a Question Review Activity, where you can spot mistakes 🔍, suggest improvements 📈, and even design new types of questions 🧩 for the course. Your ideas matter 💬 and your efforts won’t go unnoticed 🏆. ✨ Participate actively and earn a generous amount of HP Points if your question gets shortlisted! 🔥\n\n**Note**: Fill the ViBe Question Review Form for your suggested questions which is available in the Forms and links section of this page."
 
 - title: "LinkedIn Post - First Week Internship Experience"
   date: "28th Jan 2026"
@@ -47,9 +47,17 @@
   description: "Share your first week internship experience on LinkedIn to build your professional network and engage with the cohort."
   content: "We want to incentivize your LinkedIn activity by throwing a challenge with exciting gifts and perks in store. Create a post sharing all that you have learnt during your first week's internship experience. This will help you build connections with the current cohort, expand your network as people comment on your posts, and potentially discover new opportunities. Write a short and crisp message, include a GenAI image to attract attention, tag the supporting organizations (Vicharanashala lab, Annam.ai, IIT Ropar, NPTEL, and your college), and tag the mentors. Share your post link with your fellow interns. For complete guidelines and detailed instructions, visit the [LinkedIn Post Activity](../linkedin_post/) page.\n\n**Note**: Fill the activity completion form (Select Activity A2) after completing the activity, the form is available in the Forms and links section of your cohort specific pages."
 
-- title: "Vinternship Inaugural Session & Opening Ceremony"
-  date: "1st Feb 2026 at 8:45 PM"
-  deadline: "1st Feb 2026 at 9:30 PM"
+- title: "Question Review Activity for ViBe Course"
+  date: "2nd Feb 2026"
+  deadline: "1st March 2026"
   cohorts: ["cohort3"]
-  description: "Welcome to the Vinternship Inaugural Ceremony. This session marks the official launch of the Vinternship program."
-  content: "The Vinternship Inaugural Session will commence with a warm welcome and opening remarks, creating an inviting atmosphere for all participants. This will be followed by a comprehensive introduction to the Vinternship program, highlighting its vision, purpose, and the opportunities it offers for learning and professional growth. The session will also provide a clear overview of the program structure, timelines, and expectations, helping participants understand their roles and responsibilities throughout the journey. Additionally, key guidelines, communication channels, and support mechanisms will be shared to ensure a smooth and productive experience. The session aims to inspire participants, align them with the program’s objectives, and set a positive and confident tone for the Vinternship ahead."
+  description: "A Small Mission for a Big Impact! Participate in the Question Review Activity to spot mistakes, suggest improvements, and design new questions."
+  content: "A Small Mission for a Big Impact! 🚀 Imagine this course becoming even better—clearer questions ✍️, smarter challenges 🧠, and more innovative thinking 💡. Now imagine you being the reason behind it 👀✨ We’re launching a Question Review Activity, where you can spot mistakes 🔍, suggest improvements 📈, and even design new types of questions 🧩 for the course. Your ideas matter 💬 and your efforts won’t go unnoticed 🏆. ✨ Participate actively and earn a generous amount of HP Points if your question gets shortlisted! 🔥\n\n**Note**: Fill the ViBe Question Review Form for your suggested questions which is available in the Forms and links section of this page."
+
+
+# - title: "Vinternship Inaugural Session & Opening Ceremony"
+#   date: "1st Feb 2026 at 8:45 PM"
+#   deadline: "1st Feb 2026 at 9:30 PM"
+#   cohorts: ["cohort3"]
+#   description: "Welcome to the Vinternship Inaugural Ceremony. This session marks the official launch of the Vinternship program."
+#   content: "The Vinternship Inaugural Session will commence with a warm welcome and opening remarks, creating an inviting atmosphere for all participants. This will be followed by a comprehensive introduction to the Vinternship program, highlighting its vision, purpose, and the opportunities it offers for learning and professional growth. The session will also provide a clear overview of the program structure, timelines, and expectations, helping participants understand their roles and responsibilities throughout the journey. Additionally, key guidelines, communication channels, and support mechanisms will be shared to ensure a smooth and productive experience. The session aims to inspire participants, align them with the program’s objectives, and set a positive and confident tone for the Vinternship ahead."
