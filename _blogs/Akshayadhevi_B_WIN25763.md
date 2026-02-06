@@ -1,7 +1,7 @@
 ---
 title: "A Different Kind of Internship:My Experience with NPTEL at IIT Ropar"
 author: Akshayadhevi
-vinternship_id:WIN25763
+vinternship_id: WIN25763
 ---
 
 
