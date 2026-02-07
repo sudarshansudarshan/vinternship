@@ -27,5 +27,5 @@ To sum up, the journey so far has been quite insightful and a great learning adv
 
 ---
 
-Author: [Akshat Singh](www.linkedin.com/in/akshat-singh-ab13aa296/){:target="_blank"}
+Author: [Akshat Singh](https://www.linkedin.com/in/akshat-singh-ab13aa296/){:target="_blank"}
 LinkedIn Article: [Read on LinkedIn](https://www.linkedin.com/pulse/my-vinternship-experience-when-learning-isnt-marred-deadlines-singh-mjcqc){:target="_blank"}
