@@ -16,5 +16,5 @@ So far, this experience has been meaningful for me. I am grateful to the VLED La
 
 ---
 
-Author: [Mohit Kumar](https://www.linkedin.com/in/sarthakgoel2005/){:target="_blank"}
+Author: [Sarthak Goel](https://www.linkedin.com/in/sarthakgoel2005/){:target="_blank"}
 LinkedIn Article: [Read on LinkedIn](https://www.linkedin.com/pulse/small-steps-real-growth-my-ongoing-internship-experience-sarthak-goel-obqec/?trackingId=Yy3mC7zQizj0nHNVTSQVDw%3D%3D){:target="_blank"}
