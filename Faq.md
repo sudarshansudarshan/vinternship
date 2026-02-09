@@ -307,7 +307,7 @@ This special exam is conducted once every fortnight, so choosing this route may 
 
 Because this path is far more demanding and time-consuming than simply completing the regular videos, quizzes, and activities, most students find that continuing with the standard ViBe workflow is the faster and better option. 
 
-**7.7 Is the ViBe consent form compulsory? What if I don’t want to grant camera access?**
+**7.8 Is the ViBe consent form compulsory? What if I don’t want to grant camera access?**
 Yes — the consent form is compulsory.
 
 We would like to clearly inform you that providing consent is a mandatory requirement for any candidate enrolling in and continuing a course on the ViBe Learning Platform.
@@ -329,6 +329,15 @@ As outlined in the consent form:
 -> All data is handled strictly in accordance with the stated consent terms and applicable data-protection guidelines.
 -> In short, consent is not optional — it is a core requirement for participation on the platform.
 
+**7.9 What are penalty scores on the ViBe platform, and how do they affect our performance or HP?**
+Penalty scores are generated when anomalies are detected during your activity on the ViBe platform (for example, irregular behavior while watching video lessons or attempting quizzes).
+
+If the penalty score becomes high, you may be required to:
+
+->Rewatch the video lesson, and
+->Retake the associated quiz.
+
+At present, these penalty scores do not impact your HP (Health Points) or overall performance evaluation, as they are not being considered for scoring. Their primary purpose is to ensure proper engagement with the learning content.
 
 ---
 
