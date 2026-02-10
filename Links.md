@@ -23,14 +23,20 @@ links:
       url: "https://forms.gle/LpaNWG9SiYzshCsw8"
     - label: "Endorsement Audit Form - NPTEL Vinternship for Euclideans(for VLED team only)"
       url: "https://forms.gle/9CC6JQz5j7R9ZCyKA"
-    - label: "ViBe QC - NPTEL Vinternship Cohort 1"
-      url: "https://forms.gle/6iAosDo1mEEP3jjk8"
+    - label: "ViBe QC - NPTEL Vinternship (Euclideans)"
+      url: "https://forms.gle/iDDy9i4V7ugYKKJSA"
     - label: "Vinternship T&C and Declaration Form(for Dijkstrians)"
       url: "https://zfrmz.in/IWv4Sqdg9xpyAEPt1v1u"
     - label: "Activity Completion Confirmation Form(for Dijkstrians)"
       url: "https://forms.gle/y3Uujjsmjg771PNf9"
     - label: "Case Study Submission Form (for Dijkstrians)"
       url: "https://docs.google.com/forms/d/e/1FAIpQLSctefkw36-SuJZ6iQb8nBzwJJ9G4ommbfO_-gEgAJ1yfl4mgA/viewform"
+    - label: "ViBe QC - NPTEL Vinternship (Dijkstrians)"
+      url: "https://forms.gle/V1b9HGTL4HMojD6XA"
+    - label: "Vinternship T&C and Declaration Form (for Kruskalians)"
+      url: "https://forms.zohopublic.in/annamai1/form/DeclarationFormCohort3/formperma/iZnntPYMLLi7yUylY0VwzxH418pQc6s5N1dr9BwxDrk"
+    - label: "ViBe QC - Vinternship (Kruskalians)"
+      url: "https://forms.gle/d8bWDKW294UQafmF8"
 ---
 
 [← Back]({{ site.baseurl }}/)
