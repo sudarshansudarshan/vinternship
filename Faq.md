@@ -241,7 +241,32 @@ If you see “No course enrolled”:
 
 - Use personal wifi instead of college wifi as there might be some network restrictions of access.
 
-- If the issue continues, contact support with your registered email ID and a screenshot.
+- If the issue continues, please follow these steps:  
+
+Step 1: Allow Third-Party Cookies
+ 
+- Enable Cookies in Chrome: Open chrome://settings/cookies. 
+  Turn OFF "Block third-party cookies" and turn ON "Allow all cookies."
+- Add Site Exception: Scroll to "Sites that can always use cookies" and click "Add." 
+Paste *.][vicharanashala.ai and ensure "Including third-party cookies" is enabled.
+- Restart browser.
+ 
+Step 2: Fix DNS (Most Important)
+ 
+- Change your laptop DNS to Google DNS.
+- Go to: Control Panel → Network → Active Network → Properties → IPv4.
+- Shotcut: win+R -> ncpa.cpl, right click properties
+- Set Preferred DNS to 8.8.8.8 and Alternate DNS to 8.8.4.4.
+- Save.
+ 
+Step 3: Flush Old DNS Cache (its safe)
+ 
+- Open Command Prompt as Admin.
+- Run the following commands:
+- ipconfig /flushdns
+- ipconfig /release
+- ipconfig /renew
+- Restart WiFi.
 
 **7.3 Why are videos stuck or repeating?**  
 This may happen due to ViBe’s monitored learning system. Common reasons include:
