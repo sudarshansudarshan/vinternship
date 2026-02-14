@@ -69,7 +69,7 @@ Imagine the clinic’s receptionist:
 ## 4. Technical Deep Dive
 
 
-## **A. What Is Dependency Injection (DI)?**
+**A. What Is Dependency Injection (DI)?**
 
 **Dependency Injection**  is a programming technique where an object receives the objects (dependencies) it needs from an external source, rather than creating them itself
 
@@ -90,7 +90,8 @@ Imagine the clinic’s receptionist:
 -   Makes code easier to test (inject mocks).
     
 -   Enables swapping implementations with minimal code changes.
-## **B. Types of Dependency Injection**
+
+**B. Types of Dependency Injection**
 
 -   **Constructor Injection (most common and recommended):**  
     Dependencies are passed as parameters to the class constructor.
@@ -110,7 +111,8 @@ Imagine the clinic’s receptionist:
     Dependencies are set directly on public properties (less common in TypeScript/Node).
     
 **Constructor injection is preferred**  for clarity, safety, and testability.
-## **C. How Does an IoC Container Work?**
+
+**C. How Does an IoC Container Work?**
 
 An  **IoC container**  (like TypeDI) manages the creation, configuration, and lifecycle of your services and their dependencies.
 
@@ -131,7 +133,8 @@ An  **IoC container**  (like TypeDI) manages the creation, configuration, and li
     -   Transient: New instance every time.
         
     -   Scoped: Instance per request/context.
-## **D. Advanced Usage with TypeDI**
+
+**D. Advanced Usage with TypeDI**
 
 -   **Service Tokens:**  
     Instead of using classes directly, you can use tokens (symbols or strings) for even looser coupling.
@@ -148,13 +151,13 @@ An  **IoC container**  (like TypeDI) manages the creation, configuration, and li
 -   **Resetting and Cleaning Up:**  
     Use  `Container.reset()`  to clear registrations between tests or for hot-reloading.
 
-## **E. Why DI/IoC is Essential for Scalable Systems**
+**E. Why DI/IoC is Essential for Scalable Systems**
 
 -   As your system grows, manual wiring of dependencies becomes error-prone and unmanageable.
     
 -   DI containers automate this, making your codebase modular, testable, and adaptable to change
 
-## **F. Using TypeDI for DI in Node.js/Express**
+**F. Using TypeDI for DI in Node.js/Express**
 
 **1. Install Prerequisites**
  ```bash

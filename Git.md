@@ -29,13 +29,13 @@ git config --global user.email "your github email id"
 
 ## How to Contribute and Send a PR Request?
 
-First, you need to fork the [github.com/sudarshansudarshan/pinternship](https://github.com/sudarshansudarshan/pinternship){:target="_blank"} repository. Go to the repository and click the **Fork** button on the repository homepage. 
+First, you need to fork the [github.com/sudarshansudarshan/vinternship](https://github.com/sudarshansudarshan/vinternship){:target="_blank"} repository. Go to the repository and click the **Fork** button on the repository homepage. 
 
 Then, you need to clone the forked repository by using the command below and the HTTPS link that you can find on the **<> Code** dropdown on your forked repository.
 
 ```
 git clone "HTTP link for cloning of your forked repo"
-cd pinternship
+cd vinternship
 ```
 Always create a branch when you start working locally. You can create the branch by using the given command
 

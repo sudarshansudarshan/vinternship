@@ -16,6 +16,7 @@ You manage a group of neighborhood food stores. Every day, staff and customers n
 - Remove items that are no longer sold.
 
 If requests get mixed up or answers are unclear, staff and customers get confused, orders are delayed, and the stores lose business.
+
 <img src="https://i.postimg.cc/hPC3vbJ5/https-ps.png" width="300px" />
 
 
@@ -55,13 +56,17 @@ The waiter always responds clearly:
 
 A well-trained waiter keeps the dining experience smooth and stress-free, just as a well-designed food store system keeps requests and answers organized.
 
-### A. What Is a Request and a Response?
+----------
+
+## 4. Technical Deep Dive
+
+**A. What Is a Request and a Response?**
 - **Request**: When someone asks your food store system for information or to perform an action.
 - **Response**: The system’s answer to that request.
 
 In web systems, these requests and responses travel over the internet using a protocol called HTTP (HyperText Transfer Protocol).
 
-### B. HTTP Methods: The Verbs of Web Requests
+**B. HTTP Methods: The Verbs of Web Requests**
 HTTP methods are like verbs—they tell the system what action you want to perform.
 
 #### The Core Methods (CRUD)
@@ -83,7 +88,7 @@ HTTP methods are like verbs—they tell the system what action you want to perfo
 - **Safety**: GET requests don’t change data; POST/PUT/PATCH/DELETE do.
 - **Automation**: Tools and browsers know how to handle each method.
 
-### C. HTTP Status Codes: The System’s Answers
+**C. HTTP Status Codes: The System’s Answers**
 Status codes are three-digit numbers sent with every response. They help the client (browser, app, or another system) understand what happened.
 
 #### Status Code Categories
@@ -113,7 +118,7 @@ Status codes are three-digit numbers sent with every response. They help the cli
 
 <img src="https://i.postimg.cc/PrhPJ1GY/https3.png" width="400px" />
 
-## D. HTTP Headers: Extra Info on Every Request/Response
+**D. HTTP Headers: Extra Info on Every Request/Response**
 
 Headers are like sticky notes attached to a package:
 
@@ -128,7 +133,8 @@ Headers are like sticky notes attached to a package:
   ```typescript
 res.setHeader("X-Store-Region", "Downtown");
   ```
-  ## E. RESTful Routing: Mapping Real Actions to System Endpoints
+
+**E. RESTful Routing: Mapping Real Actions to System Endpoints**
 
 REST (Representational State Transfer) is a set of conventions for organizing endpoints.
 
@@ -152,26 +158,29 @@ REST (Representational State Transfer) is a set of conventions for organizing en
 -   `DELETE /products/:id`  → Remove a product
     
 
-## F. Error Handling and Edge Cases
+**F. Error Handling and Edge Cases**
 
 -   Always check for missing or invalid data.
     
 -   Always send a clear status code and message.
     
 -   Never expose sensitive server errors to the client (use 500 for unexpected issues).
-## G. Visual Recap: How a Request Flows
+
+**G. Visual Recap: How a Request Flows**
 
 <img src="
 https://i.postimg.cc/htS3PZPx/https.png" width="400px" />
 
-## H. Testing and Debugging Tips
+**H. Testing and Debugging Tips**
 
 -   Use tools like  **Postman**  or  **curl**  to send requests and see responses.
     
 -   Always check status codes and response bodies.
     
 -   Log requests and errors on the server for troubleshooting.
+
 ## Summary Table: HTTP Methods & Status Codes
+
 | Action              | Method | Route                 | Status Codes         | Use Case                                   |
 |---------------------|--------|-----------------------|----------------------|--------------------------------------------|
 | List all products   | GET    | /products             | 200                  | Show all products                         |
@@ -182,6 +191,7 @@ https://i.postimg.cc/htS3PZPx/https.png" width="400px" />
 | Remove product      | DELETE | /products/:id         | 204, 404             | Remove product, no content on success     |
 
 ## 5. Step-by-Step Data Modeling & Code Walkthrough
+
 **A. Define Product Interface and Sample Data**
   ```typescript
 interface Product {

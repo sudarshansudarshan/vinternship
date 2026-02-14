@@ -62,7 +62,7 @@ By the end of this tutorial, you will:
 
 ## 4. Technical Deep Dive
 
-## **A. What Affects Bundle Size?**
+**A. What Affects Bundle Size?**
 
 -   **Your own code:**  The more code and features, the bigger the bundle.
     
@@ -75,18 +75,20 @@ By the end of this tutorial, you will:
 -   **Non-JS assets:**  Images, fonts, CSS, etc., if imported, add to bundle size.
     
 
-----------
 
- **B. Analyzing the Bundle**
+**B. Analyzing the Bundle**
 
- **1. Using Webpack Bundle Analyzer**
+**1. Using Webpack Bundle Analyzer**
 
 -   Install:
+
 ```js
 npm install --save-dev webpack-bundle-analyzer
 
 ```
+
 - Add to your Webpack config as a plugin, or run with:
+
 ```js
 npx webpack-bundle-analyzer dist/bundle.js
 ```
@@ -101,7 +103,7 @@ npx webpack-bundle-analyzer dist/bundle.js
 -   You can also use  [Rsdoctor] or [Statoscope] for deeper analysis.
     
 
- **2. Key Metrics**
+**2. Key Metrics**
 
 -   **Total bundle size:**  The sum of all JS, CSS, and assets.
     
@@ -112,7 +114,6 @@ npx webpack-bundle-analyzer dist/bundle.js
 -   **Module sizes:**  Which files or libraries are the largest.
     
 
-----------
 
 **C. The Impact of Types and TypeScript Features**
 
@@ -125,27 +126,25 @@ npx webpack-bundle-analyzer dist/bundle.js
 -   **TypeScript features like enums or decorators**  may generate extra JavaScript code, increasing bundle size slightly.
     
 
-----------
-
 **D. The Impact of Libraries**
 
 -   **Every library you import adds to the bundle.**  Some, like lodash or moment, are very large.
     
 -   **Importing the whole library:**
+
 ```js
 import _ from 'lodash'; // BAD: includes all of lodash
 ```
 
 - **Importing only what you need:**
+
 ```js
 import debounce from 'lodash/debounce'; // GOOD: includes only debounce
 ```
+
 -   **Tree shaking:**  Modern bundlers (Webpack, Rollup) remove unused exports from ES modules, but only if you use ES import/export syntax and avoid side effects.
     
-
-----------
-
-## **E. Strategies for Reducing Bundle Size**
+**E. Strategies for Reducing Bundle Size**
 
 1.  **Analyze before you optimize:**
     
@@ -184,7 +183,7 @@ import debounce from 'lodash/debounce'; // GOOD: includes only debounce
 
 ## 5. Step-by-Step Data Modeling & Code Walkthrough
 
- **A. Analyzing Your Bundle**
+**A. Analyzing Your Bundle**
 
 
 npm install --save-dev webpack-bundle-analyzer
@@ -199,9 +198,8 @@ npx webpack-bundle-analyzer dist/bundle.js
     -   Your own code’s size
         
 
-----------
 
- **B. Reducing Bundle Size: Example**
+**B. Reducing Bundle Size: Example**
 
 **Before:**
 
@@ -211,13 +209,16 @@ const result = _.debounce(fn, 300);
 ```
 
 **After:**
+
 ```js
 import debounce from 'lodash/debounce';
 const result = debounce(fn, 300);
 ```
+
 The second form only includes the debounce function, not all of lodash
 
 **C. TypeScript Config for Better Bundling**
+
 ```js
 // tsconfig.json
 {
@@ -231,11 +232,12 @@ The second form only includes the debounce function, not all of lodash
   }
 }
 ```
+
 -   This setup helps bundlers tree shake unused code and reduces output size.
     
 
-----------
- **D. Minifying and Compressing**
+**D. Minifying and Compressing**
+
 ```js
 -   Use Terser or esbuild for minification:
 // webpack.config.js
@@ -247,6 +249,7 @@ module.exports = {
   },
 };
 ```
+
 -   Minification removes whitespace, comments, and dead code.
     
 
@@ -268,6 +271,7 @@ module.exports = {
     
 6.  Bonus: Add code splitting for a rarely-used admin page and compare the initial chunk size before and after.
 
+---
 
 ## 7. Common Pitfalls & Best Practices
 ## Common Pitfalls & Best Practices (Bundle Optimization)

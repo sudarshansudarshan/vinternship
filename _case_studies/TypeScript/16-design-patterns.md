@@ -47,6 +47,7 @@ By the end of this lesson, you’ll be able to:
 -   **Observer:**  When a drink is ready, all relevant staff (inventory, barista, customer) are instantly notified-no one is left out.
     
 -   **Strategy:**  The barista can use different preparation styles (fast, eco, strong) for each order, and can swap styles as needed.
+
 ## What Are Design Patterns?
 
 Design patterns are  **repeatable solutions to common problems**  that come up when designing software systems.
@@ -65,8 +66,10 @@ They aren’t finished code, but rather  **ways of organizing your program**  so
     
 -   **Why use it:**  
     To manage things that should only exist once, such as a settings manager, database connection, or logging service.
-    **Example:**
- ```typescript
+    
+- **Example:**
+
+```typescript
 class CafeManager {
   private static instance: CafeManager;
   private constructor() {}
@@ -85,6 +88,7 @@ console.log(manager1 === manager2); // true
  ```
 -   **Key point:**  
     There’s always just one manager.
+
 ## b. Factory
 
 -   **What it is:**  
@@ -97,6 +101,7 @@ console.log(manager1 === manager2); // true
     To make it easy to add new types of objects without changing lots of code.
     
 -   **Example:**
+
 ```typescript
 interface Drink { serve(): void; }
 class Latte implements Drink { serve() { console.log("Latte!"); } }
@@ -113,6 +118,7 @@ const drink = DrinkFactory.createDrink("latte");
 drink.serve(); // "Latte!"
 
  ```
+
 -   **Key point:**  
     You can add new drinks (types) without rewriting the whole menu.
     
@@ -129,6 +135,7 @@ drink.serve(); // "Latte!"
     To keep different parts of your system in sync without tightly coupling them.
     
 -   **Example:**
+
 ```typescript
 interface Observer { update(msg: string): void; }
 class Customer implements Observer { update(msg: string) { console.log("Customer:", msg); } }
@@ -162,6 +169,7 @@ order.completeOrder();
     To change behavior on the fly, or to keep your code flexible and clean.
     
 -   **Example:**
+
 ```typescript
 interface PrepStrategy { prepare(): void; }
 class FastPrep implements PrepStrategy { prepare() { console.log("Fast prep!"); } }
@@ -177,6 +185,7 @@ barista.makeDrink(); // "Fast prep!"
 barista.setStrategy(new EcoPrep());
 barista.makeDrink(); // "Eco prep!"
 ```
+
 -   **Key point:**  
     You can switch how things are done without rewriting the barista.
 
