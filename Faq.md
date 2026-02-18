@@ -110,12 +110,11 @@ Yes, your project mentors can schedule a meeting based on the doubts and issues 
 ## 4. Support and Resolution Protocol
 
 **4.1 Where do I raise my concern initially?**  
-Initially, try to get your query resolved from the FAQ and ViSakha. Check the Announcement Discord channel, else from your fellow interns in the Breakout sessions. If the query is still not resolved, you can email your query to the email ID below.
+Initially, try to get your query resolved from the FAQ and ViSakha. Check the Announcement Discord channel, else from your fellow interns in the Breakout sessions. If the query is still not resolved, you can send your query to the Support desk in Discord server.
 
 ViSakha: https://sakha.vicharanashala.ai/
-
-Email **vinternship@vicharanashala.zohodesk.in**.  
-Mention your Name, Cohort name and Internship ID (If applicable)  
+  
+Mention your Name and your Cohort name.
 
 Responses are provided **within 2 hours** between **9:00 AM and 9:00 PM**.
 
@@ -151,7 +150,7 @@ Failure to meet a task or milestone deadline may impact your Health Points and c
 **5.1 What are the program completion criteria?**  
 - Completion of all course modules on the Learning platform. (Required)
 - Completion of case studies provided for learning using the code. (Required)
-- Completion of Viva/endorsement for the Case Study.
+- Completion of Viva/endorsement for the Case Study.(Required)
 - Contribution to real-time applications or projects.
 
 **5.2 Where can I find information on certification?**  
