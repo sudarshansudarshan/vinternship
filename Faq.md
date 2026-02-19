@@ -109,7 +109,15 @@ Yes, your project mentors can schedule a meeting based on the doubts and issues 
 
 ## 4. Support and Resolution Protocol
 
-**4.1 Where do I raise my concern initially?**  
+**4.1 Where should I check first for updates, instructions, or clarifications?**  
+
+Start by checking the official Discord Announcement Channel. This is the primary communication hub where all important information is posted regularly, including deadlines, schedule changes, submission guidelines, and common clarifications. In many cases, your query may already be answered in a recent announcement, saving you time and effort.
+
+**4.2 Are there any profile requirements for participants on Discord?**  
+
+Yes. All participants must ensure they have a clear display picture (DP) and a proper name set on their Discord profile, regardless of the email used to register. This is required so organizers can easily identify and verify participants when needed.
+
+**4.3 Where do I raise my concern initially?**  
 Initially, try to get your query resolved from the FAQ and ViSakha. Check the Announcement Discord channel, else from your fellow interns in the Breakout sessions. If the query is still not resolved, you can send your query to the Support desk in Discord server.
 
 ViSakha: https://sakha.vicharanashala.ai/
@@ -120,12 +128,12 @@ Responses are provided **within 2 hours** between **9:00 AM and 9:00 PM**.
 
 Any question submitted beyond 9 PM will be answered the next day.
 
-**4.2 What if I don’t receive a response in 24 hours?** 
+**4.4 What if I don’t receive a response in 24 hours?** 
 If you do not receive a response within 24 hours, you may raise a second ticket.
 In the subject line, mention: "Attention Please – Follow-up on Ticket #[Original Ticket Number]"
 This ticket will be escalated to our Mentors Team, who will reach out to you for a voice call discussion and try to resolve the issue directly.
 
-**4.3 If my concern still isn’t addressed, how do I escalate further?**  
+**4.5 If my concern still isn’t addressed, how do I escalate further?**  
 After 48 hours of your first ticket (and after raising a follow-up), you can escalate the matter via email to the Internship Sponsor, with CC to Prof. Sudarshan Iyengar directly with the following recipients in CC: 
   
   ->Your department’s faculty reference
@@ -134,13 +142,13 @@ After 48 hours of your first ticket (and after raising a follow-up), you can esc
   
   ->The VLED Team at dled@iitrpr.ac.in
   
-**4.4 Is this process mandatory for all issues?**  
+**4.6 Is this process mandatory for all issues?**  
 Yes, to maintain consistency and ensure efficient support, we request all interns to follow this three-step resolution path.
 
-**4.5 Why is it important to follow the deadlines mentioned in tasks and milestones?**
+**4.7 Why is it important to follow the deadlines mentioned in tasks and milestones?**
 Each task and milestone is designed to help you progress steadily through the internship. Adhering to the specified deadlines ensures smooth evaluation, proper tracking of your progress, and continued eligibility in the program.
 
-**4.6 What happens if I miss a deadline?**
+**4.8 What happens if I miss a deadline?**
 Failure to meet a task or milestone deadline may impact your Health Points and could lead to removal from the cohort, as per internship policy. Extensions are generally not provided unless explicitly communicated.
 
 ---
@@ -351,8 +359,11 @@ If you choose not to grant camera and microphone access, you will not be able to
 As outlined in the consent form:
 
 -> ViBe does not continuously record videos.
+
 -> Proctoring operates via real-time monitoring mechanisms during learning and assessments.
+
 -> All data is handled strictly in accordance with the stated consent terms and applicable data-protection guidelines.
+
 -> In short, consent is not optional — it is a core requirement for participation on the platform.
 
 **7.9 What are penalty scores on the ViBe platform, and how do they affect our performance or HP?**
@@ -361,6 +372,7 @@ Penalty scores are generated when anomalies are detected during your activity on
 If the penalty score becomes high, you may be required to:
 
 ->Rewatch the video lesson, and
+
 ->Retake the associated quiz.
 
 At present, these penalty scores do not impact your HP (Health Points) or overall performance evaluation, as they are not being considered for scoring. Their primary purpose is to ensure proper engagement with the learning content.
@@ -565,7 +577,7 @@ This is **not prohibited**, but interns are expected to endorse **responsibly an
 
 
 **10.7 How do audits work in the endorsement network?**  
-Audits are conducted by **Bhavna** to identify interns who need improvement and work on Case studies before they get into the project phase.
+Audits are conducted by **Bhavna mam** to identify interns who need improvement and work on Case studies before they get into the project phase.
 
 If a **Needs Improvement** intern is identified:
 - The **entire endorsement path** connected to that intern is audited
@@ -630,9 +642,6 @@ The form contains **mandatory sections**:
 - The **endorser** should fill the form
 - Avoid duplicate or reciprocal entries
 
-<!-- ⏳ **Deadline:**  
-YET TO BE ANNOUNCED**. -->
-
 
 **10.12 What should interns keep in mind while endorsing others?**  
 - Avoid careless, bulk, or reciprocal endorsements
@@ -641,13 +650,6 @@ YET TO BE ANNOUNCED**. -->
 - Be mindful that poor endorsements can cause **audit cascades**
 
 The Self-Healing Endorsement Network rewards **integrity, collaboration, responsibility, and accountability**.
-
-<!-- **11.13 Will Bhavna ma’am conduct Viva sessions in the future so that interns can become Jedi (Bronze ticket holders)?**  
-
-No, Bhavna ma'am will unfortunately **not conduct Viva sessions anymore**. She will only perform audit checks in the form of viva to identify defaulters/anomalies.
-Earlier, clearing the Viva conducted by Bhavna ma’am allowed interns to become **Bronze ticket holders**. Since this process has now been discontinued, the **set of existing Jedi (Silver, Bronze, and Gold ticket holders) is fixed**.
-
-No new Jedi will be added through Viva going forward. -->
 
 
 ---
