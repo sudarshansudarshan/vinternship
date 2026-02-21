@@ -41,7 +41,12 @@ Always create a branch when you start working locally. You can create the branch
 
 ```
 git checkout -b your-branch-name
-Example: `git checkout -b feature/support_page`
+```
+
+Example:
+
+```
+git checkout -b feature/support_page
 ```
 
 After creating a new branch locally, you can just make all the changes or you can work on the particular feature/bug. Upon sucessfully completing the required changes and saving them locally. You need to run the below commands to save them to your github repository.
@@ -59,3 +64,65 @@ In order to create the Pull Request, you need to go to your forked repository, t
 ---
 
 *Happy Contributing!*
+
+---
+
+## Branch Naming Convention
+
+To keep contributions organized, use meaningful branch names:
+
+- `feature/your-feature-name`
+- `fix/bug-description`
+- `docs/update-guide`
+- `ui/improve-dashboard`
+
+Example:
+```
+git checkout -b feature/improve-github-guide
+```
+
+Avoid generic names like:
+
+```
+new-branch
+update
+changes
+```
+
+---
+
+## Best Practices While Creating a PR
+
+- Keep your PR focused on one feature or fix
+- Write clear commit messages
+- Do not mix multiple unrelated changes
+- Test your changes before pushing
+- Respond to review comments professionally
+
+---
+
+## Troubleshooting
+
+### Remote not found error
+
+Run:
+```
+git remote -v
+```
+
+Make sure it points to your fork.
+
+---
+
+### Permission denied while pushing
+
+Make sure you are pushing to your fork and not the original repository.
+
+---
+
+### Branch not updated
+
+Run:
+```
+git pull origin main
+```
