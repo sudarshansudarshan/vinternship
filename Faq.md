@@ -87,7 +87,7 @@ Taking leave is **discouraged**, as you may miss important updates shared during
 
 However, if you must take the leave, follow the steps below:
 
-- Write a mail to the **Support Desk** stating the reason for your leave
+- Write a mail to the **Support Tool in Discord** stating the reason for your leave
 - Clearly mention:
   - The **reason** for the leave
   - The **exact date** on which you intend to take the leave
@@ -120,7 +120,7 @@ Start by checking the official Discord Announcement Channel. This is the primary
 Yes. All participants must ensure they have a clear display picture (DP) and a proper name set on their Discord profile, regardless of the email used to register. This is required so organizers can easily identify and verify participants when needed.
 
 **4.3 Where do I raise my concern initially?**  
-Initially, try to get your query resolved from the FAQ and ViSakha. Check the Announcement Discord channel, else from your fellow interns in the Breakout sessions. If the query is still not resolved, you can send your query to the Support desk in Discord server.
+Initially, try to get your query resolved from the FAQ and ViSakha. Check the Announcement Discord channel, else from your fellow interns in the Breakout sessions and Chit Chat channels. If the query is still not resolved, you can send your query to the Support desk in Discord server.
 
 ViSakha: https://sakha.vicharanashala.ai/
   
@@ -170,7 +170,7 @@ NPTEL interns should contact the NPTEL internship team for the information regar
  Recommendation letters are not guaranteed. You may request one from the course instructor after completing the internship, and it will be at their discretion based on the performance of the candidate.
 
 **5.4 When will AKSians (NPTEL) cohort receive their offer letter?**    
-The offer letter for the AKSians (NPTEL) cohort will be issued after the candidate completes 20% of the ViBe course. The deadline for the same will be announced shortly.
+The offer letter for the AKSians (NPTEL) cohort will be issued after the candidate completes 20% of the ViBe course. The deadline for the same will be 1 week after ViBe course progression.
 
 
 ---
