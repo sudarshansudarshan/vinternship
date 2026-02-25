@@ -170,10 +170,12 @@ The Live session recordings from 20th Feb are available in this Youtube Playlist
 - Completion of all course modules on the Learning platform. (Required)
 - Completion of case studies provided for learning using the code. (Required)
 - Completion of Viva/endorsement for the Case Study.(Required)
-- Contribution to real-time applications or projects.
+- Contribution to real-time applications or projects.(Optional)
 
 **5.2 Where can I find information on certification?**  
-NPTEL interns should contact the NPTEL internship team for the information regarding certificates.
+NPTEL interns (whom joined after successful course completion) should contact the NPTEL internship team for the information regarding certificates.
+
+Others will receive a certification from Vicharanashala Lab for Education Design upon successful completion of internship.
 
 **5.3 Will recommendation letters be provided?**  
  Recommendation letters are not guaranteed. You may request one from the course instructor after completing the internship, and it will be at their discretion based on the performance of the candidate.
