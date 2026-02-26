@@ -6,16 +6,16 @@
   content: "Explore your Discord account settings and look for options related to your profile. Upload a clear photo that shows your face and ensure it is visible to others on the platform. This helps build a strong community where everyone can recognize and connect with each other more easily.\n\n**Note**: This activity is optional. Fill the activity completion form (Select Activity A1) after completing the activity, the form is available in the Forms and links section of your cohort specific pages."
 
 - title: "LinkedIn Post - First Week Internship Experience"
-  date: "24th Feb 2026"
-  deadline: "3rd March 2026"
-  cohorts: ["kruskalians", "rsaians"]
+  date: ["18th Jan 2026", "28th Jan 2026", "24th Feb 2026", "24th Feb 2026"]
+  deadline: ["22nd Jan 2026", "6th Feb 2026", "3rd March 2026", "3rd March 2026"]
+  cohorts: ["euclideans", "dijkstrians", "kruskalians", "rsaians"]
   description: "Share your first week internship experience on LinkedIn to build your professional network and engage with the cohort."
   content: "We want to incentivize your LinkedIn activity by throwing a challenge with exciting gifts and perks in store. Create a post sharing all that you have learnt during your first week's internship experience. This will help you build connections with the current cohort, expand your network as people comment on your posts, and potentially discover new opportunities. Write a short and crisp message, include a GenAI image to attract attention, tag the supporting organizations (Vicharanashala lab, Annam.ai, IIT Ropar, NPTEL, and your college), and tag the mentors. Share your post link with your fellow interns. For complete guidelines and detailed instructions, visit the [LinkedIn Post Activity](../linkedin_post/) page.\n\n**Note**: This activity is optional. Fill the activity completion form (Select Activity A2) after completing the activity, the form is available in the Forms and links section of your cohort specific pages."
 
 - title: "Blog Writing Activity - Call for Blogs"
-  date: "24th Feb 2026"
-  deadline: "3rd March 2026"
-  cohorts: ["dijkstrians"]
+  date: ["28th Jan 2026", "24th Feb 2026"]
+  deadline: ["6th Feb 2026", "3rd March 2026"]
+  cohorts: ["euclideans", "dijkstrians"]
   description: "A Call for Blogs—an invitation for you to pause, reflect, and put your journey into words. Capture your experience honestly, in your own voice."
   content: "As part of your internship with the VLED Lab, we are opening a Call for Blogs. This activity is not about technical writing skills or perfect grammar. It is about capturing your experience honestly, in your own words, as you lived through this internship. We are looking for your lived experience—your doubts, your growth, your surprises, and your takeaways. Publish your blog on LinkedIn first, then submit it to the Vinternship GitHub repository. For complete guidelines and submission instructions, visit the [Blogs](../blogs/) page.\n\n**Note**: This activity is optional. Fill the activity completion form (Select Activity A3) after completing the activity, the form is available in the Forms and links section of your cohort specific pages."
 
@@ -33,17 +33,10 @@
   description: "Meet. Learn. Build together. Join the official Vinterns Discord Community and complete three simple steps to kickstart your journey."
   content: "🚀 *Vinterns Connect – Meet. Learn. Build together.*\n\nWelcome to the official Vinterns Discord Community—a shared space for interaction, collaboration, and learning with your peers. To officially kickstart your journey, complete the following three steps within 48 hours of joining the server:\n\n**Step 1: Introduce Yourself 👋**  \nPost a short introduction in the #introduce-yourself channel including:\n- Your name  \n- Your college or city  \n- One skill you are excited to learn 🌱  \n- A fun fact or hobby 🎯\n\n**Step 2: Connect with Peers 🤝**  \nHead to the #cohort-quest channel and:\n- Reply to someone you relate to  \n- Find your skill twin 👯  \n- React to at least five introduction posts ⭐\n\n**Step 3: Share Your Vibe 🎨**  \nIn the #vinterns-lounge channel, describe your Vintern journey so far using three emojis.\n\nLet’s build a vibrant, active, and welcoming Vintern community together! 🌟\n\n**Note**: After completing all three steps, make sure to fill out the confirmation form here: [Activity confirmation form](https://forms.gle/meuCyFCtucW2Wfb18){:target=\"_blank\"}"
 
-- title: "Blog Writing Activity - Call for Blogs"
-  date: "28th Jan 2026"
-  deadline: "6th Feb 2026"
-  cohorts: ["euclideans"]
-  description: "A Call for Blogs—an invitation for you to pause, reflect, and put your journey into words. Capture your experience honestly, in your own voice."
-  content: "As part of your internship with the VLED Lab, we are opening a Call for Blogs. This activity is not about technical writing skills or perfect grammar. It is about capturing your experience honestly, in your own words, as you lived through this internship. We are looking for your lived experience—your doubts, your growth, your surprises, and your takeaways. Publish your blog on LinkedIn first, then submit it to the Vinternship GitHub repository. For complete guidelines and submission instructions, visit the [Blogs](../blogs/) page.\n\n**Note**: This activity is optional. Fill the activity completion form (Select Activity A3) after completing the activity, the form is available in the Forms and links section of your cohort specific pages."
-
 - title: "Question Review Activity for ViBe Course"
-  date: "21st Jan 2026"
-  deadline: "12th Feb 2026"
-  cohorts: ["euclideans"]
+  date: ["21st Jan 2026", "2nd Feb 2026", "2nd Feb 2026"]
+  deadline: ["12th Feb 2026", "19th Feb 2026", "1st March 2026"]
+  cohorts: ["euclideans", "dijkstrians", "kruskalians"]
   description: "A Small Mission for a Big Impact! Participate in the Question Review Activity to spot mistakes, suggest improvements, and design new questions."
   content: "A Small Mission for a Big Impact! 🚀 Imagine this course becoming even better—clearer questions ✍️, smarter challenges 🧠, and more innovative thinking 💡. Now imagine you being the reason behind it 👀✨ We're launching a Question Review Activity, where you can spot mistakes 🔍, suggest improvements 📈, and even design new types of questions 🧩 for the course. Your ideas matter 💬 and your efforts won't go unnoticed 🏆. ✨ Participate actively and earn a generous amount of HP Points if your question gets shortlisted! 🔥\n\n**Note**: This activity is optional. Fill the ViBe Question Review Form for your suggested questions which is available in the Forms and links section of this page."
 
@@ -54,40 +47,12 @@
   description: "Pinterns are encouraged to log in to ViBe at 9:00 PM today and engage with course content for at least 30 minutes to earn Health Points."
   content: "Today at 9:00 PM, all Pinterns are encouraged to log in to ViBe and actively engage with the course content on ViBe for at least 30 minutes as part of their regular learning activity. This is a great opportunity to get ahead in your course progress, explore the platform, and earn positive Health Points (HP) for participation. Participants who log in and remain actively engaged during this time will be rewarded with additional HP. We strongly encourage everyone to take part and make the most of this learning window. Your participation and consistency matter. Let's learn, explore, and progress together 🚀\n\n**Note**: This activity is optional."
 
-- title: "LinkedIn Post - First Week Internship Experience"
-  date: "18th Jan 2026"
-  deadline: "22nd Jan 2026"
-  cohorts: ["euclideans"]
-  description: "Share your first week internship experience on LinkedIn to build your professional network and engage with the cohort."
-  content: "We want to incentivize your LinkedIn activity by throwing a challenge with exciting gifts and perks in store. Create a post sharing all that you have learnt during your first week's internship experience. This will help you build connections with the current cohort, expand your network as people comment on your posts, and potentially discover new opportunities. Write a short and crisp message, include a GenAI image to attract attention, tag the supporting organizations (Vicharanashala lab, Annam.ai, IIT Ropar, NPTEL, and your college), and tag the mentors. Share your post link with your fellow interns. For complete guidelines and detailed instructions, visit the [LinkedIn Post Activity](../linkedin_post/) page.\n\n**Note**: This activity is optional. Fill the activity completion form (Select Activity A2) after completing the activity, the form is available in the Forms and links section of your cohort specific pages."
-
 - title: "Upload Your Zoho Profile Picture"
   date: "17th Jan 2026"
   deadline: "19th Jan 2026"
   cohorts: ["euclideans"]
   description: "In this activity, students are required to set a clear and professional profile picture in their Zoho account so that it is visible to everyone."
   content: "Explore your Zoho account settings and look for options related to your profile and visibility. You may need to search online or refer to Zoho's official help resources to find where profile pictures and privacy settings are managed. Ensure your uploaded photo clearly shows your face and is visible to others on the platform.\n\n**Note**: This activity is optional. Fill the activity completion form after completing the activity, the form is available in the Forms and links section of your cohort specific pages."
-
-- title: "Question Review Activity for ViBe Course"
-  date: "2nd Feb 2026"
-  deadline: "19th Feb 2026"
-  cohorts: ["dijkstrians"]
-  description: "A Small Mission for a Big Impact! Participate in the Question Review Activity to spot mistakes, suggest improvements, and design new questions."
-  content: "A Small Mission for a Big Impact! 🚀 Imagine this course becoming even better—clearer questions ✍️, smarter challenges 🧠, and more innovative thinking 💡. Now imagine you being the reason behind it 👀✨ We're launching a Question Review Activity, where you can spot mistakes 🔍, suggest improvements 📈, and even design new types of questions 🧩 for the course. Your ideas matter 💬 and your efforts won't go unnoticed 🏆. ✨ Participate actively and earn a generous amount of HP Points if your question gets shortlisted! 🔥\n\n**Note**: This activity is optional. Fill the ViBe Question Review Form for your suggested questions which is available in the Forms and links section of this page."
-
-- title: "LinkedIn Post - First Week Internship Experience"
-  date: "28th Jan 2026"
-  deadline: "6th Feb 2026"
-  cohorts: ["dijkstrians"]
-  description: "Share your first week internship experience on LinkedIn to build your professional network and engage with the cohort."
-  content: "We want to incentivize your LinkedIn activity by throwing a challenge with exciting gifts and perks in store. Create a post sharing all that you have learnt during your first week's internship experience. This will help you build connections with the current cohort, expand your network as people comment on your posts, and potentially discover new opportunities. Write a short and crisp message, include a GenAI image to attract attention, tag the supporting organizations (Vicharanashala lab, Annam.ai, IIT Ropar, NPTEL, and your college), and tag the mentors. Share your post link with your fellow interns. For complete guidelines and detailed instructions, visit the [LinkedIn Post Activity](../linkedin_post/) page.\n\n**Note**: This activity is optional. Fill the activity completion form (Select Activity A2) after completing the activity, the form is available in the Forms and links section of your cohort specific pages."
-
-- title: "Question Review Activity for ViBe Course"
-  date: "2nd Feb 2026"
-  deadline: "1st March 2026"
-  cohorts: ["kruskalians"]
-  description: "A Small Mission for a Big Impact! Participate in the Question Review Activity to spot mistakes, suggest improvements, and design new questions."
-  content: "A Small Mission for a Big Impact! 🚀 Imagine this course becoming even better—clearer questions ✍️, smarter challenges 🧠, and more innovative thinking 💡. Now imagine you being the reason behind it 👀✨ We're launching a Question Review Activity, where you can spot mistakes 🔍, suggest improvements 📈, and even design new types of questions 🧩 for the course. Your ideas matter 💬 and your efforts won't go unnoticed 🏆. ✨ Participate actively and earn a generous amount of HP Points if your question gets shortlisted! 🔥\n\n**Note**: This activity is optional. Fill the ViBe Question Review Form for your suggested questions which is available in the Forms and links section of this page."
 
 
 # - title: "Vinternship Inaugural Session & Opening Ceremony"
