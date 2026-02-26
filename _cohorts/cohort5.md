@@ -11,8 +11,8 @@ dashboard_available: false
 color: "2C3E50"
 schedule:
   standups:
-    days: #["Tuesday", "Thursday", "Saturday"]
-    time: #"8:45 PM - 9:30 PM IST (duration may vary)"
+    days: ["Tuesday", "Thursday", "Saturday"]
+    time: "8:45 PM - 9:30 PM IST (duration may vary)"
   live-session: #"Everyday at 10:00 PM - 11:00 PM IST"
 ---
 
