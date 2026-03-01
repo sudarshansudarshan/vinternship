@@ -9,17 +9,17 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="1. Problem Statement" />
 <meta property="og:description" content="1. Problem Statement" />
-<link rel="canonical" href="http://localhost:4001/vinternship/case-studies/14-generics/" />
-<meta property="og:url" content="http://localhost:4001/vinternship/case-studies/14-generics/" />
+<link rel="canonical" href="http://localhost:4000/vinternship/case-studies/14-generics/" />
+<meta property="og:url" content="http://localhost:4000/vinternship/case-studies/14-generics/" />
 <meta property="og:site_name" content="Vinternship" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-02-02T22:27:14+05:30" />
+<meta property="article:published_time" content="2026-02-26T13:40:59+05:30" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Generics" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-02-02T22:27:14+05:30","datePublished":"2026-02-02T22:27:14+05:30","description":"1. Problem Statement","headline":"Generics","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4001/vinternship/case-studies/14-generics/"},"url":"http://localhost:4001/vinternship/case-studies/14-generics/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-02-26T13:40:59+05:30","datePublished":"2026-02-26T13:40:59+05:30","description":"1. Problem Statement","headline":"Generics","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/vinternship/case-studies/14-generics/"},"url":"http://localhost:4000/vinternship/case-studies/14-generics/"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/vinternship/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4001/vinternship/feed.xml" title="Vinternship" /></head>
+<link rel="stylesheet" href="/vinternship/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/vinternship/feed.xml" title="Vinternship" /></head>
 <head><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-87W6B0JP70"></script>
 <script>
@@ -311,9 +311,9 @@ They are a form of  <strong>parametric polymorphism</strong>: you write code wit
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">type</span> <span class="nx">ApiResponse</span><span class="o">&lt;</span><span class="nx">T</span> <span class="o">=</span> <span class="kr">string</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">{</span>
   <span class="na">data</span><span class="p">:</span> <span class="nx">T</span><span class="p">;</span>
   <span class="nl">status</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
-
-<span class="kd">const</span> <span class="na">resp</span><span class="p">:</span> <span class="nx">ApiResponse</span> <span class="o">=</span> <span class="p">{</span> <span class="na">data</span><span class="p">:</span> <span class="dl">"</span><span class="s2">OK</span><span class="dl">"</span><span class="p">,</span> <span class="na">status</span><span class="p">:</span> <span class="mi">200</span> <span class="p">};</span> <span class="c1">// T is string by default</span>
 <span class="p">};</span>
+
+<span class="kd">const</span> <span class="nx">resp</span><span class="p">:</span> <span class="nx">ApiResponse</span> <span class="o">=</span> <span class="p">{</span> <span class="na">data</span><span class="p">:</span> <span class="dl">"</span><span class="s2">OK</span><span class="dl">"</span><span class="p">,</span> <span class="na">status</span><span class="p">:</span> <span class="mi">200</span> <span class="p">};</span> <span class="c1">// T is string by default</span>
 </code></pre></div></div>
 <h2 id="utility-types-built-in-generics"><strong>Utility Types (Built-in Generics)</strong></h2>
 
