@@ -73,7 +73,7 @@ They guarantee that all related changes succeed or none do, keeping everyone’s
 
 ## 4. Technical Deep Dive
 
- **A. What is ACID?**
+**A. What is ACID?**
 
 **ACID**  stands for:
 
@@ -92,7 +92,6 @@ They guarantee that all related changes succeed or none do, keeping everyone’s
 **Why is this important?**  
 Without ACID, financial systems can lose money, double-spend, or create audit nightmares—unacceptable in banking, fintech, and regulated industries.
 
-----------
 
 **B. MongoDB Transactions: How They Work**
 
@@ -113,9 +112,7 @@ Without ACID, financial systems can lose money, double-spend, or create audit ni
 -   **Snapshot Isolation**: Each transaction sees a consistent view of the data, unaffected by others.
     
 
-----------
-
- **C. When Should You Use Transactions?**
+**C. When Should You Use Transactions?**
 
 -   **Best for:**
     
@@ -132,21 +129,23 @@ Without ACID, financial systems can lose money, double-spend, or create audit ni
     -   Single-document updates (already atomic in MongoDB).
         
 
-----------
-
- **D. Transaction Syntax and Workflow**
+**D. Transaction Syntax and Workflow**
 
 **1. Start a session:**
+
 ```js
 const session = db.getMongo().startSession();
 ```
 
 
 **2. Start a transaction:**
+
 ```js
 session.startTransaction();
 ```
+
 **3. Perform operations (all must use the session):**
+
 ```js
 db.users.updateOne(
   { _id: aliceId },
@@ -162,8 +161,10 @@ db.transactions.insertOne(
   { from: aliceId, to: bobId, amount: 100, date: new Date() },
   { session }
 );
- ```
+```
+
 **4. Commit or abort:**
+
 ```js
 try {
   session.commitTransaction();
@@ -174,6 +175,7 @@ try {
   session.endSession();
 }
 ```
+
 **Key Notes:**
 
 -   If any operation fails, abort the transaction—no changes are saved.
@@ -183,9 +185,7 @@ try {
 -   Transactions can span collections and (since MongoDB 4.2) sharded clusters.
     
 
-----------
-
-## **E. ACID in Practice: Guarantees and Limitations**
+**E. ACID in Practice: Guarantees and Limitations**
 
 -   **Atomicity**: All or nothing—no partial changes.
     
@@ -207,7 +207,6 @@ try {
 
 Let’s walk through a real FinTrust wallet transfer:
 
-----------
 
 **A. User and Transaction Document Models**
 
@@ -219,7 +218,9 @@ Let’s walk through a real FinTrust wallet transfer:
   "balance": 500.00
 }
 ```
+
 **Transaction:**
+
 ```js
 {
   "_id": ObjectId("..."),
@@ -230,7 +231,9 @@ Let’s walk through a real FinTrust wallet transfer:
   "status": "completed"
 }
 ```
+
 **B. Atomic Money Transfer with Transaction**
+
 ```js
 const session = db.getMongo().startSession();
 session.startTransaction();
@@ -271,23 +274,20 @@ try {
   session.endSession();
 }
 ```
+
 **Explanation:**
 
 -   If any step fails (e.g., Alice doesn’t have enough balance), all changes are rolled back—no partial transfers or missing logs.
     
 
-----------
-
-## **C. What Happens If There’s an Error?**
+**C. What Happens If There’s an Error?**
 
 -   If the server crashes or a write fails before  `commitTransaction()`, MongoDB automatically aborts and rolls back all changes.
     
 -   If  `commitTransaction()`  succeeds, all changes are durable and visible to others.
     
 
-----------
-
-## **D. Best Practices for MongoDB Transactions**
+**D. Best Practices for MongoDB Transactions**
 
 -   **Keep transactions short**  to reduce lock contention and improve performance.
     
@@ -324,6 +324,8 @@ You’re building a new feature for FinTrust:
 
 **Write a MongoDB transaction (pseudo-code or JavaScript) to implement this.**
 
+---
+
 ## 7. Common Pitfalls & Best Practices
 
 | Pitfall                                      | Best Practice                                               |
@@ -334,6 +336,7 @@ You’re building a new feature for FinTrust:
 | Using transactions for simple updates       | Use only when needed for multi-document changes            |
 | Not checking preconditions (e.g., balance)  | Validate inside the transaction                            |
 
+---
 
 ## 8. Optional: Programmer’s Workflow Checklist
 

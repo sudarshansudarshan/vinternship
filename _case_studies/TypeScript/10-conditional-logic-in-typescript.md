@@ -186,7 +186,7 @@ if (condition) {
 
 Flow: One of two paths.
 
-## 4.3 Nested `if…else if…else`
+## 4.3 `if…else if…else` Statement
 
 Syntax:
 

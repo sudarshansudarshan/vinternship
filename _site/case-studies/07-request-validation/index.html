@@ -9,17 +9,17 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="1. Problem Statement" />
 <meta property="og:description" content="1. Problem Statement" />
-<link rel="canonical" href="http://localhost:4001/vinternship/case-studies/07-request-validation/" />
-<meta property="og:url" content="http://localhost:4001/vinternship/case-studies/07-request-validation/" />
+<link rel="canonical" href="http://localhost:4000/vinternship/case-studies/07-request-validation/" />
+<meta property="og:url" content="http://localhost:4000/vinternship/case-studies/07-request-validation/" />
 <meta property="og:site_name" content="Vinternship" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-01-29T22:03:58+05:30" />
+<meta property="article:published_time" content="2026-02-26T13:40:59+05:30" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Request Validation" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-29T22:03:58+05:30","datePublished":"2026-01-29T22:03:58+05:30","description":"1. Problem Statement","headline":"Request Validation","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4001/vinternship/case-studies/07-request-validation/"},"url":"http://localhost:4001/vinternship/case-studies/07-request-validation/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-02-26T13:40:59+05:30","datePublished":"2026-02-26T13:40:59+05:30","description":"1. Problem Statement","headline":"Request Validation","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/vinternship/case-studies/07-request-validation/"},"url":"http://localhost:4000/vinternship/case-studies/07-request-validation/"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/vinternship/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4001/vinternship/feed.xml" title="Vinternship" /></head>
+<link rel="stylesheet" href="/vinternship/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/vinternship/feed.xml" title="Vinternship" /></head>
 <head><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-87W6B0JP70"></script>
 <script>
@@ -176,6 +176,8 @@ How do you ensure that every application is complete, accurate, and checked for 
 
 <p>Request validation in software is like this admissions desk: it ensures that every submission is checked for completeness and correctness before it enters the system.</p>
 
+<h2 id="4-technical-deep-dive">4. Technical Deep Dive</h2>
+
 <p><strong>A. Why Validate Requests?</strong></p>
 
 <ul>
@@ -219,7 +221,7 @@ How do you ensure that every application is complete, accurate, and checked for 
 
 <p>Let’s walk through how “BrightFuture University” ensures every application is perfect before it’s reviewed:</p>
 
-<h2 id="a-designing-the-application-data-structure"><strong>A. Designing the Application Data Structure</strong></h2>
+<p><strong>A. Designing the Application Data Structure</strong></p>
 
 <p>Picture the chaos if applications were still paper forms: some missing essays, some with unreadable birthdates, and some with no contact info.<br />
 To fix this, the university creates a clear digital structure for every application-so nothing is forgotten, and every reviewer knows exactly what to expect.</p>
@@ -246,7 +248,7 @@ To fix this, the university creates a clear digital structure for every applicat
   </li>
 </ul>
 
-<h2 id="b-setting-up-validation-rules"><strong>B. Setting Up Validation Rules</strong></h2>
+<p><strong>B. Setting Up Validation Rules</strong></p>
 
 <p>Imagine the admissions staff with a checklist for every application:</p>
 
@@ -300,22 +302,24 @@ To fix this, the university creates a clear digital structure for every applicat
     <span class="p">.</span><span class="nf">withMessage</span><span class="p">(</span><span class="dl">"</span><span class="s2">A valid recommendation letter link is required</span><span class="dl">"</span><span class="p">),</span>
 <span class="p">];</span>
 
-  <span class="s2">```typescript
+</code></pre></div></div>
 
-**Explanation:**
+<p><strong>Explanation:</strong></p>
 
--   Each rule matches a real admissions requirement.
-    
--   If any rule fails, the application is rejected with a specific message.
-    
+<ul>
+  <li>
+    <p>Each rule matches a real admissions requirement.</p>
+  </li>
+  <li>
+    <p>If any rule fails, the application is rejected with a specific message.</p>
+  </li>
+</ul>
 
-**C. Implementing the Route Handler**
+<p><strong>C. Implementing the Route Handler</strong></p>
 
+<p>Just like a staff member checking each application, our route handler reviews the checklist and gives instant feedback if anything is missing or wrong.</p>
 
-Just like a staff member checking each application, our route handler reviews the checklist and gives instant feedback if anything is missing or wrong.
-
- ```</span><span class="nx">typescript</span>
- <span class="nx">app</span><span class="p">.</span><span class="nf">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">/apply</span><span class="dl">"</span><span class="p">,</span> <span class="nx">applicationValidation</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nx">app</span><span class="p">.</span><span class="nf">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">/apply</span><span class="dl">"</span><span class="p">,</span> <span class="nx">applicationValidation</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="kd">const</span> <span class="nx">errors</span> <span class="o">=</span> <span class="nf">validationResult</span><span class="p">(</span><span class="nx">req</span><span class="p">);</span>
   <span class="k">if </span><span class="p">(</span><span class="o">!</span><span class="nx">errors</span><span class="p">.</span><span class="nf">isEmpty</span><span class="p">())</span> <span class="p">{</span>
     <span class="c1">// Return all validation errors</span>
@@ -358,7 +362,7 @@ Just like a staff member checking each application, our route handler reviews th
   </li>
 </ul>
 
-<h2 id="e-visualizing-the-validation-flow"><strong>E. Visualizing the Validation Flow</strong></h2>
+<p><strong>E. Visualizing the Validation Flow</strong></p>
 
 <p>text</p>
 
@@ -465,8 +469,7 @@ Just like a staff member checking each application, our route handler reviews th
 
 <h2 id="10-coming-up-next">10. Coming up next</h2>
 
-<p>*
-Learn how to combine validation with authentication and authorization, so only the right people can submit or review applications!</p>
+<p>Learn how to combine validation with authentication and authorization, so only the right people can submit or review applications!</p>
 
   </div>
 

@@ -71,7 +71,10 @@ Imagine a restaurant kitchen:
     
 -   Quality control (TypeScript types) ensures every order (request) has the right details before the kitchen starts cooking.
     
- **A. Typing Requests and Responses**
+
+## 4. Technical Deep Dive
+
+**A. Typing Requests and Responses**
 
  **1. Defining Strict Interfaces**
 
@@ -114,7 +117,8 @@ router.post(
     
 
 **B. Validating Data with Zod**
- **1. Schema Validation**
+
+**1. Schema Validation**
 
 **Problem:**  TypeScript types are stripped at runtime. Malicious clients can still send invalid data.  
 **Solution:**  Use Zod to validate requests at runtime.

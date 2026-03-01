@@ -9,17 +9,17 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="1. Problem Statement" />
 <meta property="og:description" content="1. Problem Statement" />
-<link rel="canonical" href="http://localhost:4001/vinternship/case-studies/02-organizing-your-express-project-for-scalability/" />
-<meta property="og:url" content="http://localhost:4001/vinternship/case-studies/02-organizing-your-express-project-for-scalability/" />
+<link rel="canonical" href="http://localhost:4000/vinternship/case-studies/02-organizing-your-express-project-for-scalability/" />
+<meta property="og:url" content="http://localhost:4000/vinternship/case-studies/02-organizing-your-express-project-for-scalability/" />
 <meta property="og:site_name" content="Vinternship" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-01-29T22:03:58+05:30" />
+<meta property="article:published_time" content="2026-02-26T13:40:59+05:30" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Organizing Your Express Project" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-29T22:03:58+05:30","datePublished":"2026-01-29T22:03:58+05:30","description":"1. Problem Statement","headline":"Organizing Your Express Project","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4001/vinternship/case-studies/02-organizing-your-express-project-for-scalability/"},"url":"http://localhost:4001/vinternship/case-studies/02-organizing-your-express-project-for-scalability/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-02-26T13:40:59+05:30","datePublished":"2026-02-26T13:40:59+05:30","description":"1. Problem Statement","headline":"Organizing Your Express Project","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/vinternship/case-studies/02-organizing-your-express-project-for-scalability/"},"url":"http://localhost:4000/vinternship/case-studies/02-organizing-your-express-project-for-scalability/"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/vinternship/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4001/vinternship/feed.xml" title="Vinternship" /></head>
+<link rel="stylesheet" href="/vinternship/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/vinternship/feed.xml" title="Vinternship" /></head>
 <head><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-87W6B0JP70"></script>
 <script>
@@ -175,6 +175,10 @@ How do you organize your Express project so it’s easy to add new features, fix
   </li>
 </ul>
 
+<hr />
+
+<h2 id="4-technical-deep-dive">4. Technical Deep Dive</h2>
+
 <p><strong>A. Why Project Structure Matters</strong></p>
 
 <ul>
@@ -196,7 +200,7 @@ How do you organize your Express project so it’s easy to add new features, fix
 
 <p>A typical, scalable Express project might look like:</p>
 
-<p>greenfield-center/
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>greenfield-center/
 ├── app.js                         # Main application entry point
 ├── package.json          # Project metadata and dependencies
 ├── routes/                   # Route definitions (handles endpoint paths)
@@ -216,7 +220,8 @@ How do you organize your Express project so it’s easy to add new features, fix
 ├── middleware/           # Custom middleware functions (e.g., auth, logging)
 │   └── auth.js
 ├── .env                  # Environment variables (if used)
-└── README.md             # Project documentation</p>
+└── README.md             # Project documentation
+</code></pre></div></div>
 
 <p><strong>Key ideas:</strong></p>
 
@@ -335,7 +340,7 @@ How do you organize your Express project so it’s easy to add new features, fix
   </li>
 </ul>
 
-<h2 id="4-step-by-step-data-modeling--code-walkthrough">4. Step-by-Step Data Modeling &amp; Code Walkthrough</h2>
+<h2 id="5-step-by-step-data-modeling--code-walkthrough">5. Step-by-Step Data Modeling &amp; Code Walkthrough</h2>
 
 <p>Let’s see how this structure directly solves Greenfield Community Center’s problems:</p>
 
@@ -448,15 +453,36 @@ How do you organize your Express project so it’s easy to add new features, fix
   </li>
 </ul>
 
-<h2 id="7-common-pitfalls--best-practices">7. Common Pitfalls &amp; Best Practices</h2>
-<p>| Pitfall                        | Best Practice                                    |
-|———————————|————————————————–|
-| Mixing all routes in one file   | Separate routes into their own files            |
-| Hardcoding data everywhere     | Use controllers or models for logic             |
-| Ignoring static files          | Use public/ for images, CSS, JS                 |
-| Not using version control      | Use Git to track changes and collaborate        |</p>
+<h2 id="8-common-pitfalls--best-practices">8. Common Pitfalls &amp; Best Practices</h2>
 
-<h2 id="8-quick-recap--key-takeaways">8. Quick Recap &amp; Key Takeaways</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Pitfall</th>
+      <th>Best Practice</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mixing all routes in one file</td>
+      <td>Separate routes into their own files</td>
+    </tr>
+    <tr>
+      <td>Hardcoding data everywhere</td>
+      <td>Use controllers or models for logic</td>
+    </tr>
+    <tr>
+      <td>Ignoring static files</td>
+      <td>Use public/ for images, CSS, JS</td>
+    </tr>
+    <tr>
+      <td>Not using version control</td>
+      <td>Use Git to track changes and collaborate</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="9-quick-recap--key-takeaways">9. Quick Recap &amp; Key Takeaways</h2>
 
 <ul>
   <li>
@@ -470,7 +496,7 @@ How do you organize your Express project so it’s easy to add new features, fix
   </li>
 </ul>
 
-<h2 id="9-optional-programmers-workflow-checklist">9. Optional: Programmer’s Workflow Checklist</h2>
+<h2 id="10-optional-programmers-workflow-checklist">10. Optional: Programmer’s Workflow Checklist</h2>
 
 <ul>
   <li>

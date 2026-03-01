@@ -12,12 +12,15 @@ order: 2
 2. [Mode of Internship & Attendance](#2-mode-of-internship--attendance)
 3. [Mentorship & Guidance](#3-mentorship--guidance)
 4. [Support and Resolution Protocol](#4-support-and-resolution-protocol)
-5. [Completion & Certification](#5-completion--certification)
+5. [Completion, Certification & Offer Letter](#5-completion-certification--offer-letter)
 6. [Discontinuation Policy](#6-discontinuation-policy)
 7. [ViBe Platform](#7-vibe-platform)
 8. [MERN Case Studies](#8-mern-case-studies)
 9. [Ejection Policy](#9-ejection-policy)
 10. [Self-Healing Endorsement Network - Viva/Peer Evaluation System(PES)](#10-self-healing-endorsement-network---vivapeer-evaluation-systempes)
+11. [Health Points and Breakout Sessions](#11-health-points-and-breakout-sessions)
+12. [Dashboard](#12-dashboard)
+13. [IITM BS Internship](#13-iitm-bs-internship)
 
 ---
 
@@ -33,10 +36,21 @@ The internship follows a structured timeline with specific milestones and delive
 The internship will be conducted in **online mode only**.
 
 **1.4 Are there fixed timings for live sessions?**  
-The program includes scheduled live sessions, workshops, and mentorship meetings. The timings for these sessions will be conveyed well in advance.
+The program includes scheduled live sessions, workshops, and mentorship meetings. The timings for these sessions will be conveyed well in advance. Please look into the cohort-specific dashboard for the details.
 
 **1.5 Where can I find the Internship ID?**  
-The Internship ID will be mentioned in the offer letter sent by NPTEL POC.
+The Internship ID will be mentioned in the offer letter sent by NPTEL POC (Only for the participants joined via NPTEL).
+
+**1.6 Can I preview the certificate template for non-NPTEL batches?**  
+At this time, the certificate template will not be shared prior to the start of the program, as it may vary from cohort to cohort depending on how the program is conducted. Regardless of the format, every certificate issued carries its own value and recognition.
+
+We kindly request students not to worry about the certificate design and instead focus on making the most of the learning experience. We truly appreciate your understanding as we strive to deliver a high-quality program for everyone.
+
+**1.7 What is the Website link of Vinternship?** 
+
+Website link: https://sudarshansudarshan.github.io/vinternship/
+
+This website has the whole idea on what the internship is about, the milestones, FAQ and the dashboard in the Cohort specific pages.
 
 ---
 
@@ -46,12 +60,21 @@ The Internship ID will be mentioned in the offer letter sent by NPTEL POC.
 The program will be conducted strictly in **online mode**.
 
 **2.2 Is attendance tracked in this internship?**  
-Attendance is compulsory for all the standups, please check your Cohort page on the landing page for days and timing of standup for your cohort. Attendance is tracked for all the live session activities. Attendance will be counted **only if your camera remains ON for the entire Zoom session**. If the camera is not switched on for a sustained duration, the session may **not be considered as full attendance**.
+Attendance is NOT compulsory for all the standups and live sessions. Please check your announcement channel in discord or whatsapp for days and timing of standup and live sessions for your cohort. However, attendance is tracked for all the live session activities for other purposes. If the camera is not switched on for a sustained duration, the session may **not be considered as full attendance**.
 
 **2.3 Do I need to use a specific name or email for the internship?**  
-Yes. You must use the **same name and email ID** used during registration across all platforms (ViBe, GitHub, Cliq, Zoom etc.) for automated tracking of your progress.
+Yes. You must use the **same registered name and email ID** used during registration across all platforms (ViBe, GitHub, Zoom etc.) for automated tracking of your progress.
 
-**2.4 Should I fill the attendance form attached to the NPTEL offer letter?**  
+However for Discord, you can use your personal mail provided that you use your name and a DP(formal photo).
+
+<!--**2.4 Can I use my college or non-Gmail email ID for registration?** 
+No. This is VERY IMPORTANT. 
+  ->You must register using a Gmail ID (@gmail.com). 
+  ->Non-Gmail IDs will not be registered 
+  ->Even college Google Workspace emails may cause issues 
+👉 Please ensure you use a personal @gmail.com address while registering. 
+
+**2.5 Should I fill the attendance form attached to the NPTEL offer letter?**  
 Yes. You must fill the **Google Form provided in the NPTEL offer letter** **every day** during your internship (**except Sundays**).
 
 Guidelines:
@@ -62,17 +85,15 @@ Guidelines:
 
 Please ensure that the form is filled **daily** going forward to avoid missing attendance again.
 
-**2.5 I forgot to fill the attendance sheet attached to the NPTEL offer letter yesterday. What should I do now?**  
-Unfortunately, there is nothing that can be done, as the form is used for NPTEL’s official database and attendance cannot be recorded for the previous day. The previous day will be considered as a leave.
+**2.6 I forgot to fill the attendance sheet attached to the NPTEL offer letter yesterday. What should I do now?**  
+Unfortunately, there is nothing that can be done, as the form is used for NPTEL’s official database and attendance cannot be recorded for the previous day. The previous day will be considered as a leave.-->
 
-**2.6 How can I avail the one-day leave allowed every month during the internship?**    
+**2.7 How can I avail the one-day leave allowed every month during the internship?**    
 Taking leave is **discouraged**, as you may miss important updates shared during live sessions or fall behind in your progress. It will be **your own responsibility** to complete the work missed on the leave day.
 
 However, if you must take the leave, follow the steps below:
 
-- Write a message in the **main Cliq Channel/Thread** stating the reason for your leave
-- Tag **@Nitin Sankar A** sir, **@Jinal Gupta** ma’am, and **@Harshdeep R** ma’am in the message
-- Post the request **at least one day in advance**
+- Write a mail to the **Support Tool in Discord** stating the reason for your leave
 - Clearly mention:
   - The **reason** for the leave
   - The **exact date** on which you intend to take the leave
@@ -80,6 +101,12 @@ However, if you must take the leave, follow the steps below:
 Once submitted, the request will be reviewed and processed by the team.
 
 NOTE: No Holidays are provided!
+
+**2.8. I am not able to join the zoom from the link provided? It says "only registered participants are allowed".**
+Step 1: Ensure that you installed the Zoom Workplace on your Desktop or Laptop. 
+Step 2: Login with your registered mail ID on the Zoom Workplace Application. 
+Step 3: Click on the link to join the meet by registering yourself for the meeting. 
+
 
 ---
 
@@ -96,27 +123,71 @@ Yes, your project mentors can schedule a meeting based on the doubts and issues 
 
 ## 4. Support and Resolution Protocol
 
-**4.1 Where do I raise my concern initially?**  
-Initially, try to get your query resolved from the FAQ. Check the Broadcast cliq channel, else from your fellow interns in the Discussion Cliq channel/thread. If the query is still not resolved, you can email your query to the email ID below.
+**4.1 Where should I check first for updates, instructions, or clarifications?**  
 
-Email **vinternship-support@vicharanashala.zohodesk.in**.  
+Start by checking the official Discord Announcement Channel. This is the primary communication hub where all important information is posted regularly, including deadlines, schedule changes, submission guidelines, and common clarifications. In many cases, your query may already be answered in a recent announcement, saving you time and effort.
+
+**4.2 Are there any profile requirements for participants on Discord?**  
+
+Yes. All participants must ensure they have a clear display picture (DP) and a proper name set on their Discord profile, regardless of the email used to register. This is required so organizers can easily identify and verify participants when needed.
+
+**4.3 Where do I raise my concern initially?**  
+Initially, try to get your query resolved from the FAQ and ViSakha. Check the Announcement Discord channel, else from your fellow interns in the Breakout sessions and Chit Chat channels. If the query is still not resolved, you can send your query to the Support desk in Discord server.
+
+ViSakha: https://sakha.vicharanashala.ai/
+  
+Mention your Name and your Cohort name.
+
 Responses are provided **within 2 hours** between **9:00 AM and 9:00 PM**.
+
+Any question submitted beyond 9 PM will be answered the next day.
+
+**4.4 What if I don’t receive a response in 24 hours?** 
+If you do not receive a response within 24 hours, you may raise a second ticket.
+In the subject line, mention: "Attention Please – Follow-up on Ticket #[Original Ticket Number]"
+This ticket will be escalated to our Mentors Team, who will reach out to you for a voice call discussion and try to resolve the issue directly.
+
+**4.5 If my concern still isn’t addressed, how do I escalate further?**  
+After 48 hours of your first ticket (and after raising a follow-up), you can escalate the matter via email to the Internship Sponsor, with CC to Prof. Sudarshan Iyengar directly with the following recipients in CC: 
+  
+  ->Your department’s faculty reference
+  
+  ->Your department HOD
+  
+  ->The VLED Team at dled@iitrpr.ac.in
+  
+**4.6 Is this process mandatory for all issues?**  
+Yes, to maintain consistency and ensure efficient support, we request all interns to follow this three-step resolution path.
+
+**4.7 Why is it important to follow the deadlines mentioned in tasks and milestones?**
+Each task and milestone is designed to help you progress steadily through the internship. Adhering to the specified deadlines ensures smooth evaluation, proper tracking of your progress, and continued eligibility in the program.
+
+**4.8 What happens if I miss a deadline?**
+Failure to meet a task or milestone deadline may impact your Health Points and could lead to removal from the cohort, as per internship policy. Extensions are generally not provided unless explicitly communicated.
+
+**4.9 where can we find the Live session recordings?**
+The Live session recordings from 20th Feb are available in this Youtube Playlist: https://www.youtube.com/playlist?list=PL4ocL5uCKzQOv6Pu81GwG2Q28cViFK3QV
 
 ---
 
-## 5. Completion & Certification
+## 5. Completion, Certification & Offer Letter
 
 **5.1 What are the program completion criteria?**  
 - Completion of all course modules on the Learning platform. (Required)
 - Completion of case studies provided for learning using the code. (Required)
-- Completion of Viva/endorsement for the Case Study.
-- Contribution to real-time applications or projects.
+- Completion of Viva/endorsement for the Case Study.(Required)
+- Contribution to real-time applications or projects.(Optional)
 
 **5.2 Where can I find information on certification?**  
-NPTEL interns should contact the NPTEL internship team for the information regarding certificates.
+NPTEL interns (whom joined after successful course completion) should contact the NPTEL internship team for the information regarding certificates.
+
+Others will receive a certification from Vicharanashala Lab for Education Design upon successful completion of internship.
 
 **5.3 Will recommendation letters be provided?**  
  Recommendation letters are not guaranteed. You may request one from the course instructor after completing the internship, and it will be at their discretion based on the performance of the candidate.
+
+**5.4 When will AKSians (NPTEL) cohort receive their offer letter?**    
+The offer letter for the AKSians (NPTEL) cohort will be issued after the candidate completes 20% of the ViBe course. The deadline for the same will be 1 week after ViBe course progression.
 
 
 ---
@@ -138,12 +209,44 @@ No, once discontinued, you cannot rejoin the current program. You would need to 
 **6.5 How does the Discontinuation Policy differ from the Ejection Policy?**  
 The Discontinuation Policy addresses prolonged inactivity at an administrative level, while the Ejection Policy (see Section 10) is a real-time, algorithm-based mechanism focused on maintaining cohort momentum and learning quality.
 
+**6.6 How do I withdraw from the internship?**
+If you wish to discontinue the internship, please follow the steps below:
+
+**Step 1: Draft a Formal Email**
+
+Write a professional email addressed to:
+
+-> NPTEL Point of Contact (POC)
+-> Your College HOD
+-> DLED
+
+Your email should clearly include:
+
+-> Brief introduction – Your full name and the course/program through which you received the internship.
+-> Reason for discontinuation – State your reason clearly and honestly (academic commitments, personal reasons, health concerns, etc.).
+-> Expression of gratitude – Thank the organizers and mentors for the opportunity and support.
+-> Formal closing – End with your full name and contact details.
+
+**Step 2: Include Your Contact Information**
+
+Make sure to add:
+
+-> Full Name
+-> Roll Number / Registration ID (if applicable)
+-> Course / Department / College Name
+-> Phone Number
+-> Email Address
+
+**Step 3: Send the Email**
+
+Send the email to all concerned parties (POC, HOD, and DLED) and retain a copy for your records.
+
 ---
 
 ## 7. ViBe Platform
 
 **7.1 How do I log in to ViBe?**  
-To log in to the ViBe platform, follow the steps below carefully:
+-> To log in to the ViBe platform, follow the steps below carefully:
 
 1. Open the ViBe invite link shared with you via email.
 
@@ -154,6 +257,10 @@ To log in to the ViBe platform, follow the steps below carefully:
 4. Ensure you sign in using the same email ID (college email / registered email) that received the invite.
 
 5. Once authenticated, you will be redirected to your ViBe Dashboard, where your enrolled course will be visible.
+
+-> If you've registered to the course, please wait for the request to be accepted by the instructors.
+
+-> Join via the registration links shared in the respective discord announcement channel.
 
 ⚠️ Logging in with a different email ID may result in access issues or missing course visibility.
 
@@ -166,7 +273,34 @@ If you see “No course enrolled”:
 
 - Log out and log in again once.
 
-- If the issue continues, contact support with your registered email ID and a screenshot.
+- Use personal wifi instead of college wifi as there might be some network restrictions of access.
+
+- If the issue continues, please follow these steps:  
+
+Step 1: Allow Third-Party Cookies
+ 
+- Enable Cookies in Chrome: Open chrome://settings/cookies. 
+  Turn OFF "Block third-party cookies" and turn ON "Allow all cookies."
+- Add Site Exception: Scroll to "Sites that can always use cookies" and click "Add." 
+Paste *.][vicharanashala.ai and ensure "Including third-party cookies" is enabled.
+- Restart browser.
+ 
+Step 2: Fix DNS (Most Important)
+ 
+- Change your laptop DNS to Google DNS.
+- Go to: Control Panel → Network → Active Network → Properties → IPv4.
+- Shotcut: win+R -> ncpa.cpl, right click properties
+- Set Preferred DNS to 8.8.8.8 and Alternate DNS to 8.8.4.4.
+- Save.
+ 
+Step 3: Flush Old DNS Cache (its safe)
+ 
+- Open Command Prompt as Admin.
+- Run the following commands:
+- ipconfig /flushdns
+- ipconfig /release
+- ipconfig /renew
+- Restart WiFi.
 
 **7.3 Why are videos stuck or repeating?**  
 This may happen due to ViBe’s monitored learning system. Common reasons include:
@@ -184,7 +318,7 @@ This may happen due to ViBe’s monitored learning system. Common reasons includ
 **7.4 Can I use a mobile or tablet?**  
 No, only **desktop/laptop** is supported.
 
-**7.5 I'm experiencing video issues (stuck, looping, skipping) on ViBe. How do I troubleshoot?**
+**7.5 I'm experiencing video issues (stuck, looping, skipping) on ViBe. How do I troubleshoot?**    
 Try these troubleshooting steps in order:
 
 1. **Refresh the page** and check multiple times
@@ -197,14 +331,92 @@ If the issue persists after trying all steps, **record the issue** and email it 
 
 **7.6 I have completed all videos and quizzes in the ViBe course, but my progress is still showing less than 100%. What should I do?**  
 
-Please do not worry. This is a **dashboard-level technical issue** that has already been acknowledged by the support team and communicated in the Cliq threads. The team is actively working on resolving it, and your progress will be **updated automatically** once the issue is fixed.
+Please do not worry. This might be a skip made in the quiz/video item due to penalty score as the quiz/video item might not have been successfully completed/marked. Please verify that you've completed all the course items(1006/1006). If not, Please retry the missed contents again.
 
 In the meantime, you may try the following steps once:
 
 1. **Refresh your browser**
 2. **Log out**, clear your browser cache, and **log in again**
 
-If the issue still persists after these steps, no further action is required from your side. Your course completion status will be corrected by the support team shortly.
+**7.7 I feel the ViBe content or platform is not good or I am unhappy with the way progress is evaluated. Can I request an exception or bypass the system?**  
+
+ViBe is built and continuously improved by interns and students themselves. It is a free and open-source learning platform, and our goal is to keep it that way by encouraging the community to actively contribute, improve, and strengthen it rather than bypass it.
+
+If a learner strongly feels that the regular ViBe flow does not fairly reflect their understanding, there is a formal alternative evaluation path. However, this path is intentionally rigorous to ensure fairness for everyone.
+
+In such cases, you will be asked to:
+
+- Watch the specified YouTube video content completely (links will be provided).
+- Appear for a three-hour proctored examination based only on that content.
+- Write the exam under strict supervision with:
+  - Two cameras (front and side view), and  
+  - One online human proctor monitoring you live.
+
+This examination becomes the sole basis for evaluation in place of the regular internship track.
+
+The scoring rules are strict:
+
+- **Score below 60%**: You are considered not qualified and must join the next cohort and continue only through the normal ViBe mode.
+- **Score between 60% and 80%**: You get one more chance in the next scheduled exam.
+- **Score above 80%**: You are considered to have passed.
+
+This special exam is conducted once every fortnight, so choosing this route may significantly delay your progress compared to continuing normally on ViBe.
+
+Because this path is far more demanding and time-consuming than simply completing the regular videos, quizzes, and activities, most students find that continuing with the standard ViBe workflow is the faster and better option. 
+
+**7.8 Is the ViBe consent form compulsory? What if I don’t want to grant camera access?**   
+Yes — the consent form is compulsory.
+
+We would like to clearly inform you that providing consent is a mandatory requirement for any candidate enrolling in and continuing a course on the ViBe Learning Platform.
+
+The platform is designed with proctoring enabled throughout the learning process, which requires access to your webcam and microphone. This is essential to ensure:
+
+-> Fairness across all participants
+-> Academic integrity
+-> Active and genuine participation
+
+If you choose not to grant camera and microphone access, you will not be able to proceed with the course, as proctoring is an integral part of the learning and evaluation workflow.
+
+**Privacy & Monitoring Clarification** 
+
+As outlined in the consent form:
+
+-> ViBe does not continuously record videos.
+
+-> Proctoring operates via real-time monitoring mechanisms during learning and assessments.
+
+-> All data is handled strictly in accordance with the stated consent terms and applicable data-protection guidelines.
+
+-> In short, consent is not optional — it is a core requirement for participation on the platform.
+
+**7.9 What are penalty scores on the ViBe platform, and how do they affect our performance or HP?**
+Penalty scores are generated when anomalies are detected during your activity on the ViBe platform (for example, irregular behavior while watching video lessons or attempting quizzes).
+
+If the penalty score becomes high, you may be required to:
+
+->Rewatch the video lesson, and
+
+->Retake the associated quiz.
+
+At present, these penalty scores do not impact your HP (Health Points) or overall performance evaluation, as they are not being considered for scoring. Their primary purpose is to ensure proper engagement with the learning content.
+
+
+<!-- **7.10 What is the slot booking feature for cohorts? Is it compulsory?**  
+The slot booking feature allows students to schedule dedicated time slots to learn on the ViBe platform.
+
+From now on, students can book learning slots in advance as part of a commitment-based learning system.
+
+Each day, a total of 24 slots are available. Students may:
+
+  -> Choose any number of slots based on their availability.
+
+  -> Commit a specific percentage of course progress they plan to complete during those selected slots.
+
+Once a slot is booked, the student is expected to be active on ViBe during that time.
+
+If a student does not attend or engage during their booked slots, penalties may be applied, as the system treats slot booking as a commitment.
+
+The main goal of this feature is to encourage discipline, consistency, and accountability in learning rather than passive participation. -->
 
 ---
 
@@ -238,7 +450,7 @@ After completing all ViBe MERN modules:
 3. Read the entire documentation carefully to understand the concept and tasks to be performed.
 4. Try to understand each case study first, then attempt to code a solution for it.
 5. Open a code editor (for example, **VS Code**) and implement the tasks.
-5. Getting stuck is normal. You can ask questions on Cliq, revisit the ViBe videos, and discuss with others.
+5. Getting stuck is normal. You can ask queries to the support desk, revisit the ViBe videos, and discuss with others.
 7. Submit your work using the submission link provided on your cohort specific page.
 
 **8.4 What comes after Case Studies?**  
@@ -255,10 +467,12 @@ After completing case studies, you move ahead to the Endorsement phase. The Self
    (supported formats include `.js`, `.ts`, `.txt`, `.zip`, etc.)
 4. Review your details and submit the form.
 5. Repeat this process for **each lesson** you complete.
+6. Ensure that the upload has been successful.
 
 
 **8.6 What should I do if a lesson contains multiple files?**  
 For lessons (such as React) that involve **multiple files**, compress all related files into a **single ZIP file** and upload the ZIP file during submission.
+Multiple file submissions are not considered.
 
 
 **8.7 Where can I get help if I am stuck with the case studies?**  
@@ -275,6 +489,7 @@ You can track your submission status, access the leaderboard, and view the dashb
 **8.9. What next if I completed my Case Studies and I am done with my endorsements?**
 We have some project ideas from the existing open source projects from Vicharanashala Lab for Education Design and Annam.AI listed on the Vinternship website. You can contribute to these real-time open-source projects, working with our developers to build real applications and add new features.
 
+---
 
 ## 9. Ejection Policy
 
@@ -385,7 +600,7 @@ This is **not prohibited**, but interns are expected to endorse **responsibly an
 
 
 **10.7 How do audits work in the endorsement network?**  
-Audits are conducted by **Bhavna** to identify interns who need improvement and work on Case studies before they get into the project phase.
+Audits are conducted by **Bhavna mam** to identify interns who need improvement and work on Case studies before they get into the project phase.
 
 If a **Needs Improvement** intern is identified:
 - The **entire endorsement path** connected to that intern is audited
@@ -450,9 +665,6 @@ The form contains **mandatory sections**:
 - The **endorser** should fill the form
 - Avoid duplicate or reciprocal entries
 
-<!-- ⏳ **Deadline:**  
-YET TO BE ANNOUNCED**. -->
-
 
 **10.12 What should interns keep in mind while endorsing others?**  
 - Avoid careless, bulk, or reciprocal endorsements
@@ -462,9 +674,175 @@ YET TO BE ANNOUNCED**. -->
 
 The Self-Healing Endorsement Network rewards **integrity, collaboration, responsibility, and accountability**.
 
-<!-- **11.13 Will Bhavna ma’am conduct Viva sessions in the future so that interns can become Jedi (Bronze ticket holders)?**  
 
-No, Bhavna ma'am will unfortunately **not conduct Viva sessions anymore**. She will only perform audit checks in the form of viva to identify defaulters/anomalies.
-Earlier, clearing the Viva conducted by Bhavna ma’am allowed interns to become **Bronze ticket holders**. Since this process has now been discontinued, the **set of existing Jedi (Silver, Bronze, and Gold ticket holders) is fixed**.
+---
 
-No new Jedi will be added through Viva going forward. -->
+## 11. Health Points and Breakout Sessions
+
+**11.1 How do I access my Individual Health Points (HP) page?**   
+You can view your Individual Health Points by following these steps:   
+  - Go to: https://sudarshansudarshan.github.io/vinternship/  
+  - Navigate to your Cohort-specific page 
+  - In the Dashboard section, click Open Dashboard  
+  - Select the Health Points tab  
+  - Choose Individual HP  
+
+This section displays your personal Health Points status.
+
+**11.2 Where can I find activity deadlines (ViBe / Case Study)?**   
+All activity deadlines are available directly on the dashboard:   
+  - Go to: https://sudarshansudarshan.github.io/vinternship/  
+  - Navigate to your Cohort-specific page 
+  - In the Dashboard section, click Open Dashboard  
+  - Select the Health Points tab  
+  - Choose Individual HP  
+
+👉 The respective deadlines are shown under each activity inside the dashboard and cohort specific pages.
+
+**11.3 When are Zoom breakout rooms opened and who can join?**
+Breakout rooms are usually opened after standups (around 9:45 PM) and are generally accessible to two cohorts, unless communicated otherwise.
+
+**11.4 How will I know when the breakout rooms are active? Are they compulsory?**
+Announcements will be made in the Discord channel when breakout rooms go live. Participation is completely optional.
+
+**11.5 What is the purpose of the breakout rooms?**
+They are intended for informal discussions, doubt clarification, collaboration, and peer support amongst participants.
+
+---
+
+## 12. Dashboard
+**12.1 Why is my dashboard not updated yet?**
+The dashboard is automated and will eventually update. Please wait until the next day as the scripts are programmed to rerun at the midnight for updation.
+
+**12.2 My submission is missing in the dashboard. What should I do?**
+Please ensure that you've submitted the forms required which you can find in the forms and link section in the cohort specific page. It is essential to submit as that is the place of verification for us and the scripts fetch for the dashboard.
+
+**12.3 Dashboard is not loading at the moment. What should I do?**
+The Dashboard is under update and this might cause some glitch in dashboard view. It will be resolved soon once the updates are done.  
+
+---
+
+## 13. IITM BS Internship
+**Registration & Application**
+
+**13.1 Where can I find the application form?**
+
+You should use the official link shared in the announcement post or pinned message. If you cannot find it, request it from admins.
+
+Discord link: https://discord.com/invite/BrdzTSmMxN
+
+Youtube tutorial: https://youtu.be/vQ_bBwV9rZk?si=kvsNqnxoQEKxaV-M
+
+**13.2 My application status is pending. How long does approval take?**
+
+Approval time varies depending on admin verification. Wait for confirmation; avoid resubmitting multiple times.
+
+**13.3 I filled the form with the wrong account and reapplied. Will it be accepted?**
+
+Yes, usually the latest valid submission is considered. Duplicate or incorrect entries may be ignored. Display name should be the registered name and a professional profile picture.
+
+**13.4 I registered with a personal email instead of institute email. Is that okay?**
+
+No. Registered email IDs generally work unless explicitly stated otherwise.
+
+**🔹 Discord Access**
+
+**13.5 Is it mandatory to log in using a college email ID?**
+
+No. You can usually join using any valid email unless instructions specify otherwise.
+
+**13.6 Where is the Discord link?**
+
+It is shared in official posts or announcements. If missing, request it from moderators. 
+
+**13.7 I joined Discord. What should I do next?**
+
+Complete onboarding steps:
+
+Read rules
+
+Verify account
+
+Select cohort/role
+
+Introduce yourself (if required)
+
+**13.8 Do I need a profile picture and real name?**
+
+Yes. Many communities require professional display names and profile photos for verification.
+
+**🔹 Cohorts & Selection**
+
+**13.9 Which cohort should I select?**
+
+Choose the cohort mentioned in your invitation or instructions. If multiple exist (e.g., IIT Madras, RSAins), select the correct assigned one.
+
+**13.10 I selected a cohort. What now?**
+
+Proceed with onboarding tasks and wait for instructions inside that cohort’s channel.
+
+**13.11 Where can I join a specific cohort?**
+
+Inside Discord → Roles/Channels section → Select cohort role.
+
+**🔹 Internship Details**
+
+**13.12 Is this a bootcamp or internship?**
+
+It may function as a structured program combining training + internship elements. Check official description for classification.
+
+**13.13 What are the prerequisites?**
+
+Prerequisites vary by program but typically include:
+
+Basic technical knowledge
+
+Active participation
+
+Completion of onboarding steps
+
+**13.14 What are eligibility criteria?**
+
+Eligibility depends on the cohort/program announcement. Confirm from official guidelines.
+
+**🔹 Process & Tracking**
+
+**13.15 How is progress tracked?**
+
+Progress is typically tracked through platform activity, task completion, quizzes, or submissions.
+
+**13.16 Do we need to sign up on Vibe before slot booking?**
+
+It is required but not right now. Further announcements will be shared on this.
+
+**🔹 Technical / Access Issues**
+
+**13.17 I joined Discord but didn’t get onboarding questions.**
+
+Try:
+
+  Try Refreshing
+
+  Rechecking onboarding channel
+
+  Logging out/in
+
+  Contacting admin
+
+**🔹 Communication Channels**
+
+**13.18 Why wasn’t the Discord link shared directly in the post?**  
+
+Sometimes organizers route users through WhatsApp/Telegram first for filtering or instructions.
+
+**🔹 Miscellaneous**
+
+**13.19 Are different emails/program mails related or the same program?**
+
+Not always. Programs with similar names may be separate initiatives. Confirm via official sources.
+
+**13.20 Are there benefits like internship opportunities under mentors?**
+
+Benefits depend on performance, participation, and program structure. Official announcements clarify this.
+
+---

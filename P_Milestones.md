@@ -47,6 +47,8 @@ The Vinternship program follows a structured learning path with clear milestones
 
 Your performance is evaluated based on consistent progress, quality of work, and successful completion of all components. The table below outlines the key milestones and associated health points that add to your overall evaluation:
 
+***Note: Please ensure that you complete an additional 1% to stay on the safer side and earn health points.***
+
 | S.No. | Milestone | Deadline | HP (Health Points) |
 |-------|-----------|----------|-------------------|
 | 1 | 25% ViBe Course completion | 1 week | 2.5% |

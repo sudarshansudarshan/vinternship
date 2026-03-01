@@ -9,17 +9,17 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="1. Problem Statement" />
 <meta property="og:description" content="1. Problem Statement" />
-<link rel="canonical" href="http://localhost:4001/vinternship/case-studies/15-advanced-types/" />
-<meta property="og:url" content="http://localhost:4001/vinternship/case-studies/15-advanced-types/" />
+<link rel="canonical" href="http://localhost:4000/vinternship/case-studies/15-advanced-types/" />
+<meta property="og:url" content="http://localhost:4000/vinternship/case-studies/15-advanced-types/" />
 <meta property="og:site_name" content="Vinternship" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-01-29T22:03:58+05:30" />
+<meta property="article:published_time" content="2026-02-26T13:40:59+05:30" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Advanced Types" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-29T22:03:58+05:30","datePublished":"2026-01-29T22:03:58+05:30","description":"1. Problem Statement","headline":"Advanced Types","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4001/vinternship/case-studies/15-advanced-types/"},"url":"http://localhost:4001/vinternship/case-studies/15-advanced-types/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-02-26T13:40:59+05:30","datePublished":"2026-02-26T13:40:59+05:30","description":"1. Problem Statement","headline":"Advanced Types","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/vinternship/case-studies/15-advanced-types/"},"url":"http://localhost:4000/vinternship/case-studies/15-advanced-types/"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/vinternship/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4001/vinternship/feed.xml" title="Vinternship" /></head>
+<link rel="stylesheet" href="/vinternship/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/vinternship/feed.xml" title="Vinternship" /></head>
 <head><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-87W6B0JP70"></script>
 <script>
@@ -328,7 +328,8 @@ It’s written  with the  <code class="language-plaintext highlighter-rouge">|</
 
 <h2 id="5-live-code-walkthrough-step-by-step-explained">5. Live Code Walkthrough (Step-by-Step, Explained)</h2>
 
-<h2 id="a-union-types-one-or-the-other"><strong>A. Union Types: One or the Other</strong></h2>
+<p><strong>A. Union Types: One or the Other</strong></p>
+
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">printUserInfo</span><span class="p">(</span><span class="nx">user</span><span class="p">:</span> <span class="nx">AnyUser</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">if </span><span class="p">(</span><span class="dl">"</span><span class="s2">quizzesCompleted</span><span class="dl">"</span> <span class="k">in</span> <span class="nx">user</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="s2">`Learner: </span><span class="p">${</span><span class="nx">user</span><span class="p">.</span><span class="nx">quizzesCompleted</span><span class="p">}</span><span class="s2"> quizzes completed`</span><span class="p">);</span>
@@ -341,38 +342,39 @@ It’s written  with the  <code class="language-plaintext highlighter-rouge">|</
 </code></pre></div></div>
 
 <ul>
-  <li><strong>Union types</strong>  let you accept different shapes and handle each safely.
-    <h2 id="b-intersection-types-both-at-once"><strong>B. Intersection Types: Both at Once</strong></h2>
-    <p>```typescript
-const alice: MultiRoleUser = {
-  id: “alice123”,
-  quizzesCompleted: 10,
-  coursesTaught: 2
-};</p>
-  </li>
+  <li><strong>Union types</strong>  let you accept different shapes and handle each safely.</li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-   **Intersection types**  let you combine all properties for users with multiple roles.
+<p><strong>B. Intersection Types: Both at Once</strong></p>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">alice</span><span class="p">:</span> <span class="nx">MultiRoleUser</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">id</span><span class="p">:</span> <span class="dl">"</span><span class="s2">alice123</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">quizzesCompleted</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+  <span class="na">coursesTaught</span><span class="p">:</span> <span class="mi">2</span>
+<span class="p">};</span>
 
-## **C. Mapped Types: Transform Data Shapes**
+</code></pre></div></div>
+<ul>
+  <li><strong>Intersection types</strong>  let you combine all properties for users with multiple roles.</li>
+</ul>
 
-Suppose you want to track module progress for each learner:
+<p><strong>C. Mapped Types: Transform Data Shapes</strong></p>
 
- ```typescript
-type ModuleStatus = "not-started" | "in-progress" | "completed";
+<p>Suppose you want to track module progress for each learner:</p>
 
-// For any list of module IDs, generate a progress map:
-type ProgressMap&lt;Modules extends string&gt; = {
-  [K in Modules]: ModuleStatus;
-};
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">type</span> <span class="nx">ModuleStatus</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">not-started</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">in-progress</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">completed</span><span class="dl">"</span><span class="p">;</span>
 
-type MyModules = "quiz1" | "video2" | "assignment3";
-type MyProgress = ProgressMap&lt;MyModules&gt;;
+<span class="c1">// For any list of module IDs, generate a progress map:</span>
+<span class="kd">type</span> <span class="nx">ProgressMap</span><span class="o">&lt;</span><span class="nx">Modules</span> <span class="kd">extends</span> <span class="kr">string</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">[</span><span class="nx">K</span> <span class="k">in</span> <span class="nx">Modules</span><span class="p">]:</span> <span class="nx">ModuleStatus</span><span class="p">;</span>
+<span class="p">};</span>
 
-// Result: { quiz1: ModuleStatus; video2: ModuleStatus; assignment3: ModuleStatus }
+<span class="kd">type</span> <span class="nx">MyModules</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">quiz1</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">video2</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">assignment3</span><span class="dl">"</span><span class="p">;</span>
+<span class="kd">type</span> <span class="nx">MyProgress</span> <span class="o">=</span> <span class="nx">ProgressMap</span><span class="o">&lt;</span><span class="nx">MyModules</span><span class="o">&gt;</span><span class="p">;</span>
+
+<span class="c1">// Result: { quiz1: ModuleStatus; video2: ModuleStatus; assignment3: ModuleStatus }</span>
 </code></pre></div></div>
 
-<h2 id="d-conditional-types-adapting-to-data"><strong>D. Conditional Types: Adapting to Data</strong></h2>
+<p><strong>D. Conditional Types: Adapting to Data</strong></p>
 
 <p>Suppose you want to allow feedback only if a module is completed:</p>
 
@@ -381,7 +383,8 @@ type MyProgress = ProgressMap&lt;MyModules&gt;;
 <span class="kd">type</span> <span class="nx">FeedbackForQuiz</span> <span class="o">=</span> <span class="nx">FeedbackAllowed</span><span class="o">&lt;</span><span class="dl">"</span><span class="s2">completed</span><span class="dl">"</span><span class="o">&gt;</span><span class="p">;</span> <span class="c1">// string</span>
 <span class="kd">type</span> <span class="nx">FeedbackForVideo</span> <span class="o">=</span> <span class="nx">FeedbackAllowed</span><span class="o">&lt;</span><span class="dl">"</span><span class="s2">in-progress</span><span class="dl">"</span><span class="o">&gt;</span><span class="p">;</span> <span class="c1">// never</span>
 </code></pre></div></div>
-<h2 id="e-utility-types-quick-type-transformations"><strong>E. Utility Types: Quick Type Transformations</strong></h2>
+
+<p><strong>E. Utility Types: Quick Type Transformations</strong></p>
 
 <p>Suppose you want a type where all fields are optional for a draft report:</p>
 

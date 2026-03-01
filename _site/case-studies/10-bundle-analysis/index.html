@@ -9,17 +9,17 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="1. Problem Statement" />
 <meta property="og:description" content="1. Problem Statement" />
-<link rel="canonical" href="http://localhost:4001/vinternship/case-studies/10-bundle-analysis/" />
-<meta property="og:url" content="http://localhost:4001/vinternship/case-studies/10-bundle-analysis/" />
+<link rel="canonical" href="http://localhost:4000/vinternship/case-studies/10-bundle-analysis/" />
+<meta property="og:url" content="http://localhost:4000/vinternship/case-studies/10-bundle-analysis/" />
 <meta property="og:site_name" content="Vinternship" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-01-29T22:03:58+05:30" />
+<meta property="article:published_time" content="2026-02-26T13:40:59+05:30" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Bundle Analysis" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-29T22:03:58+05:30","datePublished":"2026-01-29T22:03:58+05:30","description":"1. Problem Statement","headline":"Bundle Analysis","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4001/vinternship/case-studies/10-bundle-analysis/"},"url":"http://localhost:4001/vinternship/case-studies/10-bundle-analysis/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-02-26T13:40:59+05:30","datePublished":"2026-02-26T13:40:59+05:30","description":"1. Problem Statement","headline":"Bundle Analysis","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/vinternship/case-studies/10-bundle-analysis/"},"url":"http://localhost:4000/vinternship/case-studies/10-bundle-analysis/"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/vinternship/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4001/vinternship/feed.xml" title="Vinternship" /></head>
+<link rel="stylesheet" href="/vinternship/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/vinternship/feed.xml" title="Vinternship" /></head>
 <head><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-87W6B0JP70"></script>
 <script>
@@ -183,7 +183,7 @@ How do you analyze and understand the impact of TypeScript code, types, and thir
 
 <h2 id="4-technical-deep-dive">4. Technical Deep Dive</h2>
 
-<h2 id="a-what-affects-bundle-size"><strong>A. What Affects Bundle Size?</strong></h2>
+<p><strong>A. What Affects Bundle Size?</strong></p>
 
 <ul>
   <li>
@@ -203,21 +203,23 @@ How do you analyze and understand the impact of TypeScript code, types, and thir
   </li>
 </ul>
 
-<hr />
-
 <p><strong>B. Analyzing the Bundle</strong></p>
 
 <p><strong>1. Using Webpack Bundle Analyzer</strong></p>
 
 <ul>
-  <li>Install:
-```js
-npm install –save-dev webpack-bundle-analyzer</li>
+  <li>Install:</li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Add to your Webpack config as a plugin, or run with:
-```js
-npx webpack-bundle-analyzer dist/bundle.js
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">npm</span> <span class="nx">install</span> <span class="o">--</span><span class="nx">save</span><span class="o">-</span><span class="nx">dev</span> <span class="nx">webpack</span><span class="o">-</span><span class="nx">bundle</span><span class="o">-</span><span class="nx">analyzer</span>
+
+</code></pre></div></div>
+
+<ul>
+  <li>Add to your Webpack config as a plugin, or run with:</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">npx</span> <span class="nx">webpack</span><span class="o">-</span><span class="nx">bundle</span><span class="o">-</span><span class="nx">analyzer</span> <span class="nx">dist</span><span class="o">/</span><span class="nx">bundle</span><span class="p">.</span><span class="nx">js</span>
 </code></pre></div></div>
 <ul>
   <li>
@@ -257,8 +259,6 @@ npx webpack-bundle-analyzer dist/bundle.js
   </li>
 </ul>
 
-<hr />
-
 <p><strong>C. The Impact of Types and TypeScript Features</strong></p>
 
 <ul>
@@ -276,28 +276,32 @@ npx webpack-bundle-analyzer dist/bundle.js
   </li>
 </ul>
 
-<hr />
-
 <p><strong>D. The Impact of Libraries</strong></p>
 
 <ul>
   <li>
     <p><strong>Every library you import adds to the bundle.</strong>  Some, like lodash or moment, are very large.</p>
   </li>
-  <li><strong>Importing the whole library:</strong>
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">_</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">lodash</span><span class="dl">'</span><span class="p">;</span> <span class="c1">// BAD: includes all of lodash</span>
-</code></pre></div>    </div>
+  <li>
+    <p><strong>Importing the whole library:</strong></p>
   </li>
-  <li><strong>Importing only what you need:</strong>
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">debounce</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">lodash/debounce</span><span class="dl">'</span><span class="p">;</span> <span class="c1">// GOOD: includes only debounce</span>
-</code></pre></div>    </div>
-  </li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">_</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">lodash</span><span class="dl">'</span><span class="p">;</span> <span class="c1">// BAD: includes all of lodash</span>
+</code></pre></div></div>
+
+<ul>
+  <li><strong>Importing only what you need:</strong></li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">debounce</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">lodash/debounce</span><span class="dl">'</span><span class="p">;</span> <span class="c1">// GOOD: includes only debounce</span>
+</code></pre></div></div>
+
+<ul>
   <li><strong>Tree shaking:</strong>  Modern bundlers (Webpack, Rollup) remove unused exports from ES modules, but only if you use ES import/export syntax and avoid side effects.</li>
 </ul>
 
-<hr />
-
-<h2 id="e-strategies-for-reducing-bundle-size"><strong>E. Strategies for Reducing Bundle Size</strong></h2>
+<p><strong>E. Strategies for Reducing Bundle Size</strong></p>
 
 <ol>
   <li>
@@ -385,8 +389,6 @@ npx webpack-bundle-analyzer dist/bundle.js</p>
   </li>
 </ul>
 
-<hr />
-
 <p><strong>B. Reducing Bundle Size: Example</strong></p>
 
 <p><strong>Before:</strong></p>
@@ -396,12 +398,15 @@ npx webpack-bundle-analyzer dist/bundle.js</p>
 </code></pre></div></div>
 
 <p><strong>After:</strong></p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">debounce</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">lodash/debounce</span><span class="dl">'</span><span class="p">;</span>
 <span class="kd">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nf">debounce</span><span class="p">(</span><span class="nx">fn</span><span class="p">,</span> <span class="mi">300</span><span class="p">);</span>
 </code></pre></div></div>
+
 <p>The second form only includes the debounce function, not all of lodash</p>
 
 <p><strong>C. TypeScript Config for Better Bundling</strong></p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// tsconfig.json</span>
 <span class="p">{</span>
   <span class="dl">"</span><span class="s2">compilerOptions</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
@@ -414,12 +419,13 @@ npx webpack-bundle-analyzer dist/bundle.js</p>
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></div>
+
 <ul>
   <li>This setup helps bundlers tree shake unused code and reduces output size.</li>
 </ul>
 
-<hr />
 <p><strong>D. Minifying and Compressing</strong></p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">-</span>   <span class="nx">Use</span> <span class="nx">Terser</span> <span class="nx">or</span> <span class="nx">esbuild</span> <span class="k">for</span> <span class="nx">minification</span><span class="p">:</span>
 <span class="c1">// webpack.config.js</span>
 <span class="kd">const</span> <span class="nx">TerserPlugin</span> <span class="o">=</span> <span class="nf">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">terser-webpack-plugin</span><span class="dl">'</span><span class="p">);</span>
@@ -430,6 +436,7 @@ npx webpack-bundle-analyzer dist/bundle.js</p>
   <span class="p">},</span>
 <span class="p">};</span>
 </code></pre></div></div>
+
 <ul>
   <li>Minification removes whitespace, comments, and dead code.</li>
 </ul>
@@ -460,6 +467,8 @@ npx webpack-bundle-analyzer dist/bundle.js</p>
     <p>Bonus: Add code splitting for a rarely-used admin page and compare the initial chunk size before and after.</p>
   </li>
 </ol>
+
+<hr />
 
 <h2 id="7-common-pitfalls--best-practices">7. Common Pitfalls &amp; Best Practices</h2>
 <h2 id="common-pitfalls--best-practices-bundle-optimization">Common Pitfalls &amp; Best Practices (Bundle Optimization)</h2>

@@ -76,6 +76,7 @@ It catches every type mismatch before it becomes a costly bug.
 -   Use  `interface`  or  `type`  to declare the shape of props.
     
 -   Interfaces are extensible and ideal for public APIs.
+
 ```js
 // AssetCard.tsx
 interface AssetCardProps {
@@ -97,11 +98,13 @@ type AssetProps = {
   value: number;
 };
 ```
- **3. Optional and Default Props**
+
+**3. Optional and Default Props**
 
 -   Use  `?`  for optional props.
     
 -   Provide default values in destructuring or with  `defaultProps`  (class components).
+
 ```js
 const AssetCard: React.FC<AssetCardProps> = ({
   name,
@@ -121,14 +124,13 @@ const AssetCard: React.FC<AssetCardProps> = ({
 );
 ```
 
--   If you pass a prop not in the interface, TypeScript will error.
-    
+- If you pass a prop not in the interface, TypeScript will error.
 
-----------
 
- **B. Typing State in Functional Components**
+**B. Typing State in Functional Components**
 
 **1. useState with Explicit Types**
+
 ```js
 const [selectedSymbol, setSelectedSymbol] = useState<string | null>(null);
 const [filters, setFilters] = useState<{ type: AssetType; minValue: number }>({ type: 'stock', minValue: 0 });
@@ -160,9 +162,7 @@ const [state, dispatch] = useReducer(portfolioReducer, { assets: [] });
 -   Useful for non-trivial, multi-field state.
     
 
-----------
-
- **C. Typing Functional Components**
+**C. Typing Functional Components**
 
 **1. With React.FC or Explicit Props**
 
@@ -189,11 +189,14 @@ interface WrapperProps {
 }
 const Wrapper: React.FC<WrapperProps> = ({ children }) => <div>{children}</div>;
 ```
+
+
 **D. Typing Class Components**
 
 **1. Props and State Generics**
 
 -   `React.Component<Props, State>`  gives full type safety.
+
 ```js
 interface AssetFormProps { onAdd: (asset: AssetCardProps) => void; }
 interface AssetFormState { name: string; symbol: string; value: string; change: string; }
@@ -230,7 +233,10 @@ class AssetForm extends React.Component<AssetFormProps, AssetFormState> {
   }
 }
 ```
- **E. Best Practices and Pitfalls**
+
+
+**E. Best Practices and Pitfalls**
+
  | Pitfall                        | Best Practice                                      |
 |-------------------------------|----------------------------------------------------|
 | Using `any`                   | Always type props and state explicitly             |
@@ -238,6 +244,8 @@ class AssetForm extends React.Component<AssetFormProps, AssetFormState> {
 | Optional props w/o default    | Provide defaults or handle `undefined`             |
 | Mutating state directly       | Use state setters and immutable patterns           |
 | Not exporting interfaces      | Export for reuse and testing                       |
+
+---
 
 ## 5. Step-by-Step Data Modeling & Code Walkthrough
 
@@ -322,6 +330,8 @@ function portfolioReducer(state: PortfolioState, action: PortfolioAction): Portf
 const [state, dispatch] = useReducer(portfolioReducer, { assets: [] });
 ```
 
+---
+
 ## 6. Interactive Challenge / Mini-Project
 
 **Your Turn!**
@@ -340,7 +350,10 @@ const [state, dispatch] = useReducer(portfolioReducer, { assets: [] });
         
     -   Resets the form after submission.
 
+---
+
 ## 7. Common Pitfalls & Best Practices
+
 | Pitfall                                 | Best Practice                                      |
 |-----------------------------------------|----------------------------------------------------|
 | Using `any` for props/state             | Always define explicit types                       |
@@ -348,6 +361,8 @@ const [state, dispatch] = useReducer(portfolioReducer, { assets: [] });
 | Mutating state directly                 | Use state setters and immutable patterns           |
 | Not exporting interfaces/types          | Export for reuse and testing                       |
 | Mixing up functional and class patterns | Be consistent and clear                            |
+
+---
 
 ## 8. Optional: Programmer’s Workflow Checklist
 

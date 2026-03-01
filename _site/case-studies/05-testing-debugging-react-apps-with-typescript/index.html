@@ -9,17 +9,17 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="1. Problem Statement" />
 <meta property="og:description" content="1. Problem Statement" />
-<link rel="canonical" href="http://localhost:4001/vinternship/case-studies/05-testing-debugging-react-apps-with-typescript/" />
-<meta property="og:url" content="http://localhost:4001/vinternship/case-studies/05-testing-debugging-react-apps-with-typescript/" />
+<link rel="canonical" href="http://localhost:4000/vinternship/case-studies/05-testing-debugging-react-apps-with-typescript/" />
+<meta property="og:url" content="http://localhost:4000/vinternship/case-studies/05-testing-debugging-react-apps-with-typescript/" />
 <meta property="og:site_name" content="Vinternship" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-01-29T22:03:58+05:30" />
+<meta property="article:published_time" content="2026-02-26T13:40:59+05:30" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Testing &amp; Debugging React Apps" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-29T22:03:58+05:30","datePublished":"2026-01-29T22:03:58+05:30","description":"1. Problem Statement","headline":"Testing &amp; Debugging React Apps","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4001/vinternship/case-studies/05-testing-debugging-react-apps-with-typescript/"},"url":"http://localhost:4001/vinternship/case-studies/05-testing-debugging-react-apps-with-typescript/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-02-26T13:40:59+05:30","datePublished":"2026-02-26T13:40:59+05:30","description":"1. Problem Statement","headline":"Testing &amp; Debugging React Apps","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/vinternship/case-studies/05-testing-debugging-react-apps-with-typescript/"},"url":"http://localhost:4000/vinternship/case-studies/05-testing-debugging-react-apps-with-typescript/"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/vinternship/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4001/vinternship/feed.xml" title="Vinternship" /></head>
+<link rel="stylesheet" href="/vinternship/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/vinternship/feed.xml" title="Vinternship" /></head>
 <head><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-87W6B0JP70"></script>
 <script>
@@ -196,13 +196,17 @@ How do you ensure every feature is tested, every bug is caught early, and the co
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">npm</span> <span class="nx">install</span> <span class="o">--</span><span class="nx">save</span><span class="o">-</span><span class="nx">dev</span> <span class="nx">jest</span> <span class="p">@</span><span class="nd">types</span><span class="sr">/jest ts-jest @testing-library/</span><span class="nx">react</span> <span class="p">@</span><span class="nd">testing</span><span class="o">-</span><span class="nx">library</span><span class="o">/</span><span class="nx">jest</span><span class="o">-</span><span class="nx">dom</span>
 </code></pre></div></div>
+
 <ul>
-  <li>Add to  <code class="language-plaintext highlighter-rouge">package.json</code>:
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="dl">"</span><span class="s2">scripts</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+  <li>Add to  <code class="language-plaintext highlighter-rouge">package.json</code>:</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="dl">"</span><span class="s2">scripts</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
   <span class="dl">"</span><span class="s2">test</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">jest</span><span class="dl">"</span>
 <span class="p">}</span>
-</code></pre></div>    </div>
-  </li>
+</code></pre></div></div>
+
+<ul>
   <li>Create  <code class="language-plaintext highlighter-rouge">jest.config.js</code>:</li>
 </ul>
 
@@ -212,7 +216,9 @@ How do you ensure every feature is tested, every bug is caught early, and the co
   <span class="na">setupFilesAfterEnv</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">@testing-library/jest-dom/extend-expect</span><span class="dl">'</span><span class="p">]</span>
 <span class="p">};</span>
 </code></pre></div></div>
+
 <p><strong>3. Writing a Component Test</strong></p>
+
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// components/ArticleCard.tsx</span>
 <span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
 
@@ -252,6 +258,7 @@ How do you ensure every feature is tested, every bug is caught early, and the co
 
 
 </code></pre></div></div>
+
 <p><strong>4. Testing Hooks and Business Logic</strong></p>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// hooks/useApproval.ts</span>
@@ -275,6 +282,7 @@ How do you ensure every feature is tested, every bug is caught early, and the co
   <span class="nf">expect</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">approved</span><span class="p">).</span><span class="nf">toBe</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div></div>
+
 <p><strong>B. Linting: ESLint, Prettier, and Biome</strong></p>
 
 <p><strong>1. Why Lint?</strong></p>
@@ -292,6 +300,7 @@ How do you ensure every feature is tested, every bug is caught early, and the co
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">npm</span> <span class="nx">install</span> <span class="o">--</span><span class="nx">save</span><span class="o">-</span><span class="nx">dev</span> <span class="nx">eslint</span> <span class="p">@</span><span class="nd">typescript</span><span class="o">-</span><span class="nx">eslint</span><span class="o">/</span><span class="nx">parser</span> <span class="p">@</span><span class="nd">typescript</span><span class="o">-</span><span class="nx">eslint</span><span class="o">/</span><span class="nx">eslint</span><span class="o">-</span><span class="nx">plugin</span> <span class="nx">prettier</span> <span class="nx">eslint</span><span class="o">-</span><span class="nx">config</span><span class="o">-</span><span class="nx">prettier</span> <span class="nx">eslint</span><span class="o">-</span><span class="nx">plugin</span><span class="o">-</span><span class="nx">react</span>
 </code></pre></div></div>
+
 <ul>
   <li><code class="language-plaintext highlighter-rouge">.eslintrc.js</code>  example:</li>
 </ul>
@@ -311,6 +320,7 @@ How do you ensure every feature is tested, every bug is caught early, and the co
 <span class="p">};</span>
 
 </code></pre></div></div>
+
 <ul>
   <li>Add a  <code class="language-plaintext highlighter-rouge">.prettierrc</code>  for formatting preferences.</li>
 </ul>
@@ -329,8 +339,6 @@ How do you ensure every feature is tested, every bug is caught early, and the co
   <li>Add a  <code class="language-plaintext highlighter-rouge">biome.json</code>  config and run with  <code class="language-plaintext highlighter-rouge">npx biome check .</code>.</li>
 </ul>
 
-<hr />
-
 <p><strong>C. Debugging React with TypeScript</strong></p>
 
 <ul>
@@ -344,8 +352,6 @@ How do you ensure every feature is tested, every bug is caught early, and the co
     <p>Use  <strong>console.log</strong>  and  <strong>Jest’s debug output</strong>  for test failures.</p>
   </li>
 </ul>
-
-<hr />
 
 <p><strong>D. Integrating Testing and Linting into CI</strong></p>
 
@@ -382,6 +388,7 @@ How do you ensure every feature is tested, every bug is caught early, and the co
 </span>  <span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></div>
+
 <p><strong>Test:</strong></p>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// __tests__/ArticleApproval.test.tsx</span>
@@ -396,6 +403,7 @@ How do you ensure every feature is tested, every bug is caught early, and the co
 <span class="p">});</span>
 
 </code></pre></div></div>
+
 <p><strong>B. Linting and Formatting Example</strong></p>
 
 <ul>
@@ -406,8 +414,6 @@ How do you ensure every feature is tested, every bug is caught early, and the co
     <p>Fix errors and warnings before pushing code.</p>
   </li>
 </ul>
-
-<hr />
 
 <p><strong>C. Debugging Example</strong></p>
 
@@ -450,7 +456,10 @@ How do you ensure every feature is tested, every bug is caught early, and the co
   </li>
 </ol>
 
+<hr />
+
 <h2 id="7-common-pitfalls--best-practices">7. Common Pitfalls &amp; Best Practices</h2>
+
 <h2 id="common-pitfalls--best-practices-testing--code-quality">Common Pitfalls &amp; Best Practices (Testing &amp; Code Quality)</h2>
 
 <table>
@@ -483,6 +492,8 @@ How do you ensure every feature is tested, every bug is caught early, and the co
     </tr>
   </tbody>
 </table>
+
+<hr />
 
 <h2 id="8-optional-programmers-workflow-checklist">8. Optional: Programmer’s Workflow Checklist</h2>
 

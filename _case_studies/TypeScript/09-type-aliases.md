@@ -132,48 +132,7 @@ let idContainer: Container<ProductID> = {
 
 ----------
 
-## 7. Solution & Deep Dive Explanation
-
-```typescript
-// 1. Primitive Alias for CustomerID
-type CustomerID = string;
-
-// 2. Object Alias for Customer
-type Customer = {
-  id: CustomerID;
-  name: string;
-  email?: string;
-};
-let customer: Customer = { id: "C123", name: "Alice" };
-
-// 3. Function Type Alias for processOrder
-type OrderCallback = (status: OrderStatus) => void;
-const processOrder: OrderCallback = status => {
-  consoleLogger(`Order is now ${status}`);
-};
-processOrder("pending");
-
-// 4. Wrap Customer in Container<T>
-let customerContainer: Container<Customer> = {
-  value: customer,
-  timestamp: new Date()
-};
-console.log(customerContainer);
-```
-
-**Explanation:**
-
--   **`CustomerID`**  makes it clear that this  `string`  is a customer identifier.
-    
--   **`Customer`**  alias reuses  `CustomerID`  and marks  `email`  optional with  `?`.
-    
--   **`OrderCallback`**  defines the exact signature for order‐status handlers.
-    
--   **`Container<Customer>`**  uses the generic alias to wrap a  `Customer`  with metadata.
-    
-
-----------
-## 8. Quick Recap & Key Takeaways
+## 7. Quick Recap & Key Takeaways
 
 -   **Type Aliases**  = named templates for any TypeScript type.
     

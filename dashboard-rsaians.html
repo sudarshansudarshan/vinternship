@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-87W6B0JP70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-87W6B0JP70');
+</script>
+<meta charset="UTF-8">
+<title>Vinternship Dashboard RSAians</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<style>
+  body {
+    margin: 0;
+    background: #f5f7fb;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1f2937;
+  }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #1a237e, #3949ab);
+    color: white;
+    padding: 24px;
+    text-align: center;
+  }
+
+  /* Top Tabs */
+  .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px;
+    flex-wrap: wrap;
+  }
+
+  .tab {
+    padding: 10px 18px;
+    background: #e8eaf6;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #1a237e;
+    user-select: none;
+  }
+
+  .tab.active {
+    background: #1a237e;
+    color: white;
+  }
+
+  /* Tab Content */
+  .tab-content {
+    display: none;
+    width: 95%;
+    max-width: 1400px;
+    margin: 0 auto 30px auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    overflow: hidden;
+  }
+
+  .tab-content.active {
+    display: block;
+  }
+
+  /* Dashboard layout */
+  .dashboard-inner {
+    display: flex;
+    min-height: 80vh;
+  }
+
+  .dashboard-menu {
+    width: 260px;
+    background: #f3f4fb;
+    border-right: 1px solid #ddd;
+    padding: 12px;
+  }
+
+  .menu-item {
+    padding: 12px 14px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 600;
+    color: #1a237e;
+    user-select: none;
+  }
+
+  .menu-item.active {
+    background: #1a237e;
+    color: white;
+  }
+
+  .dashboard-view {
+    flex: 1;
+    padding: 18px 18px 24px 18px;
+    overflow: auto;
+  }
+
+  /* Cards / Status */
+  .status-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #1a237e;
+    font-weight: 600;
+    font-size: 13px;
+  }
+
+  .muted {
+    color: #6b7280;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .search input {
+    width: 320px;
+    max-width: 60vw;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    outline: none;
+    font-size: 14px;
+  }
+
+  .search input:focus {
+    border-color: #1a237e;
+    box-shadow: 0 0 0 3px rgba(26,35,126,0.15);
+  }
+
+  /* Table */
+  .table-wrap {
+    width: 100%;
+    overflow: auto;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 900px;
+  }
+
+  thead th {
+    position: sticky;
+    top: 0;
+    background: #00FF00;      /* Bright Green */
+    color: #D32F2F;           /* Deep Red */
+    font-weight: 800;
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+  }
+
+  thead th .sort-ind {
+    font-size: 12px;
+    margin-left: 6px;
+    opacity: 0.8;
+  }
+
+  tbody td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #f0f2f5;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  tbody tr:hover {
+    filter: brightness(0.98);
+  }
+
+  .num {
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .small {
+    font-size: 12px;
+    color: #6b7280;
+  }
+  .hp-inner-view {
+  display: none;
+}
+
+.hp-inner-view.active {
+  display: block;
+}
+
+
+  /* Percentile band row colors (pastels) */
+  .band-top { background: #C8E6C9; }     /* soft green */
+  .band-2   { background: #BBDEFB; }     /* soft blue  */
+  .band-3   { background: #FFF9C4; }     /* soft yellow*/
+  .band-4   { background: #FFE0B2; }     /* soft orange*/
+  .band-bot { background: #FFCDD2; }     /* soft red   */
+
+  /* Placeholder */
+  .placeholder {
+    padding: 60px;
+    text-align: center;
+    color: #555;
+  }
+
+  /* Tickets bars */
+  .ticket-bars {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 28px;
+    height: 220px;
+    margin-top: 20px;
+  }
+
+  .bar {
+    width: 70px;
+    border-radius: 16px 16px 10px 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 10px;
+    font-weight: 800;
+    color: #1f2937;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.10);
+  }
+
+  .gold   { height: 200px; background: #FFD54F; }
+  .silver { height: 150px; background: #CFD8DC; }
+  .bronze { height: 110px; background: #D7A86E; }
+
+  .soon {
+    margin-top: 18px;
+    font-weight: 700;
+    color: #6b7280;
+  }
+
+  .top-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px 0 20px;
+}
+
+/* Back button */
+.back-btn {
+  background: #e8eaf6;
+  color: #1a237e;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.back-btn:hover {
+  background: #dfe2fd;
+}
+
+/* Tabs stay centered */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex: 1;               /* THIS IS THE KEY */
+  flex-wrap: wrap;
+}
+
+/* Right spacer (keeps tabs centered) */
+.top-bar-spacer {
+  width: 80px;           /* same visual weight as back button */
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <h1>Vinternship Dashboard RSAians</h1>
+  <p>Live Performance & Progress Overview</p>
+</div>
+
+<!-- Top Tabs -->
+<div class="top-bar">
+  <button class="back-btn" onclick="history.back()">← Back</button>
+
+  <div class="tabs">
+    <div class="tab active" data-tab="leaderboard">Leaderboard</div>
+    <div class="tab" data-tab="cs">CS Progress</div>
+    <div class="tab" data-tab="health">Health Points</div>
+    <div class="tab" data-tab="tickets">Tickets</div>
+  </div>
+
+  <div class="top-bar-spacer"></div>
+</div>
+
+
+
+<!-- Leaderboard Tab -->
+<div class="tab-content active" id="tab-leaderboard">
+  <div class="dashboard-inner">
+    <div class="dashboard-menu">
+      <div class="menu-item active" data-inner="state">State-wise</div>
+      <div class="menu-item" data-inner="institute">Institute-wise</div>
+      <div class="menu-item" data-inner="cohort">Cohort-wise</div>
+    </div>
+
+    <div class="dashboard-view">
+      <div class="status-row">
+        <div class="pill" id="lb-pill">Loading…</div>
+        <div class="search">
+          <input id="lb-search" placeholder="Search…" />
+          <span class="muted" id="lb-meta"></span>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table id="lb-table">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div class="small" style="margin-top:10px;">
+        Tip: Click any column header to sort.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CS Progress Tab -->
+<div class="tab-content" id="tab-cs">
+  <div class="dashboard-inner">
+    <div class="dashboard-view" style="width:100%;">
+
+      <div class="status-row">
+        <div class="pill">CS PROGRESS</div>
+
+        <div class="search">
+          <input id="cs-search" placeholder="Search by name or email…" />
+        </div>
+      </div>
+
+      <div style="margin-bottom:14px;">
+        <a href="https://forms.gle/SPS8s4bhXt6Nu8ddA" target="_blank"
+           style="
+             display:inline-block;
+             padding:10px 16px;
+             background:#1a237e;
+             color:white;
+             border-radius:8px;
+             font-weight:600;
+             text-decoration:none;
+           ">
+          Submit your Case Studies here
+        </a>
+      </div>
+
+      <div class="table-wrap">
+        <table id="cs-table">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Health Points Tab -->
+<div class="tab-content" id="tab-health">
+  <div class="dashboard-inner">
+
+    <!-- LEFT MENU -->
+    <div class="dashboard-menu">
+      <div class="menu-item active" data-hp-inner="dashboard">HP Dashboard</div>
+      <div class="menu-item" data-hp-inner="individual">Individual HP</div>
+      <div class="menu-item" data-hp-inner="reasons">Add / Delete Reasons</div>
+          </div>
+
+    <!-- RIGHT VIEW -->
+    <div class="dashboard-view" id="hp-view">
+
+      <!-- HP DASHBOARD (default) -->
+      <div class="hp-inner-view active" id="hp-dashboard-view">
+        <div class="status-row">
+          <div class="pill">Health Points Leaderboard</div>
+          <div class="search">
+            <input id="hp-search" placeholder="Search name or email…" />
+            <span class="muted" id="hp-meta"></span>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table id="hp-table">
+            <thead></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- INDIVIDUAL HP -->
+      <div class="hp-inner-view" id="hp-individual-view">
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTs68eUsryW_h8RU7fOeonpWE79iwqHIk7iny_00n7nLtTK5SLA35CdaXKjH6ZDvuPOhi8l8tG14nUa/pubhtml?gid=713252598&amp;single=true&amp;widget=true&amp;headers=true"
+          style="width:100%; height:80vh; border:none; border-radius:12px;">
+        </iframe>
+      </div>
+
+      <!-- ADD / DELETE REASONS -->
+      <div class="hp-inner-view" id="hp-reasons-view">
+       <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTs68eUsryW_h8RU7fOeonpWE79iwqHIk7iny_00n7nLtTK5SLA35CdaXKjH6ZDvuPOhi8l8tG14nUa/pubhtml?gid=1449701238&amp;single=true&amp;widget=true&amp;headers=false"
+          style="width:100%; height:80vh; border:none; border-radius:12px;">
+        </iframe>
+      </div>
+    <!-- Attendance -->
+      
+    </div>
+  </div>
+</div>
+
+
+<!-- Tickets Tab (placeholder with bars) -->
+<div class="tab-content" id="tab-tickets">
+  <div class="dashboard-inner">
+    <div class="dashboard-view" style="width:100%;">
+      <div class="placeholder">
+        <h2 style="color:#1a237e;">Tickets</h2>
+        <div class="ticket-bars">
+          <div class="bar gold">Gold</div>
+          <div class="bar silver">Silver</div>
+          <div class="bar bronze">Bronze</div>
+        </div>
+        <p class="soon">Will be added soon</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ========= CONFIG =========
+  const API_URL = "https://script.google.com/macros/s/AKfycbyoKKhIldrryEf2hRnkvHEJX4r9-5DEf-WXnjdf1_GJYP4V5M9FScunBwFxtwGtPvzm8g/exec";
+  const HP_API_URL = "https://script.google.com/macros/s/AKfycbzAloowHilBMPpp_Y2RXgK0y_kh2xdDrLMKDCHTE8sW22Zql6shrdfvVZP3jd8NGVrw/exec";
+  // We expect the API JSON to include these keys:
+  // {
+  //   state: [...],
+  //   institute: [...],
+  //   dashboard: [...]
+  // }
+  const DATA_KEYS = {
+    state: "state",
+    institute: "institute",
+    cohort: "dashboard" // cohort-wise uses Dashboard sheet
+  };
+
+  // Which column decides band coloring for each view
+  // state: Weighted Score column name
+  // institute: Weighted Score column name
+  // cohort: Rank / Overall Progress (choose one) -> we'll use Overall Progress if present else Rank
+  const BAND_METRIC = {
+    state: "Weighted Score",
+    institute: "Weighted Score",
+    cohort: "Overall Progress"
+  };
+
+  // ========= STATE =========
+  let apiData = null;
+
+  const sortState = {
+    // view => { key, dir }
+    state: { key: null, dir: "desc" },
+    institute: { key: null, dir: "desc" },
+    cohort: { key: null, dir: "asc" } // rank often asc
+  };
+
+  let currentInner = "state";
+  let currentRows = [];
+
+  // ========= HELPERS =========
+  function isNumberLike(v) {
+    if (v === null || v === undefined) return false;
+    const n = Number(v);
+    return !Number.isNaN(n) && v !== "";
+  }
+
+  function normalizeString(s) {
+    return (s ?? "").toString().toLowerCase();
+  }
+
+  function compare(a, b, dir) {
+    // numeric first if possible
+    const an = Number(a), bn = Number(b);
+    const aNum = !Number.isNaN(an) && a !== "" && a !== null && a !== undefined;
+    const bNum = !Number.isNaN(bn) && b !== "" && b !== null && b !== undefined;
+
+    let res = 0;
+    if (aNum && bNum) res = an - bn;
+    else res = normalizeString(a).localeCompare(normalizeString(b));
+
+    return dir === "asc" ? res : -res;
+  }
+
+  function computePercentileBands(rows, metricKey) {
+    // returns array of band class names in same order as rows
+    const values = rows.map(r => Number(r[metricKey]) || 0);
+    const sorted = [...values].sort((a,b) => b-a);
+    const n = sorted.length;
+
+    function percentile(v) {
+      const idx = sorted.findIndex(x => x <= v);
+      return idx === -1 ? 100 : (idx / n) * 100;
+    }
+
+    function bandClass(p) {
+      if (p <= 20) return "band-top";
+      if (p <= 40) return "band-2";
+      if (p <= 60) return "band-3";
+      if (p <= 80) return "band-4";
+      return "band-bot";
+    }
+
+    return values.map(v => bandClass(percentile(v)));
+  }
+
+  function renderTable(tableEl, rows, options) {
+    const thead = tableEl.querySelector("thead");
+    const tbody = tableEl.querySelector("tbody");
+    thead.innerHTML = "";
+    tbody.innerHTML = "";
+
+    if (!rows || rows.length === 0) {
+      thead.innerHTML = "<tr><th>No data</th></tr>";
+      tbody.innerHTML = "<tr><td class='small'>No rows returned from API.</td></tr>";
+      return;
+    }
+
+    const columns = options.columns ?? Object.keys(rows[0]);
+
+    // header row
+    const trh = document.createElement("tr");
+    columns.forEach(col => {
+      const th = document.createElement("th");
+      th.textContent = col;
+
+      const ind = document.createElement("span");
+      ind.className = "sort-ind";
+      ind.textContent = "";
+      th.appendChild(ind);
+
+      th.addEventListener("click", () => {
+        // toggle sort
+        const st = sortState[currentInner];
+        if (st.key === col) st.dir = (st.dir === "asc") ? "desc" : "asc";
+        else { st.key = col; st.dir = "asc"; }
+
+        // apply sorting + rerender
+        const sortedRows = [...currentRows].sort((a, b) => compare(a[col], b[col], st.dir));
+        currentRows = sortedRows;
+        renderLeaderboardView(currentInner); // rerender keeps band coloring in sync
+      });
+
+      trh.appendChild(th);
+    });
+    thead.appendChild(trh);
+
+    // band coloring
+    const metricKey = options.bandMetricKey;
+    const bandClasses = metricKey ? computePercentileBands(rows, metricKey) : rows.map(() => "");
+
+    // body rows
+    rows.forEach((r, i) => {
+      const tr = document.createElement("tr");
+      if (bandClasses[i]) tr.className = bandClasses[i];
+
+      columns.forEach(col => {
+        const td = document.createElement("td");
+        const val = r[col];
+
+        // numeric alignment
+        if (isNumberLike(val)) td.classList.add("num");
+
+        // format floats to 2 decimals (for progress/weighted etc.)
+        if (isNumberLike(val) && (col.toLowerCase().includes("progress") || col.toLowerCase().includes("weighted"))) {
+          td.textContent = Number(val).toFixed(2);
+        } else {
+          td.textContent = (val ?? "").toString();
+        }
+
+        tr.appendChild(td);
+      });
+
+      tbody.appendChild(tr);
+    });
+
+    // update sort indicators
+    const st = sortState[currentInner];
+    [...thead.querySelectorAll("th")].forEach(th => {
+      const col = th.childNodes[0]?.nodeValue?.trim() ?? th.textContent.trim();
+      const ind = th.querySelector(".sort-ind");
+      if (!ind) return;
+      if (st.key === col) ind.textContent = st.dir === "asc" ? "▲" : "▼";
+      else ind.textContent = "";
+    });
+  }
+
+  function applySearch(rows, query) {
+    if (!query) return rows;
+    const q = normalizeString(query);
+    return rows.filter(obj => JSON.stringify(obj).toLowerCase().includes(q));
+  }
+
+  // ========= LEADERBOARD RENDERING =========
+  function getDefaultBandMetric(inner, sampleRow) {
+    if (inner === "cohort") {
+      // Cohort-wise = Dashboard. Prefer Overall Progress; else Vibe Progress; else Rank
+      if (sampleRow && "Overall Progress" in sampleRow) return "Overall Progress";
+      if (sampleRow && "Vibe Progress" in sampleRow) return "Vibe Progress";
+      return "Rank";
+    }
+    return BAND_METRIC[inner];
+  }
+
+  function renderLeaderboardView(innerKey) {
+    currentInner = innerKey;
+
+    const pill = document.getElementById("lb-pill");
+    const meta = document.getElementById("lb-meta");
+    const search = document.getElementById("lb-search");
+    const table = document.getElementById("lb-table");
+
+    const dataKey = DATA_KEYS[innerKey];
+    let rows = (apiData && apiData[dataKey]) ? apiData[dataKey] : [];
+
+    // Apply search
+    rows = applySearch(rows, search.value);
+
+    // Determine columns and band metric
+    const sample = rows[0];
+
+    let columns;
+    if (innerKey === "state") {
+      columns = ["State / UT", "Student Count", "Average Vibe Progress", "In Top 50", "Weighted Score"];
+      // fallback if keys differ slightly
+      columns = columns.filter(c => sample && (c in sample));
+      if (columns.length === 0 && sample) columns = Object.keys(sample);
+    } else if (innerKey === "institute") {
+      columns = ["Institute Name", "Student Count", "Average Vibe Progress", "Not Yet Started", "In Top 50", "Weighted Score"];
+      columns = columns.filter(c => sample && (c in sample));
+      if (columns.length === 0 && sample) columns = Object.keys(sample);
+    } else {
+      // cohort-wise from Dashboard
+      columns = ["Rank", "Name", "Email", "Case Study Progress", "Vibe Progress", "Health Points" , "Overall Progress"];
+      columns = columns.filter(c => sample && (c in sample));
+      if (columns.length === 0 && sample) columns = Object.keys(sample);
+    }
+
+    // Default sort if none chosen yet
+    const st = sortState[innerKey];
+    if (!st.key) {
+      if (innerKey === "state" || innerKey === "institute") {
+        st.key = "Weighted Score";
+        st.dir = "desc";
+      } else {
+        st.key = "Rank";
+        st.dir = "asc";
+      }
+    }
+
+    // Sort rows
+    rows = [...rows].sort((a, b) => compare(a[st.key], b[st.key], st.dir));
+
+    // Keep global reference for re-render
+    currentRows = rows;
+
+    const bandMetric = getDefaultBandMetric(innerKey, sample);
+
+    pill.textContent = `${innerKey.toUpperCase()} VIEW`;
+    meta.textContent = `Rows: ${rows.length}${apiData?.lastUpdated ? " • Updated: " + new Date(apiData.lastUpdated).toLocaleString() : ""}`;
+
+    renderTable(table, rows, { columns, bandMetricKey: bandMetric });
+  }
+function renderCSProgress() {
+  const table = document.getElementById("cs-table");
+  if (!table || !apiData || !apiData.csProgress) return;
+
+  const thead = table.querySelector("thead");
+  const tbody = table.querySelector("tbody");
+  const searchInput = document.getElementById("cs-search");
+
+  /**
+   * IMPORTANT:
+   * Row 1 → mapping (ignore)
+   * Row 2 → header
+   * Data starts from Row 3
+   *
+   * sheetToJSON already converted rows,
+   * so we SKIP the FIRST OBJECT only.
+   */
+  const rawRows = apiData.csProgress.slice(1); // 🔴 skip mapping row
+
+  if (!rawRows.length) return;
+
+  const columns = Object.keys(rawRows[0]);
+
+  // ---------- RENDER HEADER ----------
+  thead.innerHTML = "";
+  const trh = document.createElement("tr");
+  columns.forEach(col => {
+    const th = document.createElement("th");
+    th.textContent = col;
+    trh.appendChild(th);
+  });
+  thead.appendChild(trh);
+
+  // ---------- RENDER BODY ----------
+  function draw(rows) {
+    tbody.innerHTML = "";
+
+    rows.forEach(r => {
+      const tr = document.createElement("tr");
+
+      columns.forEach(col => {
+        const td = document.createElement("td");
+        const val = r[col];
+
+        if (val === "Yes") {
+          td.textContent = "✓";
+          td.style.color = "#1B5E20";
+          td.style.fontWeight = "700";
+          td.style.textAlign = "center";
+        } else if (val === "" || val === null || val === undefined) {
+          td.textContent = "–";
+          td.style.color = "#9E9E9E";
+          td.style.textAlign = "center";
+        } else {
+          td.textContent = val;
+        }
+
+        tr.appendChild(td);
+      });
+
+      tbody.appendChild(tr);
+    });
+  }
+
+  // Initial render
+  draw(rawRows);
+
+  // ---------- SEARCH ----------
+  if (searchInput) {
+    searchInput.addEventListener("input", () => {
+      const q = searchInput.value.toLowerCase();
+      const filtered = rawRows.filter(r =>
+        (r.Name || "").toLowerCase().includes(q) ||
+        (r.Email || "").toLowerCase().includes(q)
+      );
+      draw(filtered);
+    });
+  }
+}
+
+  // ========= API =========
+  async function loadAPI() {
+    const pill = document.getElementById("lb-pill");
+    const meta = document.getElementById("lb-meta");
+    pill.textContent = "Loading data…";
+    meta.textContent = "";
+
+    try {
+      const res = await fetch(API_URL, { cache: "no-store" });
+      if (!res.ok) throw new Error(`API error: ${res.status}`);
+      apiData = await res.json();
+
+      // Basic validation
+      if (!apiData || typeof apiData !== "object") throw new Error("Invalid JSON");
+
+      // Render initial view
+      renderLeaderboardView("state");
+      pill.textContent = "STATE-WISE";
+    } catch (err) {
+      pill.textContent = "Failed to load";
+      meta.textContent = (err && err.message) ? err.message : "Unknown error";
+      console.error(err);
+    }
+  }
+ // ========= HEALTH POINTS =========
+  let hpData = null;
+
+  async function loadHealthPoints() {
+    const meta = document.getElementById("hp-meta");
+    meta.textContent = "Loading…";
+
+    try {
+      const res = await fetch(HP_API_URL, { cache: "no-store" });
+      hpData = await res.json();
+      renderHealthPoints();
+    } catch (e) {
+      meta.textContent = "Failed to load";
+      console.error(e);
+    }
+  }
+
+ function renderHealthPoints() {
+  if (!hpData || !hpData.leaderboard) return;
+
+  const rows = hpData.leaderboard;
+  const search = document.getElementById("hp-search");
+  const meta = document.getElementById("hp-meta");
+  const table = document.getElementById("hp-table");
+
+  let filtered = rows;
+  if (search.value) {
+    const q = search.value.toLowerCase();
+    filtered = rows.filter(r =>
+      r.name.toLowerCase().includes(q) ||
+      r.email.toLowerCase().includes(q)
+    );
+  }
+
+  meta.textContent = `Students: ${filtered.length}`;
+
+  const thead = table.querySelector("thead");
+  const tbody = table.querySelector("tbody");
+  thead.innerHTML = "";
+  tbody.innerHTML = "";
+
+  const columns = ["Rank", "Name", "Email", "Current HP", "Base HP", "HP Status"];
+
+  // ✅ HEADER
+  const trh = document.createElement("tr");
+  columns.forEach(c => {
+    const th = document.createElement("th");
+    th.textContent = c;
+    trh.appendChild(th);
+  });
+  thead.appendChild(trh);
+
+  // ✅ BODY
+  filtered.forEach(r => {
+    const tr = document.createElement("tr");
+   tr.innerHTML = `
+  <td class="num">${r.rank}</td>
+  <td>${r.name}</td>
+  <td>${r.email}</td>
+  <td class="num">${Number(r.currentHP).toFixed(2)}</td>
+  <td class="num">${Number(r.baseHP).toFixed(2)}</td>
+  <td>
+    <span style="
+      padding:4px 10px;
+      border-radius:999px;
+      font-weight:700;
+      font-size:12px;
+      color:${r.status === "SAFE" ? "#1B5E20" : "#B71C1C"};
+      background:${r.status === "SAFE" ? "#C8E6C9" : "#FFCDD2"};
+    ">
+      ${r.status}
+    </span>
+  </td>
+`;
+ tbody.appendChild(tr);
+  });
+} // ✅ FUNCTION CLOSED
+
+  // ========= UI WIRING =========
+  function activateTopTab(key) {
+  document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+  document.querySelectorAll(".tab-content").forEach(c => c.classList.remove("active"));
+
+  document.querySelector(`.tab[data-tab="${key}"]`).classList.add("active");
+  document.getElementById(`tab-${key}`).classList.add("active");
+
+  if (key === "cs") renderCSProgress();
+  if (key === "health" && !hpData) loadHealthPoints(); // 👈 ONLY LOAD ON DEMAND
+}
+
+  function activateInner(key) {
+    // left menu active state
+    document.querySelectorAll("#tab-leaderboard .menu-item").forEach(m => m.classList.remove("active"));
+    document.querySelector(`#tab-leaderboard .menu-item[data-inner="${key}"]`).classList.add("active");
+
+    // render view
+    renderLeaderboardView(key);
+  }
+// ========= HEALTH POINTS INNER TABS =========
+function activateHPInner(key) {
+  // menu active state
+  document.querySelectorAll('#tab-health .menu-item')
+    .forEach(m => m.classList.remove('active'));
+
+  document.querySelector(`#tab-health .menu-item[data-hp-inner="${key}"]`)
+    .classList.add('active');
+
+  // views
+  document.querySelectorAll('.hp-inner-view')
+    .forEach(v => v.classList.remove('active'));
+
+  if (key === 'dashboard') {
+    document.getElementById('hp-dashboard-view').classList.add('active');
+    if (!hpData) loadHealthPoints();
+  }
+
+  if (key === 'individual') {
+    document.getElementById('hp-individual-view').classList.add('active');
+  }
+
+  if (key === 'reasons') {
+    document.getElementById('hp-reasons-view').classList.add('active');
+  }
+
+   if (key === 'attendance') {
+    document.getElementById('hp-attendance-view').classList.add('active');
+  }
+}
+
+// left menu click binding
+document.querySelectorAll('#tab-health .menu-item').forEach(item => {
+  item.addEventListener('click', () => {
+    activateHPInner(item.dataset.hpInner);
+  });
+});
+
+  // Top tabs
+  document.querySelectorAll(".tab").forEach(tab => {
+    tab.addEventListener("click", () => activateTopTab(tab.dataset.tab));
+  });
+
+  // Left tabs (Leaderboard)
+  document.querySelectorAll("#tab-leaderboard .menu-item").forEach(item => {
+    item.addEventListener("click", () => activateInner(item.dataset.inner));
+  });
+
+  // Search
+  document.getElementById("lb-search").addEventListener("input", () => {
+    renderLeaderboardView(currentInner);
+  });
+
+  // Boot
+  loadAPI();
+</script>
+
+</body>
+</html> 

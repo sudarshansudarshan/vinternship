@@ -76,12 +76,15 @@ By the end of this tutorial, you will:
 ```js
 npm install --save-dev jest @types/jest ts-jest @testing-library/react @testing-library/jest-dom
 ```
+
 -   Add to  `package.json`:
+
 ```js
 "scripts": {
   "test": "jest"
 }
 ```
+
 -   Create  `jest.config.js`:
 
 ```js
@@ -91,7 +94,9 @@ module.exports = {
   setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect']
 };
 ```
- **3. Writing a Component Test**
+
+**3. Writing a Component Test**
+
 ```js
 // components/ArticleCard.tsx
 import React from 'react';
@@ -134,6 +139,7 @@ test('calls onApprove when button is clicked', () => {
 
 
 ```
+
 **4. Testing Hooks and Business Logic**
 
 ```js
@@ -160,20 +166,22 @@ test('approves correctly', () => {
   expect(result.current.approved).toBe(true);
 });
 ```
- **B. Linting: ESLint, Prettier, and Biome**
 
- **1. Why Lint?**
+**B. Linting: ESLint, Prettier, and Biome**
+
+**1. Why Lint?**
 
 -   Prevents bugs, enforces style, and ensures code consistency.
     
 -   Catches unused variables, type errors, and anti-patterns before testing or deployment.
     
 
- **2. Setting Up ESLint and Prettier**
+**2. Setting Up ESLint and Prettier**
 
 ```js
 npm install --save-dev eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin prettier eslint-config-prettier eslint-plugin-react
 ```
+
 -   `.eslintrc.js`  example:
 
 
@@ -193,10 +201,11 @@ module.exports = {
 };
 
 ```
+
 -   Add a  `.prettierrc`  for formatting preferences.
     
 
- **3. Biome (Optional Modern Linter)**
+**3. Biome (Optional Modern Linter)**
 
 -   Biome is a new, fast alternative to ESLint/Prettier.
 
@@ -208,9 +217,8 @@ npm install --save-dev @biomejs/biome
 -   Add a  `biome.json`  config and run with  `npx biome check .`.
     
 
-----------
 
- **C. Debugging React with TypeScript**
+**C. Debugging React with TypeScript**
 
 -   Use  **React Developer Tools**  for inspecting component state, props, and re-renders.
     
@@ -218,8 +226,6 @@ npm install --save-dev @biomejs/biome
     
 -   Use  **console.log**  and  **Jest’s debug output**  for test failures.
     
-
-----------
 
 **D. Integrating Testing and Linting into CI**
 
@@ -230,7 +236,8 @@ npm install --save-dev @biomejs/biome
 -   Use coverage reports (`jest --coverage`) to track test completeness.
     
 
-----------
+---
+
 
 ## 5. Step-by-Step Data Modeling & Code Walkthrough
 
@@ -253,6 +260,7 @@ export function ArticleApproval({ article }) {
   );
 }
 ```
+
 **Test:**
 
 
@@ -269,14 +277,14 @@ test('shows Approved! after clicking approve', () => {
 });
 
 ```
- **B. Linting and Formatting Example**
+
+**B. Linting and Formatting Example**
 
 -   Run  `npx eslint .`  and  `npx prettier --check .`  before every commit.
     
 -   Fix errors and warnings before pushing code.
     
 
-----------
 
  **C. Debugging Example**
 
@@ -285,7 +293,7 @@ test('shows Approved! after clicking approve', () => {
 -   Use React DevTools to inspect the  `approved`  state as you interact with the UI.
     
 
-----------
+---
 
 ## 6. Interactive Challenge / Mini-Project
 
@@ -303,7 +311,10 @@ test('shows Approved! after clicking approve', () => {
     
 3.  Debug a failing test: The test expects "Approved!" to appear, but it doesn’t—what could be wrong?
 
+---
+
 ## 7. Common Pitfalls & Best Practices
+
 ## Common Pitfalls & Best Practices (Testing & Code Quality)
 
 | Pitfall                              | Best Practice                                                        |
@@ -314,6 +325,7 @@ test('shows Approved! after clicking approve', () => {
 | Not using coverage reports           | Track and improve test completeness                                  |
 | Debugging only in browser            | Use VSCode/IDE debuggers for TypeScript                              |
 
+---
 
 ## 8. Optional: Programmer’s Workflow Checklist
 

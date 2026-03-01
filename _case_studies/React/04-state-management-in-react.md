@@ -28,7 +28,7 @@ TaskFlow is a project management app:
 **The challenge:**  
 How do you architect state management so that global data (user, theme, tasks) is accessible, type-safe, and performant—without unnecessary re-renders or boilerplate?
 
-----------
+---
 
 ## 2. Learning Objectives
 
@@ -45,7 +45,7 @@ By the end of this tutorial, you will:
 -   Avoid common pitfalls (re-renders, type errors, boilerplate).
     
 
-----------
+---
 
 ## 3. Concept Introduction with Analogy
 
@@ -60,16 +60,17 @@ By the end of this tutorial, you will:
 
 ## 4. Technical Deep Dive
 
- **A. Context Providers with TypeScript**
+**A. Context Providers with TypeScript**
 
- **When to Use Context**
+**When to Use Context**
 
 -   Best for  **global, rarely-changing state**  (theme, auth, locale).
     
 -   Avoid for large, frequently-changing data (e.g., task lists).
     
 
-## **Type-Safe Context Example: Theme**
+**Type-Safe Context Example: Theme**
+
  ```js
 import React, { useState, useContext } from 'react';
 
@@ -125,11 +126,10 @@ function ThemeSwitcher() {
 -   No prop drilling—any component can access the theme.
     
 
-----------
 
 **B. Zustand: Modern, Type-Safe Global State**
 
-## **Why Zustand?**
+**Why Zustand?**
 
 -   Minimal API, no boilerplate, no reducers or providers needed.
     
@@ -201,7 +201,8 @@ function Profile() {
 -   **No context provider needed:**  Just import and use the store anywhere.
     
 
-## **3. Async Actions and Middleware**
+**3. Async Actions and Middleware**
+
  ```js
 interface Task {
   id: string;
@@ -230,8 +231,6 @@ const useTaskStore = create<TaskStore>((set) => ({
  ```
 
 
-----------
-
 **C. Combining Context and Zustand**
 
 -   Use  **Context**  for global app settings (theme, locale, auth).
@@ -252,11 +251,11 @@ const useTaskStore = create<TaskStore>((set) => ({
 | Persistence     | Manual                                | Built-in (middleware)                |
 | Best For        | Theme, locale, auth                   | Tasks, user, large state             |
 
-
+---
 
 ## 5. Step-by-Step Data Modeling & Code Walkthrough
 
- **A. User Context Provider (Theme Example)**
+**A. User Context Provider (Theme Example)**
 
  ```js
 // context/ThemeContext.tsx
@@ -286,7 +285,7 @@ export const useTheme = () => {
 };
  ```
  
- **B. Zustand Store for Tasks**
+**B. Zustand Store for Tasks**
   ```js
 // store/taskStore.ts
 import { create } from 'zustand';
@@ -320,8 +319,9 @@ const useTaskStore = create<TaskStore>((set) => ({
 export default useTaskStore;
  ```
  
- **C. Using Zustand Store in Components**
-   ```js
+**C. Using Zustand Store in Components**
+
+```js
 import useTaskStore from './store/taskStore';
 
 function TaskList() {
@@ -345,8 +345,12 @@ function TaskList() {
     </ul>
   );
 }
- ```
- ## 6. Interactive Challenge / Mini-Project
+```
+
+---
+
+
+## 6. Interactive Challenge / Mini-Project
 
 **Your Turn!**
 
@@ -357,6 +361,8 @@ function TaskList() {
     -   Add actions:  `addNotification`,  `markAsRead`, and  `clearNotifications`.
         
 2.  Use the store in a NotificationList component to display unread notifications and mark them as read.
+
+---
 
 ## 7. Common Pitfalls & Best Practices
 
@@ -369,6 +375,8 @@ function TaskList() {
 | Unnecessary re-renders in Context        | Use Zustand’s selectors for performance                    |
 | Mixing concerns in one store             | Split stores by domain (user, tasks, etc.)                 |
 | Not using custom hooks for Context       | Always wrap context in a custom hook                       |
+
+---
 
 ## 8. Optional: Programmer’s Workflow Checklist
 
