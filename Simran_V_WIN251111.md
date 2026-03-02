@@ -2,7 +2,7 @@
 title: "My Vinternship Learning Journey: ViBe Platform, Milestones & Case Studies"
 author: Simran Kumari
 vinternship_id: WIN251111
-youtube_url: "https://youtu.be/csDndZRjybk"
+youtube_url: "https://www.youtube.com/watch?v=csDndZRjybk"
 ---
 
 ## About This Vlog
