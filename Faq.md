@@ -201,13 +201,14 @@ You are expected to maintain steady progress through all three required componen
 If you remain inactive or fail to make reasonable progress over an extended period, we may discontinue your access to the program. The program has a 2-month duration with a possible 15-day extension based on individual circumstances. This policy helps ensure that active learners have the best support and resources.
 
 **6.3 Can I appeal a discontinuation decision?**  
-No, discontinuation decisions are **final** and cannot be appealed if the attendance or milestone requirements are not met.
+yes, discontinuation decisions can be appealed if the attendance or milestone requirements are not met with a valid reason. Please find the appeal form in the Discord announcements
+
 
 **6.4 Can I rejoin the program after discontinuation?**  
 No, once discontinued, you cannot rejoin the current program. You would need to apply afresh for any future program offerings, subject to availability.
 
 **6.5 How does the Discontinuation Policy differ from the Ejection Policy?**  
-The Discontinuation Policy addresses prolonged inactivity at an administrative level, while the Ejection Policy (see Section 10) is a real-time, algorithm-based mechanism focused on maintaining cohort momentum and learning quality.
+The Discontinuation Policy addresses prolonged inactivity at an administrative level, while the Ejection Policy (see Section 9) is a real-time, algorithm-based mechanism focused on maintaining cohort momentum and learning quality.
 
 **6.6 How do I withdraw from the internship?**
 If you wish to discontinue the internship, please follow the steps below:
