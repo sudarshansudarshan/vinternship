@@ -3,6 +3,7 @@ title: "Beauty of Unexpected Things"
 author: Susmita
 vinternship_id: WIN25594R
 ---
+
 # Second Chance
 
 It all began with "I have to do certification courses". I felt like time is running out and I have to do some courses and I joined "Programming in Java" course offered by NPTEL.There I learned some basic concepts of Java and gave the final exam. Then results were announced and I scored 90% and was recognised as Elite Gold. I was very happy and I had no clue about internships.
@@ -20,7 +21,7 @@ We were introduced to the platform called ViBe (Vikram Betal),where the videos d
 These were the rooms to discuss among peers.These rooms were really helpful to solve case studies. It made me possible to meet new people from different states. 
 
 # Impact
-It's been just 2.5 weeks out of 10 weeks.But it has made strong impact on my way of learning and being consistent.It taught me how to be disiplined and punctual.
+It's been just 2.5 weeks out of 10 weeks.But it has made strong impact on my way of learning and being consistent. It taught me how to be disiplined and punctual.
 
 # Gratitude
 I heartfully thank the organizers of this internship and the helping hands who guided us:
@@ -41,4 +42,4 @@ Special thanks to Vicharanashala Lab for Education Design ANNAM.AI for making th
 
 ---
 Author: [Susmita Betadur](https://www.linkedin.com/in/susmita-betadur-03365532a){:target="_blank"}
-LinkedIn Article: [Read on LinkedIn](https://www.linkedin.com/your-article-link/){:target="_blank"}
+LinkedIn Article: [Read on LinkedIn](https://www.linkedin.com/pulse/beauty-unexpected-things-susmita-betadur-qlzxc){:target="_blank"}
