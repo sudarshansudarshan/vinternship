@@ -18,8 +18,8 @@ permalink: /protocols_and_policies/
 
 The Vinternship programme follows a structured support and grievance redressal mechanism. If you have a query, please follow the steps below in order:
 
-### 1. Telegram Broadcast
-Start by checking the official **Telegram Broadcast Channel** for the latest announcements, instructions, and program updates. This channel serves as the primary communication hub where important information about deadlines, schedule changes, submission guidelines, and common clarifications are posted regularly. Often, the answer to your query has already been addressed in a recent announcement, saving you time and effort.
+### 1. Discord Announcements
+Start by checking the official **Discord Announcement Channel** for the latest announcements, instructions, and program updates. This channel serves as the primary communication hub where important information about deadlines, schedule changes, submission guidelines, and common clarifications are posted regularly. Often, the answer to your query has already been addressed in a recent announcement, saving you time and effort.
 
 ### 2. Ask Vi-Sakha
 Utilize [Vi-Sakha](https://sakha.vicharanashala.ai/){:target="_blank"}, our intelligent AI assistant, for immediate support. Vi-Sakha is trained on the Vinternship program documentation and can provide instant answers to questions about course content, technical concepts, project requirements, platform navigation, and general program policies. This 24/7 available resource offers quick clarifications without waiting for human support.
@@ -31,13 +31,13 @@ Before escalating your query, explore two valuable peer-based resources:
 
 - **Discuss in Breakout Rooms**: Engage with your fellow interns in the designated breakout discussions. Your peers may have encountered and resolved similar challenges. Collaborative problem-solving not only helps you find solutions faster but also strengthens the learning community.
 
-### 4. Support Desk
+<!-- ### 4. Support Desk
 If your query remains unresolved, write to the Support Desk at **vinternship@vicharanashala.zohodesk.in**. Our support team will respond within **2 hours** of your submission (between 9 AM to 9 PM). Any question submitted beyond 9 PM will be answered the next day. Please ensure that the subject of the email follows the structure *"CohortName_NPTELID/FullName_YourEmailSubject"*.
 
 
 If you do not receive a response within 24 hours, you may raise a second ticket with the subject line: *"Attention Please – Follow-up on Ticket #[Original Ticket Number]"*. This ticket will be escalated to our Mentors Team, who will assume responsibility for it. They will schedule a call discussion to ensure your issue is clearly understood and resolved directly.
 
-If your concern remains unaddressed after 48 hours of your first ticket (and after raising a follow-up), you may escalate the matter via email to the Internship Sponsor. Please CC **Prof. Sudarshan Iyengar** directly, along with your department’s faculty reference, your department HOD, and the VLED Team at `dled@iitrpr.ac.in`. Ensure that your email includes your full name, department, reference numbers and dates of the two Zoho Desk tickets, and a brief explanation of the unresolved issue.
+If your concern remains unaddressed after 48 hours of your first ticket (and after raising a follow-up), you may escalate the matter via email to the Internship Sponsor. Please CC **Prof. Sudarshan Iyengar** directly, along with your department’s faculty reference, your department HOD, and the VLED Team at `dled@iitrpr.ac.in`. Ensure that your email includes your full name, department, reference numbers and dates of the two Zoho Desk tickets, and a brief explanation of the unresolved issue. -->
 
 To maintain consistency and ensure efficient support, we request all interns to strictly follow this three-step resolution path for all issues.
 
@@ -66,6 +66,41 @@ We ensure transparency and fairness by using an automated, dual-criteria filter 
 2. **Cohort Standing:** Your overall engagement level ranks within the **bottom 10% of the active cohort**.
 
 By maintaining a pace above this threshold, you ensure your spot in the program remains secure while you build meaningful professional artifacts, including **case studies and reflective blogs**.
+
+
+### Milestone-Based Backward Ejection
+
+In addition to day-to-day progress monitoring, the program employs a **structured milestone checkpoint system** to ensure participants are meeting critical learning objectives at designated intervals. This approach recognizes that consistent velocity is important, but achieving **concrete deliverable milestones** is essential for program completion and professional readiness.
+
+#### Why Milestone-Based Ejection?
+
+The Vinternship program is designed around a carefully sequenced curriculum with interdependent components. Missing critical ViBe milestones creates a cascading effect that:
+- Prevents meaningful participation in collaborative activities (vivas, peer reviews)
+- Compromises the quality of learning phases
+- Signals disengagement that cannot be remediated within the program timeline
+
+Therefore, **ViBe milestone achievement serves as a non-negotiable measure of program alignment**, ensuring all active participants maintain the foundational knowledge required for cohort-wide activities.
+
+### HP-Based Ejection
+
+Beyond daily progress and milestone tracking, the program uses a **Health Points (HP) based ejection mechanism** rooted in each learner's Base (Credit) HP. Maintaining and improving HP through active participation is **mandatory** throughout the program.
+
+#### Base (Credit) Health Points
+
+Every intern begins the program with a **Base HP of 100**. This is the minimum acceptable HP floor. All HP additions and deductions are calculated as a **percentage of the learner's current HP**, not as fixed values — meaning the stakes scale with your standing.
+
+> **Base HP is dynamic.** It is not permanently fixed at 100. As the program progresses, the base HP value may be revised upward (for example, from 100 to 150) to reflect higher expectations at later stages. When the base HP is updated, learners who fall below the new threshold and do not demonstrate active progress toward it will be **automatically discontinued** from the internship.
+
+#### The Strike-Based Continuation Rule
+
+Learners are not permitted to remain at or below the Base HP value indefinitely. The program enforces this through a **strike system**:
+
+- Every day a learner's current HP is at or below the Base HP counts as **1 strike**.
+- Strikes accumulate across **any 5 days**.
+- Reaching **5 strikes** results in **discontinuation from the internship**.
+
+
+This mechanism operates continuously in the background alongside the progress algorithm and milestone checks, providing a third independent safety net to ensure the cohort remains composed of actively contributing learners.
 
 ---
 
