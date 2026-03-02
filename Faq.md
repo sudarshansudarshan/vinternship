@@ -1,4 +1,4 @@
----
+<img width="1919" height="972" alt="image" src="https://github.com/user-attachments/assets/e4a6d504-4a6b-407d-a484-85e8ecfae364" />---
 layout: page
 title: FAQ
 parent: Resources
@@ -202,6 +202,8 @@ If you remain inactive or fail to make reasonable progress over an extended peri
 
 **6.3 Can I appeal a discontinuation decision?**  
 yes, discontinuation decisions can be appealed if the attendance or milestone requirements are not met with a valid reason. Please find the appeal form in the Discord announcements
+
+Appeal Form: https://forms.gle/6VBbrjkcAvSDPX2J7
 
 
 **6.4 Can I rejoin the program after discontinuation?**  
