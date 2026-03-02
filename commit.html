@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Commitment Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+body {
+  font-family: system-ui, sans-serif;
+  background: #f5f8ff;
+  margin: 0;
+  padding: 30px;
+  color: #1f2d3d;
+}
+
+.dashboard {
+  max-width: 1300px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  color: #2f6fed;
+  margin-bottom: 5px;
+}
+
+#lastUpdated {
+  text-align: center;
+  font-size: 13px;
+  color: #6b7c93;
+  margin-bottom: 25px;
+}
+
+select {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.1);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  border-left: 6px solid #2f6fed;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 13px;
+  color: #2f6fed;
+}
+
+.card p {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 8px 0 0;
+}
+
+.panel {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+.panel h2 {
+  font-size: 15px;
+  color: #2f6fed;
+  margin-bottom: 15px;
+}
+
+.chart-container {
+  height: 400px;
+}
+</style>
+</head>
+
+<body>
+<div class="dashboard">
+
+<h1>Commitment Dashboard</h1>
+<div id="lastUpdated">Loading...</div>
+
+<select id="batchFilter"></select>
+
+<div class="cards">
+  <div class="card">
+    <h3>Total Bookings</h3>
+    <p id="totalBookings">0</p>
+  </div>
+  <div class="card">
+    <h3 id="batchTitle">Most Active Batch</h3>
+    <p id="batchValue">-</p>
+  </div>
+  <div class="card">
+    <h3>Most Used Slot</h3>
+    <p id="topSlot">-</p>
+  </div>
+  <div class="card">
+    <h3>Most Booked Day</h3>
+    <p id="topDay">-</p>
+  </div>
+</div>
+
+<div class="panel">
+  <h2>Slot Usage (Stacked)</h2>
+  <div class="chart-container">
+    <canvas id="slotChart"></canvas>
+  </div>
+</div>
+
+<div class="panel">
+  <h2>Daily Bookings (Stacked)</h2>
+  <div class="chart-container">
+    <canvas id="dayChart"></canvas>
+  </div>
+</div>
+
+<div class="panel">
+  <h2>Daily Trend</h2>
+  <div class="chart-container">
+    <canvas id="trendChart"></canvas>
+  </div>
+</div>
+
+</div>
+
+<script>
+
+const API_URL = "https://script.google.com/macros/s/AKfycby0YeYV4cPrKu1xHaZhnH_JCDbaW7V8emXuopSRJYXLczeunu8EKKTkYPcyCt8IpTc6/exec";
+const REFRESH_INTERVAL = 60000;
+
+let RAW = null;
+let slotChart, dayChart, trendChart;
+let lastFetchTime = null;
+
+function sanitize(value) {
+  const num = Number(value);
+  return isNaN(num) ? 0 : num;
+}
+
+async function fetchData(initial=false) {
+  const res = await fetch(API_URL, { cache: "no-store" });
+  RAW = await res.json();
+  lastFetchTime = new Date();
+
+  if(initial) buildDropdown();
+  render();
+  updateLastUpdated();
+}
+
+function buildDropdown() {
+  const dd = document.getElementById("batchFilter");
+  dd.innerHTML = `<option value="All">All Batches</option>`;
+  const batches = [...new Set(RAW.analytics.map(r=>r.Batch))].sort();
+  batches.forEach(b=>{
+    dd.innerHTML += `<option value="${b}">${b}</option>`;
+  });
+}
+
+function getFiltered() {
+  const selected = document.getElementById("batchFilter").value;
+  return {
+    selected,
+    analytics: selected==="All" ? RAW.analytics : RAW.analytics.filter(r=>r.Batch===selected),
+    slots: selected==="All" ? RAW.slots : RAW.slots.filter(r=>r.Batch===selected)
+  };
+}
+
+function sumRow(row) {
+  return Object.keys(row).reduce((sum,k)=>{
+    if(k==="Batch") return sum;
+    return sum + sanitize(row[k]);
+  },0);
+}
+
+function columnTotals(rows) {
+  const totals = {};
+  rows.forEach(r=>{
+    Object.keys(r).forEach(k=>{
+      if(k==="Batch") return;
+      totals[k] = (totals[k]||0) + sanitize(r[k]);
+    });
+  });
+  return totals;
+}
+
+function render() {
+  const {selected,analytics,slots} = getFiltered();
+
+  let total = 0;
+  analytics.forEach(r=> total += sumRow(r));
+  document.getElementById("totalBookings").textContent = total.toLocaleString();
+
+  if(selected==="All") {
+    document.getElementById("batchTitle").textContent = "Most Active Batch";
+    let batchTotals={};
+    RAW.analytics.forEach(r=> batchTotals[r.Batch]=sumRow(r));
+    document.getElementById("batchValue").textContent =
+      Object.keys(batchTotals).reduce((a,b)=>batchTotals[a]>batchTotals[b]?a:b);
+  } else {
+    document.getElementById("batchTitle").textContent = "Current Batch";
+    document.getElementById("batchValue").textContent = selected;
+  }
+
+  const slotTotals = columnTotals(slots);
+  document.getElementById("topSlot").textContent =
+    Object.keys(slotTotals).reduce((a,b)=>slotTotals[a]>slotTotals[b]?a:b);
+
+  const dayTotals = columnTotals(analytics);
+  document.getElementById("topDay").textContent =
+    Object.keys(dayTotals).reduce((a,b)=>dayTotals[a]>dayTotals[b]?a:b);
+
+  renderStacked("slotChart", slots);
+  renderStacked("dayChart", analytics);
+  renderTrend(analytics);
+}
+
+function renderStacked(id,data) {
+
+  if(!data || data.length===0) return;
+
+  const ctx=document.getElementById(id);
+  if(window[id]) window[id].destroy();
+
+  const labels = Object.keys(data[0]).filter(k=>k!=="Batch");
+
+  const pastel = ["#A8D0E6","#F6C1C7","#C3FBD8","#FBE7C6","#D7C0F5","#B5EAD7"];
+
+  const datasets = data.map((batch,i)=>({
+    label: batch.Batch,
+    data: labels.map(l=> sanitize(batch[l])),
+    backgroundColor: pastel[i%pastel.length]
+  }));
+
+  window[id]=new Chart(ctx,{
+    type:"bar",
+    data:{labels,datasets},
+    options:{
+      responsive:true,
+      maintainAspectRatio:false,
+      scales:{x:{stacked:true}, y:{stacked:true}}
+    }
+  });
+}
+
+function renderTrend(data) {
+  const totals = columnTotals(data);
+  if(trendChart) trendChart.destroy();
+  trendChart=new Chart(document.getElementById("trendChart"),{
+    type:"line",
+    data:{
+      labels:Object.keys(totals),
+      datasets:[{
+        data:Object.values(totals),
+        borderColor:"#2f6fed",
+        fill:false
+      }]
+    },
+    options:{maintainAspectRatio:false}
+  });
+}
+
+function updateLastUpdated() {
+  if(!lastFetchTime) return;
+  const diff=Math.floor((new Date()-lastFetchTime)/1000);
+  const el=document.getElementById("lastUpdated");
+  el.textContent = diff<60 ? "Last updated just now"
+                           : "Last updated "+Math.floor(diff/60)+" minute(s) ago";
+}
+
+document.getElementById("batchFilter").addEventListener("change",render);
+
+fetchData(true);
+setInterval(fetchData,REFRESH_INTERVAL);
+setInterval(updateLastUpdated,1000);
+
+</script>
+</body>
+</html>

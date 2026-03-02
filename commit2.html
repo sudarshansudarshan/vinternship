@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Commitment Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f8ff;
+  margin: 0;
+  padding: 20px;
+  color: #003366;
+}
+
+h1 {
+  text-align: center;
+  color: #004aad;
+}
+
+.dashboard {
+  max-width: 1300px;
+  margin: auto;
+}
+
+.filters {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+select, button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #004aad;
+  background: white;
+  color: #004aad;
+  cursor: pointer;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: white;
+  border-left: 6px solid #004aad;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 14px;
+  color: #004aad;
+}
+
+.card p {
+  font-size: 22px;
+  margin: 5px 0 0;
+  font-weight: bold;
+}
+
+.chart-container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+</style>
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<h1>Commitment Dashboard</h1>
+<p id="lastUpdated" style="text-align:center; font-size:13px; color:#666;"></p>
+
+<div class="filters">
+  <select id="batchFilter">
+    <option value="All">All Batches</option>
+  </select>
+
+</div>
+
+<div class="cards">
+  <div class="card">
+    <h3>Total Bookings</h3>
+    <p id="totalBookings">0</p>
+  </div>
+
+  <div class="card">
+    <h3>Most Active Batch</h3>
+    <p id="topBatch">-</p>
+  </div>
+
+  <div class="card">
+    <h3>Most Used Slot</h3>
+    <p id="topSlot">-</p>
+  </div>
+
+  <div class="card">
+    <h3>Most Booked Day</h3>
+    <p id="topDay">-</p>
+  </div>
+</div>
+
+<div class="chart-container">
+  <h3>Slot Usage</h3>
+  <canvas id="slotChart"></canvas>
+</div>
+
+<div class="chart-container">
+  <h3>Daily Bookings</h3>
+  <canvas id="dayChart"></canvas>
+</div>
+
+<div class="chart-container">
+  <h3>Daily Trend</h3>
+  <canvas id="trendChart"></canvas>
+</div>
+
+</div>
+
+<script>
+
+const API_URL = "https://script.google.com/macros/s/AKfycby0YeYV4cPrKu1xHaZhnH_JCDbaW7V8emXuopSRJYXLczeunu8EKKTkYPcyCt8IpTc6/exec";
+
+let slotChart, dayChart, trendChart;
+let lastFetchTime = null;
+
+async function loadData() {
+
+  const response = await fetch(API_URL);
+  const data = await response.json();
+
+  lastFetchTime = new Date();
+  updateLastUpdated();
+
+  populateBatchFilter(data.analytics);
+  renderDashboard(data);
+}
+
+function updateLastUpdated() {
+  if (!lastFetchTime) return;
+
+  const now = new Date();
+  const diffMinutes = Math.floor((now - lastFetchTime) / 60000);
+
+  document.getElementById("lastUpdated").innerText =
+    `Last updated ${diffMinutes} min ago`;
+}
+
+setInterval(updateLastUpdated, 60000);
+
+function populateBatchFilter(data) {
+  const dropdown = document.getElementById("batchFilter");
+
+  if (dropdown.options.length > 1) return; // prevent duplicates
+
+  const batches = [...new Set(data.map(d => d.Batch))];
+
+  batches.forEach(b => {
+    const option = document.createElement("option");
+    option.value = b;
+    option.textContent = b;
+    dropdown.appendChild(option);
+  });
+
+  dropdown.addEventListener("change", () => loadData());
+}
+
+function renderDashboard(data) {
+
+  const selectedBatch = document.getElementById("batchFilter").value;
+
+  const filteredAnalytics = selectedBatch === "All"
+    ? data.analytics
+    : data.analytics.filter(d => d.Batch === selectedBatch);
+
+  const filteredSlots = selectedBatch === "All"
+    ? data.slots
+    : data.slots.filter(d => d.Batch === selectedBatch);
+
+  calculateKPIs(filteredAnalytics, filteredSlots, selectedBatch);
+  renderSlotChart(filteredSlots);
+  renderDayChart(filteredAnalytics);
+  renderTrendChart(filteredAnalytics);
+}
+
+function calculateKPIs(analytics, slots, selectedBatch) {
+
+  let totalBookings = 0;
+  const batchTotals = {};
+  const slotTotals = {};
+  const dayTotals = {};
+
+  analytics.forEach(batch => {
+    let batchSum = 0;
+
+    Object.keys(batch).forEach(key => {
+      if (key !== "Batch") {
+        const val = Number(batch[key]);
+        totalBookings += val;
+        batchSum += val;
+        dayTotals[key] = (dayTotals[key] || 0) + val;
+      }
+    });
+
+    batchTotals[batch.Batch] = batchSum;
+  });
+
+  slots.forEach(batch => {
+    Object.keys(batch).forEach(key => {
+      if (key !== "Batch") {
+        slotTotals[key] = (slotTotals[key] || 0) + Number(batch[key]);
+      }
+    });
+  });
+
+  document.getElementById("totalBookings").innerText = totalBookings;
+
+  if (selectedBatch === "All") {
+    document.querySelector(".cards .card:nth-child(2) h3").innerText = "Most Active Batch";
+    document.getElementById("topBatch").innerText =
+      Object.keys(batchTotals).reduce((a, b) =>
+        batchTotals[a] > batchTotals[b] ? a : b
+      );
+  } else {
+    document.querySelector(".cards .card:nth-child(2) h3").innerText = "Current Batch";
+    document.getElementById("topBatch").innerText = selectedBatch;
+  }
+
+  document.getElementById("topSlot").innerText =
+    Object.keys(slotTotals).length > 0
+      ? Object.keys(slotTotals).reduce((a, b) =>
+          slotTotals[a] > slotTotals[b] ? a : b
+        )
+      : "-";
+
+  document.getElementById("topDay").innerText =
+    Object.keys(dayTotals).length > 0
+      ? Object.keys(dayTotals).reduce((a, b) =>
+          dayTotals[a] > dayTotals[b] ? a : b
+        )
+      : "-";
+}
+
+function renderSlotChart(data) {
+
+  const totals = {};
+  data.forEach(batch => {
+    Object.keys(batch).forEach(key => {
+      if (key !== "Batch") {
+        totals[key] = (totals[key] || 0) + Number(batch[key]);
+      }
+    });
+  });
+
+  if (slotChart) slotChart.destroy();
+
+  slotChart = new Chart(document.getElementById("slotChart"), {
+    type: "bar",
+    data: {
+      labels: Object.keys(totals),
+      datasets: [{
+        label: "Slot Usage",
+        data: Object.values(totals),
+        backgroundColor: "#004aad"
+      }]
+    }
+  });
+}
+
+function renderDayChart(data) {
+
+  const totals = {};
+  data.forEach(batch => {
+    Object.keys(batch).forEach(key => {
+      if (key !== "Batch") {
+        totals[key] = (totals[key] || 0) + Number(batch[key]);
+      }
+    });
+  });
+
+  if (dayChart) dayChart.destroy();
+
+  dayChart = new Chart(document.getElementById("dayChart"), {
+    type: "bar",
+    data: {
+      labels: Object.keys(totals),
+      datasets: [{
+        label: "Bookings per Day",
+        data: Object.values(totals),
+        backgroundColor: "#007bff"
+      }]
+    }
+  });
+}
+
+function renderTrendChart(data) {
+
+  const totals = {};
+  data.forEach(batch => {
+    Object.keys(batch).forEach(key => {
+      if (key !== "Batch") {
+        totals[key] = (totals[key] || 0) + Number(batch[key]);
+      }
+    });
+  });
+
+  if (trendChart) trendChart.destroy();
+
+  trendChart = new Chart(document.getElementById("trendChart"), {
+    type: "line",
+    data: {
+      labels: Object.keys(totals),
+      datasets: [{
+        label: "Trend",
+        data: Object.values(totals),
+        borderColor: "#004aad",
+        fill: false
+      }]
+    }
+  });
+}
+
+loadData();
+
+</script>
+
+
+</body>
+</html>
