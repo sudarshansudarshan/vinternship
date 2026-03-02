@@ -4,7 +4,7 @@ author: Prince Malviya
 Internship_id: WIN251509
 ---
 
-There is a specific kind of silence that comes with being a 5th-semester CSE student. It’s the silence of a library during RGPV exam season, mixed with the frantic clicking of a keyboard as you try to debug a React component before a technical interview.
+In the 6th semester, your life stops being a student’s schedule and starts feeling like a high-stakes heist. You’re caught in a crossfire between the rigid, theoretical grind of Semester exams and the 'no-mercy' reality of a production-level MERN codebases. It’s not just a busy season; it’s a relentless test of how much pressure you can take before the logic breaks, or you do.
 
 When I started the Internship with VLED Lab, IIT Ropar, I thought I was adding another "checklist" to my already crowded schedule. I expected a series of videos and a certificate at the end. What I found instead was a narrative—one that felt less like a textbook and more like a thriller novel. 
 
