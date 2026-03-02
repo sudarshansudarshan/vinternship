@@ -26,5 +26,6 @@ This cohort is exclusively for IITM BS students and focuses on building full-sta
 - Stay tuned for further updates.
 
 ## Forms and links
+- [Consent Form](https://zfrmz.in/SZcDP34cCHW9x3ep8IWc){:target="_blank"}
 - [Activity Completion Confirmation Form](https://forms.gle/5F1LyWveNb2RwH1H7){:target="_blank"}
 - [Case Study Submission Form](https://forms.gle/SPS8s4bhXt6Nu8ddA){:target="_blank"}
