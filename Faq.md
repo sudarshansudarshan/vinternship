@@ -1,3 +1,11 @@
+---
+layout: page
+title: FAQ
+parent: Resources
+permalink: /faq/
+order: 2
+---
+
 ## Table of Contents
 
 1. [Internship Overview](#1-internship-overview)
