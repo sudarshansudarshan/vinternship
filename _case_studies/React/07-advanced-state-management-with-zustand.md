@@ -65,15 +65,15 @@ By the end of this tutorial, you will:
 
 ## 4. Technical Deep Dive
 
-## **A. Zustand Middleware: devtools, persist, immer, and custom logging**
+**A. Zustand Middleware: devtools, persist, immer, and custom logging**
 
- **1. Devtools Middleware**
+**1. Devtools Middleware**
 
 -   Lets you inspect and time-travel state changes in Redux DevTools.
     
 -   Should be the  **last**  middleware applied.
 
- ```js
+```js
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 
@@ -83,13 +83,14 @@ const useNoteStore = create(
     addNote: (note) => set((state) => ({ notes: [...state.notes, note] })),
   }))
 );
- ```
+```
 
 **2. Persist Middleware**
 
 -   Persists state across reloads using localStorage/sessionStorage.
     
 -   Use  `partialize`  to persist only selected fields.
+
 ```js
 import { persist, createJSONStorage } from 'zustand/middleware';
 
@@ -114,6 +115,7 @@ const usePreferencesStore = create(
   )
 );
 ```
+
 **3. Immer Middleware**
 
 -   Enables immutable updates with a mutable API (like Redux Toolkit).
@@ -132,8 +134,10 @@ const useNoteStore = create(
   }))
 );
 ```
- **4. Custom Logging Middleware**
-   ```js
+
+**4. Custom Logging Middleware**
+
+```js
 -   Log every change for audit/history.
 
 const logMiddleware = (config) => (set, get, api) =>
@@ -148,7 +152,8 @@ const useNoteStore = create(
     // ...state and actions
   }))
 );
- ```
+```
+
 **B. State Versioning & Migration**
 
 -   Use  `version`  and  `migrate`  in  `persist`  to safely upgrade persisted state.
@@ -169,7 +174,8 @@ persist(
   }
 )
 ```
- **C. Combining Zustand with React Query**
+
+**C. Combining Zustand with React Query**
 
 -   **React Query**  fetches and caches async data (notes from the cloud).
     
@@ -204,9 +210,12 @@ function NotesList() {
 }
 ```
 
+---
+
 ## 5. Step-by-Step Data Modeling & Code Walkthrough
 
 **A. Persisted Preferences Store with Migration**
+
 ```js
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
@@ -232,7 +241,9 @@ const usePreferencesStore = create(
   )
 );
 ```
+
 **B. Notes Store with Devtools, Immer, and Logging**
+
 ```js
 import { create } from 'zustand';
 import { devtools, immer } from 'zustand/middleware';
@@ -267,7 +278,9 @@ const useNoteStore = create(
   )
 );
 ```
+
 **C. Syncing Notes with React Query**
+
 ```js
 import { useQuery } from '@tanstack/react-query';
 import useNoteStore from './store/noteStore';
@@ -290,6 +303,8 @@ function NotesList() {
   );
 }
 ```
+
+---
 
 ## 6. Interactive Challenge / Mini-Project
 
@@ -318,7 +333,7 @@ function NotesList() {
     -   Display collaborators in a component, updating automatically when data is fetched.
 
 ## 7. Common Pitfalls & Best Practices
-## 8. Common Pitfalls & Best Practices (Zustand)
+## Common Pitfalls & Best Practices (Zustand)
 
 | Pitfall                              | Best Practice                                               |
 |--------------------------------------|-------------------------------------------------------------|
@@ -328,9 +343,7 @@ function NotesList() {
 | Not using selectors in Zustand       | Use selectors to prevent unnecessary renders                |
 | Mixing async fetch with store        | Use React Query for fetching, Zustand for UI                |
 
-
-
-
+---
 
 ## 8. Optional: Programmer’s Workflow Checklist
 

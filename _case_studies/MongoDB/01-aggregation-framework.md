@@ -66,7 +66,7 @@ Imagine MovieFlix’s analytics as a high-tech conveyor belt in a mailroom:
 
 ## 4. Technical Deep Dive
 
- **A. What is the Aggregation Framework?**
+**A. What is the Aggregation Framework?**
 
 -   The Aggregation Framework is MongoDB’s built-in tool for advanced data analysis and transformation.
     
@@ -88,11 +88,10 @@ db.collection.aggregate([
 -   Pipelines can have any number of stages, in any order
     
 
-----------
 
-## **B. Key Pipeline Stages**
+**B. Key Pipeline Stages**
 
-## **1. $match: Filtering Documents**
+**1. $match: Filtering Documents**
 
 -   Like a query filter; selects only documents that meet criteria.
     
@@ -100,15 +99,15 @@ db.collection.aggregate([
     
 
 **Example:**
+
 ```js
 { $match: { country: "USA", "rating": { $gte: 8 } } }
 ```
 -   Filters for US movies with rating 8 or higher.
     
 
-----------
 
- **2. $group: Aggregating Data**
+**2. $group: Aggregating Data**
 
 -   Groups documents by a field (or expression) and computes aggregates (sum, avg, count, etc.).
     
@@ -116,6 +115,7 @@ db.collection.aggregate([
     
 
 **Example:**
+
 ```js
 { $group: {
     _id: "$genre",
@@ -123,11 +123,10 @@ db.collection.aggregate([
     avgRating: { $avg: "$rating" }
   }
 }
- ```
+```
 -   Groups by genre, calculates total views and average rating per genre.
     
 
-----------
 
 **3. $project: Shaping Output**
 
@@ -137,6 +136,7 @@ db.collection.aggregate([
     
 
 **Example:**
+
 ```js
 { $project: {
     _id: 0,
@@ -149,9 +149,8 @@ db.collection.aggregate([
 -   Outputs only genre, totalViews, and a rounded avgRating.
 
 
-----------
-
 **4. Other Useful Stages**
+
 ```js
 -   `$sort`: Orders documents (e.g., by totalViews descending).
     
@@ -160,9 +159,8 @@ db.collection.aggregate([
 -   `$unwind`: Deconstructs arrays into separate documents.
     
 -   `$addFields`: Adds computed fields.
- ```   
+```   
 
-----------
 
 **5. How the Pipeline Works**
 
@@ -172,11 +170,11 @@ db.collection.aggregate([
     
 -   The output of the last stage is your final result.  
 
-----------
 
- **C. Aggregation Pipeline Example**
+**C. Aggregation Pipeline Example**
 
 Suppose MovieFlix wants to find the top 3 genres by total views in 2024:
+
 ```js
 db.watchHistory.aggregate([
   // 1. Only 2024 records
@@ -191,7 +189,9 @@ db.watchHistory.aggregate([
   { $project: { _id: 0, genre: "$_id", totalViews: 1 } }
 ])
  ```
+
 **Explanation:**
+
 ```js
 -   `$match`: Filters for 2024.
     
@@ -202,12 +202,13 @@ db.watchHistory.aggregate([
 -   `$project`: Formats output for reporting.
  ```   
 
-----------
 
 **D. Best Practices for Aggregation Pipelines**
+
 ```js
--   **Place  `$match`  early**  to reduce data volume for later stages.
-  ```  
+-   Place  `$match`  early  to reduce data volume for later stages.
+```  
+
 -   **Use indexes**  on fields used in  `$match`  for performance.
     
 -   **Keep documents small**—avoid unnecessary fields with  `$project`.
@@ -223,9 +224,8 @@ db.watchHistory.aggregate([
 
 Let’s build a real MovieFlix aggregation pipeline.
 
-----------
+**A. Sample Document Structure**
 
- **A. Sample Document Structure**
 ```json
 {
   "_id": ObjectId("..."),
@@ -237,7 +237,9 @@ Let’s build a real MovieFlix aggregation pipeline.
   "year": 2024
 }
 ```
- **B. Find the Average Rating and Total Views per Genre in the USA**
+
+**B. Find the Average Rating and Total Views per Genre in the USA**
+
 ```json
 db.watchHistory.aggregate([
   { $match: { country: "USA" } },
@@ -256,6 +258,7 @@ db.watchHistory.aggregate([
   }
 ])
 ```
+
 **Explanation:**
 
 -   Filters for USA records.
@@ -267,9 +270,8 @@ db.watchHistory.aggregate([
 -   Projects a clean, rounded output.
     
 
-----------
-
 **C. Find Top 5 Movies by Views in 2024**
+
 ```json
 db.watchHistory.aggregate([
   { $match: { year: 2024 } },
@@ -278,13 +280,17 @@ db.watchHistory.aggregate([
   { $project: { _id: 0, movie: 1, views: 1 } }
 ])
 ```
- **D. Count Movies per Genre with $group and $project**
+
+**D. Count Movies per Genre with $group and $project**
+
 ```json
 db.watchHistory.aggregate([
   { $group: { _id: "$genre", count: { $sum: 1 } } },
   { $project: { _id: 0, genre: "$_id", count: 1 } }
 ])
 ```
+
+---
 
 ## 6. Interactive Challenge / Mini-Project
 
@@ -296,6 +302,7 @@ db.watchHistory.aggregate([
     
 
 ----------
+
 ## 7. Common Pitfalls & Best Practices
 
 | Pitfall                      | Best Practice                                      |
@@ -305,7 +312,7 @@ db.watchHistory.aggregate([
 | Not using indexes            | Index fields used in `$match` for speed            |
 | Complex pipelines in one go  | Build and test one stage at a time                 |
 
-
+---
 
 ## 8. Optional: Programmer’s Workflow Checklist
 
