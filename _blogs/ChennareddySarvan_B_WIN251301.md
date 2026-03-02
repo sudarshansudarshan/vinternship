@@ -10,7 +10,7 @@ I had done many courses and certifications before, but there were no deadlines, 
 
 Some people in the internship did not know HTML, CSS, or JavaScript, but I had some knowledge of them. However, the MERN stack internship required knowledge of TypeScript. I did not find TypeScript hard to learn, but React and Express were hard for me because I had no knowledge of them. Learning the syntax was not hard, but applying it logically was hard for me.
 
-In the learning process of the MERN stack, I not only found it hard to apply the logic, but I found it hard to apply the consistency. In this experience, I learned that “Don’t think about what you should do, just do something. Doing something is better than doing nothing. Even zero is better than negative.”
+In the learning process of the MERN stack, I not only found it hard to apply the logic, but I also found it hard to maintain consistency. In this experience, I learned that “Don’t think about what you should do, just do something. Doing something is better than doing nothing. Even zero is better than negative.”
 
 The case studies were very good, even while submitting them. Most of my struggles came from React and Express since they were entirely new to me. The syntax itself was doable and even fun, but getting the logic right was the toughest part.
 
