@@ -1,11 +1,3 @@
-<img width="1919" height="972" alt="image" src="https://github.com/user-attachments/assets/e4a6d504-4a6b-407d-a484-85e8ecfae364" />---
-layout: page
-title: FAQ
-parent: Resources
-permalink: /faq/
-order: 2
----
-
 ## Table of Contents
 
 1. [Internship Overview](#1-internship-overview)
