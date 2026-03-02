@@ -18,7 +18,7 @@ Even in the React case studies, which were interactive and fun, the toughest par
 
 I would also like to talk about the VLED team. The team members are interactive, helpful, and dedicated. They are putting in so much effort to have live sessions and standups, even at night, to make sure that we are on the same page and on track. Their dedication, availability, and constant motivation have made it possible for me to feel like I am learning in a world where I am not alone in this journey.
 
-This Vinternship has allowed me to develop myself from something into something better. I am convinced that I am not the same person I was before this internship. The way I tackle problems, the way I handle deadlines, and the way I communicate have all changed.
+This Vinternship has allowed me to develop myself from someone into someone better. I am convinced that I am not the same person I was before this internship. The way I tackle problems, the way I handle deadlines, and the way I communicate have all changed.
 
 
 
