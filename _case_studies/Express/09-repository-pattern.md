@@ -71,7 +71,7 @@ Imagine the records office:
 
 ## 4. Technical Deep Dive
 
-## **A. What is the Repository Pattern?**
+**A. What is the Repository Pattern?**
 
 The Repository Pattern is a design pattern that centralizes data access logic in a single place, separating it from business logic.
 
@@ -92,7 +92,7 @@ The Repository Pattern is a design pattern that centralizes data access logic in
         
     -   Reduces code duplication and errors.
 
-## **B. Repository Pattern in Practice**
+**B. Repository Pattern in Practice**
 
 **Key Components:**
 
@@ -116,7 +116,7 @@ The Repository Pattern is a design pattern that centralizes data access logic in
     -   Uses the repository interface, not the implementation, to enforce rules and policies.
         
 
-## **C. Why Not Access Data Directly?**
+**C. Why Not Access Data Directly?**
 
 If you mix data access and business logic:
 
@@ -127,7 +127,7 @@ If you mix data access and business logic:
 -   Code is harder to read, debug, and maintain.
     
 
-## **D. Best Practices**
+**D. Best Practices**
 
 -   Define repository interfaces in the domain layer
    
@@ -144,7 +144,7 @@ If you mix data access and business logic:
 ## 5. Step-by-Step Data Modeling & Code Walkthrough
 
 Let’s build a robust course registration system using the Repository Pattern.
-## **A. Define the Domain Model**
+**A. Define the Domain Model**
 
 ```typescript
 // models/Course.ts
@@ -156,7 +156,7 @@ export interface Course {
 }
   ```
 
-## **B. Create the Repository Interface**
+**B. Create the Repository Interface**
 
 ```typescript
 // repositories/interfaces/ICourseRepository.ts
@@ -173,7 +173,9 @@ export interface ICourseRepository {
     -   This interface is the “standard form” for the records office.
         
     -   Business logic only talks to this interface, never to storage details.
-## **C. Implement an In-Memory Repository**
+
+**C. Implement an In-Memory Repository**
+
 ```typescript
 // repositories/InMemoryCourseRepository.ts
 import { ICourseRepository } from './interfaces/ICourseRepository';
@@ -218,8 +220,9 @@ export class InMemoryCourseRepository implements ICourseRepository {
         
     -   If you switch to a database, only this file changes.
 
-## **D. Implement a Database Repository (Example Outline)**
+**D. Implement a Database Repository (Example Outline)**
 ```typescript
+
 // repositories/DatabaseCourseRepository.ts
 import { ICourseRepository } from './interfaces/ICourseRepository';
 import { Course } from '../models/Course';
@@ -244,7 +247,9 @@ export class DatabaseCourseRepository implements ICourseRepository {
  -   **Why?**
     
     -   You can now swap between in-memory and database storage without changing business logic.
-## **E. Use the Repository in a Service**
+
+**E. Use the Repository in a Service**
+
 ```typescript
 // services/CourseService.ts
 import { ICourseRepository } from '../repositories/interfaces/ICourseRepository';
@@ -269,7 +274,8 @@ export class CourseService {
     
     -   The service only knows about the repository interface, not how data is stored.
 
-## **F. Hook Up in Your App**
+**F. Hook Up in Your App**
+
 ```typescript
 // app.ts
 import express from 'express';
@@ -340,6 +346,5 @@ app.listen(3000, () => console.log('Server running on port 3000'));
 
 Learn how to use Dependency Injection to provide repositories to your services and controllers automatically-making your app even more modular, testable, and ready for growth!
 
-----------
 
 

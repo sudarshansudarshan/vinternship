@@ -68,7 +68,7 @@ It manages all services (dependencies) and delivers them to your classes as need
 -   Instead of manually creating dependencies, you  **register**  them with the container and  **request**  them when needed.
   
 
-## 5. Step-by-Step Data Modeling & Code Walkthrough
+## 4. Step-by-Step Data Modeling & Code Walkthrough
 
  **Step 1: Install  TypeDI****
 
@@ -197,7 +197,7 @@ aggregator2.getLatestArticles(); // Now uses APISource
     
     -   TypeDI uses TypeScript’s  `reflect-metadata`  to read type information and decorator hints.
 
-## 6.  Challenge 
+## 5.  Challenge 
 
 1.  **Register a new  `APISource`  with the container.**
     
@@ -205,7 +205,7 @@ aggregator2.getLatestArticles(); // Now uses APISource
     
 3.  **Write a test**  that injects a mock source to verify the aggregator’s behavior.
 
-## 7. Quick Recap & Key Takeaways
+## 6. Quick Recap & Key Takeaways
 
 -   **IoC Containers**  automate dependency management.
     
@@ -214,7 +214,7 @@ aggregator2.getLatestArticles(); // Now uses APISource
 -   Classes remain clean, focused, and testable.
     
 
-## 8. (Optional) Programmer’s Workflow Checklist
+## 7. (Optional) Programmer’s Workflow Checklist
 
 -   Define interfaces for dependencies.
     

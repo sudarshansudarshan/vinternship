@@ -175,7 +175,8 @@ let consoleGreet: VisitorFormatter = (n) => console.log(`Hello, ${n}!`);
 5.  Compute  `factorial(5)`.
     
 6.  Generate a text report and a JSON report for an array of sample objects (e.g.,  `{ title: "1984" }`).
-----------
+
+---
 
 ## 7. Common Pitfalls & Best Practices
 

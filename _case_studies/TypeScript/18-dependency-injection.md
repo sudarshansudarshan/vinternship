@@ -166,6 +166,7 @@ testProcessor.pay(50); // Uses mock gateway for testing
 -   Use it with  `PaymentProcessor`  to process a payment.
     
 -   Write a mock gateway that simulates failure (`return false`) and test error handling.
+
 ## 6. Quick Recap & Key Takeaways
 
 -   **Dependency Injection**  means supplying dependencies from outside, not creating them inside.
