@@ -8,6 +8,7 @@ summary: "Learn about Built in Types in Typescript"
 
 # Built-in Types in TypeScript
 
+## 1. Problem Statement
 
 You are developing a financial analytics dashboard for a multinational company.
 

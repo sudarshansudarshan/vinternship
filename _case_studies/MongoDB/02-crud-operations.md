@@ -62,20 +62,24 @@ By the end of this tutorial, you will:
 
 **MongoDB’s CRUD operations are your digital tools for managing this ever-changing board—instantly, reliably, and at scale.**
 
+---
+
 ## 4. Technical Deep Dive
 
-## **A. MongoDB CRUD Basics**
+**A. MongoDB CRUD Basics**
 
 -   **Atomicity**: Each operation is atomic at the document level.
     
 -   **Document Structure**: Flexible schema allows nested fields (e.g.,  `price.currency`,  `price.value`).
     
 -   **Indexes**: Improve query performance (e.g., indexing  `category`  or  `price`).
-## **B.  `insertOne`: Adding Products**
+
+**B.  `insertOne`: Adding Products**
 
 **Purpose**: Add a single document to a collection.
 
 **Syntax**:
+
 ```js
 db.products.insertOne({  
   name: "Wireless Headphones",  
@@ -85,17 +89,19 @@ db.products.insertOne({
   ratings: [4.5, 4.7, 4.8]  
 });  
 ```
+
 **Key Notes**:
 
 -   MongoDB auto-generates a unique  `_id`  (primary key) if not provided.
     
 -   Returns an  `acknowledged: true`  and the inserted  `_id`.
 
-## **C.  `find`: Querying Products**
+**C.  `find`: Querying Products**
 
 **Purpose**: Retrieve documents matching criteria.
 
 **Syntax**:
+
 ```js
 // Find all electronics in stock  
 db.products.find({  
@@ -112,6 +118,7 @@ db.products.find(
 // Sorting: Highest price first  
 db.products.find().sort({ "price.value": -1 });  
 ```
+
 **Operators**:
 
 -   **Comparison**:  `$eq`,  `$gt`,  `$lt`,  `$in`.
@@ -121,13 +128,13 @@ db.products.find().sort({ "price.value": -1 });
 -   **Array**:  `$elemMatch`,  `$size`.
     
 
-----------
 
-## **D.  `updateOne`: Modifying Products**
+**D.  `updateOne`: Modifying Products**
 
 **Purpose**: Update a single document matching a filter.
 
 **Syntax**:
+
 ```js
 // Update stock quantity for a product  
 db.products.updateOne(  
@@ -147,6 +154,7 @@ db.products.updateOne(
   { $set: { "price.discount": 15 } }  
 );  
 ```
+
 **Key Notes**:
 
 -   Use  `$set`,  `$inc`,  `$push`  (for arrays) to avoid overwriting the entire document.
@@ -154,13 +162,13 @@ db.products.updateOne(
 -   Always include a filter to prevent accidental updates.
     
 
-----------
 
-## **E.  `deleteOne`: Removing Products**
+**E.  `deleteOne`: Removing Products**
 
 **Purpose**: Delete a single document matching a filter.
 
 **Syntax**:
+
 ```js
 // Delete a discontinued product  
 db.products.deleteOne({  
@@ -172,6 +180,7 @@ db.products.deleteOne({
   name: "Outdated Model XYZ"  
 });  
 ```
+
 **Key Notes**:
 
 -   Use precise filters to avoid accidental deletions.
@@ -183,7 +192,7 @@ db.products.deleteOne({
 
 ## 5. Step-by-Step Code Walkthrough
 
-## **A. Define the Product Schema**
+**A. Define the Product Schema**
 
 // Sample product document  
 ```js
@@ -197,7 +206,9 @@ db.products.deleteOne({
   tags: ["fitness", "bluetooth"]  
 }  
 ```
-## **B. Insert a New Product**
+
+**B. Insert a New Product**
+
 ```js
 db.products.insertOne({  
   name: "4K Smart TV",  
@@ -207,6 +218,7 @@ db.products.insertOne({
   tags: ["television", "streaming"]  
 });  
 ```
+
 **Output**:
 
 ```json
@@ -215,7 +227,9 @@ db.products.insertOne({
   insertedId: ObjectId("665f4d7e8b3e6c1e24a7b3e2")  
 }  
 ```
-## **C. Query Products**
+
+**C. Query Products**
+
 ```js
 // Find all TVs under $600  
 db.products.find({  
@@ -231,7 +245,8 @@ db.products.find(
 );  
 ```
 
-## **D. Update Product Stock**
+**D. Update Product Stock**
+
 ```js
 // Reduce stock by 1 when purchased  
 db.products.updateOne(  
@@ -245,12 +260,17 @@ db.products.updateOne(
   { $push: { tags: "sale" } }  
 );  
 ```
-## **E. Delete a Discontinued Product**
+
+**E. Delete a Discontinued Product**
+
 ```js
 db.products.deleteOne({  
   name: "Legacy DVD Player"  
 });  
 ```
+
+---
+
 ## 6. Interactive Challenge / Mini-Project
 
 **Your Turn!**
@@ -265,8 +285,7 @@ You’re managing FastBite’s menu database. Complete these tasks using MongoDB
     
 4.  **Delete**  the dish “Old Special Soup” from the menu.
 
-
-
+---
 
 ## 7. Common Pitfalls & Best Practices
 
