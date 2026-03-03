@@ -1,5 +1,5 @@
 ---
- title: “Never Giving Up: How Consistency and Discipline Shaped My MERN Journey"
+ title: "Never Giving Up: How Consistency and Discipline Shaped My MERN Journey"
  author: Ashutosh Rout
  vinternship_id: WIN251265
 ---
