@@ -5,7 +5,7 @@ vinternship_id: WIN25562R
 youtube_url: "https://youtu.be/lR2liIkdtTo"
 ---
 
-Thank you for checking out my vlog! 👋  
+Thank you for checking out my vlog! 👋   
 In this video, I cover:
 
 - A brief Introduction 
