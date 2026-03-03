@@ -1,5 +1,5 @@
 ---
-title: "My Vinternship Experience at Vicharanshala Lab, IIT Ropar"
+title: "My Vinternship Experience at Vicharnashala Lab, IIT Ropar"
 author: Shivam Singh
 vinternship_id: WIN251095
 youtube_url: "https://youtu.be/bJIZtwWO6II"
