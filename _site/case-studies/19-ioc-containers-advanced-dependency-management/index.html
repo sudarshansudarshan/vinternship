@@ -9,17 +9,17 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="1. Problem Statement" />
 <meta property="og:description" content="1. Problem Statement" />
-<link rel="canonical" href="http://localhost:4001/vinternship/case-studies/19-ioc-containers-advanced-dependency-management/" />
-<meta property="og:url" content="http://localhost:4001/vinternship/case-studies/19-ioc-containers-advanced-dependency-management/" />
+<link rel="canonical" href="http://localhost:4000/vinternship/case-studies/19-ioc-containers-advanced-dependency-management/" />
+<meta property="og:url" content="http://localhost:4000/vinternship/case-studies/19-ioc-containers-advanced-dependency-management/" />
 <meta property="og:site_name" content="Vinternship" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-02-04T15:22:46+05:30" />
+<meta property="article:published_time" content="2026-03-04T16:29:53+05:30" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="IoC Containers &amp; Advanced Dependency Management" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-02-04T15:22:46+05:30","datePublished":"2026-02-04T15:22:46+05:30","description":"1. Problem Statement","headline":"IoC Containers &amp; Advanced Dependency Management","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4001/vinternship/case-studies/19-ioc-containers-advanced-dependency-management/"},"url":"http://localhost:4001/vinternship/case-studies/19-ioc-containers-advanced-dependency-management/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-03-04T16:29:53+05:30","datePublished":"2026-03-04T16:29:53+05:30","description":"1. Problem Statement","headline":"IoC Containers &amp; Advanced Dependency Management","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/vinternship/case-studies/19-ioc-containers-advanced-dependency-management/"},"url":"http://localhost:4000/vinternship/case-studies/19-ioc-containers-advanced-dependency-management/"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/vinternship/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4001/vinternship/feed.xml" title="Vinternship" /></head>
+<link rel="stylesheet" href="/vinternship/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/vinternship/feed.xml" title="Vinternship" /></head>
 <head><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-87W6B0JP70"></script>
 <script>
@@ -215,33 +215,34 @@ It manages all services (dependencies) and delivers them to your classes as need
 
 <h2 id="4-step-by-step-data-modeling--code-walkthrough">4. Step-by-Step Data Modeling &amp; Code Walkthrough</h2>
 
-<p><strong>Step 1: Install  TypeDI</strong>**</p>
+<ol>
+  <li>
+    <p><strong>Install TypeDI</strong></p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install </span>typedi reflect-metadata
-</code></pre></div></div>
-<ul>
-  <li>In your  <code class="language-plaintext highlighter-rouge">tsconfig.json</code>, enable decorators:</li>
-</ul>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install </span>typedi reflect-metadata
+</code></pre></div>    </div>
 
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="dl">"</span><span class="s2">experimentalDecorators</span><span class="dl">"</span><span class="p">:</span>  <span class="kc">true</span><span class="p">,</span> 
-    <span class="dl">"</span><span class="s2">emitDecoratorMetadata</span><span class="dl">"</span><span class="p">:</span>  <span class="kc">true</span>
-</code></pre></div></div>
+    <p>In your <code class="language-plaintext highlighter-rouge">tsconfig.json</code>, enable decorators:</p>
 
-<ul>
-  <li>At the very top of your entry file (e.g., <code class="language-plaintext highlighter-rouge">index.ts</code>):</li>
-</ul>
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"experimentalDecorators"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="err">,</span><span class="w">
+</span><span class="nl">"emitDecoratorMetadata"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></code></pre></div>    </div>
 
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="dl">"</span><span class="s2">reflect-metadata</span><span class="dl">"</span><span class="p">;</span>
-</code></pre></div></div>
-<p><strong>Step 2: Define Interfaces and Implementations</strong></p>
+    <p>At the very top of your entry file (e.g., <code class="language-plaintext highlighter-rouge">index.ts</code>):</p>
 
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// src/NewsSource.ts</span>
+    <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="dl">"</span><span class="s2">reflect-metadata</span><span class="dl">"</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Define Interfaces and Implementations</strong></p>
+
+    <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// src/NewsSource.ts</span>
 <span class="k">export</span> <span class="kr">interface</span> <span class="nx">NewsSource</span> <span class="p">{</span>
   <span class="nf">fetchArticles</span><span class="p">():</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="kr">string</span><span class="p">[]</span><span class="o">&gt;</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</code></pre></div>    </div>
 
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// src/RSSFeedSource.ts</span>
+    <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// src/RSSFeedSource.ts</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">Service</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">typedi</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">NewsSource</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./NewsSource</span><span class="dl">"</span><span class="p">;</span>
 
@@ -263,14 +264,13 @@ It manages all services (dependencies) and delivers them to your classes as need
   <span class="p">}</span>
 <span class="p">}</span>
 
-</code></pre></div></div>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">@Service()</code>  registers the class with TypeDI’s container.</li>
-</ul>
+</code></pre></div>    </div>
+    <p><code class="language-plaintext highlighter-rouge">@Service()</code>  registers the class with TypeDI’s container.</p>
+  </li>
+  <li>
+    <p><strong>Inject Dependencies Automatically</strong></p>
 
-<p><strong>Step 3: Inject Dependencies Automatically</strong></p>
-
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// src/NewsAggregator.ts</span>
+    <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// src/NewsAggregator.ts</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">Service</span><span class="p">,</span> <span class="nx">Inject</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">typedi</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">NewsSource</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./NewsSource</span><span class="dl">"</span><span class="p">;</span>
 
@@ -285,27 +285,28 @@ It manages all services (dependencies) and delivers them to your classes as need
     <span class="nx">articles</span><span class="p">.</span><span class="nf">forEach</span><span class="p">(</span><span class="nx">article</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">article</span><span class="p">));</span>
   <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</code></pre></div>    </div>
 
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">@Inject(() =&gt; RSSFeedSource)</code>  tells TypeDI which implementation to inject.</li>
-</ul>
+    <p><code class="language-plaintext highlighter-rouge">@Inject(() =&gt; RSSFeedSource)</code> tells TypeDI which implementation to inject.</p>
+  </li>
+  <li>
+    <p><strong>Resolve and Use</strong></p>
 
-<p><strong>Step 4: Resolve and Use</strong></p>
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// src/index.ts</span>
+    <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// src/index.ts</span>
 <span class="k">import</span> <span class="dl">"</span><span class="s2">reflect-metadata</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">Container</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">typedi</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">NewsAggregator</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./NewsAggregator</span><span class="dl">"</span><span class="p">;</span>
 
 <span class="kd">const</span> <span class="nx">aggregator</span> <span class="o">=</span> <span class="nx">Container</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="nx">NewsAggregator</span><span class="p">);</span>
 <span class="nx">aggregator</span><span class="p">.</span><span class="nf">getLatestArticles</span><span class="p">();</span> <span class="c1">// Uses RSSFeedSource by default</span>
-</code></pre></div></div>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">Container.get()</code>  creates the class and injects all dependencies.</li>
-</ul>
+</code></pre></div>    </div>
 
-<p><strong>Step 5: Swapping Implementations</strong></p>
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Container</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">typedi</span><span class="dl">"</span><span class="p">;</span>
+    <p><code class="language-plaintext highlighter-rouge">Container.get()</code> creates the class and injects all dependencies.</p>
+  </li>
+  <li>
+    <p><strong>Swapping Implementations</strong></p>
+
+    <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Container</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">typedi</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">NewsAggregator</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./NewsAggregator</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">APISource</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./APISource</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">NewsSource</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./NewsSource</span><span class="dl">"</span><span class="p">;</span>
@@ -315,48 +316,41 @@ It manages all services (dependencies) and delivers them to your classes as need
 
 <span class="kd">const</span> <span class="nx">aggregator2</span> <span class="o">=</span> <span class="nx">Container</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="nx">NewsAggregator</span><span class="p">);</span>
 <span class="nx">aggregator2</span><span class="p">.</span><span class="nf">getLatestArticles</span><span class="p">();</span> <span class="c1">// Now uses APISource</span>
+</code></pre></div>    </div>
 
-</code></pre></div></div>
-<ul>
-  <li>No changes to  <code class="language-plaintext highlighter-rouge">NewsAggregator</code>  code needed!</li>
-</ul>
+    <p>No changes to <code class="language-plaintext highlighter-rouge">NewsAggregator</code> code needed!</p>
+  </li>
+  <li>
+    <p><strong>Re-binding Implementations (Alternative)</strong></p>
 
-<p><strong>Step 6: Swapping Implementations</strong></p>
+    <p>Suppose you want to use <code class="language-plaintext highlighter-rouge">APISource</code> instead of <code class="language-plaintext highlighter-rouge">RSSFeedSource</code>:</p>
 
-<p>Suppose you want to use  <code class="language-plaintext highlighter-rouge">APISource</code>  instead of  <code class="language-plaintext highlighter-rouge">RSSFeedSource</code>:</p>
-
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">container</span><span class="p">.</span><span class="nx">rebind</span><span class="o">&lt;</span><span class="nx">NewsSource</span><span class="o">&gt;</span><span class="p">(</span><span class="nx">TYPES</span><span class="p">.</span><span class="nx">NewsSource</span><span class="p">).</span><span class="nf">to</span><span class="p">(</span><span class="nx">APISource</span><span class="p">);</span>
+    <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">container</span><span class="p">.</span><span class="nx">rebind</span><span class="o">&lt;</span><span class="nx">NewsSource</span><span class="o">&gt;</span><span class="p">(</span><span class="nx">TYPES</span><span class="p">.</span><span class="nx">NewsSource</span><span class="p">).</span><span class="nf">to</span><span class="p">(</span><span class="nx">APISource</span><span class="p">);</span>
 
 <span class="kd">const</span> <span class="nx">aggregator2</span> <span class="o">=</span> <span class="nx">container</span><span class="p">.</span><span class="nf">resolve</span><span class="p">(</span><span class="nx">NewsAggregator</span><span class="p">);</span>
 <span class="nx">aggregator2</span><span class="p">.</span><span class="nf">getLatestArticles</span><span class="p">();</span> <span class="c1">// Now uses APISource</span>
-</code></pre></div></div>
-<ul>
-  <li>No changes to  <code class="language-plaintext highlighter-rouge">NewsAggregator</code>  code needed!</li>
-</ul>
+</code></pre></div>    </div>
 
-<p><strong>Step 7: How Does TypeDI Know What to Inject?</strong></p>
-
-<ul>
+    <p>No changes to <code class="language-plaintext highlighter-rouge">NewsAggregator</code> code needed!</p>
+  </li>
   <li>
-    <p><strong>Decorators:</strong></p>
+    <p><strong>How Does TypeDI Know What to Inject?</strong></p>
 
     <ul>
-      <li>
-        <p><code class="language-plaintext highlighter-rouge">@Service()</code>  marks a class as injectable.</p>
+      <li><strong>Decorators:</strong>
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">@Service()</code> marks a class as injectable.</li>
+          <li><code class="language-plaintext highlighter-rouge">@Inject()</code> specifies which dependency to inject.</li>
+        </ul>
       </li>
-      <li>
-        <p><code class="language-plaintext highlighter-rouge">@Inject()</code>  specifies which dependency to inject.</p>
+      <li><strong>Metadata:</strong>
+        <ul>
+          <li>TypeDI uses TypeScript’s <code class="language-plaintext highlighter-rouge">reflect-metadata</code> to read type information and decorator hints.</li>
+        </ul>
       </li>
     </ul>
   </li>
-  <li>
-    <p><strong>Metadata:</strong></p>
-
-    <ul>
-      <li>TypeDI uses TypeScript’s  <code class="language-plaintext highlighter-rouge">reflect-metadata</code>  to read type information and decorator hints.</li>
-    </ul>
-  </li>
-</ul>
+</ol>
 
 <h2 id="5--challenge">5.  Challenge</h2>
 

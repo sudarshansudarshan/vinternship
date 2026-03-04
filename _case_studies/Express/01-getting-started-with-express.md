@@ -208,9 +208,7 @@ app.get('/events', (req, res) => {
 -   This route listens for GET requests to  `/events`.
     
 -   When someone visits  `http://localhost:3000/events`, Express sends back a list of events as JSON (a common data format).
-    ```typescript
 -   `res.json()`  automatically sets the correct headers and formats the data.
-    ```
 
 **How does this help?**
 
@@ -245,9 +243,9 @@ app.get('/events', (req, res) => {
  **E. Running and Testing Your Server**
 
 1.  In your terminal, start the server:
-    
+
    ```bash 
-    `node app.js` 
+    node app.js 
    ```
 2.  Open your browser and visit:
     

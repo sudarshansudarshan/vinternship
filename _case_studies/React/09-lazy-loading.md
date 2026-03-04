@@ -89,16 +89,15 @@ By the end of this tutorial, you will:
 -   Can be used conditionally, in event handlers, or anywhere in your code—not just at the top.
 
 ```js
-
 // Only load the math module if needed
 function handleCalculate() {
   import('./math').then((math) => {
     console.log(math.add(1, 2));
   });
 }
--   This reduces the initial bundle size, as  `math`  is only loaded when  `handleCalculate`  is called .
+```
 
-``` 
+-   This reduces the initial bundle size, as  `math`  is only loaded when  `handleCalculate`  is called.
 
 
 **C. React.lazy() and Suspense: Lazy Loading Components**

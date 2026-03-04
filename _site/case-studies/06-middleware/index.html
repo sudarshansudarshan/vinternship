@@ -9,17 +9,17 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="1. Problem Statement :" />
 <meta property="og:description" content="1. Problem Statement :" />
-<link rel="canonical" href="http://localhost:4001/vinternship/case-studies/06-middleware/" />
-<meta property="og:url" content="http://localhost:4001/vinternship/case-studies/06-middleware/" />
+<link rel="canonical" href="http://localhost:4000/vinternship/case-studies/06-middleware/" />
+<meta property="og:url" content="http://localhost:4000/vinternship/case-studies/06-middleware/" />
 <meta property="og:site_name" content="Vinternship" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-02-04T15:22:46+05:30" />
+<meta property="article:published_time" content="2026-03-04T16:29:53+05:30" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Middleware" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-02-04T15:22:46+05:30","datePublished":"2026-02-04T15:22:46+05:30","description":"1. Problem Statement :","headline":"Middleware","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4001/vinternship/case-studies/06-middleware/"},"url":"http://localhost:4001/vinternship/case-studies/06-middleware/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-03-04T16:29:53+05:30","datePublished":"2026-03-04T16:29:53+05:30","description":"1. Problem Statement :","headline":"Middleware","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/vinternship/case-studies/06-middleware/"},"url":"http://localhost:4000/vinternship/case-studies/06-middleware/"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/vinternship/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4001/vinternship/feed.xml" title="Vinternship" /></head>
+<link rel="stylesheet" href="/vinternship/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/vinternship/feed.xml" title="Vinternship" /></head>
 <head><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-87W6B0JP70"></script>
 <script>
@@ -304,7 +304,7 @@ How do you redesign the discharge process so that:</p>
 <span class="nx">app</span><span class="p">.</span><span class="nf">use</span><span class="p">(</span><span class="nx">logDischargeStep</span><span class="p">);</span>
 </code></pre></div></div>
 
-<p>Every step in the discharge process is timestamped, so delays are visible and traceable._</p>
+<p><em>Every step in the discharge process is timestamped, so delays are visible and traceable.</em></p>
 
 <p><strong>F. Custom Middleware: Doctor Sign-off Check</strong></p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">doctorSignoffCheck</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
@@ -315,7 +315,7 @@ How do you redesign the discharge process so that:</p>
   <span class="nf">next</span><span class="p">();</span>
 <span class="p">}</span>
 </code></pre></div></div>
-<p>Ensures no patient leaves without a doctor’s approval._</p>
+<p><em>Ensures no patient leaves without a doctor’s approval.</em></p>
 
 <p><strong>G. Custom Middleware: Pharmacy Review</strong></p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">pharmacyReview</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
@@ -327,7 +327,7 @@ How do you redesign the discharge process so that:</p>
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>No patient leaves without medication instructions being double-checked._</p>
+<p><em>No patient leaves without medication instructions being double-checked.</em></p>
 
 <p><strong>H. Custom Middleware: Follow-up Scheduling</strong></p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">followupCheck</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
@@ -338,7 +338,7 @@ How do you redesign the discharge process so that:</p>
   <span class="nf">next</span><span class="p">();</span>
 <span class="p">}</span>
 </code></pre></div></div>
-<p>Ensures every patient has a plan for after they leave._</p>
+<p><em>Ensures every patient has a plan for after they leave.</em></p>
 
 <p><strong>I. Error-Handling Middleware</strong></p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">errorHandler</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
@@ -349,7 +349,7 @@ How do you redesign the discharge process so that:</p>
 <span class="nx">app</span><span class="p">.</span><span class="nf">use</span><span class="p">(</span><span class="nx">errorHandler</span><span class="p">);</span>
 </code></pre></div></div>
 
-<p>If anything goes wrong, staff can see exactly where the process failed._</p>
+<p><em>If anything goes wrong, staff can see exactly where the process failed.</em></p>
 
 <p><strong>J. Middleware Order Matters!</strong></p>
 
@@ -377,7 +377,7 @@ How do you redesign the discharge process so that:</p>
 <span class="nx">app</span><span class="p">.</span><span class="nf">use</span><span class="p">(</span><span class="nx">logDischargeRequest</span><span class="p">);</span>
 
 </code></pre></div></div>
-<p>Every discharge request is timestamped and tracked, so delays or bottlenecks are visible._</p>
+<p><em>Every discharge request is timestamped and tracked, so delays or bottlenecks are visible.</em></p>
 
 <p><strong>B. Checking Doctor Sign-Off</strong></p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
@@ -391,7 +391,7 @@ How do you redesign the discharge process so that:</p>
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>No patient is discharged without a doctor’s approval._</p>
+<p><em>No patient is discharged without a doctor’s approval.</em></p>
 
 <p><strong>C. Checking Pharmacy Review</strong></p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">pharmacyReview</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
@@ -403,7 +403,7 @@ How do you redesign the discharge process so that:</p>
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>Ensures all medications are reviewed and ready._</p>
+<p><em>Ensures all medications are reviewed and ready.</em></p>
 
 <p><strong>D. Checking Follow-Up Scheduling</strong></p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">followupCheck</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
@@ -415,7 +415,7 @@ How do you redesign the discharge process so that:</p>
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>Every patient leaves with a plan for next steps._</p>
+<p><em>Every patient leaves with a plan for next steps.</em></p>
 
 <p><strong>E. Centralized Error Handling</strong></p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">errorHandler</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
@@ -424,7 +424,7 @@ How do you redesign the discharge process so that:</p>
 <span class="p">}</span>
 <span class="nx">app</span><span class="p">.</span><span class="nf">use</span><span class="p">(</span><span class="nx">errorHandler</span><span class="p">);</span>
 </code></pre></div></div>
-<p>If anything fails, staff can review the full log to find and fix bottlenecks._</p>
+<p><em>If anything fails, staff can review the full log to find and fix bottlenecks.</em></p>
 
 <p><strong>F. Full Example: Putting It All Together</strong></p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">express</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">express</span><span class="dl">"</span><span class="p">;</span>

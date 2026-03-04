@@ -208,11 +208,15 @@ Just like a staff member checking each application, our route handler reviews th
 
 **E. Visualizing the Validation Flow**
 
-text
-
-`[Student submits application]  ↓ [Validation Middleware: Checks every field]
- ↓ [If errors: Respond with all problems]
- ↓ [If valid: Application accepted for review]` 
+```text
+[Student submits application]
+             ↓ 
+[Validation Middleware: Checks every field]
+             ↓ 
+[If errors: Respond with all problems]
+             ↓ 
+[If valid: Application accepted for review]
+```
 
 **Example error response:**
 

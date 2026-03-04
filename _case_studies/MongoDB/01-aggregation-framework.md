@@ -33,9 +33,9 @@ How can MovieFlix efficiently analyze, summarize, and transform huge volumes of 
 By the end of this tutorial, you will:
 
 -   Understand what the MongoDB Aggregation Framework is and why it’s powerful.
- ```js   
+    
 -   Build multi-stage aggregation pipelines using  `$match`,  `$group`,  `$project`, and more.
- ```   
+    
 -   Use pipeline stages to filter, group, reshape, and analyze data.
     
 -   Apply best practices for performance and maintainability.
@@ -48,7 +48,7 @@ By the end of this tutorial, you will:
 ## **Analogy: The Data Conveyor Belt**
 
 Imagine MovieFlix’s analytics as a high-tech conveyor belt in a mailroom:
-```js
+
 -   Each letter (document) passes through a series of stations (pipeline stages).
     
 -   Some stations filter out junk mail (`$match`).
@@ -56,7 +56,7 @@ Imagine MovieFlix’s analytics as a high-tech conveyor belt in a mailroom:
 -   Others sort mail into bins by city or sender (`$group`).
     
 -   Some reformat addresses or add labels (`$project`).
- ```     
+    
 -   At the end, you have exactly the summary or report you need.
    
 
@@ -151,7 +151,6 @@ db.collection.aggregate([
 
 **4. Other Useful Stages**
 
-```js
 -   `$sort`: Orders documents (e.g., by totalViews descending).
     
 -   `$limit`: Restricts the number of output documents.
@@ -159,7 +158,6 @@ db.collection.aggregate([
 -   `$unwind`: Deconstructs arrays into separate documents.
     
 -   `$addFields`: Adds computed fields.
-```   
 
 
 **5. How the Pipeline Works**
@@ -192,7 +190,6 @@ db.watchHistory.aggregate([
 
 **Explanation:**
 
-```js
 -   `$match`: Filters for 2024.
     
 -   `$group`: Sums up views per genre.
@@ -200,14 +197,11 @@ db.watchHistory.aggregate([
 -   `$sort`  and  `$limit`: Gets top 3 genres.
     
 -   `$project`: Formats output for reporting.
- ```   
 
 
 **D. Best Practices for Aggregation Pipelines**
 
-```js
 -   Place  `$match`  early  to reduce data volume for later stages.
-```  
 
 -   **Use indexes**  on fields used in  `$match`  for performance.
     

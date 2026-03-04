@@ -222,37 +222,38 @@ obj.greet();
 ## 5. Step-by-Step Data Modeling & Code Walkthrough
 
 1.  **Declare a variable:**
-    
-```typescript
-    let productName:  string  =  "Bananas";
-  ```
-    
+
+    ```typescript
+    let productName: string = "Bananas";
+    ```
+
 2.  **Write a function:**
-    
-```typescript
-function printProduct(name: string): void {
-  console.log("Product: " + name);
-}
-printProduct(productName);
-```
-    
+
+    ```typescript
+    function printProduct(name: string): void {
+      console.log("Product: " + name);
+    }
+    printProduct(productName);
+    ```
+
 3.  **Add a comment:**
-    
-		// This prints the product name
-		printProduct(productName);
- 
-    
+
+    ```typescript
+    // This prints the product name
+    printProduct(productName);
+    ```
+
 4.  **Define a class:**
-    
- ```typescript
-class Store {
-  open(): void {
-    console.log("Store is open!");
-  }
-}
-let store = new Store();
-store.open();
-```
+
+    ```typescript
+    class Store {
+      open(): void {
+        console.log("Store is open!");
+      }
+    }
+    let store = new Store();
+    store.open();
+    ```
 
 ## 6. Interactive Challenge
 

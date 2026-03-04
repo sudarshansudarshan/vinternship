@@ -166,31 +166,33 @@ if (true) {
 ## 5. Step-by-Step Data Modeling & Code Walkthrough
 
 1.  **Declare a variable with `let`:**
-    
-   ```typescript
-let userName:  string  =  "Alex";` 
-  ```
+
+    ```typescript
+    let userName: string = "Alex";
+    ```
+
 2.  **Declare a constant with `const`:**
-    
-   ```typescript
-    const  MAX_USERS:  number  =  100;
- ```
-    
+
+    ```typescript
+    const MAX_USERS: number = 100;
+    ```
+
 3.  **Block scope demonstration:**
-    
-   ```typescript
-if (true) {
-	let sessionId: string = "abc123";
-	console.log(sessionId); // Works here
-}
-	// console.log(sessionId); // Error: sessionId is not defined here
-```
-    
+
+    ```typescript
+    if (true) {
+        let sessionId: string = "abc123";
+        console.log(sessionId); // Works here
+    }
+    // console.log(sessionId); // Error: sessionId is not defined here
+    ```
+
 4.  **No redeclaration or reassignment with `const`:**
-```typescript
-const appName: string = "MyApp";
-// appName = "YourApp"; // Error: Cannot assign to 'appName'
-```
+
+    ```typescript
+    const appName: string = "MyApp";
+    // appName = "YourApp"; // Error: Cannot assign to 'appName'
+    ```
     
 
 ## 6. Interactive Challenge 

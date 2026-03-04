@@ -9,17 +9,17 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="1. Problem Statement: A Day at “FreshMart” Grocery Stores" />
 <meta property="og:description" content="1. Problem Statement: A Day at “FreshMart” Grocery Stores" />
-<link rel="canonical" href="http://localhost:4001/vinternship/case-studies/04-request-response/" />
-<meta property="og:url" content="http://localhost:4001/vinternship/case-studies/04-request-response/" />
+<link rel="canonical" href="http://localhost:4000/vinternship/case-studies/04-request-response/" />
+<meta property="og:url" content="http://localhost:4000/vinternship/case-studies/04-request-response/" />
 <meta property="og:site_name" content="Vinternship" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-02-04T15:22:46+05:30" />
+<meta property="article:published_time" content="2026-03-04T16:29:53+05:30" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Request and Response" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-02-04T15:22:46+05:30","datePublished":"2026-02-04T15:22:46+05:30","description":"1. Problem Statement: A Day at “FreshMart” Grocery Stores","headline":"Request and Response","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4001/vinternship/case-studies/04-request-response/"},"url":"http://localhost:4001/vinternship/case-studies/04-request-response/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-03-04T16:29:53+05:30","datePublished":"2026-03-04T16:29:53+05:30","description":"1. Problem Statement: A Day at “FreshMart” Grocery Stores","headline":"Request and Response","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/vinternship/case-studies/04-request-response/"},"url":"http://localhost:4000/vinternship/case-studies/04-request-response/"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/vinternship/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4001/vinternship/feed.xml" title="Vinternship" /></head>
+<link rel="stylesheet" href="/vinternship/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/vinternship/feed.xml" title="Vinternship" /></head>
 <head><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-87W6B0JP70"></script>
 <script>
@@ -291,11 +291,14 @@ Avoid repeating validation logic:</p>
 <span class="p">});</span>
 
 </code></pre></div></div>
-<p><strong>C. Structured Error Handling</strong>
-<strong>1. Error Hierarchy</strong></p>
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Define</span> <span class="nx">custom</span> <span class="nx">errors</span> <span class="k">for</span> <span class="nx">clarity</span><span class="p">:</span>
 
-<span class="kd">class</span> <span class="nc">ApiError</span> <span class="kd">extends</span> <span class="nc">Error</span> <span class="p">{</span>
+<p><strong>C. Structured Error Handling</strong></p>
+
+<p><strong>1. Error Hierarchy</strong></p>
+
+<p>Define custom errors for clarity:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">ApiError</span> <span class="kd">extends</span> <span class="nc">Error</span> <span class="p">{</span>
   <span class="nf">constructor</span><span class="p">(</span>
     <span class="k">public</span> <span class="nx">statusCode</span><span class="p">:</span> <span class="kr">number</span><span class="p">,</span>
     <span class="nx">message</span><span class="p">:</span> <span class="kr">string</span><span class="p">,</span>

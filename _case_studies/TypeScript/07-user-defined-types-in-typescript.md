@@ -56,7 +56,7 @@ This system keeps patient data organized, consistent, and easy to find-just like
 
 ## 4. Technical Deep Dive
 
-## Arrays
+### Arrays
 
 -   Store collections of values of the same type.
     
@@ -67,7 +67,7 @@ let patientIds: number[] = [101, 102, 103];
 let patientNames: Array<string> = ["Alice", "Bob", "Carol"];
 ```
 
-## Tuples
+### Tuples
 
 -   Arrays with a fixed number of elements, each with a specific type.
 
@@ -76,7 +76,7 @@ let vitalSigns: [number, number] = [120, 80]; // [systolic, diastolic]
 let patientInfo: [string, number] = ["Alice", 30];
 ```
 
-## Enums
+### Enums
 
 -   Named set of related values (numeric or string).
     
@@ -85,7 +85,7 @@ enum PatientStatus { Admitted, Discharged, UnderObservation }
 let status: PatientStatus = PatientStatus.Admitted;
 ```
 
-## Interfaces
+### Interfaces
 
 -   Define the shape of an object.
     
@@ -99,7 +99,7 @@ interface Patient {
 }
 ```
 
-## Classes
+### Classes
 
 -   Blueprint for creating objects with data and behavior.
 ```typescript
@@ -114,47 +114,47 @@ class Doctor {
 ## 5. Step-by-Step Data Modeling & Code Walkthrough
 
 1.  **Define enums and interfaces:**
-    
-	```typescript
-	enum PatientStatus { Admitted, Discharged, UnderObservation }
 
-	interface Patient {
-	  id: number;
-	  name: string;
-	  age: number;
-	  status: PatientStatus;
-	  vitals: [number, number];
-	}
-	```
-    
+    ```typescript
+    enum PatientStatus { Admitted, Discharged, UnderObservation }
+
+    interface Patient {
+      id: number;
+      name: string;
+      age: number;
+      status: PatientStatus;
+      vitals: [number, number];
+    }
+    ```
+
 2.  **Create an array of patients:**
-    
+
     ```typescript
-	let patients: Patient[] = [
-	  { id: 1, name: "Alice", age: 30, status: PatientStatus.Admitted, vitals: [120, 80] },
-	  { id: 2, name: "Bob", age: 45, status: PatientStatus.UnderObservation, vitals: [130, 85] }
-	];
+    let patients: Patient[] = [
+      { id: 1, name: "Alice", age: 30, status: PatientStatus.Admitted, vitals: [120, 80] },
+      { id: 2, name: "Bob", age: 45, status: PatientStatus.UnderObservation, vitals: [130, 85] }
+    ];
     ```
-    
+
 3.  **Define a class for staff:**
-    
+
     ```typescript
-	class Nurse {
-	  constructor(public name: string) {}
-	  takeVitals(patient: Patient, vitals: [number, number]): void {
-	    patient.vitals = vitals;
-	    console.log(`${this.name} updated vitals for ${patient.name}`);
-	  }
-	}
+    class Nurse {
+      constructor(public name: string) {}
+      takeVitals(patient: Patient, vitals: [number, number]): void {
+        patient.vitals = vitals;
+        console.log(`${this.name} updated vitals for ${patient.name}`);
+      }
+    }
     ```
-    
+
 4.  **Use tuples and enums for structured data:**
 
-	```typescript
-	let newVitals: [number, number] = [118, 76];
-	let nurse = new Nurse("Carol");
-	nurse.takeVitals(patients[0], newVitals);
-	```
+    ```typescript
+    let newVitals: [number, number] = [118, 76];
+    let nurse = new Nurse("Carol");
+    nurse.takeVitals(patients[0], newVitals);
+    ```
     
 
 ## 6. Interactive Challenge

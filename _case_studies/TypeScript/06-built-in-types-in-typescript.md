@@ -121,30 +121,32 @@ function fail(): never {
 ## 5. Step-by-Step Data Modeling & Code Walkthrough
 
 1.  **Declare variables for each built-in type:**
-    
-	  ```typescript
-	  let accountBalance: number = 1000.50;
-	let accountName: string = "Savings";
-	let isActive: boolean = true;
-	let transactionId: symbol = Symbol("txn");
-	let account: object = { id: 1, name: "Main" };
-	let missingValue: null = null;
-	let notSet: undefined;
-	```
-    
+
+    ```typescript
+    let accountBalance: number = 1000.50;
+    let accountName: string = "Savings";
+    let isActive: boolean = true;
+    let transactionId: symbol = Symbol("txn");
+    let account: object = { id: 1, name: "Main" };
+    let missingValue: null = null;
+    let notSet: undefined;
+    ```
+
 2.  **Function with void return:**
+
     ```typescript
     function printStatement(): void {
-	  console.log("Statement printed.");
-	}
-	```
-    
+      console.log("Statement printed.");
+    }
+    ```
+
 3.  **Function with never return:**
+
     ```typescript
-	function criticalError(): never {
-	  throw new Error("Critical failure!");
-	}
-	```
+    function criticalError(): never {
+      throw new Error("Critical failure!");
+    }
+    ```
 
 ## 6. Interactive Challenge
 

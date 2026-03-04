@@ -143,7 +143,7 @@ function logDischargeStep(req, res, next) {
 app.use(logDischargeStep);
   ```
 
-Every step in the discharge process is timestamped, so delays are visible and traceable._
+_Every step in the discharge process is timestamped, so delays are visible and traceable._
 
 **F. Custom Middleware: Doctor Sign-off Check**
   ```typescript
@@ -155,7 +155,7 @@ function doctorSignoffCheck(req, res, next) {
   next();
 }
   ```
-Ensures no patient leaves without a doctor’s approval._
+_Ensures no patient leaves without a doctor's approval._
 
  **G. Custom Middleware: Pharmacy Review**
   ```typescript
@@ -168,7 +168,7 @@ function pharmacyReview(req, res, next) {
 }
   ```
 
-No patient leaves without medication instructions being double-checked._
+_No patient leaves without medication instructions being double-checked._
 
 **H. Custom Middleware: Follow-up Scheduling**
   ```typescript
@@ -180,7 +180,7 @@ function followupCheck(req, res, next) {
   next();
 }
   ```
-Ensures every patient has a plan for after they leave._
+_Ensures every patient has a plan for after they leave._
 
  **I. Error-Handling Middleware**
   ```typescript
@@ -192,7 +192,7 @@ function errorHandler(err, req, res, next) {
 app.use(errorHandler);
   ```
 
-If anything goes wrong, staff can see exactly where the process failed._
+_If anything goes wrong, staff can see exactly where the process failed._
 
 **J. Middleware Order Matters!**
 
@@ -217,7 +217,7 @@ function logDischargeRequest(req, res, next) {
 app.use(logDischargeRequest);
 
   ```
-Every discharge request is timestamped and tracked, so delays or bottlenecks are visible._
+_Every discharge request is timestamped and tracked, so delays or bottlenecks are visible._
 
 **B. Checking Doctor Sign-Off**
   ```typescript
@@ -232,7 +232,7 @@ function doctorSignoffCheck(req, res, next) {
 }
   ```
 
-No patient is discharged without a doctor’s approval._
+_No patient is discharged without a doctor's approval._
 
  **C. Checking Pharmacy Review**
    ```typescript
@@ -245,7 +245,7 @@ function pharmacyReview(req, res, next) {
 }
   ```
 
-Ensures all medications are reviewed and ready._
+_Ensures all medications are reviewed and ready._
 
  **D. Checking Follow-Up Scheduling**
    ```typescript
@@ -258,7 +258,7 @@ function followupCheck(req, res, next) {
 }
   ```
 
-Every patient leaves with a plan for next steps._
+_Every patient leaves with a plan for next steps._
 
 **E. Centralized Error Handling**
   ```typescript
@@ -268,7 +268,7 @@ function errorHandler(err, req, res, next) {
 }
 app.use(errorHandler);
   ```
-If anything fails, staff can review the full log to find and fix bottlenecks._
+_If anything fails, staff can review the full log to find and fix bottlenecks._
 
  **F. Full Example: Putting It All Together**
   ```typescript

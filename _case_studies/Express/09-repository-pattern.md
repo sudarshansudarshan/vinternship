@@ -144,6 +144,7 @@ If you mix data access and business logic:
 ## 5. Step-by-Step Data Modeling & Code Walkthrough
 
 Let’s build a robust course registration system using the Repository Pattern.
+
 **A. Define the Domain Model**
 
 ```typescript

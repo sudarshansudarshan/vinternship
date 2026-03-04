@@ -105,6 +105,8 @@ This separation prevents chaos and lets the library adapt to changes smoothly.
 
 ## 5. Step-by-Step Data Modeling & Code Walkthrough
 
+**A. Architecture Overview**
+
 <img src="https://i.postimg.cc/bvSpTRHw/day10.png" width="500px" />
 
 

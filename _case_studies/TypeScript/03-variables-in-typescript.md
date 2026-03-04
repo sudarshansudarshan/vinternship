@@ -82,35 +82,36 @@ Organizing your office this way prevents confusion and lost items-just like usin
 You can declare variables in several ways:
 
 1.  **Declare type and value:**
-    
-```typescript
-var name:  string  =  "mary";
-   ```
-    
-   The variable stores a value of type string.
-    
+
+    ```typescript
+    var name: string = "mary";
+    ```
+
+    The variable stores a value of type string.
+
 2.  **Declare type, no value:**
-    
- ```css    
-var name:  string;
-  ```
-    
-   The variable is a string, set to  `undefined`  by default.
-    
+
+    ```typescript
+    var name: string;
+    ```
+
+    The variable is a string, set to `undefined` by default.
+
 3.  **Declare value, no type:**
-    
-```typescript   
-var name =  "mary";
-```
-The type is inferred from the value (`string`).
-    
+
+    ```typescript
+    var name = "mary";
+    ```
+
+    The type is inferred from the value (`string`).
+
 4.  **Declare neither value nor type:**
-    
-```typescript    
-var name;
-```
-    
-   The type is  `any`  and the value is  `undefined`  by default.
+
+    ```typescript
+    var name;
+    ```
+
+    The type is `any` and the value is `undefined` by default.
     
 
 ## Example: Variables in TypeScript
@@ -213,50 +214,52 @@ Class num: 13
 ## 5. Step-by-Step Data Modeling & Code Walkthrough
 
 1.  **Declare variables with type and value:**
-    
-	```typescript		
-	var productName: string = "Bananas";
-	var quantity: number = 25;
-	```
-    
-2.  **Declare a variable with type only:**
-    
-    ```typescript
-	var city:  string; city =  "Mumbai";` 
-    ```
-3.  **Declare a variable with value only (type inferred):**
-    
-    ```typescript
-    var inStock =  true;  // inferred as boolean` 
-    ```
-4.  **Declare a variable with no type or value:**
-    
-    ```typescript
-	var discount;
-	discount = 10; // type is any
-	discount = "none"; // still allowed
-    ```
-    
-5.  **Type assertion:**
-    
-	  ```typescript
-    var code = "123";
-	var codeNumber: number = <number><any>code;
-	 ```
 
-    
+    ```typescript
+    var productName: string = "Bananas";
+    var quantity: number = 25;
+    ```
+
+2.  **Declare a variable with type only:**
+
+    ```typescript
+    var city: string;
+    city = "Mumbai";
+    ```
+
+3.  **Declare a variable with value only (type inferred):**
+
+    ```typescript
+    var inStock = true;  // inferred as boolean
+    ```
+
+4.  **Declare a variable with no type or value:**
+
+    ```typescript
+    var discount;
+    discount = 10; // type is any
+    discount = "none"; // still allowed
+    ```
+
+5.  **Type assertion:**
+
+    ```typescript
+    var code = "123";
+    var codeNumber: number = <number><any>code;
+    ```
+
 6.  **Variable scope:**
-    
+
     ```typescript
     var globalVar = "I am global";
-	class Store {
-	  storeName = "Main Branch";
-	  static storeType = "Grocery";
-	  show() {
-	    var localVar = "I am local";
-	    console.log(localVar);
-	  }
-	}
+    class Store {
+      storeName = "Main Branch";
+      static storeType = "Grocery";
+      show() {
+        var localVar = "I am local";
+        console.log(localVar);
+      }
+    }
     ```
     
     

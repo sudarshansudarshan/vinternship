@@ -70,132 +70,134 @@ It manages all services (dependencies) and delivers them to your classes as need
 
 ## 4. Step-by-Step Data Modeling & Code Walkthrough
 
- **Step 1: Install  TypeDI****
+1.  **Install TypeDI**
 
+    ```bash
+    npm install typedi reflect-metadata
+    ```
 
- ```bash
-npm install typedi reflect-metadata
- ```
--   In your  `tsconfig.json`, enable decorators:
+    In your `tsconfig.json`, enable decorators:
+
+    ```json
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+    ```
+
+    At the very top of your entry file (e.g., `index.ts`):
+
+    ```typescript
+    import "reflect-metadata";
+    ```
+
+2.  **Define Interfaces and Implementations**
+
+    ```typescript
+    // src/NewsSource.ts
+    export interface NewsSource {
+      fetchArticles(): Promise<string[]>;
+    }
+    ```
+
+    ```typescript
+    // src/RSSFeedSource.ts
+    import { Service } from "typedi";
+    import { NewsSource } from "./NewsSource";
+
+    @Service()
+    export class RSSFeedSource implements NewsSource {
+      async fetchArticles(): Promise<string[]> {
+        return ["RSS: Article 1", "RSS: Article 2"];
+      }
+    }
+
+    // src/APISource.ts
+    import { Service } from "typedi";
+    import { NewsSource } from "./NewsSource";
+
+    @Service()
+    export class APISource implements NewsSource {
+      async fetchArticles(): Promise<string[]> {
+        return ["API: Article A", "API: Article B"];
+      }
+    }
+
+    ```
+    `@Service()`  registers the class with TypeDI’s container.
     
-   ```typescript
-    "experimentalDecorators":  true, 
-    "emitDecoratorMetadata":  true
- ```
+3.  **Inject Dependencies Automatically**
 
-- At the very top of your entry file (e.g., `index.ts`):
+    ```typescript
+    // src/NewsAggregator.ts
+    import { Service, Inject } from "typedi";
+    import { NewsSource } from "./NewsSource";
 
- ```typescript
-import "reflect-metadata";
-  ```
-**Step 2: Define Interfaces and Implementations**
+    @Service()
+    export class NewsAggregator {
+      constructor(
+        @Inject(() => RSSFeedSource) private source: NewsSource
+      ) {}
 
- ```typescript
-// src/NewsSource.ts
-export interface NewsSource {
-  fetchArticles(): Promise<string[]>;
-}
- ```
+      async getLatestArticles() {
+        const articles = await this.source.fetchArticles();
+        articles.forEach(article => console.log(article));
+      }
+    }
+    ```
 
- ```typescript
-// src/RSSFeedSource.ts
-import { Service } from "typedi";
-import { NewsSource } from "./NewsSource";
+    `@Inject(() => RSSFeedSource)` tells TypeDI which implementation to inject.
 
-@Service()
-export class RSSFeedSource implements NewsSource {
-  async fetchArticles(): Promise<string[]> {
-    return ["RSS: Article 1", "RSS: Article 2"];
-  }
-}
+4.  **Resolve and Use**
 
-// src/APISource.ts
-import { Service } from "typedi";
-import { NewsSource } from "./NewsSource";
+    ```typescript
+    // src/index.ts
+    import "reflect-metadata";
+    import { Container } from "typedi";
+    import { NewsAggregator } from "./NewsAggregator";
 
-@Service()
-export class APISource implements NewsSource {
-  async fetchArticles(): Promise<string[]> {
-    return ["API: Article A", "API: Article B"];
-  }
-}
+    const aggregator = Container.get(NewsAggregator);
+    aggregator.getLatestArticles(); // Uses RSSFeedSource by default
+    ```
 
- ```
- -   `@Service()`  registers the class with TypeDI’s container.
+    `Container.get()` creates the class and injects all dependencies.
+
+5.  **Swapping Implementations**
+
+    ```typescript
+    import { Container } from "typedi";
+    import { NewsAggregator } from "./NewsAggregator";
+    import { APISource } from "./APISource";
+    import { NewsSource } from "./NewsSource";
+
+    // Override the NewsSource dependency
+    Container.set(NewsSource, new APISource());
+
+    const aggregator2 = Container.get(NewsAggregator);
+    aggregator2.getLatestArticles(); // Now uses APISource
+    ```
+
+    No changes to `NewsAggregator` code needed!
     
-  **Step 3: Inject Dependencies Automatically**
+6.  **Re-binding Implementations (Alternative)**
 
- ```typescript
-// src/NewsAggregator.ts
-import { Service, Inject } from "typedi";
-import { NewsSource } from "./NewsSource";
+    Suppose you want to use `APISource` instead of `RSSFeedSource`:
 
-@Service()
-export class NewsAggregator {
-  constructor(
-    @Inject(() => RSSFeedSource) private source: NewsSource
-  ) {}
+    ```typescript
+    container.rebind<NewsSource>(TYPES.NewsSource).to(APISource);
 
-  async getLatestArticles() {
-    const articles = await this.source.fetchArticles();
-    articles.forEach(article => console.log(article));
-  }
-}
- ```
+    const aggregator2 = container.resolve(NewsAggregator);
+    aggregator2.getLatestArticles(); // Now uses APISource
+    ```
 
--   `@Inject(() => RSSFeedSource)`  tells TypeDI which implementation to inject.
+    No changes to `NewsAggregator` code needed!
 
- **Step 4: Resolve and Use**
- ```typescript
-// src/index.ts
-import "reflect-metadata";
-import { Container } from "typedi";
-import { NewsAggregator } from "./NewsAggregator";
+7.  **How Does TypeDI Know What to Inject?**
 
-const aggregator = Container.get(NewsAggregator);
-aggregator.getLatestArticles(); // Uses RSSFeedSource by default
- ```
--   `Container.get()`  creates the class and injects all dependencies. 
+    -   **Decorators:**
+        -   `@Service()` marks a class as injectable.
+        -   `@Inject()` specifies which dependency to inject.
+    -   **Metadata:**
+        -   TypeDI uses TypeScript's `reflect-metadata` to read type information and decorator hints.
 
- **Step 5: Swapping Implementations**
- ```typescript
-import { Container } from "typedi";
-import { NewsAggregator } from "./NewsAggregator";
-import { APISource } from "./APISource";
-import { NewsSource } from "./NewsSource";
-
-// Override the NewsSource dependency
-Container.set(NewsSource, new APISource());
-
-const aggregator2 = Container.get(NewsAggregator);
-aggregator2.getLatestArticles(); // Now uses APISource
-
- ```
--   No changes to  `NewsAggregator`  code needed!
-    
- **Step 6: Swapping Implementations**
-
-Suppose you want to use  `APISource`  instead of  `RSSFeedSource`:
-
- ```typescript
-container.rebind<NewsSource>(TYPES.NewsSource).to(APISource);
-
-const aggregator2 = container.resolve(NewsAggregator);
-aggregator2.getLatestArticles(); // Now uses APISource
- ```
- -   No changes to  `NewsAggregator`  code needed!
- 
-**Step 7: How Does TypeDI Know What to Inject?**
-
--   **Decorators:**
-    
-    -   `@Service()`  marks a class as injectable.
-        
-    -   `@Inject()`  specifies which dependency to inject.
-        
--   **Metadata:**
-    
-    -   TypeDI uses TypeScript’s  `reflect-metadata`  to read type information and decorator hints.
 
 ## 5.  Challenge 
 

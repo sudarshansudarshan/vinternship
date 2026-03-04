@@ -217,9 +217,8 @@ Let’s see how this structure directly solves Greenfield Community Center’s p
 1.  In your project folder, create these folders:
     
     ```bash
-    
-    `mkdir routes public` 
-     ```
+    mkdir routes public
+    ```
     
 2.  Create  `routes/events.js`  as shown above.
     
