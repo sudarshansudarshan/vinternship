@@ -70,7 +70,8 @@ Imagine a  bank vault where:
 
 **A. Props: Contracts  for Component  Input**
 
- **1. Interfaces  vs. Type Aliases**
+**1. Interfaces  vs. Type Aliases**
+
 ```js
 // Interface: Extensible via declaration merging  
 interface TransactionProps {  
@@ -92,6 +93,7 @@ type PaymentProps = {
     
 
 **2. Optional vs. Required Props**
+
 ```js
 interface UserProfileProps {  
   name: string;  
@@ -103,6 +105,7 @@ interface UserProfileProps {
     
 
 **3. Default Props**
+
 ```js
 // Functional Component  
 const Greeting: React.FC<{ message?: string }> = ({ message = 'Hello' }) => (  
@@ -115,6 +118,7 @@ class Greeting extends React.Component<{ message?: string }> {
   render() { return <h1>{this.props.message}</h1>; }  
 }  
 ```
+
 **B. State: Typing Component Internal Data**
 
  **1.  `useState`  with Type Inference**
@@ -141,17 +145,21 @@ const reducer = (state: TransactionState, action: TransactionAction): Transactio
   }  
 };  
 ```
+
  **3. Immutable State Patterns**
+
 ```js
 // Use Readonly/ReadonlyArray to prevent mutations  
 interface AccountState {  
   readonly transactions: ReadonlyArray<Transaction>;  
 }  
 ```
+
 **C. Functional Components: Advanced Typing**
-```js
+
 **1.  `React.FC`  vs. Explicit Return Types**
 
+```js
 // Implicit return type (avoid unless simple)  
 const DepositButton: React.FC<{ onClick: () => void }> = ({ onClick }) => (  
   <button onClick={onClick}>Deposit</button>  
@@ -164,6 +172,7 @@ const WithdrawButton = ({ onClick }: { onClick: () => void }): JSX.Element => {
 ```
 
  **2. Generics in Functional Components**
+
 ```js
 type CurrencyConverterProps<T extends string> = {  
   currencies: T[];  
@@ -181,6 +190,7 @@ const CurrencyConverter = <T extends string>({
 **D. Class Components: Full Type System Integration**
 
 **1. Props and State Type Parameters**
+
 ```js
 interface AccountProps {  
   accountId: string;  
@@ -196,7 +206,9 @@ class AccountManager extends React.Component<AccountProps, AccountState> {
   // Lifecycle methods with type context  
 }  
 ```
+
 **2. Typing Lifecycle Methods**
+
 ```js
 componentDidUpdate(prevProps: AccountProps, prevState: AccountState) {  
   if (this.props.accountId !== prevProps.accountId) {  
@@ -204,9 +216,13 @@ componentDidUpdate(prevProps: AccountProps, prevState: AccountState) {
   }  
 }  
 ```
+
+---
+
 ## 5. Step-by-Step Data Modeling & Code Walkthrough
 
- **A. Transaction List Component (Functional)**
+**A. Transaction List Component (Functional)**
+
 ```js
 interface Transaction {  
   id: string;  
@@ -234,7 +250,7 @@ const TransactionList: React.FC<TransactionListProps> = ({
 );  
 ```
 
- **B. Transaction Form (Class Component)**
+**B. Transaction Form (Class Component)**
 ```js
 interface TransactionFormState {  
   amount: string;  
@@ -275,6 +291,8 @@ class TransactionForm extends React.Component<TransactionFormProps, TransactionF
 }  
 ```
 
+---
+
 ## 6. Interactive Challenge / Mini-Project
 
 **Your Task:**  
@@ -297,7 +315,10 @@ Build a  `BudgetTracker`  component that:
     
 3.  Prevent negative balances through type-safe checks.
 
+---
+
 ## 7. Common Pitfalls & Best Practices
+
 | Pitfall                             | Best Practice                                      |
 |-------------------------------------|----------------------------------------------------|
 | Using `any` for props/state         | Always define explicit types                       |
@@ -305,6 +326,8 @@ Build a  `BudgetTracker`  component that:
 | Mutating state directly             | Use read-only types and immutable updates          |
 | Ignoring type inference             | Let TypeScript infer when possible                 |
 | Complex unions without validation   | Use `Zod` or `Yup` for runtime validation          |
+
+---
 
 ## 8. Optional: Programmer’s Workflow Checklist
 

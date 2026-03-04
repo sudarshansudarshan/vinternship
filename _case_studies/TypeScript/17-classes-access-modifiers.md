@@ -50,6 +50,7 @@ By the end of this lesson, you’ll be able to:
 ## 3. Concept Introduction with Office Building Analogy
 
 **Think of your code as an office building:**
+
 | Area/Room            | Access Modifier  | Who Can Enter?                                    | What Happens Here?                      |
 |----------------------|------------------|--------------------------------------------------|------------------------------------------|
 | Lobby & Hallways     | public           | Everyone (employees, managers, directors)        | Viewing shared info, casual meetings    |
@@ -69,7 +70,7 @@ Sets required features for all rooms
     
 -   **abstract class:**  The blueprint for all rooms; you can’t walk into a blueprint, but every room follows its design.
     
-  ## **What Are Classes in TypeScript?**
+## **What Are Classes in TypeScript?**
 
 A  **class**  in TypeScript is a blueprint for creating objects with specific properties (fields) and methods (functions).  
 Classes support  **object-oriented programming**  concepts like encapsulation, inheritance, and abstraction
@@ -93,7 +94,8 @@ class Person {
 const p = new Person("Alice");
 console.log(p.name); // OK
   ```
-  ## **Private**
+
+## **Private**
 
 -   Accessible  **only within the class**  where declared.
     
@@ -112,6 +114,7 @@ const s = new Secret("1234");
 // console.log(s.code); // Error: Property 'code' is private
 console.log(s.reveal()); // OK
  ```
+
 ## **Protected**
 
 -   Accessible  **within the class and its subclasses**  (not outside)
@@ -186,6 +189,7 @@ An  **abstract class**  is a class that  **cannot be incorporated directly**. It
 -   **Abstract methods**: Declared without implementation-must be implemented by subclasses.
     
 -   **Concrete methods**: Fully implemented in the abstract class.
+
 ## **Combining Access Modifiers with Constructors**
 
  ```typescript

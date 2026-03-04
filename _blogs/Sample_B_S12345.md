@@ -1,7 +1,7 @@
 ---
-title: "Welcome to Pinternship: Reflections on Growth"
-author: VLED Lab
-pinternship_id: VID12345
+ title: "Welcome to Vinternship: Reflections on Growth"
+ author: VLED Lab
+ vinternship_id: VID12345
 ---
 
 Your blog content here...

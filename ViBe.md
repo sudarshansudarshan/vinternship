@@ -31,13 +31,13 @@ ViBe is supported on **Desktop or Laptop only**. Unfortunately, mobile phones an
 
 ### "No course enrolled" Message
 
-If you see this message after accepting the invite, first verify your email address and check for any email aliases. If the issue persists, contact Support at **pinternship-support@vicharanashala.zohodesk.in**.
+If you see this message after accepting the invite, first verify your email address and check for any email aliases. If the issue persists, contact Support at **vinternship-support@vicharanashala.zohodesk.in**.
 
 ### Video Issues (Stuck, Looping, or Skipping)
 
 If you're experiencing video issues, try these troubleshooting steps in order. Start by refreshing the page multiple times. If that doesn't work, check the browser console by right-clicking, selecting Inspect, going to the Network or Console tab, and watching the video to check for any errors. Next, try logging out and logging back in again. If the problem continues, switch to a different browser or clear your browsing data and cache before re-logging in.
 
-If the issue persists after trying all these steps, record the problem and email it to **pinternship-support@vicharanashala.zohodesk.in** between 9:00 AM and 9:00 PM.
+If the issue persists after trying all these steps, record the problem and email it to **vinternship-support@vicharanashala.zohodesk.in** between 9:00 AM and 9:00 PM.
 
 ### Progress Showing Less Than 100%
 
@@ -57,7 +57,7 @@ Please ensure that you are registered on the ViBe platform with the NPTEL regist
 
 ### Course Completion
 
-Completion of all ViBe platform course modules is required as part of the Core Learning component of the Pinternship program.
+Completion of all ViBe platform course modules is required as part of the Core Learning component of the Vinternship program.
 
 ---
 

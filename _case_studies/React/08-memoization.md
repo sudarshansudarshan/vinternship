@@ -70,9 +70,7 @@ By the end of this tutorial, you will:
 -   In React, memoization prevents unnecessary recalculations and re-renders, improving performance—especially in large or complex UIs.
     
 
-----------
-
- **B. useMemo: Memoizing Expensive Computations**
+**B. useMemo: Memoizing Expensive Computations**
 
  **When to Use**
 
@@ -82,6 +80,7 @@ By the end of this tutorial, you will:
     
 
 **Syntax**
+
 ```js
 import React, { useMemo } from 'react';
 
@@ -111,19 +110,18 @@ const ExpensiveChart = ({ data }) => {
 -   If dependencies are unstable (e.g., new object/array each render), memoization is ineffective.
     
 
-----------
+**C. useCallback: Memoizing Functions and Event Handlers**
 
- **C. useCallback: Memoizing Functions and Event Handlers**
-
- **When to Use**
+**When to Use**
 
 -   When passing callbacks to child components that are memoized (e.g., with  `React.memo`).
     
 -   When the callback is used in a dependency array (e.g., in  `useEffect`).
     
 
- **Syntax**
- ```js
+**Syntax**
+
+```js
 import React, { useCallback } from 'react';
 
 const VideoControls = ({ onPlay, onPause }) => (
@@ -143,7 +141,8 @@ const Dashboard = () => {
 };
 
 ```
- **How It Works**
+
+**How It Works**
 
 -   `useCallback`  returns the same function reference unless dependencies change.
     
@@ -157,18 +156,18 @@ const Dashboard = () => {
 -   Be careful with dependencies—stale closures can occur if dependencies are missing.
     
 
-----------
 
 **D. React.memo: Memoizing Functional Components**
 
- **When to Use**
+**When to Use**
 
 -   For pure functional components that render the same output given the same props.
     
 -   To prevent re-rendering unless props actually change.
     
 
- **Syntax**
+**Syntax**
+
 ```js
 import React from 'react';
 
@@ -184,23 +183,22 @@ const CommentList = React.memo(({ comments }) => {
 });
 ```
 
- **How It Works**
+**How It Works**
 
 -   `React.memo`  wraps a component and only re-renders it if its props change (shallow comparison).
     
 -   You can provide a custom comparison function for complex props.
     
 
- **Pitfalls**
+**Pitfalls**
 
 -   If props are new objects/arrays each render, memoization won’t help—use  `useMemo`  or  `useCallback`  to stabilize them.
     
 -   Not useful for components with side effects or non-deterministic rendering.
     
 
-----------
 
- **E. Combining All Three for Maximum Performance**
+**E. Combining All Three for Maximum Performance**
 
 -   Use  `useMemo`  for expensive values.
     
@@ -209,11 +207,12 @@ const CommentList = React.memo(({ comments }) => {
 -   Use  `React.memo`  for pure, presentational components.
     
 
-----------
+---
 
 ## 5. Step-by-Step Data Modeling & Code Walkthrough
 
- **A. Memoizing Expensive Chart Data**
+**A. Memoizing Expensive Chart Data**
+
 ```js
 import React, { useMemo } from 'react';
 
@@ -227,7 +226,9 @@ const AnalyticsChart = ({ data }) => {
   return <div>Analytics Value: {analytics}</div>;
 };
 ```
+
 **B. Memoizing Event Handlers with useCallback**
+
 ```js
 import React, { useCallback, useState } from 'react';
 
@@ -256,7 +257,9 @@ const CommentsPanel = ({ comments }) => {
 };
 
 ```
- **C. Memoizing Components with React.memo**
+
+**C. Memoizing Components with React.memo**
+
 ```js
 const VideoOverlay = React.memo(({ overlays }) => {
   return (
@@ -268,6 +271,9 @@ const VideoOverlay = React.memo(({ overlays }) => {
   );
 });
 ```
+
+---
+
 ## 6. Interactive Challenge / Mini-Project
 
 **Your Turn!**
@@ -288,6 +294,8 @@ const VideoOverlay = React.memo(({ overlays }) => {
         
 3.  Show how changing unrelated state in the parent does  **not**  re-render the memoized  `TagList`  or  `TagInput`.
 
+---
+
 ## 7. Common Pitfalls & Best Practices
 ## Common Pitfalls & Best Practices (React Memoization)
 
@@ -298,6 +306,8 @@ const VideoOverlay = React.memo(({ overlays }) => {
 | Missing dependencies in hooks               | Always include all dependencies                                   |
 | Stale closures in callbacks                 | Ensure dependencies are up-to-date                                |
 | Memoizing impure or side-effectful functions| Only memoize pure computations                                    |
+
+---
 
 ## 8. Optional: Programmer’s Workflow Checklist
 

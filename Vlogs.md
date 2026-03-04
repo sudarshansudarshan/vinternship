@@ -11,7 +11,7 @@ permalink: /vlogs/
   }
 </style>
 
-### Creating a Vlog as Part of Your Pinternship Journey with VLED Lab
+### Creating a Vlog as Part of Your Vinternship Journey with VLED Lab
 
 <small>*(Activity: Call for Vlogs)*</small>
 
@@ -29,20 +29,20 @@ What we **are looking for** is authentic and your honest experience of what work
 
 ### Publication
 
-Your vlog should first be uploaded to **your personal YouTube channel**. You should tag or mention **Vicharnashala** channel in your video description. If we find the video high-quality, informative, and aligned with Pinternship, we will select your submitted vlog and it will be **reviewed by the VLED Lab team**.
+Your vlog should first be uploaded to **your personal YouTube channel**. You should tag or mention **Vicharnashala** channel in your video description. If we find the video high-quality, informative, and aligned with Vinternship, we will select your submitted vlog and it will be **reviewed by the VLED Lab team**.
 
-After review, the selected vlogs will be **embedded on the Pinternship website under the Vlogs section**. Additionally, **featured vlog creators will be recognised** for their contribution to the learning community.
+After review, the selected vlogs will be **embedded on the Vinternship website under the Vlogs section**. Additionally, **featured vlog creators will be recognised** for their contribution to the learning community.
 
 ### Submission Instructions
 
-You are first required to upload your video to **your personal [YouTube](https://www.youtube.com/){:target="_blank"} channel** and then you are required to submit your vlog as a **Markdown file with embedded video** to the **Pinternship** GitHub repository as a new pull request. Your vlog page will be rendered as a webpage, so ensure the markdown file is well-structured and includes proper video embedding. Follow the folder structure, naming conventions, and file structure provided below.
+You are first required to upload your video to **your personal [YouTube](https://www.youtube.com/){:target="_blank"} channel** and then you are required to submit your vlog as a **Markdown file with embedded video** to the **Vinternship** GitHub repository as a new pull request. Your vlog page will be rendered as a webpage, so ensure the markdown file is well-structured and includes proper video embedding. Follow the folder structure, naming conventions, and file structure provided below.
 
-***Repository:*** [https://github.com/sudarshansudarshan/pinternship](https://github.com/sudarshansudarshan/pinternship){:target="_blank"}
+***Repository:*** [https://github.com/sudarshansudarshan/vinternship](https://github.com/sudarshansudarshan/vinternship){:target="_blank"}
 
 ***Folder Structure:*** Place your vlog file in the `_vlogs/` folder.
 
 ***Naming Convention***
-Your file must be named: `Name_V_PinternshipID.md`, *Example:* `Mohit_V_12345.md`
+Your file must be named: `Name_V_VinternshipID.md`, *Example:* `Mohit_V_12345.md`
 
 ***File Structure:***
 Your vlog file must include front matter at the beginning with the following fields:
@@ -50,7 +50,7 @@ Your vlog file must include front matter at the beginning with the following fie
 ---
 title: "Your Video Title Here"
 author: Your Full Name
-pinternship_id: YOUR_PINTERNSHIP_ID
+vinternship_id: YOUR_VINTERNSHIP_ID
 youtube_url: "URL"
 ---
 
@@ -81,7 +81,7 @@ Brief description of what your video covers and what viewers will learn along wi
 
 <div style="text-align: center; background-color: #f6f8fa; padding: 2rem; margin-bottom: 2rem; border-radius: 8px; border-left: 4px solid #0366d6;">
   <p style="font-size: 1.1rem; line-height: 1.8; color: #24292e; margin: 0; max-width: 800px; margin-left: auto; margin-right: auto;">
-    Watch video tutorials, project demonstrations, and learning journeys shared by our interns. Each vlog provides valuable insights and practical knowledge from the Pinternship program.
+    Watch video tutorials, project demonstrations, and learning journeys shared by our interns. Each vlog provides valuable insights and practical knowledge from the Vinternship program.
   </p>
 </div>
 
@@ -90,7 +90,7 @@ Brief description of what your video covers and what viewers will learn along wi
 <div style="margin-bottom: 1.5rem; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
   <details style="margin: 0;">
     <summary style="cursor: pointer; font-size: 1.2rem; font-weight: 600; padding: 1rem 1.5rem; background: linear-gradient(135deg, #FF980020 0%, #FF980040 100%); border-left: 4px solid #FF9800; display: flex; align-items: center; gap: 0.5rem;">
-      <span>{{ vlog.title }} - {{ vlog.author }} ({{ vlog.pinternship_id }})</span>
+      <span>{{ vlog.title }} - {{ vlog.author }} ({{ vlog.vinternship_id }})</span>
     </summary>
     
     <div style="padding: 1.5rem; background-color: white;">
