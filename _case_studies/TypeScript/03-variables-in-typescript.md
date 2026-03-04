@@ -222,12 +222,12 @@ Class num: 13
 2.  **Declare a variable with type only:**
     
     ```typescript
-	var city:  string; city =  "Mumbai";` 
+	var city:  string; city =  "Mumbai"; 
     ```
 3.  **Declare a variable with value only (type inferred):**
     
     ```typescript
-    var inStock =  true;  // inferred as boolean` 
+    var inStock =  true;  // inferred as boolean 
     ```
 4.  **Declare a variable with no type or value:**
     
