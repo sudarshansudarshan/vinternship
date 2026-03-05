@@ -1,8 +1,8 @@
 ---
 title: "My Vinternship Learning Journey"
 author: Rayan Khan
-vinternship_id: 12345
-youtube_url: "https://www.youtube.com/watch?v=abc123xyz"
+vinternship_id: WIN251003
+youtube_url: "https://youtu.be/OCzCBZmUass?si=_Ztprlne2UO8Oz2H"
 
 
 In this vlog, I share my Vinternship learning journey, skills I developed, and projects I worked on. Viewers will learn how Vinternship helped me grow technically and professionally.
