@@ -126,40 +126,42 @@ console.log(result); // Output: undefined
 ## 5. Step-by-Step Data Modeling & Code Walkthrough
 
 1.  **User type with nullable and optional properties:**
-    
-    ```typescript
-	type User = {
-	  name: string;
-	  age: number | null;
-	  email?: string;
-	};
-	```
-    
-2.  **User with null and undefined properties:**
-	  ```typescript 
-	  let user1: User = {
-	   name: "John Doe",
-	   age: null, // Explicitly no age
-	   email: "john@example.com"
-	};
 
-	let user2: User = {
-	   name: "Jane Doe",
-	   age: 25
-	   // email is optional and thus undefined
-	};
-	```
-    
+    ```typescript
+    type User = {
+      name: string;
+      age: number | null;
+      email?: string;
+    };
+    ```
+
+2.  **User with null and undefined properties:**
+
+    ```typescript
+    let user1: User = {
+      name: "John Doe",
+      age: null, // Explicitly no age
+      email: "john@example.com"
+    };
+
+    let user2: User = {
+      name: "Jane Doe",
+      age: 25
+      // email is optional and thus undefined
+    };
+    ```
+
 3.  **Checking and handling values:**
+
     ```typescript
     function printUser(user: User): void {
-	  let ageInfo = user.age === null ? "Age not provided" : `Age: ${user.age}`;
-	  let emailInfo = user.email ? `Email: ${user.email}` : "Email not set";
-	  console.log(`${user.name} - ${ageInfo}, ${emailInfo}`);
-	}
+      let ageInfo = user.age === null ? "Age not provided" : `Age: ${user.age}`;
+      let emailInfo = user.email ? `Email: ${user.email}` : "Email not set";
+      console.log(`${user.name} - ${ageInfo}, ${emailInfo}`);
+    }
 
-	printUser(user1); // John Doe - Age not provided, Email: john@example.com
-	printUser(user2); // Jane Doe - Age: 25, Email not set
+    printUser(user1); // John Doe - Age not provided, Email: john@example.com
+    printUser(user2); // Jane Doe - Age: 25, Email not set
     ```
     
 

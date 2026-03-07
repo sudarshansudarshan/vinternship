@@ -9,17 +9,17 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Built-in Types in TypeScript" />
 <meta property="og:description" content="Built-in Types in TypeScript" />
-<link rel="canonical" href="http://localhost:4001/vinternship/case-studies/06-built-in-types-in-typescript/" />
-<meta property="og:url" content="http://localhost:4001/vinternship/case-studies/06-built-in-types-in-typescript/" />
+<link rel="canonical" href="http://localhost:4000/vinternship/case-studies/06-built-in-types-in-typescript/" />
+<meta property="og:url" content="http://localhost:4000/vinternship/case-studies/06-built-in-types-in-typescript/" />
 <meta property="og:site_name" content="Vinternship" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-01-29T22:03:58+05:30" />
+<meta property="article:published_time" content="2026-03-06T12:45:53+05:30" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Built in Types in Typescript" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-29T22:03:58+05:30","datePublished":"2026-01-29T22:03:58+05:30","description":"Built-in Types in TypeScript","headline":"Built in Types in Typescript","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4001/vinternship/case-studies/06-built-in-types-in-typescript/"},"url":"http://localhost:4001/vinternship/case-studies/06-built-in-types-in-typescript/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-03-06T12:45:53+05:30","datePublished":"2026-03-06T12:45:53+05:30","description":"Built-in Types in TypeScript","headline":"Built in Types in Typescript","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/vinternship/case-studies/06-built-in-types-in-typescript/"},"url":"http://localhost:4000/vinternship/case-studies/06-built-in-types-in-typescript/"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/vinternship/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4001/vinternship/feed.xml" title="Vinternship" /></head>
+<link rel="stylesheet" href="/vinternship/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/vinternship/feed.xml" title="Vinternship" /></head>
 <head><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-87W6B0JP70"></script>
 <script>
@@ -107,6 +107,8 @@
 
   <div class="post-content">
     <h1 id="built-in-types-in-typescript">Built-in Types in TypeScript</h1>
+
+<h2 id="1-problem-statement">1. Problem Statement</h2>
 
 <p>You are developing a financial analytics dashboard for a multinational company.</p>
 
@@ -272,7 +274,7 @@ How do you use TypeScript’s built-in types to model, validate, and process all
   <li>
     <p><strong>Declare variables for each built-in type:</strong></p>
 
-    <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">let</span> <span class="nx">accountBalance</span><span class="p">:</span> <span class="kr">number</span> <span class="o">=</span> <span class="mf">1000.50</span><span class="p">;</span>
+    <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">accountBalance</span><span class="p">:</span> <span class="kr">number</span> <span class="o">=</span> <span class="mf">1000.50</span><span class="p">;</span>
 <span class="kd">let</span> <span class="nx">accountName</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Savings</span><span class="dl">"</span><span class="p">;</span>
 <span class="kd">let</span> <span class="nx">isActive</span><span class="p">:</span> <span class="nx">boolean</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
 <span class="kd">let</span> <span class="nx">transactionId</span><span class="p">:</span> <span class="nx">symbol</span> <span class="o">=</span> <span class="nc">Symbol</span><span class="p">(</span><span class="dl">"</span><span class="s2">txn</span><span class="dl">"</span><span class="p">);</span>
@@ -281,13 +283,17 @@ How do you use TypeScript’s built-in types to model, validate, and process all
 <span class="kd">let</span> <span class="nx">notSet</span><span class="p">:</span> <span class="kc">undefined</span><span class="p">;</span>
 </code></pre></div>    </div>
   </li>
-  <li><strong>Function with void return:</strong>
+  <li>
+    <p><strong>Function with void return:</strong></p>
+
     <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">printStatement</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Statement printed.</span><span class="dl">"</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>    </div>
   </li>
-  <li><strong>Function with never return:</strong>
+  <li>
+    <p><strong>Function with never return:</strong></p>
+
     <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">criticalError</span><span class="p">():</span> <span class="nx">never</span> <span class="p">{</span>
   <span class="k">throw</span> <span class="k">new</span> <span class="nc">Error</span><span class="p">(</span><span class="dl">"</span><span class="s2">Critical failure!</span><span class="dl">"</span><span class="p">);</span>
 <span class="p">}</span>

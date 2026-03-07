@@ -6,7 +6,9 @@ order: 6
 summary: "Learn about Middleware in Express"
 ---
 
-## 1. Problem Statement : A Day at “CityCare General Hospital”**
+## 1. Problem Statement : 
+
+## **A Day at “CityCare General Hospital”**
 
 CityCare General Hospital prides itself on excellent patient care.  
 But as the hospital grew, so did the complexity of discharging patients:
@@ -65,6 +67,9 @@ Imagine the discharge process as a relay race:
 
 Middleware in software acts like these checkpoints and handoffs, ensuring every request (patient discharge) is processed in the right order, with full accountability and visibility.
 
+
+## 4. Technical Deep Dive
+
 **A. What Is Middleware?**
 
 -   Middleware is a function that sits between the incoming request and the final handler.
@@ -105,6 +110,7 @@ Middleware in software acts like these checkpoints and handoffs, ensuring every 
 -   If an error is passed to  `next(err)`, Express skips to error-handling middleware.
     
 ![Tool Box Challenge](https://i.postimg.cc/tgrv8R9M/Middleware.png)
+
  **C. Built-in Middleware Example**
 
   ```typescript
@@ -137,7 +143,7 @@ function logDischargeStep(req, res, next) {
 app.use(logDischargeStep);
   ```
 
-Every step in the discharge process is timestamped, so delays are visible and traceable._
+_Every step in the discharge process is timestamped, so delays are visible and traceable._
 
 **F. Custom Middleware: Doctor Sign-off Check**
   ```typescript
@@ -149,9 +155,9 @@ function doctorSignoffCheck(req, res, next) {
   next();
 }
   ```
-Ensures no patient leaves without a doctor’s approval._
+_Ensures no patient leaves without a doctor's approval._
 
-## **G. Custom Middleware: Pharmacy Review**
+ **G. Custom Middleware: Pharmacy Review**
   ```typescript
 function pharmacyReview(req, res, next) {
   if (!req.body.pharmacyChecked) {
@@ -162,7 +168,7 @@ function pharmacyReview(req, res, next) {
 }
   ```
 
-No patient leaves without medication instructions being double-checked._
+_No patient leaves without medication instructions being double-checked._
 
 **H. Custom Middleware: Follow-up Scheduling**
   ```typescript
@@ -174,7 +180,7 @@ function followupCheck(req, res, next) {
   next();
 }
   ```
-Ensures every patient has a plan for after they leave._
+_Ensures every patient has a plan for after they leave._
 
  **I. Error-Handling Middleware**
   ```typescript
@@ -186,7 +192,7 @@ function errorHandler(err, req, res, next) {
 app.use(errorHandler);
   ```
 
-If anything goes wrong, staff can see exactly where the process failed._
+_If anything goes wrong, staff can see exactly where the process failed._
 
 **J. Middleware Order Matters!**
 
@@ -211,7 +217,7 @@ function logDischargeRequest(req, res, next) {
 app.use(logDischargeRequest);
 
   ```
-Every discharge request is timestamped and tracked, so delays or bottlenecks are visible._
+_Every discharge request is timestamped and tracked, so delays or bottlenecks are visible._
 
 **B. Checking Doctor Sign-Off**
   ```typescript
@@ -226,7 +232,7 @@ function doctorSignoffCheck(req, res, next) {
 }
   ```
 
-No patient is discharged without a doctor’s approval._
+_No patient is discharged without a doctor's approval._
 
  **C. Checking Pharmacy Review**
    ```typescript
@@ -239,7 +245,7 @@ function pharmacyReview(req, res, next) {
 }
   ```
 
-Ensures all medications are reviewed and ready._
+_Ensures all medications are reviewed and ready._
 
  **D. Checking Follow-Up Scheduling**
    ```typescript
@@ -252,7 +258,7 @@ function followupCheck(req, res, next) {
 }
   ```
 
-Every patient leaves with a plan for next steps._
+_Every patient leaves with a plan for next steps._
 
 **E. Centralized Error Handling**
   ```typescript
@@ -262,7 +268,7 @@ function errorHandler(err, req, res, next) {
 }
 app.use(errorHandler);
   ```
-If anything fails, staff can review the full log to find and fix bottlenecks._
+_If anything fails, staff can review the full log to find and fix bottlenecks._
 
  **F. Full Example: Putting It All Together**
   ```typescript
@@ -342,8 +348,8 @@ app.listen(3000, () => console.log("Hospital system running on port 3000"));
 -   Review logs to identify and resolve bottlenecks.
     
 
-## 10. Next Steps & Curiosity Hook
+<!-- ## 10. Next Steps & Curiosity Hook
 
 **Next:**  
-Learn how to use validation libraries to ensure every discharge packet is complete and correct-no more missing signatures or incomplete instructions!
+Learn how to use validation libraries to ensure every discharge packet is complete and correct-no more missing signatures or incomplete instructions! -->
 

@@ -9,17 +9,17 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="TypeScript – null vs. undefined" />
 <meta property="og:description" content="TypeScript – null vs. undefined" />
-<link rel="canonical" href="http://localhost:4001/vinternship/case-studies/08-null-vs-undefined/" />
-<meta property="og:url" content="http://localhost:4001/vinternship/case-studies/08-null-vs-undefined/" />
+<link rel="canonical" href="http://localhost:4000/vinternship/case-studies/08-null-vs-undefined/" />
+<meta property="og:url" content="http://localhost:4000/vinternship/case-studies/08-null-vs-undefined/" />
 <meta property="og:site_name" content="Vinternship" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-01-29T22:03:58+05:30" />
+<meta property="article:published_time" content="2026-03-06T12:45:53+05:30" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Null vs Undefined" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-29T22:03:58+05:30","datePublished":"2026-01-29T22:03:58+05:30","description":"TypeScript – null vs. undefined","headline":"Null vs Undefined","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4001/vinternship/case-studies/08-null-vs-undefined/"},"url":"http://localhost:4001/vinternship/case-studies/08-null-vs-undefined/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-03-06T12:45:53+05:30","datePublished":"2026-03-06T12:45:53+05:30","description":"TypeScript – null vs. undefined","headline":"Null vs Undefined","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/vinternship/case-studies/08-null-vs-undefined/"},"url":"http://localhost:4000/vinternship/case-studies/08-null-vs-undefined/"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/vinternship/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4001/vinternship/feed.xml" title="Vinternship" /></head>
+<link rel="stylesheet" href="/vinternship/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/vinternship/feed.xml" title="Vinternship" /></head>
 <head><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-87W6B0JP70"></script>
 <script>
@@ -296,21 +296,25 @@ How do you use  <code class="language-plaintext highlighter-rouge">null</code>  
 <span class="p">};</span>
 </code></pre></div>    </div>
   </li>
-  <li><strong>User with null and undefined properties:</strong>
-    <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">let</span> <span class="nx">user1</span><span class="p">:</span> <span class="nx">User</span> <span class="o">=</span> <span class="p">{</span>
-   <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">John Doe</span><span class="dl">"</span><span class="p">,</span>
-   <span class="na">age</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span> <span class="c1">// Explicitly no age</span>
-   <span class="na">email</span><span class="p">:</span> <span class="dl">"</span><span class="s2">john@example.com</span><span class="dl">"</span>
+  <li>
+    <p><strong>User with null and undefined properties:</strong></p>
+
+    <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">user1</span><span class="p">:</span> <span class="nx">User</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">John Doe</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">age</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span> <span class="c1">// Explicitly no age</span>
+  <span class="na">email</span><span class="p">:</span> <span class="dl">"</span><span class="s2">john@example.com</span><span class="dl">"</span>
 <span class="p">};</span>
 
 <span class="kd">let</span> <span class="nx">user2</span><span class="p">:</span> <span class="nx">User</span> <span class="o">=</span> <span class="p">{</span>
-   <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Jane Doe</span><span class="dl">"</span><span class="p">,</span>
-   <span class="na">age</span><span class="p">:</span> <span class="mi">25</span>
-   <span class="c1">// email is optional and thus undefined</span>
+  <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Jane Doe</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">age</span><span class="p">:</span> <span class="mi">25</span>
+  <span class="c1">// email is optional and thus undefined</span>
 <span class="p">};</span>
 </code></pre></div>    </div>
   </li>
-  <li><strong>Checking and handling values:</strong>
+  <li>
+    <p><strong>Checking and handling values:</strong></p>
+
     <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">printUser</span><span class="p">(</span><span class="nx">user</span><span class="p">:</span> <span class="nx">User</span><span class="p">):</span> <span class="k">void</span> <span class="p">{</span>
   <span class="kd">let</span> <span class="nx">ageInfo</span> <span class="o">=</span> <span class="nx">user</span><span class="p">.</span><span class="nx">age</span> <span class="o">===</span> <span class="kc">null</span> <span class="p">?</span> <span class="dl">"</span><span class="s2">Age not provided</span><span class="dl">"</span> <span class="p">:</span> <span class="s2">`Age: </span><span class="p">${</span><span class="nx">user</span><span class="p">.</span><span class="nx">age</span><span class="p">}</span><span class="s2">`</span><span class="p">;</span>
   <span class="kd">let</span> <span class="nx">emailInfo</span> <span class="o">=</span> <span class="nx">user</span><span class="p">.</span><span class="nx">email</span> <span class="p">?</span> <span class="s2">`Email: </span><span class="p">${</span><span class="nx">user</span><span class="p">.</span><span class="nx">email</span><span class="p">}</span><span class="s2">`</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">Email not set</span><span class="dl">"</span><span class="p">;</span>

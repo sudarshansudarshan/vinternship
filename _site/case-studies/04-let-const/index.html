@@ -9,17 +9,17 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="TypeScript – let &amp; const" />
 <meta property="og:description" content="TypeScript – let &amp; const" />
-<link rel="canonical" href="http://localhost:4001/vinternship/case-studies/04-let-const/" />
-<meta property="og:url" content="http://localhost:4001/vinternship/case-studies/04-let-const/" />
+<link rel="canonical" href="http://localhost:4000/vinternship/case-studies/04-let-const/" />
+<meta property="og:url" content="http://localhost:4000/vinternship/case-studies/04-let-const/" />
 <meta property="og:site_name" content="Vinternship" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-01-29T22:03:58+05:30" />
+<meta property="article:published_time" content="2026-03-06T12:45:53+05:30" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="let &amp; const" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-29T22:03:58+05:30","datePublished":"2026-01-29T22:03:58+05:30","description":"TypeScript – let &amp; const","headline":"let &amp; const","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4001/vinternship/case-studies/04-let-const/"},"url":"http://localhost:4001/vinternship/case-studies/04-let-const/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-03-06T12:45:53+05:30","datePublished":"2026-03-06T12:45:53+05:30","description":"TypeScript – let &amp; const","headline":"let &amp; const","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/vinternship/case-studies/04-let-const/"},"url":"http://localhost:4000/vinternship/case-studies/04-let-const/"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/vinternship/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4001/vinternship/feed.xml" title="Vinternship" /></head>
+<link rel="stylesheet" href="/vinternship/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/vinternship/feed.xml" title="Vinternship" /></head>
 <head><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-87W6B0JP70"></script>
 <script>
@@ -287,31 +287,31 @@ How do you declare variables in TypeScript so that you control where and how the
 <h2 id="5-step-by-step-data-modeling--code-walkthrough">5. Step-by-Step Data Modeling &amp; Code Walkthrough</h2>
 
 <ol>
-  <li><strong>Declare a variable with <code class="language-plaintext highlighter-rouge">let</code>:</strong></li>
-</ol>
+  <li>
+    <p><strong>Declare a variable with <code class="language-plaintext highlighter-rouge">let</code>:</strong></p>
 
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">userName</span><span class="p">:</span>  <span class="kr">string</span>  <span class="o">=</span>  <span class="dl">"</span><span class="s2">Alex</span><span class="dl">"</span><span class="p">;</span><span class="s2">` 
-</span></code></pre></div></div>
-<ol>
-  <li><strong>Declare a constant with <code class="language-plaintext highlighter-rouge">const</code>:</strong></li>
-</ol>
+    <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">userName</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Alex</span><span class="dl">"</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Declare a constant with <code class="language-plaintext highlighter-rouge">const</code>:</strong></p>
 
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kd">const</span>  <span class="nx">MAX_USERS</span><span class="p">:</span>  <span class="kr">number</span>  <span class="o">=</span>  <span class="mi">100</span><span class="p">;</span>
-</code></pre></div></div>
+    <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">MAX_USERS</span><span class="p">:</span> <span class="kr">number</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Block scope demonstration:</strong></p>
 
-<ol>
-  <li><strong>Block scope demonstration:</strong></li>
-</ol>
-
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if </span><span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
-	<span class="kd">let</span> <span class="nx">sessionId</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">abc123</span><span class="dl">"</span><span class="p">;</span>
-	<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">sessionId</span><span class="p">);</span> <span class="c1">// Works here</span>
+    <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if </span><span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">sessionId</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">abc123</span><span class="dl">"</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">sessionId</span><span class="p">);</span> <span class="c1">// Works here</span>
 <span class="p">}</span>
-	<span class="c1">// console.log(sessionId); // Error: sessionId is not defined here</span>
-</code></pre></div></div>
+<span class="c1">// console.log(sessionId); // Error: sessionId is not defined here</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>No redeclaration or reassignment with <code class="language-plaintext highlighter-rouge">const</code>:</strong></p>
 
-<ol>
-  <li><strong>No redeclaration or reassignment with <code class="language-plaintext highlighter-rouge">const</code>:</strong>
     <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">appName</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">MyApp</span><span class="dl">"</span><span class="p">;</span>
 <span class="c1">// appName = "YourApp"; // Error: Cannot assign to 'appName'</span>
 </code></pre></div>    </div>

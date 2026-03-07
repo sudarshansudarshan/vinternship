@@ -126,6 +126,7 @@ app.use("/orders", OrderController);
 app.use("/inventory", InventoryController);
   ```
 
+## 4. Technical Deep Dive
 
  **A. Organizing Workflows with Routing Controllers**
 
@@ -173,6 +174,7 @@ export class BakingController {
 **Solution:**  Add checkpoints to inspect orders before they’re processed.
 
 **1. Types of Checkpoints**
+
 | Checkpoint         | Purpose                                    | Example            |
 |--------------------|--------------------------------------------|--------------------|
 | Allergy Check      | Scans for nuts, gluten, etc.              | allergyMiddleware  |
@@ -369,6 +371,7 @@ export class OrderController {
 -   Add a  `GET /baking/status/:id`  endpoint to check the baking status of an order.
 
 ## 7. Common Pitfalls & Best Practices
+
 | Pitfall                | Best Practice                                |
 |------------------------|----------------------------------------------|
 | Mixing unrelated routes | Group related routes in controllers         |
@@ -400,6 +403,6 @@ export class OrderController {
 -   Test each controller independently.
     
 
-## 10. Coming up next
+<!-- ## 10. Coming up next
 
-Learn how to add “checkpoints” (middleware) to your workflow-catching errors, logging actions, and ensuring every order is safe before it reaches the kitchen!
+Learn how to add “checkpoints” (middleware) to your workflow-catching errors, logging actions, and ensuring every order is safe before it reaches the kitchen! -->

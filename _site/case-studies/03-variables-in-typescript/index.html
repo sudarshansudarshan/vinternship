@@ -9,17 +9,17 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Variables in TypeScript" />
 <meta property="og:description" content="Variables in TypeScript" />
-<link rel="canonical" href="http://localhost:4001/vinternship/case-studies/03-variables-in-typescript/" />
-<meta property="og:url" content="http://localhost:4001/vinternship/case-studies/03-variables-in-typescript/" />
+<link rel="canonical" href="http://localhost:4000/vinternship/case-studies/03-variables-in-typescript/" />
+<meta property="og:url" content="http://localhost:4000/vinternship/case-studies/03-variables-in-typescript/" />
 <meta property="og:site_name" content="Vinternship" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-01-29T22:03:58+05:30" />
+<meta property="article:published_time" content="2026-03-06T12:45:53+05:30" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Variables in Typescript" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-29T22:03:58+05:30","datePublished":"2026-01-29T22:03:58+05:30","description":"Variables in TypeScript","headline":"Variables in Typescript","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4001/vinternship/case-studies/03-variables-in-typescript/"},"url":"http://localhost:4001/vinternship/case-studies/03-variables-in-typescript/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-03-06T12:45:53+05:30","datePublished":"2026-03-06T12:45:53+05:30","description":"Variables in TypeScript","headline":"Variables in Typescript","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/vinternship/case-studies/03-variables-in-typescript/"},"url":"http://localhost:4000/vinternship/case-studies/03-variables-in-typescript/"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/vinternship/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4001/vinternship/feed.xml" title="Vinternship" /></head>
+<link rel="stylesheet" href="/vinternship/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/vinternship/feed.xml" title="Vinternship" /></head>
 <head><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-87W6B0JP70"></script>
 <script>
@@ -219,39 +219,39 @@ How do you declare, use, and manage variables in TypeScript so your code is robu
 <p>You can declare variables in several ways:</p>
 
 <ol>
-  <li><strong>Declare type and value:</strong></li>
+  <li>
+    <p><strong>Declare type and value:</strong></p>
+
+    <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">name</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">mary</span><span class="dl">"</span><span class="p">;</span>
+</code></pre></div>    </div>
+
+    <p>The variable stores a value of type string.</p>
+  </li>
+  <li>
+    <p><strong>Declare type, no value:</strong></p>
+
+    <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">name</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+</code></pre></div>    </div>
+
+    <p>The variable is a string, set to <code class="language-plaintext highlighter-rouge">undefined</code> by default.</p>
+  </li>
+  <li>
+    <p><strong>Declare value, no type:</strong></p>
+
+    <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">mary</span><span class="dl">"</span><span class="p">;</span>
+</code></pre></div>    </div>
+
+    <p>The type is inferred from the value (<code class="language-plaintext highlighter-rouge">string</code>).</p>
+  </li>
+  <li>
+    <p><strong>Declare neither value nor type:</strong></p>
+
+    <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">name</span><span class="p">;</span>
+</code></pre></div>    </div>
+
+    <p>The type is <code class="language-plaintext highlighter-rouge">any</code> and the value is <code class="language-plaintext highlighter-rouge">undefined</code> by default.</p>
+  </li>
 </ol>
-
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">name</span><span class="p">:</span>  <span class="kr">string</span>  <span class="o">=</span>  <span class="dl">"</span><span class="s2">mary</span><span class="dl">"</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>The variable stores a value of type string.</p>
-
-<ol>
-  <li><strong>Declare type, no value:</strong></li>
-</ol>
-
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">var</span> <span class="nt">name</span><span class="o">:</span>  <span class="nt">string</span><span class="o">;</span>
-</code></pre></div></div>
-
-<p>The variable is a string, set to  <code class="language-plaintext highlighter-rouge">undefined</code>  by default.</p>
-
-<ol>
-  <li><strong>Declare value, no type:</strong></li>
-</ol>
-
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span>  <span class="dl">"</span><span class="s2">mary</span><span class="dl">"</span><span class="p">;</span>
-</code></pre></div></div>
-<p>The type is inferred from the value (<code class="language-plaintext highlighter-rouge">string</code>).</p>
-
-<ol>
-  <li><strong>Declare neither value nor type:</strong></li>
-</ol>
-
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">name</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>The type is  <code class="language-plaintext highlighter-rouge">any</code>  and the value is  <code class="language-plaintext highlighter-rouge">undefined</code>  by default.</p>
 
 <h2 id="example-variables-in-typescript">Example: Variables in TypeScript</h2>
 
@@ -366,13 +366,14 @@ Class num: 13
   <li>
     <p><strong>Declare a variable with type only:</strong></p>
 
-    <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">city</span><span class="p">:</span>  <span class="kr">string</span><span class="p">;</span> <span class="nx">city</span> <span class="o">=</span>  <span class="dl">"</span><span class="s2">Mumbai</span><span class="dl">"</span><span class="p">;</span><span class="s2">` 
-</span></code></pre></div>    </div>
+    <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">city</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+<span class="nx">city</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Mumbai</span><span class="dl">"</span><span class="p">;</span>
+</code></pre></div>    </div>
   </li>
   <li>
     <p><strong>Declare a variable with value only (type inferred):</strong></p>
 
-    <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">inStock</span> <span class="o">=</span>  <span class="kc">true</span><span class="p">;</span>  <span class="c1">// inferred as boolean` </span>
+    <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">inStock</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>  <span class="c1">// inferred as boolean</span>
 </code></pre></div>    </div>
   </li>
   <li>

@@ -47,6 +47,9 @@ By the end of this lesson, you’ll be able to:
 -   **Observer:**  When a drink is ready, all relevant staff (inventory, barista, customer) are instantly notified-no one is left out.
     
 -   **Strategy:**  The barista can use different preparation styles (fast, eco, strong) for each order, and can swap styles as needed.
+
+## 4. Technical Deep Dive
+
 ## What Are Design Patterns?
 
 Design patterns are  **repeatable solutions to common problems**  that come up when designing software systems.
@@ -55,7 +58,7 @@ They aren’t finished code, but rather  **ways of organizing your program**  so
 
 ## The Four Patterns (with Simple Explanations & Analogies)
 
-## a. Singleton
+### A. Singleton
 
 -   **What it is:**  
     Ensures there is  **only one instance**  of a particular object throughout your entire application
@@ -65,8 +68,10 @@ They aren’t finished code, but rather  **ways of organizing your program**  so
     
 -   **Why use it:**  
     To manage things that should only exist once, such as a settings manager, database connection, or logging service.
-    **Example:**
- ```typescript
+    
+- **Example:**
+
+```typescript
 class CafeManager {
   private static instance: CafeManager;
   private constructor() {}
@@ -85,7 +90,8 @@ console.log(manager1 === manager2); // true
  ```
 -   **Key point:**  
     There’s always just one manager.
-## b. Factory
+
+### B. Factory
 
 -   **What it is:**  
     Provides a way to  **create objects**  (like drinks, users, or shapes) without specifying the exact class/type to create.
@@ -97,6 +103,7 @@ console.log(manager1 === manager2); // true
     To make it easy to add new types of objects without changing lots of code.
     
 -   **Example:**
+
 ```typescript
 interface Drink { serve(): void; }
 class Latte implements Drink { serve() { console.log("Latte!"); } }
@@ -113,11 +120,12 @@ const drink = DrinkFactory.createDrink("latte");
 drink.serve(); // "Latte!"
 
  ```
+
 -   **Key point:**  
     You can add new drinks (types) without rewriting the whole menu.
     
 
-## c. Observer
+### C. Observer
 
 -   **What it is:**  
     Lets one object (the “subject”)  **notify many other objects**  (the “observers”) when something changes.
@@ -129,6 +137,7 @@ drink.serve(); // "Latte!"
     To keep different parts of your system in sync without tightly coupling them.
     
 -   **Example:**
+
 ```typescript
 interface Observer { update(msg: string): void; }
 class Customer implements Observer { update(msg: string) { console.log("Customer:", msg); } }
@@ -150,7 +159,7 @@ order.completeOrder();
     When something important happens, everyone who needs to know is notified automatically.
     
 
-## 4. Strategy
+### D. Strategy
 
 -   **What it is:**  
     Lets you  **swap out different ways of doing something**  (an “algorithm”) without changing the object that uses it.
@@ -162,6 +171,7 @@ order.completeOrder();
     To change behavior on the fly, or to keep your code flexible and clean.
     
 -   **Example:**
+
 ```typescript
 interface PrepStrategy { prepare(): void; }
 class FastPrep implements PrepStrategy { prepare() { console.log("Fast prep!"); } }
@@ -177,6 +187,7 @@ barista.makeDrink(); // "Fast prep!"
 barista.setStrategy(new EcoPrep());
 barista.makeDrink(); // "Eco prep!"
 ```
+
 -   **Key point:**  
     You can switch how things are done without rewriting the barista.
 
@@ -188,7 +199,7 @@ barista.makeDrink(); // "Eco prep!"
 | Strategy  | Swap algorithms/behaviors easily | Swap recipe cards              | Change behavior at runtime            |
 
 
-## 6. Challenge 
+## 5. Challenge 
 
 **Your Turn!**
 
@@ -196,7 +207,7 @@ barista.makeDrink(); // "Eco prep!"
     
 -   Add it to the  `DrinkOrder`  notification list and test it.
 
-## 7. Quick Recap & Key Takeaways
+## 6. Quick Recap & Key Takeaways
 
 -   **Singleton:**  Ensures only one manager is in charge.
     
@@ -207,7 +218,7 @@ barista.makeDrink(); // "Eco prep!"
 -   **Strategy:**  Lets baristas switch preparation methods as needed.
     
 
-## 8. (Optional) Programmer’s Workflow Checklist
+## 7. (Optional) Programmer’s Workflow Checklist
 
 -   Need only one instance? Use Singleton.
     
@@ -218,7 +229,7 @@ barista.makeDrink(); // "Eco prep!"
 -   Want to swap behaviors easily? Use Strategy.
     
 
-## 9. Coming up next:
+<!-- ## 8. Coming up next:
  
 Master  **Dependency Injection**-the secret ingredient for building flexible, testable, and loosely coupled systems.  
-Imagine your café’s staff and machines always getting the right tools, ingredients, and helpers-automatically!
+Imagine your café’s staff and machines always getting the right tools, ingredients, and helpers-automatically! -->

@@ -47,8 +47,11 @@ collections:
     permalink: /projects/:slug/
   cohorts:
     output: true
-    permalink: /:name/
+    permalink: /:slug/
   blogs:
     output: true
     permalink: /blogs/:slug/
+  vlogs:
+    output: true
+    permalink: /vlogs/:slug/
 

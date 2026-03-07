@@ -79,7 +79,7 @@ Brief description of what your video covers and what viewers will learn along wi
 
 ### **Published Vlogs**
 
-<div style="text-align: center; background-color: #f6f8fa; padding: 2rem; margin-bottom: 2rem; border-radius: 8px; border-left: 4px solid #0366d6;">
+<div style="text-align: center; background-color: #f6f8fa; padding: 2rem; margin-bottom: 2rem; border-radius: 8px; border-left: 4px solid #FF9800;">
   <p style="font-size: 1.1rem; line-height: 1.8; color: #24292e; margin: 0; max-width: 800px; margin-left: auto; margin-right: auto;">
     Watch video tutorials, project demonstrations, and learning journeys shared by our interns. Each vlog provides valuable insights and practical knowledge from the Vinternship program.
   </p>

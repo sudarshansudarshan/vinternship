@@ -71,9 +71,12 @@ Imagine a restaurant kitchen:
     
 -   Quality control (TypeScript types) ensures every order (request) has the right details before the kitchen starts cooking.
     
- **A. Typing Requests and Responses**
 
- **1. Defining Strict Interfaces**
+## 4. Technical Deep Dive
+
+**A. Typing Requests and Responses**
+
+**1. Defining Strict Interfaces**
 
 **Problem:**  Without types, requests like  `{ points: "100" }`  (string) might be processed as  `100`  (number), causing bugs.  
 **Solution:**  Use TypeScript interfaces to enforce data shapes.
@@ -114,7 +117,8 @@ router.post(
     
 
 **B. Validating Data with Zod**
- **1. Schema Validation**
+
+**1. Schema Validation**
 
 **Problem:**  TypeScript types are stripped at runtime. Malicious clients can still send invalid data.  
 **Solution:**  Use Zod to validate requests at runtime.
@@ -163,12 +167,15 @@ router.post("/redeem", validate(RedeemSchema), (req, res) => {
   // req.body is now validated and typed!
 });
 
-   ```
- **C. Structured Error Handling**
-**1. Error Hierarchy**
-```typescript
+```
+
+**C. Structured Error Handling**
+
+**1. Error Hierarchy**  
+
 Define custom errors for clarity:
 
+```typescript
 class ApiError extends Error {
   constructor(
     public statusCode: number,

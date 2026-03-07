@@ -9,7 +9,19 @@ layout: home
 
 **Vinternship by VLED Lab** — A comprehensive full-stack development internship program for mastering the MERN stack under the guidance of **Prof. Sudarshan Iyengar** at IIT Ropar's VLED Lab. Learn TypeScript, React, Express.js, and MongoDB through hands-on case studies and real-world projects.
 
-**Quick Guide:** To get a complete overview of the program structure and learning journey, start with the [Introduction](./intro/). Review the [FAQ](./faq/) to understand detailed policies and common questions. For live dashboard, announcements and cohort specific information, please visit the Cohort specific page that you can access from the **Select Your Cohort** section below in this page. Visit the [Case Studies](./case-studies/) section for your MERN practice problems, and explore the [Projects](./projects/) section to discover and track the larger internship projects you may want to work on. For course completion criteria, and deadlines, check the [Milestones](./milestones/) page to keep an eye on the deadlines. When new activities are announced (such as LinkedIn Posts, Blogs, Vlogs, and Endorsements), use the **Activity** links in the top navigation to access detailed instructions. For additional references, guides, and helpful materials, visit the **Resources** section in the navigation. 
+**Quick Guide:** To get a complete overview of the program structure and learning journey, start with the [Introduction](./intro/). Review the [FAQ](./faq/) to understand detailed policies and common questions. For live dashboard, announcements and cohort specific information, please visit the Cohort specific page that you can access from the **Select Your Cohort** section below in this page. Visit the [Case Studies](./case-studies/) section for your MERN practice problems, and explore the [Projects](./projects/) section to discover and track the larger internship projects you may want to work on. For course completion criteria, and deadlines, check the [Milestones](./milestones/) page to keep an eye on the deadlines, and we request you to take a look at the [Protocols and Policies](./protocols_and_policies/). When new activities are announced (such as LinkedIn Posts, Blogs, Vlogs, and Endorsements), use the **Activity** links in the top navigation to access detailed instructions. For additional references, guides, and helpful materials, visit the **Resources** section in the navigation.
+
+---
+
+## 💬 Need Help?
+
+{% include_relative _data/need-help-section.html %}
+
+---
+
+## 🔗 Important Links
+
+{% include_relative _data/important-links-section.html %}
 
 ---
 
@@ -19,7 +31,7 @@ Choose your cohort to view general information, live dashboard, announcements, a
 
 {% if site.cohorts and site.cohorts.size > 0 %}
 <div style="display: flex; gap: 1.5rem; margin: 2rem 0; flex-wrap: wrap;">
-  {% for cohort in site.cohorts %}
+  {% for cohort in site.cohorts reversed %}
     {% assign status_color = cohort.color %}
     {% if cohort.status == "Active" %}
       {% assign status_icon = "🟢" %}
@@ -58,6 +70,4 @@ Choose your cohort to view general information, live dashboard, announcements, a
 </div>
 {% endif %}
 
-
-<!-- ---
-[Important Links](./important_links/) -->
+---
