@@ -20,16 +20,16 @@
   content: "We want to incentivize your LinkedIn activity by throwing a challenge with exciting gifts and perks in store. Create a post sharing all that you have learnt during your first week's internship experience. This will help you build connections with the current cohort, expand your network as people comment on your posts, and potentially discover new opportunities. Write a short and crisp message, include a GenAI image to attract attention, tag the supporting organizations (Vicharanashala lab, Annam.ai, IIT Ropar, NPTEL, and your college), and tag the mentors. Share your post link with your fellow interns. For complete guidelines and detailed instructions, visit the [LinkedIn Post Activity](../linkedin_post/) page.\n\n**Note**: This activity is optional. Fill the activity completion form (Select Activity A2) after completing the activity, the form is available in the Forms and links section of this page."
 
 - title: "Blog Writing Activity - Call for Blogs"
-  date: ["28th Jan 2026", "24th Feb 2026"]
-  deadline: ["6th Feb 2026", "3rd March 2026"]
-  cohorts: ["euclideans", "dijkstrians"]
+  date: ["28th Jan 2026", "24th Feb 2026", "11th March 2026"]
+  deadline: ["6th Feb 2026", "3rd March 2026", "18th March 2026"]
+  cohorts: ["euclideans", "dijkstrians", "kruskalians"]
   description: "A Call for Blogs—an invitation for you to pause, reflect, and put your journey into words. Capture your experience honestly, in your own voice."
   content: "As part of your internship with the VLED Lab, we are opening a Call for Blogs. This activity is not about technical writing skills or perfect grammar. It is about capturing your experience honestly, in your own words, as you lived through this internship. We are looking for your lived experience—your doubts, your growth, your surprises, and your takeaways. Publish your blog on LinkedIn first, then submit it to the Vinternship GitHub repository. For complete guidelines and submission instructions, visit the [Blogs](../blogs/) page.\n\n**Note**: This activity is optional. Fill the activity completion form (Select Activity A3) after completing the activity, the form is available in the Forms and links section of this page."
 
 - title: "Vlog Creation Activity - Call for Vlogs"
-  date: "24th Feb 2026"
-  deadline: "3rd March 2026"
-  cohorts: ["euclideans"]
+  date: ["24th Feb 2026", "11th March 2026"]
+  deadline: ["3rd March 2026", "18th March 2026"]
+  cohorts: ["euclideans", "dijkstrians"]
   description: "Share your learning journey through video. Create a vlog demonstrating your technical skills, project work, or tutorials to help others learn."
   content: "As part of your internship with the VLED Lab, we are opening a Call for Vlogs. This is an opportunity to share your learning journey, technical skills, and project demonstrations through video. Create authentic content showing your real experience, coding process, and problem-solving approach. Upload your vlog to your personal YouTube channel first, then submit it to the Vinternship GitHub repository. For complete guidelines and submission instructions, visit the [Vlogs](../vlogs/) page.\n\n**Note**: This activity is optional. Fill the activity completion form (Select Activity A4) after completing the activity, the form is available in the Forms and links section of this page."
 
