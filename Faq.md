@@ -39,7 +39,9 @@ The internship will be conducted in **online mode only**.
 The program includes scheduled live sessions, workshops, and mentorship meetings. The timings for these sessions will be conveyed well in advance. Please look into the cohort-specific dashboard for the details.
 
 **1.5 Where can I find the Internship ID?**  
-The Internship ID will be mentioned in the offer letter sent by NPTEL POC (Only for the participants joined via NPTEL).
+The Internship ID will be mentioned in the offer letter sent by NPTEL POC (Only for the participants joined via NPTEL (Euclideans and Dijkstrians)).
+
+Other participants need not worry about their internship ID as it is primarily your registered mail ID.
 
 **1.6 Can I preview the certificate template for non-NPTEL batches?**  
 At this time, the certificate template will not be shared prior to the start of the program, as it may vary from cohort to cohort depending on how the program is conducted. Regardless of the format, every certificate issued carries its own value and recognition.
@@ -114,7 +116,7 @@ Step 3: Click on the link to join the meet by registering yourself for the meeti
 
 **3.1 Will the course instructor supervise our work directly?**  
 The instructor **may interact** with participants depending on project requirements.  
-Mentors and coordinators will engage via **live sessions** and **forums**.
+Mentors and coordinators will engage via **live sessions** and **standups**.
 
 **3.2 Do we get to meet our mentors?**  
 Yes, your project mentors can schedule a meeting based on the doubts and issues you are facing in the projects or in the learning phase.
@@ -187,10 +189,12 @@ Others will receive a certification from Vicharanashala Lab for Education Design
  Recommendation letters are not guaranteed. You may request one from the course instructor after completing the internship, and it will be at their discretion based on the performance of the candidate.
 
 **5.4 When will AKSians (NPTEL) cohort receive their offer letter?**    
-The offer letter for the AKSians (NPTEL) cohort will be issued after the candidate completes 20% of the ViBe course. The deadline for the same will be 1 week after ViBe course progression. 
+The offer letter for the AKSians (NPTEL) cohort will be issued after the candidate completes 20% of the ViBe course. The deadline for the same will be 5 days after ViBe course progression. Prior announcements will be made before releasing the offer letters
 
 Note that the offer letters are only for the AKSians cohort. Announcements regarding offer letters will be made soon.
 
+**5.5 When will AKSians (NPTEL) cohort receive their certificate of completion?**    
+The certificate of completion for the AKSians (NPTEL) cohort will be issued after the candidate successfully completes all phases of the internship provided the candidate is registered for examination in one of Prof. Sudarshan Iyengar's NPTEL course.
 
 ---
 
@@ -251,21 +255,17 @@ Send the email to all concerned parties (POC, HOD, and DLED) and retain a copy f
 ## 7. ViBe Platform
 
 **7.1 How do I log in to ViBe?**  
+-> Link for the website: https://vibe.vicharanashala.ai/auth
+
+-> Sign up as a student with the registered mail ID into the ViBe platform.
+
 -> To log in to the ViBe platform, follow the steps below carefully:
 
-1. Open the ViBe invite link shared with you via email.
+1. Log in to the ViBe platform as a student from registered email ID
 
-2. Click Continue as Student when prompted.
+2. Check the "Notifications" tab in the Top right side of the Dashboard.
 
-3. Select Continue with Google.
-
-4. Ensure you sign in using the same email ID (college email / registered email) that received the invite.
-
-5. Once authenticated, you will be redirected to your ViBe Dashboard, where your enrolled course will be visible.
-
--> If you've registered to the course, please wait for the request to be accepted by the instructors.
-
--> Join via the registration links shared in the respective discord announcement channel.
+3. Accept the course invite sent for your respective MERN Course.
 
 ⚠️ Logging in with a different email ID may result in access issues or missing course visibility.
 
@@ -423,6 +423,13 @@ If a student does not attend or engage during their booked slots, penalties may 
 
 The main goal of this feature is to encourage discipline, consistency, and accountability in learning rather than passive participation. -->
 
+**7.11 When should I use the Flag option on ViBe, and when should I contact support on Discord?**
+Use the Flag feature on ViBe only for course content-related issues, such as problems with video content or quiz questions.
+
+For technical issues, platform errors, login problems, or logistics-related queries, do not use the flag option. Instead, raise a ticket in the Discord support channel so the team can assist you faster.
+
+Using the correct method helps resolve issues quickly and keeps the learning process smooth for everyone.
+
 ---
 
 
@@ -493,6 +500,9 @@ You can track your submission status, access the leaderboard, and view the dashb
 
 **8.9. What next if I completed my Case Studies and I am done with my endorsements?**
 We have some project ideas from the existing open source projects from Vicharanashala Lab for Education Design and Annam.AI listed on the Vinternship website. You can contribute to these real-time open-source projects, working with our developers to build real applications and add new features.
+
+**8.10. What to do if the case studies submission are not updated?** 
+Please wait for 24 hrs as the dashboard will update once a while. If the submission doesn't reflect, please contact the support desk in discord as sson as possible to report the concern.
 
 ---
 
@@ -679,6 +689,8 @@ The form contains **mandatory sections**:
 
 The Self-Healing Endorsement Network rewards **integrity, collaboration, responsibility, and accountability**.
 
+**10.12 How are viva slots been scheduled?**  
+The Viva are scheduled based on the completion and the intern's progress. The schedules will be announced by the team beforehand in the respective cohort announcements page.
 
 ---
 
