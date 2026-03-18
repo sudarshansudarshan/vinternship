@@ -1,7 +1,7 @@
 ---
 title: "🚀 Learning Slowly, Understanding Better"
 author: Subham Duary
-vinternship_id: "subhamduary11@gmail.com"
+vinternship_id: NA
 ---
 
 ![🚀 Learning Slowly, Understanding Better](https://i.ibb.co/twqt7bxk/Learning-Slowly-Understanding-Better.jpg)
