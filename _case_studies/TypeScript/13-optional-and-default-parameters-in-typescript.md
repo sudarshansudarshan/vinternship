@@ -114,7 +114,7 @@ This mirrors TypeScript’s optional (`?`) and default (`=`) parameters: they le
 
 ## 5. Step-by-Step Code Walkthrough
 
-## Example 1: Optional Parameter
+### Example 1: Optional Parameter
 
 ```typescript
 function greet(name: string, age?: number): void {
@@ -130,7 +130,7 @@ greet("Bob", 30);     // Hello Bob, you are 30 years old.
 
 ``` 
 
-## Example 2: Default Parameter
+### Example 2: Default Parameter
 
 ```typescript
 function greet(name: string, age: number = 25): void {
@@ -142,7 +142,7 @@ greet("Diana", 40);   // Hello Diana, you are 40 years old.
 
 ```
 
-## Example 3: Incorrect Optional Ordering (Error)
+### Example 3: Incorrect Optional Ordering (Error)
 
 ```typescript
 // Error: Optional parameters must follow required ones
@@ -151,7 +151,7 @@ function add(x?: number, y: number): number {
 }
 ```
 
-## Example 4: Optional + Default Conflict (Error)
+### Example 4: Optional + Default Conflict (Error)
 
 ```typescript
 // Error: Cannot combine ? and = on same parameter
@@ -160,7 +160,7 @@ function add(x: number, y?: number = 10): number {
 }
 ```
 
-## Example 5: Default as Optional
+### Example 5: Default as Optional
 
 ```typescript
 function add(x: number, y: number = 10): number {
@@ -194,13 +194,13 @@ console.log(add(5, 20)); // 25
     -   Return price after discount.
         
 3.  Test calls:
-    
-```typescript
-describePerson("Eve");
-describePerson("Frank", 28);
-console.log(calculatePrice(100));      // 90
-console.log(calculatePrice(100, 0.2)); // 80
-```
+
+    ```typescript
+    describePerson("Eve");
+    describePerson("Frank", 28);
+    console.log(calculatePrice(100));      // 90
+    console.log(calculatePrice(100, 0.2)); // 80
+    ```
     
 
 ----------

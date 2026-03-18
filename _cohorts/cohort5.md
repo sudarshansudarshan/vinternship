@@ -7,13 +7,13 @@ display_name: "AKSians"
 start_date: "20th Feb 2026"
 end_date: ""
 status: "Active" #"Upcoming"
-dashboard_available: false
+dashboard_available: true
 color: "2C3E50"
 schedule:
   standups:
-    days: #["Tuesday", "Thursday", "Saturday"]
-    time: #"8:45 PM - 9:30 PM IST (duration may vary)"
-  live-session: #"Everyday at 10:00 PM - 11:00 PM IST"
+    days: ["Tuesday", "Thursday", "Saturday"]
+    time: "8:45 PM - 9:30 PM IST (duration may vary)"
+  live-session: "Saturday after 2:00 PM and Sunday"
 ---
 
 ## 📋 General Information
@@ -25,6 +25,9 @@ This cohort is exclusively for NPTEL students and focuses on building full-stack
 - The schedule will be announced soon.
 - Stay tuned for further updates.
 
-<!-- ## Forms and links
-- [Activity Completion Confirmation Form](){:target="_blank"}
-- [Case Study Submission Form](){:target="_blank"} -->
+## Forms and links
+- [Consent Form](https://zfrmz.in/W6zVH5pijnCLajKNUNmv){:target="_blank"}
+- [Institute Details Form](https://forms.gle/UbFFuDt2oetS1Re18){:target="_blank"}
+- [Activity Completion Confirmation Form](https://forms.gle/ydseV19eLqXfFvte9){:target="_blank"}
+- [Case Study Submission Form](https://forms.gle/AU6xq3Jf7UiTqZjU6){:target="_blank"} 
+- [FAQ Activity Submission Form](https://docs.google.com/forms/d/e/1FAIpQLSfvGiK3WLH1q-tLbED_NO1lXijpRyjDEkL3gzhKd2rDO8jdnw/viewform){:target="_blank"}

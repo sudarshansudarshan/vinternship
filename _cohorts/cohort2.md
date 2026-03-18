@@ -13,7 +13,7 @@ schedule:
   standups:
     days: ["Monday", "Wednesday", "Friday"]
     time: "8:45 PM - 9:30 PM IST (duration may vary)"
-  live-session: "Everyday at 10:00 PM - 11:00 PM IST"
+  live-session: "Saturday after 2:00 PM and Sunday"
 ---
 
 ## 📋 General Information

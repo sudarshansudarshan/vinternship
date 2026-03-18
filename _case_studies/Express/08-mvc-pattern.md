@@ -105,6 +105,8 @@ This separation prevents chaos and lets the library adapt to changes smoothly.
 
 ## 5. Step-by-Step Data Modeling & Code Walkthrough
 
+**A. Architecture Overview**
+
 <img src="https://i.postimg.cc/bvSpTRHw/day10.png" width="500px" />
 
 
@@ -269,6 +271,6 @@ app.listen(port, () => {
 -   **Review regularly:**  Refactor if business logic creeps into controllers or data access leaks into services.
     
 
-## 10. Coming up next
+<!-- ## 10. Coming up next
 
-Learn to use automated dependency injection tools (like  `tsyringe`) to manage complex systems effortlessly!
+Learn to use automated dependency injection tools (like  `tsyringe`) to manage complex systems effortlessly! -->

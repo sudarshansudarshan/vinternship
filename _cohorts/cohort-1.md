@@ -32,4 +32,13 @@ Student selection will be institution-led, with faculty nominations preferred. I
 ### Important Notes:
 - All interns are managed by their respective College SPOCs.
 
-<!-- ## Forms and links -->
+## Forms and links
+- Case Study Submission Form
+  - [Acropolis](https://forms.gle/H4hcWs6KThdysLqQ8){:target="_blank"}
+  - [RVITM](https://forms.gle/EffRwamxfKYoBFeq5){:target="_blank"}
+  - [Indira](https://forms.gle/HQZYUekMw5aQhUJc9){:target="_blank"}
+  
+- Activity Completion Confirmation Form
+  - [Acropolis](https://forms.gle/hzXMcMrb1xfwGYQy9){:target="_blank"}
+  - [RVITM](https://forms.gle/ehkLWDwZbznxbEeB9){:target="_blank"}
+  - [Indira](https://forms.gle/5Pda4DMsFa2vUvSo8){:target="_blank"}

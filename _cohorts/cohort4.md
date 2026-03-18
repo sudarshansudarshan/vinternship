@@ -13,7 +13,7 @@ schedule:
   standups:
     days: ["Tuesday", "Thursday", "Saturday"]
     time: "8:45 PM - 9:30 PM IST (duration may vary)"
-  live-session: "Everyday at 10:00 PM - 11:00 PM IST"
+  live-session: "Saturday after 2:00 PM and Sunday"
 ---
 
 ## 📋 General Information
@@ -26,5 +26,7 @@ This cohort is exclusively for IITM BS students and focuses on building full-sta
 - Stay tuned for further updates.
 
 ## Forms and links
+- [Consent Form](https://zfrmz.in/SZcDP34cCHW9x3ep8IWc){:target="_blank"}
 - [Activity Completion Confirmation Form](https://forms.gle/5F1LyWveNb2RwH1H7){:target="_blank"}
 - [Case Study Submission Form](https://forms.gle/SPS8s4bhXt6Nu8ddA){:target="_blank"}
+- [FAQ Activity Submission Form](https://docs.google.com/forms/d/e/1FAIpQLSfvGiK3WLH1q-tLbED_NO1lXijpRyjDEkL3gzhKd2rDO8jdnw/viewform){:target="_blank"}

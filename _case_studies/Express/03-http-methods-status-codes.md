@@ -335,9 +335,9 @@ export default router;
 -   Use headers for extra context when needed.
     
 
-## 9. Coming up next
+<!-- ## 9. Coming up next
 
-Learn how to **type requests and responses** precisely, so your API never accepts bad data or sends confusing responses!
+Learn how to **type requests and responses** precisely, so your API never accepts bad data or sends confusing responses! -->
 
 
 

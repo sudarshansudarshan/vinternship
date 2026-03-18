@@ -11,7 +11,7 @@
   gtag('config', 'G-87W6B0JP70');
 </script>
 <meta charset="UTF-8">
-<title>Vinternship Dashboard Euclideans</title>
+<title>Vinternship Dashboard AKSians</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <style>
@@ -32,10 +32,10 @@
 
   /* Top Tabs */
   .tabs {
+    flex: 1;
     display: flex;
     justify-content: center;
     gap: 12px;
-    margin: 20px;
     flex-wrap: wrap;
   }
 
@@ -50,6 +50,29 @@
   }
 
   .tab.active {
+    background: #1a237e;
+    color: white;
+  }
+
+  .header-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 20px;
+  }
+
+  .back-button {
+    padding: 10px 18px;
+    background: #e8eaf6;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #1a237e;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .back-button:hover {
     background: #1a237e;
     color: white;
   }
@@ -299,55 +322,13 @@
   width: 80px;           /* same visual weight as back button */
 }
 
-/* Ticket chip shared base */
-.ticket-chip {
-  border-radius: 12px;
-  padding: 12px 28px;
-  font-weight: 700;
-  font-size: 15px;
-  text-align: center;
-  cursor: default;
-}
-
-/* Gold chip */
-.ticket-chip-gold {
-  background: linear-gradient(135deg, #fff9e6, #fff3cd);
-  border: 2.5px solid #e6ac00;
-  outline: 3px solid #FFD54F;
-  outline-offset: 3px;
-  color: #5a3e00;
-  box-shadow: 0 4px 14px rgba(230,172,0,0.35);
-}
-
-/* Silver chip */
-.ticket-chip-silver {
-  background: linear-gradient(135deg, #f9fafb, #eceff1);
-  border: 2.5px solid #78909c;
-  outline: 3px solid #B0BEC5;
-  outline-offset: 3px;
-  color: #263238;
-  box-shadow: 0 4px 14px rgba(120,144,156,0.3);
-}
-
-/* Ticket row */
-.ticket-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
-  margin-bottom: 16px;
-}
-.ticket-row:last-child {
-  margin-bottom: 0;
-}
-
 </style>
 </head>
 
 <body>
 
 <div class="header">
-  <h1>Vinternship Dashboard Euclideans</h1>
+  <h1>Vinternship Dashboard AKSians</h1>
   <p>Live Performance & Progress Overview</p>
 </div>
 
@@ -413,7 +394,7 @@
       </div>
 
       <div style="margin-bottom:14px;">
-        <a href="https://forms.gle/9brRWW5kAbv2kaH98" target="_blank"
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc97JJLlsGWhrvY8diXOzGAIJZdMP19qiWuOzUB4Te730iQ2Q/viewform?usp=sharing&ouid=105855304345625827116" target="_blank"
            style="
              display:inline-block;
              padding:10px 16px;
@@ -474,14 +455,14 @@
 
       <!-- INDIVIDUAL HP -->
       <div class="hp-inner-view" id="hp-individual-view">
-        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQcZjQcLbb54CiTt9G2e_tWL93gPcwsdBCMOxUeKrXpIOSiM5z05oVkOVa6EuswyvVdpA_LFxxUIG9Q/pubhtml?gid=713252598&amp;single=true&amp;widget=true&amp;headers=false"
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT1yFwB1o7ei3TUg-PfgGHoPPqct3tb0e5WQE1wGtszuWYNyGgFv9Dqu8mRMayTdwZ2oovcNyI4DAwp/pubhtml?gid=713252598&single=true&amp;widget=true&amp;headers=false"
           style="width:100%; height:80vh; border:none; border-radius:12px;">
         </iframe>
       </div>
 
       <!-- ADD / DELETE REASONS -->
       <div class="hp-inner-view" id="hp-reasons-view">
-       <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQcZjQcLbb54CiTt9G2e_tWL93gPcwsdBCMOxUeKrXpIOSiM5z05oVkOVa6EuswyvVdpA_LFxxUIG9Q/pubhtml?gid=1449701238&amp;single=true&amp;widget=true&amp;headers=false"
+       <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT1yFwB1o7ei3TUg-PfgGHoPPqct3tb0e5WQE1wGtszuWYNyGgFv9Dqu8mRMayTdwZ2oovcNyI4DAwp/pubhtml?gid=1449701238&single=true&amp;widget=true&amp;headers=false"
           style="width:100%; height:80vh; border:none; border-radius:12px;">
         </iframe>
       </div>
@@ -496,122 +477,27 @@
 </div>
 
 
-<!-- Tickets Tab -->
+<!-- Tickets Tab (placeholder with bars) -->
 <div class="tab-content" id="tab-tickets">
   <div class="dashboard-inner">
     <div class="dashboard-view" style="width:100%;">
-      <h2 style="color:#1a237e; margin-bottom:24px;">🎟️ Ticket Holders</h2>
-
-      <!-- Gold Ticket -->
-      <div style="
-        background: linear-gradient(135deg, #fffde7, #fff8e1);
-        border: 2px solid #FFD54F;
-        border-radius: 16px;
-        padding: 24px 28px;
-        margin-bottom: 28px;
-        box-shadow: 0 4px 16px rgba(255,213,79,0.25);
-      ">
-        <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
-          <span style="font-size:28px;">🥇</span>
-          <h3 style="margin:0; color:#b8860b; font-size:20px; letter-spacing:0.5px;">Gold Ticket Holders</h3>
-          <span style="
-            margin-left:auto;
-            background:#FFD54F;
-            color:#5a3e00;
-            font-weight:700;
-            padding:4px 12px;
-            border-radius:999px;
-            font-size:13px;
-          ">3 holders</span>
+      <div class="placeholder">
+        <h2 style="color:#1a237e;">Tickets</h2>
+        <div class="ticket-bars">
+          <div class="bar gold">Gold</div>
+          <div class="bar silver">Silver</div>
+          <div class="bar bronze">Bronze</div>
         </div>
-        <div class="ticket-row">
-          <div class="ticket-chip ticket-chip-gold">🏅 Kartik Jain</div>
-          <div class="ticket-chip ticket-chip-gold">🏅 Komalpreet Kaur</div>
-          <div class="ticket-chip ticket-chip-gold">🏅 Mahi Sinha</div>
-        </div>
+        <p class="soon">Will be added soon</p>
       </div>
-
-      <!-- Silver Ticket -->
-      <div style="
-        background: linear-gradient(135deg, #f5f5f5, #eceff1);
-        border: 2px solid #B0BEC5;
-        border-radius: 16px;
-        padding: 24px 28px;
-        box-shadow: 0 4px 16px rgba(176,190,197,0.25);
-      ">
-        <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
-          <span style="font-size:28px;">🥈</span>
-          <h3 style="margin:0; color:#455a64; font-size:20px; letter-spacing:0.5px;">Silver Ticket Holders</h3>
-          <span style="
-            margin-left:auto;
-            background:#CFD8DC;
-            color:#263238;
-            font-weight:700;
-            padding:4px 12px;
-            border-radius:999px;
-            font-size:13px;
-          ">31 holders</span>
-        </div>
-        <!-- Row 1: 7 -->
-        <div class="ticket-row">
-          <div class="ticket-chip ticket-chip-silver">Aakash Tiwari</div>
-          <div class="ticket-chip ticket-chip-silver">Sahil Yadav</div>
-          <div class="ticket-chip ticket-chip-silver">Neel Dasai</div>
-          <div class="ticket-chip ticket-chip-silver">Shivam Singh</div>
-          <div class="ticket-chip ticket-chip-silver">D Hari Vallabha</div>
-          <div class="ticket-chip ticket-chip-silver">Gangadi Kondaswamy</div>
-          <div class="ticket-chip ticket-chip-silver">Lohith Burra</div>
-          
-        </div>
-        <!-- Row 2: 6 -->
-        <div class="ticket-row">
-          <div class="ticket-chip ticket-chip-silver">Vidhi Patel</div>
-          <div class="ticket-chip ticket-chip-silver">Pavan Malji</div>
-          <div class="ticket-chip ticket-chip-silver">Ayush Mishra</div>
-          <div class="ticket-chip ticket-chip-silver">Faqrudeen Faizan Z</div>
-          <div class="ticket-chip ticket-chip-silver">Aryan Dutta</div>
-          <div class="ticket-chip ticket-chip-silver">Harsh Priyadarshi</div>
-          
-        </div>
-        <!-- Row 3: 6 -->
-        <div class="ticket-row">
-          <div class="ticket-chip ticket-chip-silver">Shuchithaa Krishna Mohite</div>
-          <div class="ticket-chip ticket-chip-silver">Gows Maithine</div>
-          <div class="ticket-chip ticket-chip-silver">Shaik rehan ur Rahman</div>
-          <div class="ticket-chip ticket-chip-silver">Somnath Sengupta</div>
-          <div class="ticket-chip ticket-chip-silver">Ashish Kumar Gupta</div>
-          <div class="ticket-chip ticket-chip-silver">M. PrabhuDas</div>
-          
-        </div>
-        <!-- Row 4: 6 -->
-        <div class="ticket-row">
-          <div class="ticket-chip ticket-chip-silver">Tanu Mourya</div>
-          <div class="ticket-chip ticket-chip-silver">Sai Nirvignaa</div>
-          <div class="ticket-chip ticket-chip-silver">Rohit Singh</div>
-          <div class="ticket-chip ticket-chip-silver">Zoya Khan</div>
-          <div class="ticket-chip ticket-chip-silver">Sugandham Sudheer</div>
-          <div class="ticket-chip ticket-chip-silver">Saksham Sharma</div>
-        </div>
-        <!-- Row 5: 6 -->
-        <div class="ticket-row">
-          <div class="ticket-chip ticket-chip-silver">Vikas Sharma</div>
-          <div class="ticket-chip ticket-chip-silver">Sarikonda Sree Vaishnavi</div>
-          <div class="ticket-chip ticket-chip-silver">Patel Nency Dasharathbhai</div>
-          <div class="ticket-chip ticket-chip-silver">SUWETHA V</div>
-          <div class="ticket-chip ticket-chip-silver">Deepak Akuthota</div>
-          <div class="ticket-chip ticket-chip-silver">Suchismita Sahoo</div>
-        </div>
-
-      </div>
-
     </div>
   </div>
 </div>
 
 <script>
   // ========= CONFIG =========
-  const API_URL = "https://script.google.com/macros/s/AKfycbyU2YIGp55fzmJvhLP_DdNUTUCd6DbMHQUeayuFCL6xioWm7R0YB2L0KRftupQzGYR9Xw/exec";
-  const HP_API_URL = "https://script.google.com/macros/s/AKfycbwq_M-IDZlZUlDMJ7gXuhLhNq304qdCLs60plmJ90TtVtLtnZURKPxnrRVeS3kwLzZ2Hg/exec";
+  const API_URL = "https://script.google.com/macros/s/AKfycbzgUxiihC1JNJqQgl49of4VyUQt0dz08ag1D8COqrUZiSJhfYOGNxHbIVLM8aUmc_ovcQ/exec";
+  const HP_API_URL = "https://script.google.com/macros/s/AKfycby4uj1yr4KhQdiZeWlm2zYX96ypW--IdtNhu7ZXwStCp8A-WK_vJMWYH2rhkzFAz3Cg/exec";
   // We expect the API JSON to include these keys:
   // {
   //   state: [...],

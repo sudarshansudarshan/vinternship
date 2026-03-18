@@ -185,9 +185,10 @@ import debounce from 'lodash/debounce'; // GOOD: includes only debounce
 
 **A. Analyzing Your Bundle**
 
-
+```js
 npm install --save-dev webpack-bundle-analyzer
 npx webpack-bundle-analyzer dist/bundle.js
+```
 
 -   Open the report and look for:
     
@@ -238,8 +239,9 @@ The second form only includes the debounce function, not all of lodash
 
 **D. Minifying and Compressing**
 
-```js
 -   Use Terser or esbuild for minification:
+
+```js
 // webpack.config.js
 const TerserPlugin = require('terser-webpack-plugin');
 module.exports = {

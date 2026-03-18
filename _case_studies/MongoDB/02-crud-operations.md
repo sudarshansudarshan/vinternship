@@ -194,8 +194,8 @@ db.products.deleteOne({
 
 **A. Define the Product Schema**
 
-// Sample product document  
 ```js
+// Sample product document  
 {  
   _id: ObjectId("665f4d7e8b3e6c1e24a7b3e1"),  
   name: "Smartwatch Pro",  

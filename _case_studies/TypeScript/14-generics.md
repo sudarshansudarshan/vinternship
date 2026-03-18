@@ -348,9 +348,9 @@ const firstLessonFeedback = getFirstItem(lessonFeedback.getAllFeedback()); // Le
 -   Test with multiple data types to ensure flexibility and safety.
     
 
-## 9. Coming up next
+<!-- ## 9. Coming up next
 
 Master  **Advanced Types**-your toolkit for combining, transforming, and adapting types to handle complex real-world data scenarios in EduFlow!  
 Think of it as customizing your magical toolbox with special attachments.
 
-
+ -->

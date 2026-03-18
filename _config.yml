@@ -51,4 +51,7 @@ collections:
   blogs:
     output: true
     permalink: /blogs/:slug/
+  vlogs:
+    output: true
+    permalink: /vlogs/:slug/
 

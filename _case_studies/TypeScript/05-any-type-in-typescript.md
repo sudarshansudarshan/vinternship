@@ -71,34 +71,36 @@ answer = [1, 2, 3];
 
 ## 5. Step-by-Step Data Modeling & Code Walkthrough
 
-1.  **Declare a survey answer variable with  `any`:**
-    
+1.  **Declare a survey answer variable with `any`:**
+
     ```typescript
-    let surveyAnswer:  any;
+    let surveyAnswer: any;
     ```
-    
+
 2.  **Assign different types of values:**
-    
-	 ```typescript
-	surveyAnswer = "Yes";
-	surveyAnswer = 5;
-	surveyAnswer = ["Option A", "Option B"];
-	 ``` 
+
+    ```typescript
+    surveyAnswer = "Yes";
+    surveyAnswer = 5;
+    surveyAnswer = ["Option A", "Option B"];
+    ```
+
 3.  **Store answers in an array:**
-    
+
     ```typescript
     let allAnswers: any[] = [];
-	allAnswers.push("No");
-	allAnswers.push(10);
-	allAnswers.push({ comment: "N/A" });
-	```
-    
+    allAnswers.push("No");
+    allAnswers.push(10);
+    allAnswers.push({ comment: "N/A" });
+    ```
+
 4.  **Process answers (with caution):**
+
     ```typescript
-	for (let ans of allAnswers) {
-	  console.log("Received answer:", ans);
-	}
-	```
+    for (let ans of allAnswers) {
+      console.log("Received answer:", ans);
+    }
+    ```
     
 
 ## 6. Interactive Challenge

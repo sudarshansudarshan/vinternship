@@ -267,6 +267,8 @@ test("should send notification on booking", async () => {
 });
  ```
 
+---
+
 ## 5. Step-by-Step Data Modeling & Code Walkthrough
 
 **A. Setting Up for Flexibility and Growth**
@@ -440,6 +442,8 @@ Container.reset(); // Clean up after test
  ```
 -   No real SMS or billing happens during tests—just logs in memory.
 
+---
+
 ## 6. Challenge 
 
 **Your Turn!**
@@ -450,6 +454,8 @@ Container.reset(); // Clean up after test
     
 -   Write a test using a mock billing service to verify the charge is made.
 
+---
+
 ## 7.  Common Pitfalls & Best Practices
 
 | **Pitfall**                              | **Best Practice**                                      |
@@ -458,6 +464,8 @@ Container.reset(); // Clean up after test
 | Not using interfaces for services       | Depend on abstractions, not implementations            |
 | Forgetting to reset the container in tests | Clean up after each test to avoid side effects        |
 | Over-injecting (too many dependencies)  | Keep service responsibilities focused                  |
+
+---
 
 ## 8. Optional: Programmer’s Workflow Checklist
 

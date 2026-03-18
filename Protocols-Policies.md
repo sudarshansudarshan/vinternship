@@ -74,12 +74,33 @@ In addition to day-to-day progress monitoring, the program employs a **structure
 
 #### Why Milestone-Based Ejection?
 
-The Vinternship program is designed around a carefully sequenced curriculum with interdependent components. Missing critical milestones creates a cascading effect that:
+The Vinternship program is designed around a carefully sequenced curriculum with interdependent components. Missing critical ViBe milestones creates a cascading effect that:
 - Prevents meaningful participation in collaborative activities (vivas, peer reviews)
 - Compromises the quality of learning phases
 - Signals disengagement that cannot be remediated within the program timeline
 
-Therefore, **milestone achievement serves as a non-negotiable measure of program alignment**, ensuring all active participants maintain the foundational knowledge required for cohort-wide activities.
+Therefore, **ViBe milestone achievement serves as a non-negotiable measure of program alignment**, ensuring all active participants maintain the foundational knowledge required for cohort-wide activities.
+
+### HP-Based Ejection
+
+Beyond daily progress and milestone tracking, the program uses a **Health Points (HP) based ejection mechanism** rooted in each learner's Base (Credit) HP. Maintaining and improving HP through active participation is **mandatory** throughout the program.
+
+#### Base (Credit) Health Points
+
+Every intern begins the program with a **Base HP of 100**. This is the minimum acceptable HP floor. All HP additions and deductions are calculated as a **percentage of the learner's current HP**, not as fixed values — meaning the stakes scale with your standing.
+
+> **Base HP is dynamic.** It is not permanently fixed at 100. As the program progresses, the base HP value may be revised upward (for example, from 100 to 150) to reflect higher expectations at later stages. When the base HP is updated, learners who fall below the new threshold and do not demonstrate active progress toward it will be **automatically discontinued** from the internship.
+
+#### The Strike-Based Continuation Rule
+
+Learners are not permitted to remain at or below the Base HP value indefinitely. The program enforces this through a **strike system**:
+
+- Every day a learner's current HP is at or below the Base HP counts as **1 strike**.
+- Strikes accumulate across **any 5 days**.
+- Reaching **5 strikes** results in **discontinuation from the internship**.
+
+
+This mechanism operates continuously in the background alongside the progress algorithm and milestone checks, providing a third independent safety net to ensure the cohort remains composed of actively contributing learners.
 
 ---
 

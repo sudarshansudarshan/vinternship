@@ -13,7 +13,7 @@ schedule:
   standups:
     days: ["Monday", "Wednesday", "Friday"]
     time: "8:45 PM - 9:30 PM IST (duration may vary)"
-  live-session: "Everyday at 10:00 PM - 11:00 PM IST"
+  live-session: "Saturday after 2:00 PM and Sunday"
 ---
 
 ## 📋 General Information
@@ -29,5 +29,5 @@ Please do join our Discord for announcements and updates.
 
 ## Forms and links
 - [ViBe Question Review Form](https://forms.gle/d8bWDKW294UQafmF8){:target="_blank"}
-<!-- - [Activity Completion Confirmation Form](){:target="_blank"} -->
+- [Activity Completion Confirmation Form](https://forms.gle/q4sR3pUv7yG8oENs5){:target="_blank"}
 - [Case Study Submission Form](https://forms.gle/E5p8gLgrwp8FvhhH6){:target="_blank"}
