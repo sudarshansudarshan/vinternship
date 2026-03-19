@@ -1,9 +1,9 @@
 ---
 title: "A Journey Through Learning, Challenges, and Growth"
-author: Harsha Vardhan Rao Ponnada
+author: "Harsha Vardhan Rao Ponnada"
 vinternship_id: NULL
 ---
----
+
 Even after securing a Gold in *The Joy of Computing*, I initially missed the opportunity to be part of the Vinternship program. It was disappointing at first, but a few days later, I got another chance to apply—and that changed everything.
 
 That moment marked the beginning of my journey with VLED.
@@ -26,7 +26,6 @@ I would like to express my sincere gratitude to Prof. Sudarshan Iyengar, the Vic
 I am also grateful to the Indian Institute of Technology Ropar and Annam.AI for providing this opportunity. This internship taught me lessons that go far beyond the course itself.
 
 ---
-## Links
-Author: <a href="https://www.linkedin.com/in/harsha-vardhan-rao-ponnada/" target="_blank">Harsha Vardhan Rao Ponnada</a>
 
-LinkedIn Article: <a href="https://www.linkedin.com/pulse/journey-through-learning-challenges-growth-harsha-vardhan-rao-ponnada-jaquc/" target="_blank">Read on LinkedIn</a>
+Author: [Harsha Vardhan Rao Ponnada](https://www.linkedin.com/in/harsha-vardhan-rao-ponnada/){:target="_blank"}
+LinkedIn Article: [Read on LinkedIn](https://www.linkedin.com/pulse/journey-through-learning-challenges-growth-harsha-vardhan-rao-ponnada-jaquc/){:target="_blank"}
