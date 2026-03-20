@@ -34,5 +34,5 @@ The action can be added (Member 1 endorsed Member 2), deleted (Member 1 de-endor
 **Step 6: Your challenge**
 Using this data, students must create a dashboard that visualizes endorsement chains, penalties, incentives, and overall network health. The design and style are completely open-ended.
 
-***Form for Endorsement's* [Will be updated soon]**
+***Form for Endorsement's is available on the Cohort specific pages.***
 <!-- [Endorse here](https://forms.gle/){:target="_blank"}** -->

@@ -15,17 +15,35 @@ permalink: /projects/
 
 {% for project in projects %}
 {% assign color = project_colors[forloop.index0] %}
+{% assign accent = project.color | default: color %}
 
 <div style="margin-bottom: 2.5rem; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
   <details style="margin: 0;">
-    <summary style="cursor: pointer; font-size: 1.7rem; font-weight: bold; padding: 1.5rem 2rem; background: linear-gradient(135deg, #{{ color }}20 0%, #{{ color }}40 100%); border-left: 6px solid #{{ color }}; display: flex; align-items: center; gap: 0.75rem;">
+    <summary style="cursor: pointer; font-size: 1.7rem; font-weight: bold; padding: 1.5rem 2rem; background: linear-gradient(135deg, #{{ accent }}20 0%, #{{ accent }}40 100%); border-left: 6px solid #{{ accent }}; display: flex; align-items: center; gap: 0.75rem;">
       <span>{{ project.title }}</span>
     </summary>
     
     <div style="padding: 2rem; background-color: white;">
-      <div style="margin-bottom: 1.5rem; padding: 1rem; background-color: #f6f8fa; border-radius: 8px; border-left: 4px solid #{{ color }};">
+      <div style="margin-bottom: 1.5rem; padding: 1rem; background-color: #f6f8fa; border-radius: 8px; border-left: 4px solid #{{ accent }};">
         <p style="margin: 0; color: #586069; font-size: 1rem; text-align: justify;"><strong>Summary:</strong> {{ project.summary }}</p>
       </div>
+
+      {% if project.mentors and project.mentors.size > 0 %}
+      <div style="margin-bottom: 1.5rem; padding: 1.25rem; background-color: #f6f8fa; border-radius: 8px; border-left: 4px solid #{{ accent }};">
+        <h3 style="margin: 0 0 0.75rem 0; color: #24292e; font-size: 1.1rem;">{% if project.mentors.size > 1 %}Mentors{% else %}Mentor{% endif %}</h3>
+        <ul style="margin: 0; padding-left: 1.25rem; color: #24292e;">
+          {% for mentor in project.mentors %}
+          <li style="margin-bottom: 0.5rem; line-height: 1.6;">
+            {% if mentor.name %}
+              <strong>{{ mentor.name }}</strong>{% if mentor.role %} - {{ mentor.role }}{% endif %}{% if mentor.link %} (<a href="{{ mentor.link }}" target="_blank" rel="noopener noreferrer">Profile</a>){% endif %}
+            {% else %}
+              {{ mentor }}
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
       
       <div style="prose max-width: none; text-align: justify;">
         {{ project.content }}

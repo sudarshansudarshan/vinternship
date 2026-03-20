@@ -299,6 +299,48 @@
   width: 80px;           /* same visual weight as back button */
 }
 
+/* Ticket chip shared base */
+.ticket-chip {
+  border-radius: 12px;
+  padding: 12px 28px;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  cursor: default;
+}
+
+/* Gold chip */
+.ticket-chip-gold {
+  background: linear-gradient(135deg, #fff9e6, #fff3cd);
+  border: 2.5px solid #e6ac00;
+  outline: 3px solid #FFD54F;
+  outline-offset: 3px;
+  color: #5a3e00;
+  box-shadow: 0 4px 14px rgba(230,172,0,0.35);
+}
+
+/* Silver chip */
+.ticket-chip-silver {
+  background: linear-gradient(135deg, #f9fafb, #eceff1);
+  border: 2.5px solid #78909c;
+  outline: 3px solid #B0BEC5;
+  outline-offset: 3px;
+  color: #263238;
+  box-shadow: 0 4px 14px rgba(120,144,156,0.3);
+}
+
+/* Ticket row */
+.ticket-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.ticket-row:last-child {
+  margin-bottom: 0;
+}
+
 </style>
 </head>
 
@@ -454,18 +496,108 @@
 </div>
 
 
-<!-- Tickets Tab (placeholder with bars) -->
+<!-- Tickets Tab -->
 <div class="tab-content" id="tab-tickets">
   <div class="dashboard-inner">
     <div class="dashboard-view" style="width:100%;">
-      <div class="placeholder">
-        <h2 style="color:#1a237e;">Tickets</h2>
-        <div class="ticket-bars">
-          <div class="bar gold">Gold</div>
-          <div class="bar silver">Silver</div>
-          <div class="bar bronze">Bronze</div>
+      <h2 style="color:#1a237e; margin-bottom:24px;">🎟️ Ticket Holders</h2>
+
+      <!-- Gold Ticket -->
+      <div style="
+        background: linear-gradient(135deg, #fffde7, #fff8e1);
+        border: 2px solid #FFD54F;
+        border-radius: 16px;
+        padding: 24px 28px;
+        margin-bottom: 28px;
+        box-shadow: 0 4px 16px rgba(255,213,79,0.25);
+      ">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+          <span style="font-size:28px;">🥇</span>
+          <h3 style="margin:0; color:#b8860b; font-size:20px; letter-spacing:0.5px;">Gold Ticket Holders</h3>
+          <span style="
+            margin-left:auto;
+            background:#FFD54F;
+            color:#5a3e00;
+            font-weight:700;
+            padding:4px 12px;
+            border-radius:999px;
+            font-size:13px;
+          ">3 holders</span>
         </div>
-        <p class="soon">Will be added soon</p>
+        <div class="ticket-row">
+          <div class="ticket-chip ticket-chip-gold">🏅 Mikkilineni Sarvani</div>
+          <div class="ticket-chip ticket-chip-gold">🏅 Himanshu Chib</div>
+          <div class="ticket-chip ticket-chip-gold">🏅 Aryan Vaghasiya</div>
+        </div>
+      </div>
+
+      <!-- Silver Ticket -->
+      <div style="
+        background: linear-gradient(135deg, #f5f5f5, #eceff1);
+        border: 2px solid #B0BEC5;
+        border-radius: 16px;
+        padding: 24px 28px;
+        box-shadow: 0 4px 16px rgba(176,190,197,0.25);
+      ">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+          <span style="font-size:28px;">🥈</span>
+          <h3 style="margin:0; color:#455a64; font-size:20px; letter-spacing:0.5px;">Silver Ticket Holders</h3>
+          <span style="
+            margin-left:auto;
+            background:#CFD8DC;
+            color:#263238;
+            font-weight:700;
+            padding:4px 12px;
+            border-radius:999px;
+            font-size:13px;
+          ">26 holders</span>
+        </div>
+
+        <div class="ticket-row">
+          <div class="ticket-chip ticket-chip-silver">Harsh Joshi</div>
+          <div class="ticket-chip ticket-chip-silver">Akshara Sri Phani Chirravuri</div>
+          <div class="ticket-chip ticket-chip-silver">Majji Naga Pranathi</div>
+          <div class="ticket-chip ticket-chip-silver">Ankur Kumar Singh</div>
+          <div class="ticket-chip ticket-chip-silver">Maurya Doshi</div>
+          <div class="ticket-chip ticket-chip-silver">Ashutosh Rout</div>
+        </div>
+
+        <div class="ticket-row">
+          <div class="ticket-chip ticket-chip-silver">Julia G</div>
+          <div class="ticket-chip ticket-chip-silver">Anurag Kumar</div>
+          <div class="ticket-chip ticket-chip-silver">Adapa Mounica</div>
+          <div class="ticket-chip ticket-chip-silver">Kannika Sardar</div>
+          <div class="ticket-chip ticket-chip-silver">Akash Raj</div>
+          <div class="ticket-chip ticket-chip-silver">Nihitha</div>
+          <div class="ticket-chip ticket-chip-silver">Nidhi C A</div>
+          <div class="ticket-chip ticket-chip-silver">Vishal Rai</div>
+        </div>
+
+        <div class="ticket-row">
+          <div class="ticket-chip ticket-chip-silver">Ujjwal Kumar</div>
+          <div class="ticket-chip ticket-chip-silver">Kollipara Naga Harshitha</div>
+          <div class="ticket-chip ticket-chip-silver">Aditya Kumar</div>
+          <div class="ticket-chip ticket-chip-silver">Bharathikannan R</div>
+          <div class="ticket-chip ticket-chip-silver">Borra Pujith Ganesh</div>
+          <div class="ticket-chip ticket-chip-silver">Harini Elangovan</div>
+        </div>
+
+        <div class="ticket-row">
+          <div class="ticket-chip ticket-chip-silver">Prerna Mishra</div>
+          
+          <div class="ticket-chip ticket-chip-silver">Ruchika Choudhary</div>
+          <div class="ticket-chip ticket-chip-silver">Aditya Kumar</div>
+          <div class="ticket-chip ticket-chip-silver">Ritika Verma</div>
+          <div class="ticket-chip ticket-chip-silver">Sontyana Sai Gowtham</div>
+          <div class="ticket-chip ticket-chip-silver">Tanmay Kumar</div>
+          
+          
+        </div>
+
+       
+          
+        </div>
+
       </div>
     </div>
   </div>

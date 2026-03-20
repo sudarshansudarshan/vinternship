@@ -6,6 +6,8 @@ summary: Multilingual agricultural chatbot that connects farmers with verified k
 color: "90EE90"
 repo: "vicharanashala/ajrasakha-client"
 features: []
+mentors:
+  - Aditya BMV
 ---
 
 ## **Project Overview**

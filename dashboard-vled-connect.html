@@ -22,10 +22,10 @@ body {
 
 /* Top Tabs */
 .tabs {
+  flex: 1;
   display: flex;
   justify-content: center;
   gap: 12px;
-  margin: 20px;
   flex-wrap: wrap;
 }
 
@@ -39,6 +39,28 @@ body {
 }
 
 .tab.active {
+  background: #1a237e;
+  color: white;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 20px;
+}
+
+.back-button {
+  padding: 10px 18px;
+  background: #e8eaf6;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #1a237e;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.back-button:hover {
   background: #1a237e;
   color: white;
 }
@@ -125,15 +147,18 @@ iframe {
 </div>
 
 <!-- ================= TOP TABS ================= -->
-<div class="tabs">
-  <div class="tab active" onclick="showTab(0)">Dashboard</div>
-  <div class="tab" onclick="showTab(1)">Acropolis</div>
-  <div class="tab" onclick="showTab(2)">Indira</div>
-  <div class="tab" onclick="showTab(3)">RVITM</div>
-<!--  <div class="tab" onclick="showTab(4)">Saintgits</div>-->
-<!--  <div class="tab" onclick="showTab(5)">Dayananda Sagar</div>-->
-  
-  
+<div class="header-row">
+  <a href="../" class="back-button">← Back</a>
+  <div class="tabs">
+    <div class="tab active" onclick="showTab(0)">Dashboard</div>
+    <div class="tab" onclick="showTab(1)">Acropolis</div>
+    <div class="tab" onclick="showTab(2)">Indira</div>
+    <div class="tab" onclick="showTab(3)">RVITM</div>
+  <!--  <div class="tab" onclick="showTab(4)">Saintgits</div>-->
+    <div class="tab" onclick="showTab(4)">Dayananda</div>
+    
+    
+  </div>
 </div>
 
 <!-- ================= TAB 0 : DASHBOARD ================= -->
@@ -278,6 +303,33 @@ iframe {
   </div>
 </div>
 
+
+  </div>
+</div>
+
+<!---Dayananda-->
+<div class="tab-content">
+  <div class="dashboard-inner">
+
+    <div class="dashboard-menu">
+      <div class="menu-item active" onclick="showInner(4,0)">Leaderboard</div>
+      <div class="menu-item" onclick="showInner(4,1)">CS Progress</div>
+      <div class="menu-item" onclick="showInner(4,2)">Ticket Holders</div>
+    </div>
+
+    <div class="dashboard-view">
+      <iframe class="dash-frame active"
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSiRjiVNS21UEbFZqQkSFaMz9UKtE2YsOXwd4m-xXyqlny2vy1rrbtjiUq5INnjhgDqk4i9Zh6pr-FL/pubhtml?gid=83067525&amp;single=true&amp;widget=true&amp;headers=false">
+      </iframe>
+
+      <iframe class="dash-frame"
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSiRjiVNS21UEbFZqQkSFaMz9UKtE2YsOXwd4m-xXyqlny2vy1rrbtjiUq5INnjhgDqk4i9Zh6pr-FL/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false">
+      </iframe>
+
+      <div class="dash-frame placeholder">
+        Ticket holders dashboard will be added here.
+      </div>
+    </div>
 
   </div>
 </div>

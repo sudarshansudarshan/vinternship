@@ -27,5 +27,7 @@ This cohort is exclusively for NPTEL students and focuses on building full-stack
 
 ## Forms and links
 - [Consent Form](https://zfrmz.in/W6zVH5pijnCLajKNUNmv){:target="_blank"}
+- [Institute Details Form](https://forms.gle/UbFFuDt2oetS1Re18){:target="_blank"}
 - [Activity Completion Confirmation Form](https://forms.gle/ydseV19eLqXfFvte9){:target="_blank"}
 - [Case Study Submission Form](https://forms.gle/AU6xq3Jf7UiTqZjU6){:target="_blank"} 
+- [FAQ Activity Submission Form](https://docs.google.com/forms/d/e/1FAIpQLSfvGiK3WLH1q-tLbED_NO1lXijpRyjDEkL3gzhKd2rDO8jdnw/viewform){:target="_blank"}

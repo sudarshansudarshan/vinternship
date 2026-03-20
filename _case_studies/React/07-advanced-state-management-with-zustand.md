@@ -137,9 +137,9 @@ const useNoteStore = create(
 
 **4. Custom Logging Middleware**
 
-```js
 -   Log every change for audit/history.
 
+```js
 const logMiddleware = (config) => (set, get, api) =>
   config((args) => {
     console.log('Before:', get());

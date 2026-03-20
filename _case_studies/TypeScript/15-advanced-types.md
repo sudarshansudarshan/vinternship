@@ -273,8 +273,8 @@ type ReadonlyReport = Readonly<LearnerReport>;
 -   Test your types with real data and scenarios.
     
 
-## 9. Coming up Next
+<!-- ## 9. Coming up Next
 
 ***Congratulations!***  
 You’ve mastered the Swiss Army knife of TypeScript types.  
-Next, imagine combining all these tools to build a reporting engine that adapts to any new content or user type ViBe invents in the future!
+Next, imagine combining all these tools to build a reporting engine that adapts to any new content or user type ViBe invents in the future! -->

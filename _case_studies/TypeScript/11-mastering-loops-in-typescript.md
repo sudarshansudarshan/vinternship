@@ -100,7 +100,7 @@ Control Statements:
 
 ## 5. Step-by-Step Code Walkthrough
 
-## 5.1 Data Modeling
+### 5.1 Data Modeling
 
 ```typescript
 type Transaction = {
@@ -126,7 +126,7 @@ const visitors: string[] = ["Alice", "Bob", "Carol"];
 
 ```
 
-## 5.2 `for` Loop: Process a Fixed List
+### 5.2 `for` Loop: Process a Fixed List
 
 ```typescript
 let totalProcessed = 0;
@@ -145,12 +145,12 @@ for (let i = 0; i < transactions.length; i++) {
 console.log(`Total processed: ${totalProcessed}`);
 ```
 	
-### Flowchart
+#### Flowchart
 
 ![For Loop](https://www.tutorialspoint.com/typescript/images/for_loop.jpg)
 
 
-## 5.3 `while` Loop: Process Until Empty
+### 5.3 `while` Loop: Process Until Empty
 
 ```typescript
 let queue = [...transactions];
@@ -163,13 +163,13 @@ while (queue.length > 0) {
 }
 ```
 
-## Flow Diagram
+### Flow Diagram
 
 The flow diagram of the while loop looks as follows
 
 ![While Loop](https://www.tutorialspoint.com/typescript/images/while_loop.jpg)
 
-## 5.4 `do…while` Loop: Always Run Once
+### 5.4 `do…while` Loop: Always Run Once
 
 ```typescript
 let pendingReturns = 0;
@@ -184,7 +184,7 @@ do {
 } while (idx < transactions.length);
 console.log(`Pending returns: ${pendingReturns}`);
 ```
-## Flowchart
+### Flowchart
 
 The flowchart of the do...while loop looks as follows
 

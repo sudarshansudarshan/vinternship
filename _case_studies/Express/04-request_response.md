@@ -76,7 +76,7 @@ Imagine a restaurant kitchen:
 
 **A. Typing Requests and Responses**
 
- **1. Defining Strict Interfaces**
+**1. Defining Strict Interfaces**
 
 **Problem:**  Without types, requests like  `{ points: "100" }`  (string) might be processed as  `100`  (number), causing bugs.  
 **Solution:**  Use TypeScript interfaces to enforce data shapes.
@@ -167,12 +167,15 @@ router.post("/redeem", validate(RedeemSchema), (req, res) => {
   // req.body is now validated and typed!
 });
 
-   ```
- **C. Structured Error Handling**
-**1. Error Hierarchy**
-```typescript
+```
+
+**C. Structured Error Handling**
+
+**1. Error Hierarchy**  
+
 Define custom errors for clarity:
 
+```typescript
 class ApiError extends Error {
   constructor(
     public statusCode: number,

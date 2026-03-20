@@ -403,6 +403,6 @@ export class OrderController {
 -   Test each controller independently.
     
 
-## 10. Coming up next
+<!-- ## 10. Coming up next
 
-Learn how to add “checkpoints” (middleware) to your workflow-catching errors, logging actions, and ensuring every order is safe before it reaches the kitchen!
+Learn how to add “checkpoints” (middleware) to your workflow-catching errors, logging actions, and ensuring every order is safe before it reaches the kitchen! -->

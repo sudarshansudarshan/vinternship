@@ -208,11 +208,15 @@ Just like a staff member checking each application, our route handler reviews th
 
 **E. Visualizing the Validation Flow**
 
-text
-
-`[Student submits application]  ↓ [Validation Middleware: Checks every field]
- ↓ [If errors: Respond with all problems]
- ↓ [If valid: Application accepted for review]` 
+```text
+[Student submits application]
+             ↓ 
+[Validation Middleware: Checks every field]
+             ↓ 
+[If errors: Respond with all problems]
+             ↓ 
+[If valid: Application accepted for review]
+```
 
 **Example error response:**
 
@@ -272,6 +276,6 @@ text
 -   Document validation rules for users and staff.
     
 
-## 10. Coming up next
+<!-- ## 10. Coming up next
 
-Learn how to combine validation with authentication and authorization, so only the right people can submit or review applications!
+Learn how to combine validation with authentication and authorization, so only the right people can submit or review applications! -->

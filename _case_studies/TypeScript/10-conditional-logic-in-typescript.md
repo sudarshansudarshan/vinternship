@@ -54,12 +54,13 @@ Just as a principal uses a well-organized “Decision Book” of rules to manage
         > “If a student’s attendance is 75% or higher, they may sit the exam.”
         
     -   Code Equivalent:
-        
+
         ```typescript
-		if (attendance >= 75) {
-			// allow exam
-		}
-	    ```      
+        if (attendance >= 75) {
+            // allow exam
+        }
+        ```
+
     -   Explanation: The principal flips to the “attendance” page, checks the percentage, and if the condition is met, allows the student in. In code, the  `if`  evaluates a single boolean expression and runs its block only when true.
 		 ## Flowchart
 
@@ -74,15 +75,15 @@ Just as a principal uses a well-organized “Decision Book” of rules to manage
         > “If the student’s score is 40 or above, mark ‘Pass’; otherwise, mark ‘Fail.’”
         
     -   Code Equivalent:
-        
+
         ```typescript
-	    if (score >= 40) {
-		 // Pass logic
-		} else {
-		 // Fail logic
-		}
-		 ```
-        
+        if (score >= 40) {
+          // Pass logic
+        } else {
+          // Fail logic
+        }
+        ```
+
     -   Explanation: The principal reads the score, and if it meets the threshold, writes “Pass.” Otherwise, they write “Fail.” The  `if…else`  gives exactly two paths-one when true, one when false-matching the principal’s binary decision.
     ## Flowchart
 
@@ -97,22 +98,21 @@ Just as a principal uses a well-organized “Decision Book” of rules to manage
         > “90–100 → A; 80–89 → B; 70–79 → C; 60–69 → D; below 60 → F.”
         
     -   Code Equivalent:
-        
+
         ```typescript
         if (score >= 90) {
-		  grade = "A";
-		} else if (score >= 80) {
-		  grade = "B";
-		} else if (score >= 70) {
-		  grade = "C";
-		} else if (score >= 60) {
-		  grade = "D";
-		} else {
-		  grade = "F";
-		}
-		```
+          grade = "A";
+        } else if (score >= 80) {
+          grade = "B";
+        } else if (score >= 70) {
+          grade = "C";
+        } else if (score >= 60) {
+          grade = "D";
+        } else {
+          grade = "F";
+        }
+        ```
 
-        
     -   Explanation: The principal works down the list of ranges, stopping as soon as a match is found. The  `else if`  ladder mirrors this sequential evaluation-each condition is tested in turn until one is true.
         
 5.  **Feedback Rule →  `switch`  Statement**
@@ -122,21 +122,21 @@ Just as a principal uses a well-organized “Decision Book” of rules to manage
         > “For grade A, comment ‘Excellent’; for B, ‘Good job’; for C, ‘Keep improving’; etc.”
         
     -   Code Equivalent:
-        
+
         ```typescript
-	    switch (grade) {
-		  case "A":
-		    // Excellent
-		    break;
-		  case "B":
-		    // Good job
-		    break;
-		  // … and so on
-		  default:
-		    // Fallback comment
-		}
-		```
-        
+        switch (grade) {
+          case "A":
+            // Excellent
+            break;
+          case "B":
+            // Good job
+            break;
+          // … and so on
+          default:
+            // Fallback comment
+        }
+        ```
+
     -   Explanation: The principal turns directly to the grade’s section in the Book and reads the prepared comment. A  `switch`  lets code jump straight to the matching  `case`  block for a discrete set of values, then “break” to stop.
 		## Flowchart
 
@@ -161,7 +161,7 @@ Just as a principal uses a well-organized “Decision Book” of rules to manage
 
 ## 4. Technical Deep Dive
 
-## 4.1 `if` Statement
+### 4.1 `if` Statement
 
 Syntax:
 ```typescript
@@ -172,7 +172,7 @@ if (condition) {
 
 Flow: Evaluate `condition`; if true, run block; otherwise skip it.
 
-## 4.2 `if…else` Statement
+### 4.2 `if…else` Statement
 
 Syntax:
 
@@ -186,7 +186,7 @@ if (condition) {
 
 Flow: One of two paths.
 
-## 4.3 `if…else if…else` Statement
+### 4.3 `if…else if…else` Statement
 
 Syntax:
 
@@ -202,7 +202,7 @@ if (cond1) {
 
 Flow: Checks in order, runs first matching block.
 
-## 4.4 `switch` Statement
+### 4.4 `switch` Statement
 
 Syntax:
 

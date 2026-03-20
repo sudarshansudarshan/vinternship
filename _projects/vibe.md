@@ -30,6 +30,8 @@ features:
   - title: "Detect Background Blur / Virtual Background Usage"
     description: "Identify and block users employing virtual backgrounds or background blur effects during portal access. System logs all detection instances to enable action on repeated violations, ensuring authentic proctoring environments."
     issue: 607
+mentors:
+  - Meenakshi V
 ---
 
 ## **Project Overview**

@@ -30,6 +30,8 @@ features:
   - title: "AI-Based Question Analysis and Auto-Responses"
     description: "Add an AI system that analyses student questions during a session. Simple or factual questions should receive automatic AI-generated answers, while complex or conceptual questions should be routed to the teacher. Each question should clearly indicate whether it was answered by AI or requires teacher attention. The goal is to reduce teacher workload while maintaining meaningful, human-led discussions."
     issue: 8
+mentors:
+  - Rohit Sharma
 ---
 
 ## **Project Overview**

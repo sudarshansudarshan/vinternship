@@ -6,6 +6,8 @@ summary: AI-powered agricultural advisory platform with expert knowledge base an
 color: "059669"
 repo: "vicharanashala/ajrasakha"
 features: []
+mentors:
+  - Aditya BMV
 ---
 
 ## **Project Overview**

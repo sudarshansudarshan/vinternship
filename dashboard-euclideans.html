@@ -299,6 +299,48 @@
   width: 80px;           /* same visual weight as back button */
 }
 
+/* Ticket chip shared base */
+.ticket-chip {
+  border-radius: 12px;
+  padding: 12px 28px;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  cursor: default;
+}
+
+/* Gold chip */
+.ticket-chip-gold {
+  background: linear-gradient(135deg, #fff9e6, #fff3cd);
+  border: 2.5px solid #e6ac00;
+  outline: 3px solid #FFD54F;
+  outline-offset: 3px;
+  color: #5a3e00;
+  box-shadow: 0 4px 14px rgba(230,172,0,0.35);
+}
+
+/* Silver chip */
+.ticket-chip-silver {
+  background: linear-gradient(135deg, #f9fafb, #eceff1);
+  border: 2.5px solid #78909c;
+  outline: 3px solid #B0BEC5;
+  outline-offset: 3px;
+  color: #263238;
+  box-shadow: 0 4px 14px rgba(120,144,156,0.3);
+}
+
+/* Ticket row */
+.ticket-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.ticket-row:last-child {
+  margin-bottom: 0;
+}
+
 </style>
 </head>
 
@@ -318,6 +360,7 @@
     <div class="tab" data-tab="cs">CS Progress</div>
     <div class="tab" data-tab="health">Health Points</div>
     <div class="tab" data-tab="tickets">Tickets</div>
+    <div class="tab" data-tab="endorsements">Endorsements</div>
   </div>
 
   <div class="top-bar-spacer"></div>
@@ -454,19 +497,128 @@
 </div>
 
 
-<!-- Tickets Tab (placeholder with bars) -->
+<!-- Tickets Tab -->
 <div class="tab-content" id="tab-tickets">
   <div class="dashboard-inner">
     <div class="dashboard-view" style="width:100%;">
-      <div class="placeholder">
-        <h2 style="color:#1a237e;">Tickets</h2>
-        <div class="ticket-bars">
-          <div class="bar gold">Gold</div>
-          <div class="bar silver">Silver</div>
-          <div class="bar bronze">Bronze</div>
+      <h2 style="color:#1a237e; margin-bottom:24px;">🎟️ Ticket Holders</h2>
+
+      <!-- Gold Ticket -->
+      <div style="
+        background: linear-gradient(135deg, #fffde7, #fff8e1);
+        border: 2px solid #FFD54F;
+        border-radius: 16px;
+        padding: 24px 28px;
+        margin-bottom: 28px;
+        box-shadow: 0 4px 16px rgba(255,213,79,0.25);
+      ">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+          <span style="font-size:28px;">🥇</span>
+          <h3 style="margin:0; color:#b8860b; font-size:20px; letter-spacing:0.5px;">Gold Ticket Holders</h3>
+          <span style="
+            margin-left:auto;
+            background:#FFD54F;
+            color:#5a3e00;
+            font-weight:700;
+            padding:4px 12px;
+            border-radius:999px;
+            font-size:13px;
+          ">3 holders</span>
         </div>
-        <p class="soon">Will be added soon</p>
+        <div class="ticket-row">
+          <div class="ticket-chip ticket-chip-gold">🏅 Kartik Jain</div>
+          <div class="ticket-chip ticket-chip-gold">🏅 Komalpreet Kaur</div>
+          <div class="ticket-chip ticket-chip-gold">🏅 Mahi Sinha</div>
+        </div>
       </div>
+
+      <!-- Silver Ticket -->
+      <div style="
+        background: linear-gradient(135deg, #f5f5f5, #eceff1);
+        border: 2px solid #B0BEC5;
+        border-radius: 16px;
+        padding: 24px 28px;
+        box-shadow: 0 4px 16px rgba(176,190,197,0.25);
+      ">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+          <span style="font-size:28px;">🥈</span>
+          <h3 style="margin:0; color:#455a64; font-size:20px; letter-spacing:0.5px;">Silver Ticket Holders</h3>
+          <span style="
+            margin-left:auto;
+            background:#CFD8DC;
+            color:#263238;
+            font-weight:700;
+            padding:4px 12px;
+            border-radius:999px;
+            font-size:13px;
+          ">32 holders</span>
+        </div>
+        <!-- Row 1: 7 -->
+        <div class="ticket-row">
+          <div class="ticket-chip ticket-chip-silver">Aakash Tiwari</div>
+          <div class="ticket-chip ticket-chip-silver">Sahil Yadav</div>
+          <div class="ticket-chip ticket-chip-silver">Neel Dasai</div>
+          <div class="ticket-chip ticket-chip-silver">Shivam Singh</div>
+          <div class="ticket-chip ticket-chip-silver">D Hari Vallabha</div>
+          <div class="ticket-chip ticket-chip-silver">Gangadi Kondaswamy</div>
+          <div class="ticket-chip ticket-chip-silver">Lohith Burra</div>
+          
+        </div>
+        <!-- Row 2: 6 -->
+        <div class="ticket-row">
+          <div class="ticket-chip ticket-chip-silver">Vidhi Patel</div>
+          <div class="ticket-chip ticket-chip-silver">Pavan Malji</div>
+          <div class="ticket-chip ticket-chip-silver">Ayush Mishra</div>
+          <div class="ticket-chip ticket-chip-silver">Faqrudeen Faizan Z</div>
+          <div class="ticket-chip ticket-chip-silver">Aryan Dutta</div>
+          <div class="ticket-chip ticket-chip-silver">Harsh Priyadarshi</div>
+          
+        </div>
+        <!-- Row 3: 6 -->
+        <div class="ticket-row">
+          <div class="ticket-chip ticket-chip-silver">Shuchithaa Krishna Mohite</div>
+          <div class="ticket-chip ticket-chip-silver">Gows Maithine</div>
+          <div class="ticket-chip ticket-chip-silver">Shaik rehan ur Rahman</div>
+          <div class="ticket-chip ticket-chip-silver">Somnath Sengupta</div>
+          <div class="ticket-chip ticket-chip-silver">Ashish Kumar Gupta</div>
+          <div class="ticket-chip ticket-chip-silver">M. PrabhuDas</div>
+          
+        </div>
+        <!-- Row 4: 6 -->
+        <div class="ticket-row">
+          <div class="ticket-chip ticket-chip-silver">Tanu Mourya</div>
+          <div class="ticket-chip ticket-chip-silver">Sai Nirvignaa</div>
+          <div class="ticket-chip ticket-chip-silver">Rohit Singh</div>
+          <div class="ticket-chip ticket-chip-silver">Zoya Khan</div>
+          <div class="ticket-chip ticket-chip-silver">Sugandham Sudheer</div>
+          <div class="ticket-chip ticket-chip-silver">Saksham Sharma</div>
+          <div class="ticket-chip ticket-chip-silver">Abdul Yunus</div>
+        </div>
+        <!-- Row 5: 6 -->
+        <div class="ticket-row">
+          <div class="ticket-chip ticket-chip-silver">Vikas Sharma</div>
+          <div class="ticket-chip ticket-chip-silver">Sarikonda Sree Vaishnavi</div>
+          <div class="ticket-chip ticket-chip-silver">Patel Nency Dasharathbhai</div>
+          <div class="ticket-chip ticket-chip-silver">SUWETHA V</div>
+          <div class="ticket-chip ticket-chip-silver">Deepak Akuthota</div>
+          <div class="ticket-chip ticket-chip-silver">Suchismita Sahoo</div>
+          
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Endorsements Tab -->
+<div class="tab-content" id="tab-endorsements">
+  <div class="dashboard-inner">
+    <div class="dashboard-view" style="width:100%; padding:0;">
+      <iframe src="Euclidean_Endorse.html"
+        title="Euclidean Endorsements"
+        style="width:100%; height:88vh; border:none; border-radius:12px;">
+      </iframe>
     </div>
   </div>
 </div>

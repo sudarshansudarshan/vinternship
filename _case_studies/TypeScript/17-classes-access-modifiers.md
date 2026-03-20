@@ -353,9 +353,9 @@ Try it yourself before checking the solution!
 -   Test access by role (learner, instructor, admin).
     
 
-## 9. Coming up next
+<!-- ## 9. Coming up next
   
 Unlock the power of  **Generics**!  
-Imagine designing tools (like boxes or folders) that magically adapt to hold any kind of content-quiz, lesson, or assignment.  You’ll learn how to build these flexible, reusable tools in TypeScript!
+Imagine designing tools (like boxes or folders) that magically adapt to hold any kind of content-quiz, lesson, or assignment.  You’ll learn how to build these flexible, reusable tools in TypeScript! -->
 
 

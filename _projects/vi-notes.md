@@ -21,6 +21,8 @@ features:
   - title: "Save Writing Session Data"
     description: "Save the written text along with related session information so it can be accessed later. Each writing session should be stored in a way that links the content to the user and the captured typing metadata. The initial implementation can focus on simple storage and retrieval without complex analysis."
     issue: 5
+mentors:
+  - Jinal Gupta
 ---
 
 ## **Project Overview**

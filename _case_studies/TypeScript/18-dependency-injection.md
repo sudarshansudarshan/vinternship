@@ -81,83 +81,91 @@ You can swap adapters (dependencies) without changing the device (business logic
 
 ## 4. Step-by-Step Data Modeling & Code Walkthrough
 
-**Define a Contract (Interface) for Payment Gateways**
-Interfaces define the expected behavior without implementation details.
-```typescript
-interface PaymentGateway {
-  processPayment(amount: number): Promise<boolean>;
-}
-```
-This interface ensures any payment gateway class implements the  `processPayment`  method.
+1.  **Define a Contract (Interface) for Payment Gateways**
 
- **Implement Concrete Payment Gateways**
-Each gateway implements the interface with its own logic.
+    Interfaces define the expected behavior without implementation details.
 
-```typescript
-class StripeGateway implements PaymentGateway {
-  async processPayment(amount: number): Promise<boolean> {
-    console.log(`Processing payment of $${amount} via Stripe.`);
-    // Simulate API call...
-    return true;
-  }
-}
-
-class PaypalGateway implements PaymentGateway {
-  async processPayment(amount: number): Promise<boolean> {
-    console.log(`Processing payment of $${amount} via PayPal.`);
-    // Simulate API call...
-    return true;
-  }
-}
-```
-**Create the Payment Processor Using Constructor Injection**
-The payment processor receives the gateway via its constructor.
-```typescript
-class PaymentProcessor {
-  constructor(private gateway: PaymentGateway) {}
-
-  async pay(amount: number): Promise<void> {
-    const success = await this.gateway.processPayment(amount);
-    if (success) {
-      console.log("Payment successful!");
-    } else {
-      console.log("Payment failed.");
+    ```typescript
+    interface PaymentGateway {
+      processPayment(amount: number): Promise<boolean>;
     }
-  }
-}
-```
+    ```
 
--   The processor  **does not create**  the gateway; it receives it.
-    
--   This allows any class implementing  `PaymentGateway`  to be used.
-    
+    This interface ensures any payment gateway class implements the `processPayment` method.
 
-**Using Different Gateways**
-```typescript
-const stripeGateway = new StripeGateway();
-const paypalGateway = new PaypalGateway();
+2.  **Implement Concrete Payment Gateways**
 
-const processor1 = new PaymentProcessor(stripeGateway);
-processor1.pay(100); // Uses Stripe
+    Each gateway implements the interface with its own logic.
 
-const processor2 = new PaymentProcessor(paypalGateway);
-processor2.pay(200); // Uses PayPal
-```
-**Testing with Mock Gateways**
+    ```typescript
+    class StripeGateway implements PaymentGateway {
+      async processPayment(amount: number): Promise<boolean> {
+        console.log(`Processing payment of $${amount} via Stripe.`);
+        // Simulate API call...
+        return true;
+      }
+    }
 
-For testing, inject a mock gateway that simulates payment without real transactions.
-```typescript
-class MockGateway implements PaymentGateway {
-  async processPayment(amount: number): Promise<boolean> {
-    console.log(`Mock processing payment of $${amount}.`);
-    return true;
-  }
-}
+    class PaypalGateway implements PaymentGateway {
+      async processPayment(amount: number): Promise<boolean> {
+        console.log(`Processing payment of $${amount} via PayPal.`);
+        // Simulate API call...
+        return true;
+      }
+    }
+    ```
 
-const mockGateway = new MockGateway();
-const testProcessor = new PaymentProcessor(mockGateway);
-testProcessor.pay(50); // Uses mock gateway for testing
-```
+3.  **Create the Payment Processor Using Constructor Injection**
+
+    The payment processor receives the gateway via its constructor.
+
+    ```typescript
+    class PaymentProcessor {
+      constructor(private gateway: PaymentGateway) {}
+
+      async pay(amount: number): Promise<void> {
+        const success = await this.gateway.processPayment(amount);
+        if (success) {
+          console.log("Payment successful!");
+        } else {
+          console.log("Payment failed.");
+        }
+      }
+    }
+    ```
+
+    -   The processor **does not create** the gateway; it receives it.
+    -   This allows any class implementing `PaymentGateway` to be used.
+
+4.  **Using Different Gateways**
+
+    ```typescript
+    const stripeGateway = new StripeGateway();
+    const paypalGateway = new PaypalGateway();
+
+    const processor1 = new PaymentProcessor(stripeGateway);
+    processor1.pay(100); // Uses Stripe
+
+    const processor2 = new PaymentProcessor(paypalGateway);
+    processor2.pay(200); // Uses PayPal
+    ```
+
+5.  **Testing with Mock Gateways**
+
+    For testing, inject a mock gateway that simulates payment without real transactions.
+
+    ```typescript
+    class MockGateway implements PaymentGateway {
+      async processPayment(amount: number): Promise<boolean> {
+        console.log(`Mock processing payment of $${amount}.`);
+        return true;
+      }
+    }
+
+    const mockGateway = new MockGateway();
+    const testProcessor = new PaymentProcessor(mockGateway);
+    testProcessor.pay(50); // Uses mock gateway for testing
+    ```
 
 ## 5. Challenge 
 
@@ -190,9 +198,9 @@ testProcessor.pay(50); // Uses mock gateway for testing
     
 -   Avoid creating dependencies inside business logic classes.
 
-## 8. Coming up
+<!-- ## 8. Coming up
 
 **You’ve mastered Dependency Injection basics!**  
 Next, explore  **IoC Containers**  (like InversifyJS) for automatic dependency management and advanced DI features.
-
+ -->
 

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Euclideans Endorsement Trees</title>
+
+	<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+
+	<style>
+		body {
+			margin: 0;
+			min-height: 100vh;
+			background: linear-gradient(135deg, #eef2ff, #f8fafc);
+			font-family: "Inter", system-ui, Arial, sans-serif;
+			display: flex;
+			justify-content: center;
+		}
+
+		.container {
+			width: 100%;
+			max-width: 1300px;
+			margin: 40px;
+			padding: 32px;
+			background: white;
+			border-radius: 16px;
+			box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+		}
+
+		h2 {
+			text-align: center;
+			margin-bottom: 20px;
+			font-size: 28px;
+			font-weight: 700;
+			color: #1f2937;
+		}
+
+		.controls {
+			display: flex;
+			gap: 16px;
+			justify-content: center;
+			margin-bottom: 24px;
+			flex-wrap: wrap;
+		}
+
+		select {
+			padding: 10px 14px;
+			font-size: 15px;
+			border-radius: 8px;
+			border: 1px solid #d1d5db;
+			min-width: 280px;
+		}
+
+		.mermaid-wrapper {
+			background: #f9fafb;
+			padding: 24px;
+			border-radius: 12px;
+			overflow: hidden;
+			height: 72vh;
+		}
+
+		#tree {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		#tree svg {
+			width: 100% !important;
+			height: 100% !important;
+			display: block;
+		}
+
+		.hint {
+			text-align: center;
+			margin-top: 10px;
+			color: #6b7280;
+			font-size: 13px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h2>📐 Euclideans Endorsement Trees</h2>
+
+		<div class="controls">
+			<select id="categorySelect">
+				<option value="">Select a category…</option>
+			</select>
+			<select id="rootSelect">
+				<option value="">Select a root…</option>
+			</select>
+		</div>
+
+		<div class="mermaid-wrapper">
+			<div class="mermaid" id="tree">Select a network to view</div>
+		</div>
+
+		<div class="hint">Use browser zoom or horizontal scroll for large trees</div>
+	</div>
+
+	<script>
+		const API_URL = "https://script.google.com/macros/s/AKfycbxftUXAOuY7T7RcIRfU5R0nU9IcmHVIzKKfooT-OWw_lVnXwW1nQqFPE1eJsmYYeZlT/exec";
+
+		const categorySelect = document.getElementById("categorySelect");
+		const rootSelect = document.getElementById("rootSelect");
+		const treeEl = document.getElementById("tree");
+
+		let allNetworks = {};
+		let currentCategory = "";
+
+		const categoryLabels = {
+			VALID: "Jedi Networks",
+			FLOATING: "Floating Islands",
+			DEFAULTER: "Needs Improvement"
+		};
+
+		mermaid.initialize({
+			startOnLoad: false,
+			theme: "base",
+			themeVariables: {
+				primaryColor: "#ffffff",
+				primaryBorderColor: "#4f46e5",
+				primaryTextColor: "#111827",
+				secondaryColor: "#eef2ff",
+				secondaryBorderColor: "#6366f1",
+				lineColor: "#374151",
+				fontFamily: "Inter, Arial, sans-serif",
+				fontSize: "15px"
+			},
+			flowchart: {
+				curve: "basis",
+				nodeSpacing: 50,
+				rankSpacing: 80
+			}
+		});
+
+		fetch(API_URL)
+			.then((res) => res.json())
+			.then((json) => {
+				allNetworks = json || {};
+				populateCategories();
+			})
+			.catch((err) => {
+				treeEl.innerText = "Failed to load data";
+				console.error(err);
+			});
+
+		categorySelect.addEventListener("change", (e) => {
+			currentCategory = e.target.value;
+			populateRoots(currentCategory);
+			clearTree();
+		});
+
+		rootSelect.addEventListener("change", (e) => {
+			const root = e.target.value;
+			if (root) {
+				renderTree(currentCategory, root);
+			} else {
+				clearTree();
+			}
+		});
+
+		function populateCategories() {
+			categorySelect.innerHTML = '<option value="">Select a category…</option>';
+
+			const categories = Object.keys(allNetworks);
+			if (!categories.length) {
+				treeEl.innerText = "No network categories found in API response";
+				return;
+			}
+
+			categories.forEach((key) => {
+				const opt = document.createElement("option");
+				opt.value = key;
+				opt.textContent = categoryLabels[key] || key;
+				categorySelect.appendChild(opt);
+			});
+
+			const defaultCategory = categories.includes("VALID") ? "VALID" : categories[0];
+			categorySelect.value = defaultCategory;
+			currentCategory = defaultCategory;
+			populateRoots(defaultCategory);
+		}
+
+		function populateRoots(categoryKey) {
+			rootSelect.innerHTML = '<option value="">Select a root…</option>';
+
+			if (!categoryKey || !allNetworks[categoryKey] || typeof allNetworks[categoryKey] !== "object") {
+				return;
+			}
+
+			const roots = Object.keys(allNetworks[categoryKey]).sort((a, b) => a.localeCompare(b));
+			if (!roots.length) {
+				treeEl.innerText = `No roots found for ${categoryLabels[categoryKey] || categoryKey}`;
+				return;
+			}
+
+			roots.forEach((label) => {
+				const opt = document.createElement("option");
+				opt.value = label;
+				opt.textContent = label;
+				rootSelect.appendChild(opt);
+			});
+		}
+
+		function clearTree() {
+			treeEl.innerHTML = "Select a network to view";
+		}
+
+		function fitTreeToView() {
+			const svg = treeEl.querySelector("svg");
+			if (!svg) return;
+
+			const bbox = svg.getBBox();
+			if (!bbox || !bbox.width || !bbox.height) return;
+
+			svg.setAttribute("viewBox", `${bbox.x} ${bbox.y} ${bbox.width} ${bbox.height}`);
+			svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
+			svg.removeAttribute("width");
+			svg.removeAttribute("height");
+		}
+
+		function escapeMermaidText(text) {
+			return String(text).replace(/"/g, "\\\"");
+		}
+
+		function renderTree(categoryKey, rootLabel) {
+			if (!categoryKey) {
+				treeEl.innerHTML = "Select a category first";
+				return;
+			}
+
+			const categoryGroup = allNetworks[categoryKey] || {};
+			const group = categoryGroup[rootLabel];
+			if (!group || !Array.isArray(group.nodes) || !Array.isArray(group.edges)) {
+				treeEl.innerHTML = "Invalid tree data for selected root";
+				return;
+			}
+
+			let diagram = "graph TD\n";
+
+			group.nodes.forEach((n) => {
+				diagram += `${n.id}["${escapeMermaidText(n.label)}"]\n`;
+			});
+
+			group.edges.forEach((e) => {
+				diagram += `${e.from} --> ${e.to}\n`;
+			});
+
+			treeEl.innerHTML = "";
+			const uniqueId = "tree_" + Date.now();
+
+			mermaid
+				.render(uniqueId, diagram)
+				.then(({ svg }) => {
+					treeEl.innerHTML = svg;
+					requestAnimationFrame(fitTreeToView);
+				})
+				.catch((err) => {
+					treeEl.innerHTML = "Failed to render tree";
+					console.error(err, diagram);
+				});
+		}
+	</script>
+</body>
+</html>
+

@@ -21,6 +21,7 @@ order: 2
 11. [Health Points and Breakout Sessions](#11-health-points-and-breakout-sessions)
 12. [Dashboard](#12-dashboard)
 13. [IITM BS Internship](#13-iitm-bs-internship)
+14. [Projects](#14-projects)
 
 ---
 
@@ -39,7 +40,9 @@ The internship will be conducted in **online mode only**.
 The program includes scheduled live sessions, workshops, and mentorship meetings. The timings for these sessions will be conveyed well in advance. Please look into the cohort-specific dashboard for the details.
 
 **1.5 Where can I find the Internship ID?**  
-The Internship ID will be mentioned in the offer letter sent by NPTEL POC (Only for the participants joined via NPTEL).
+The Internship ID will be mentioned in the offer letter sent by NPTEL POC (Only for the participants joined via NPTEL (Euclideans and Dijkstrians)).
+
+Other participants need not worry about their internship ID as it is primarily your registered mail ID.
 
 **1.6 Can I preview the certificate template for non-NPTEL batches?**  
 At this time, the certificate template will not be shared prior to the start of the program, as it may vary from cohort to cohort depending on how the program is conducted. Regardless of the format, every certificate issued carries its own value and recognition.
@@ -88,7 +91,7 @@ Please ensure that the form is filled **daily** going forward to avoid missing a
 **2.6 I forgot to fill the attendance sheet attached to the NPTEL offer letter yesterday. What should I do now?**  
 Unfortunately, there is nothing that can be done, as the form is used for NPTEL’s official database and attendance cannot be recorded for the previous day. The previous day will be considered as a leave.-->
 
-**2.7 How can I avail the one-day leave allowed every month during the internship?**    
+<!--**2.7 How can I avail the one-day leave allowed every month during the internship?**    
 Taking leave is **discouraged**, as you may miss important updates shared during live sessions or fall behind in your progress. It will be **your own responsibility** to complete the work missed on the leave day.
 
 However, if you must take the leave, follow the steps below:
@@ -100,12 +103,12 @@ However, if you must take the leave, follow the steps below:
 
 Once submitted, the request will be reviewed and processed by the team.
 
-NOTE: No Holidays are provided!
+NOTE: No Holidays are provided!-->
 
-**2.8. I am not able to join the zoom from the link provided? It says "only registered participants are allowed".**
-Step 1: Ensure that you installed the Zoom Workplace on your Desktop or Laptop. 
-Step 2: Login with your registered mail ID on the Zoom Workplace Application. 
-Step 3: Click on the link to join the meet by registering yourself for the meeting. 
+**2.8. I am not able to join the zoom from the link provided? It says "only registered participants are allowed".**   
+Step 1: Ensure that you installed the Zoom Workplace on your Desktop or Laptop.   
+Step 2: Login with your registered mail ID on the Zoom Workplace Application.   
+Step 3: Click on the link to join the meet by registering yourself for the meeting.   
 
 
 ---
@@ -114,7 +117,7 @@ Step 3: Click on the link to join the meet by registering yourself for the meeti
 
 **3.1 Will the course instructor supervise our work directly?**  
 The instructor **may interact** with participants depending on project requirements.  
-Mentors and coordinators will engage via **live sessions** and **forums**.
+Mentors and coordinators will engage via **live sessions** and **standups**.
 
 **3.2 Do we get to meet our mentors?**  
 Yes, your project mentors can schedule a meeting based on the doubts and issues you are facing in the projects or in the learning phase.
@@ -142,7 +145,7 @@ Responses are provided **within 2 hours** between **9:00 AM and 9:00 PM**.
 
 Any question submitted beyond 9 PM will be answered the next day.
 
-**4.4 What if I don’t receive a response in 24 hours?** 
+**4.4 What if I don’t receive a response in 24 hours?**   
 If you do not receive a response within 24 hours, you may raise a second ticket.
 In the subject line, mention: "Attention Please – Follow-up on Ticket #[Original Ticket Number]"
 This ticket will be escalated to our Mentors Team, who will reach out to you for a voice call discussion and try to resolve the issue directly.
@@ -159,14 +162,14 @@ After 48 hours of your first ticket (and after raising a follow-up), you can esc
 **4.6 Is this process mandatory for all issues?**  
 Yes, to maintain consistency and ensure efficient support, we request all interns to follow this three-step resolution path.
 
-**4.7 Why is it important to follow the deadlines mentioned in tasks and milestones?**
+**4.7 Why is it important to follow the deadlines mentioned in tasks and milestones?**  
 Each task and milestone is designed to help you progress steadily through the internship. Adhering to the specified deadlines ensures smooth evaluation, proper tracking of your progress, and continued eligibility in the program.
 
-**4.8 What happens if I miss a deadline?**
-Failure to meet a task or milestone deadline may impact your Health Points and could lead to removal from the cohort, as per internship policy. Extensions are generally not provided unless explicitly communicated.
+**4.8 What happens if I miss a deadline?**  
+Failure to meet a task or milestone deadline may impact your Health Points and could lead to your discontinuation from the cohort, as per internship policy. Extensions are generally not provided unless explicitly communicated via appeal form.
 
-**4.9 where can we find the Live session recordings?**
-The Live session recordings from 20th Feb are available in this Youtube Playlist: https://www.youtube.com/playlist?list=PL4ocL5uCKzQOv6Pu81GwG2Q28cViFK3QV
+**4.9 where can we find the Live session recordings?**  
+The Live session recordings from 20th Feb are available in this Youtube Playlist: [https://www.youtube.com/playlist?list=PL4ocL5uCKzQOv6Pu81GwG2Q28cViFK3QV](https://www.youtube.com/playlist?list=PL4ocL5uCKzQOv6Pu81GwG2Q28cViFK3QV){:target="_blank"}
 
 ---
 
@@ -187,8 +190,12 @@ Others will receive a certification from Vicharanashala Lab for Education Design
  Recommendation letters are not guaranteed. You may request one from the course instructor after completing the internship, and it will be at their discretion based on the performance of the candidate.
 
 **5.4 When will AKSians (NPTEL) cohort receive their offer letter?**    
-The offer letter for the AKSians (NPTEL) cohort will be issued after the candidate completes 20% of the ViBe course. The deadline for the same will be 1 week after ViBe course progression.
+The offer letter for the AKSians (NPTEL) cohort will be issued after the candidate completes 20% of the ViBe course. The deadline for the same will be 5 days after ViBe course progression. Prior announcements will be made before releasing the offer letters
 
+Note that the offer letters are only for the AKSians cohort. Announcements regarding offer letters will be made soon.
+
+**5.5 When will AKSians (NPTEL) cohort receive their certificate of completion?**    
+The certificate of completion for the AKSians (NPTEL) cohort will be issued after the candidate successfully completes all phases of the internship provided the candidate is registered for examination in one of Prof. Sudarshan Iyengar's NPTEL course.
 
 ---
 
@@ -207,12 +214,14 @@ Appeal Form: https://forms.gle/6VBbrjkcAvSDPX2J7
 
 
 **6.4 Can I rejoin the program after discontinuation?**  
-No, once discontinued, you cannot rejoin the current program. You would need to apply afresh for any future program offerings, subject to availability.
+Yes, once discontinued, you can rejoin the current program via the appeal form. If we find the reason to be genuine, you will be permitted to continue with the current cohort. If not, you would need to apply afresh for any future program offerings, subject to availability.
+
+You'll be moved to a Discord channel from the existing ones after discontinuation.
 
 **6.5 How does the Discontinuation Policy differ from the Ejection Policy?**  
 The Discontinuation Policy addresses prolonged inactivity at an administrative level, while the Ejection Policy (see Section 9) is a real-time, algorithm-based mechanism focused on maintaining cohort momentum and learning quality.
 
-**6.6 How do I withdraw from the internship?**
+**6.6 How do I withdraw from the internship?**  
 If you wish to discontinue the internship, please follow the steps below:
 
 **Step 1: Draft a Formal Email**
@@ -249,21 +258,17 @@ Send the email to all concerned parties (POC, HOD, and DLED) and retain a copy f
 ## 7. ViBe Platform
 
 **7.1 How do I log in to ViBe?**  
+-> Link for the website: https://vibe.vicharanashala.ai/auth
+
+-> Sign up as a student with the registered mail ID into the ViBe platform.
+
 -> To log in to the ViBe platform, follow the steps below carefully:
 
-1. Open the ViBe invite link shared with you via email.
+1. Log in to the ViBe platform as a student from registered email ID
 
-2. Click Continue as Student when prompted.
+2. Check the "Notifications" tab in the Top right side of the Dashboard.
 
-3. Select Continue with Google.
-
-4. Ensure you sign in using the same email ID (college email / registered email) that received the invite.
-
-5. Once authenticated, you will be redirected to your ViBe Dashboard, where your enrolled course will be visible.
-
--> If you've registered to the course, please wait for the request to be accepted by the instructors.
-
--> Join via the registration links shared in the respective discord announcement channel.
+3. Accept the course invite sent for your respective MERN Course.
 
 ⚠️ Logging in with a different email ID may result in access issues or missing course visibility.
 
@@ -421,6 +426,13 @@ If a student does not attend or engage during their booked slots, penalties may 
 
 The main goal of this feature is to encourage discipline, consistency, and accountability in learning rather than passive participation. -->
 
+**7.11 When should I use the Flag option on ViBe, and when should I contact support on Discord?**
+Use the Flag feature on ViBe only for course content-related issues, such as problems with video content or quiz questions.
+
+For technical issues, platform errors, login problems, or logistics-related queries, do not use the flag option. Instead, raise a ticket in the Discord support channel so the team can assist you faster.
+
+Using the correct method helps resolve issues quickly and keeps the learning process smooth for everyone.
+
 ---
 
 
@@ -480,7 +492,7 @@ Multiple file submissions are not considered.
 
 **8.7 Where can I get help if I am stuck with the case studies?**  
 If you are facing difficulties, feel free to:
-- Join the **breakout rooms** during Zoom sessions  
+- Join the **breakout rooms** in the Discord servers with your peers  
 - Collaborate and discuss solutions with your peers  
 
 This collaborative approach is encouraged to enhance learning and problem-solving skills.
@@ -489,8 +501,11 @@ This collaborative approach is encouraged to enhance learning and problem-solvin
 **8.8 Where can I view my submission status and access the leaderboard and dashboard?**  
 You can track your submission status, access the leaderboard, and view the dashboard by visiting the Vinternship Live Dashboard section on your cohort specific page.
 
-**8.9. What next if I completed my Case Studies and I am done with my endorsements?**
+**8.9. What next if I completed my Case Studies and I am done with my endorsements?**   
 We have some project ideas from the existing open source projects from Vicharanashala Lab for Education Design and Annam.AI listed on the Vinternship website. You can contribute to these real-time open-source projects, working with our developers to build real applications and add new features.
+
+**8.10. What to do if the case studies submission are not updated?**  
+Please wait for 24 hrs as the dashboard will update once a while. If the submission doesn't reflect, please contact the support desk in discord as sson as possible to report the concern.
 
 ---
 
@@ -677,6 +692,8 @@ The form contains **mandatory sections**:
 
 The Self-Healing Endorsement Network rewards **integrity, collaboration, responsibility, and accountability**.
 
+**10.13 How are viva slots been scheduled?**  
+The Viva are scheduled based on the completion and the intern's progress. The schedules will be announced by the team beforehand in the respective cohort announcements page.
 
 ---
 
@@ -702,26 +719,33 @@ All activity deadlines are available directly on the dashboard:
 
 👉 The respective deadlines are shown under each activity inside the dashboard and cohort specific pages.
 
-**11.3 When are Zoom breakout rooms opened and who can join?**
+**11.3 When are Zoom breakout rooms opened and who can join?**  
 Breakout rooms are usually opened after standups (around 9:45 PM) and are generally accessible to two cohorts, unless communicated otherwise.
 
-**11.4 How will I know when the breakout rooms are active? Are they compulsory?**
+**11.4 How will I know when the breakout rooms are active? Are they compulsory?**   
 Announcements will be made in the Discord channel when breakout rooms go live. Participation is completely optional.
 
-**11.5 What is the purpose of the breakout rooms?**
+**11.5 What is the purpose of the breakout rooms?**   
 They are intended for informal discussions, doubt clarification, collaboration, and peer support amongst participants.
 
 ---
 
 ## 12. Dashboard
-**12.1 Why is my dashboard not updated yet?**
+**12.1 Why is my dashboard not updated yet?**   
 The dashboard is automated and will eventually update. Please wait until the next day as the scripts are programmed to rerun at the midnight for updation.
 
-**12.2 My submission is missing in the dashboard. What should I do?**
+**12.2 My submission is missing in the dashboard. What should I do?**   
 Please ensure that you've submitted the forms required which you can find in the forms and link section in the cohort specific page. It is essential to submit as that is the place of verification for us and the scripts fetch for the dashboard.
 
-**12.3 Dashboard is not loading at the moment. What should I do?**
+**12.3 Dashboard is not loading at the moment. What should I do?**    
 The Dashboard is under update and this might cause some glitch in dashboard view. It will be resolved soon once the updates are done.  
+
+**12.4 How to check my status on Dashboard ?**    
+1. Open the Vinternship Site. 
+2. Go to your specific cohort page. 
+3. Go to the Live Dashboard Section. 
+4. Click on "Open Dashboard".
+5. Click Ctrl+F and type your name there and then press enter.  
 
 ---
 
@@ -847,5 +871,39 @@ Not always. Programs with similar names may be separate initiatives. Confirm via
 **13.20 Are there benefits like internship opportunities under mentors?**
 
 Benefits depend on performance, participation, and program structure. Official announcements clarify this.
+
+---
+
+## 14. Projects
+
+**14.1 Should we do the projects as a group or as an induvidual?**  
+
+Depends upon the project and the feature to be built. Please reach out to the mentors of the respective projects mentioned in the website on the projects site for more clarity on the projects and their aspects.
+
+**14.2 How can we connect with the mentors?**
+
+You can use Linkedin profiles of the mentors and inthe discord channel by sending a formal message in the Discussion or the chit chat servers in your cohort groups mentioning the respective mentor.
+
+**14.3 Is the project phase necessary for the completion of the Internship?**
+
+Yes, it is necessary for the internship completion and by the remarks of the mentor. You can work on the projects even after the internship based on the mentor's discretion on an extended internship.
+
+**14.4 How much should we contribute to the existing project to mark that we have contributed?**
+
+Depends upon the requirements of the project and the mentor. You can work on enhancement of the existing feature and even create a new feature in the project upon guidance from the mentor.
+
+**14.5 Do we need to fill any completion for the projects?**
+
+Not necessarily, depends upon the mentor's discretion.
+
+**14.6 Will we get the health points for the project?**
+
+HP will be awarded based on your performance, contribution and involvement in the projects which will be evaluated by the mentors and the Vinternship team.
+
+**14.7 How to contribute to the existing projects?**
+
+You can view the git repositories of the projects in the projects site in the website. Please get guidance from the mentors upon the usage of the repositories and how to raise PRs in them.
+
+
 
 ---

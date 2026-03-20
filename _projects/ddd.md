@@ -35,6 +35,8 @@ features:
     description: "Teacher dashboard organized by course sections, providing insights into section-level performance and progress tracking."
     repo: "vicharanashala/vibe"
     issue: 529
+mentors:
+  - Sakshi Sharma
 ---
 
 ## **Project Overview**

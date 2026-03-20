@@ -27,6 +27,8 @@ features:
   - title: "Cohost Feature (Poll Room Collaboration)"
     description: "Multi-host functionality enabling poll room collaboration where cohosts can assist with session management, question monitoring, and student interaction. Supports teaching assistants and co-teachers."
     issue: 16
+mentors:
+  - Rohit Sharma
 ---
 
 ## **Project Overview**
