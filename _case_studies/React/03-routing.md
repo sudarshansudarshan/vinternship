@@ -63,9 +63,9 @@ By the end of this tutorial, you will:
 
 **A. Defining Dynamic Routes with Parameters**
 
--   In React Router, you define parameters in the path using  `:paramName`:
+-   In React Router, you define parameters in the path using  `:paramName`
 
-```js
+```tsx
 <Route path="/patients/:patientId/appointments/:appointmentId" element={<AppointmentDetails />} />
 ```
 -   These parameters are parsed from the URL and made available to your component.
@@ -79,7 +79,7 @@ By the end of this tutorial, you will:
     
 -   In TypeScript, you can specify the expected param types using a generic
 
-```js
+```tsx
 import { useParams } from 'react-router-dom';
 
 interface AppointmentParams {
@@ -101,7 +101,7 @@ const AppointmentDetails: React.FC = () => {
 
 - If you expect a number, convert and validate:
 
-```js
+```tsx
 const { appointmentId } = useParams<AppointmentParams>();
 const numericId = Number(appointmentId);
 if (isNaN(numericId)) return <div>Invalid appointment ID</div>;
@@ -111,7 +111,7 @@ if (isNaN(numericId)) return <div>Invalid appointment ID</div>;
 
 -   Use the  `Link`  or  `useNavigate`  to create URLs with params:
 
-```js
+```tsx
 import { Link } from 'react-router-dom';
 
 <Link to={`/patients/${patientId}/appointments/${appointmentId}`}>View Appointment</Link>
@@ -119,7 +119,7 @@ import { Link } from 'react-router-dom';
 
 For programmatic navigation:
 
-```js
+```tsx
 import { useNavigate } from 'react-router-dom';
 const navigate = useNavigate();
 navigate(`/patients/${patientId}/appointments/${appointmentId}`);
@@ -150,7 +150,7 @@ navigate(`/patients/${patientId}/appointments/${appointmentId}`);
 
 **A. Define Routes with Parameters**
 
-```js
+```tsx
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AppointmentDetails from './AppointmentDetails';
 
@@ -165,7 +165,7 @@ const App = () => (
 
 **B. Extract and Type Params in the Component**
 
-```js
+```tsx
 // AppointmentDetails.tsx
 import { useParams } from 'react-router-dom';
 
@@ -202,7 +202,7 @@ export default AppointmentDetails;
 
 **C. Navigating with Typed Params**
 
-```js
+```tsx
 import { Link } from 'react-router-dom';
 
 const PatientRow: React.FC<{ patientId: string }> = ({ patientId }) => (
@@ -214,7 +214,7 @@ const PatientRow: React.FC<{ patientId: string }> = ({ patientId }) => (
 
 -   With [react-router-typesafe-routes]
 
-```js
+```tsx
 import { route, useTypedParams } from "react-router-typesafe-routes";
 const routes = route({ patient: route({ path: "patients/:patientId" }) });
 // In component:
@@ -223,7 +223,7 @@ const { patientId } = useTypedParams(routes.patient);
 
 - With [react-router-typed-object]
 
-```js
+```tsx
 const params = ROUTES["/patients/:patientId/appointments/:appointmentId"].path.useParams();
 // params.patientId and params.appointmentId are typed as string
 ```
