@@ -222,7 +222,7 @@ It manages all services (dependencies) and delivers them to your classes as need
     
 -   Register implementations with the container.
     
--   Use decorators (`@injectable`,  `@inject`) for automatic injection.
+-   Use decorators (`@Service`,  `@Inject`) for automatic injection.
     
 -   Swap implementations for testing or scaling.
     
