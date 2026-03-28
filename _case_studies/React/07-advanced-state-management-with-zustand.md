@@ -184,7 +184,10 @@ persist(
 
 ```js
 import { useQuery } from '@tanstack/react-query';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { create } from 'zustand';
+
+const queryClient = new QueryClient();
 
 const useNoteStore = create((set) => ({
   notes: [],
@@ -195,9 +198,15 @@ function NotesList() {
   const setNotes = useNoteStore((s) => s.setNotes);
   const notes = useNoteStore((s) => s.notes);
 
-  const { data, isLoading } = useQuery(['notes'], fetchNotesFromAPI, {
+  const { data, isLoading } = useQuery({ queryKey: ['notes'], queryFn: fetchNotesFromAPI, {
     onSuccess: setNotes,
   });
+
+  useEffect(() => {
+    if (data) {
+      setNotes(data);
+    }
+  }, [data, setNotes]);
 
   if (isLoading) return <div>Loading...</div>;
   return (
@@ -208,6 +217,13 @@ function NotesList() {
     </ul>
   );
 }
+
+// To use Notes as an element you have to wrap it with QueryClientProvider
+/*
+<QueryClientProvider client={queryClient}>
+    <NotesList/>
+</QueryClientProvider>
+*/
 ```
 
 ---
@@ -246,7 +262,8 @@ const usePreferencesStore = create(
 
 ```js
 import { create } from 'zustand';
-import { devtools, immer } from 'zustand/middleware';
+import { devtools } from 'zustand/middleware';
+import { immer } from 'zustand/middleware/immer';
 
 const logMiddleware = (config) => (set, get, api) =>
   config((args) => {
@@ -283,15 +300,24 @@ const useNoteStore = create(
 
 ```js
 import { useQuery } from '@tanstack/react-query';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import useNoteStore from './store/noteStore';
+
+const queryClient = new QueryClient();
 
 function NotesList() {
   const setNotes = useNoteStore((s) => s.setNotes);
   const notes = useNoteStore((s) => s.notes);
 
-  const { data, isLoading } = useQuery(['notes'], fetchNotesFromAPI, {
+  const { data, isLoading } = useQuery({ queryKey: ['notes'], queryFn: fetchNotesFromAPI, {
     onSuccess: setNotes,
   });
+
+  useEffect(() => {
+    if (data) {
+      setNotes(data);
+    }
+  }, [data, setNotes]);
 
   if (isLoading) return <div>Loading...</div>;
   return (
@@ -302,6 +328,13 @@ function NotesList() {
     </ul>
   );
 }
+
+// To use Notes as an element you have to wrap it with QueryClientProvider
+/*
+<QueryClientProvider client={queryClient}>
+    <NotesList/>
+</QueryClientProvider>
+*/
 ```
 
 ---
