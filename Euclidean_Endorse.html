@@ -103,7 +103,7 @@
 	</div>
 
 	<script>
-		const API_URL = "https://script.google.com/macros/s/AKfycbxftUXAOuY7T7RcIRfU5R0nU9IcmHVIzKKfooT-OWw_lVnXwW1nQqFPE1eJsmYYeZlT/exec";
+		const API_URL = "https://script.google.com/macros/s/AKfycbyKgbMRnNesoUNOnAKMFbiacDixVn-SmCR--3lSUgAJ7YqvnvOFBQYDO1ivcToLLF8/exec";
 
 		const categorySelect = document.getElementById("categorySelect");
 		const rootSelect = document.getElementById("rootSelect");
@@ -193,7 +193,22 @@
 				return;
 			}
 
-			const roots = Object.keys(allNetworks[categoryKey]).sort((a, b) => a.localeCompare(b));
+			const categoryGroup = allNetworks[categoryKey];
+
+			if (categoryKey === "FLOATING") {
+				const floatingRoots = getFloatingRootOptions(categoryGroup);
+				if (floatingRoots.length) {
+					floatingRoots.forEach((r) => {
+						const opt = document.createElement("option");
+						opt.value = r.value;
+						opt.textContent = r.label;
+						rootSelect.appendChild(opt);
+					});
+					return;
+				}
+			}
+
+			const roots = Object.keys(categoryGroup).sort((a, b) => a.localeCompare(b));
 			if (!roots.length) {
 				treeEl.innerText = `No roots found for ${categoryLabels[categoryKey] || categoryKey}`;
 				return;
@@ -228,6 +243,68 @@
 			return String(text).replace(/"/g, "\\\"");
 		}
 
+		function getFloatingRootOptions(categoryGroup) {
+			const floatingGroup = categoryGroup["Floating Islands"];
+			if (!floatingGroup || !Array.isArray(floatingGroup.nodes) || !Array.isArray(floatingGroup.edges)) {
+				return [];
+			}
+
+			const inDegree = new Map();
+			floatingGroup.nodes.forEach((n) => inDegree.set(n.id, 0));
+			floatingGroup.edges.forEach((e) => {
+				inDegree.set(e.to, (inDegree.get(e.to) || 0) + 1);
+			});
+
+			const zeroInDegreeRoots = floatingGroup.nodes
+				.filter((n) => (inDegree.get(n.id) || 0) === 0)
+				.map((n) => ({
+					value: `node:${n.id}`,
+					label: n.label || n.id
+				}));
+
+			if (zeroInDegreeRoots.length) {
+				return zeroInDegreeRoots;
+			}
+
+			// Fallback for cyclic/disconnected datasets: offer every node from Floating Islands.
+			return floatingGroup.nodes.map((n) => ({
+				value: `node:${n.id}`,
+				label: n.label || n.id
+			}));
+		}
+
+		function buildSubtreeFromRoot(group, rootId) {
+			const nodes = Array.isArray(group.nodes) ? group.nodes : [];
+			const edges = Array.isArray(group.edges) ? group.edges : [];
+
+			const byId = new Map(nodes.map((n) => [n.id, n]));
+			if (!byId.has(rootId)) {
+				return { nodes: [], edges: [] };
+			}
+
+			const children = new Map();
+			edges.forEach((e) => {
+				if (!children.has(e.from)) children.set(e.from, []);
+				children.get(e.from).push(e.to);
+			});
+
+			const visited = new Set();
+			const queue = [rootId];
+			while (queue.length) {
+				const cur = queue.shift();
+				if (visited.has(cur)) continue;
+				visited.add(cur);
+				(children.get(cur) || []).forEach((next) => {
+					if (!visited.has(next)) queue.push(next);
+				});
+			}
+
+			return {
+				nodes: nodes.filter((n) => visited.has(n.id)),
+				edges: edges.filter((e) => visited.has(e.from) && visited.has(e.to))
+			};
+		}
+
 		function renderTree(categoryKey, rootLabel) {
 			if (!categoryKey) {
 				treeEl.innerHTML = "Select a category first";
@@ -235,7 +312,15 @@
 			}
 
 			const categoryGroup = allNetworks[categoryKey] || {};
-			const group = categoryGroup[rootLabel];
+			let group = categoryGroup[rootLabel];
+			if (categoryKey === "FLOATING" && rootLabel && rootLabel.startsWith("node:")) {
+				const floatingGroup = categoryGroup["Floating Islands"];
+				const rootId = rootLabel.slice("node:".length);
+				if (floatingGroup) {
+					group = buildSubtreeFromRoot(floatingGroup, rootId);
+				}
+			}
+
 			if (!group || !Array.isArray(group.nodes) || !Array.isArray(group.edges)) {
 				treeEl.innerHTML = "Invalid tree data for selected root";
 				return;
