@@ -73,7 +73,7 @@ By the end of this tutorial, you will:
     
 -   Should be the  **last**  middleware applied.
 
-```js
+```ts
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 
@@ -91,7 +91,7 @@ const useNoteStore = create(
     
 -   Use  `partialize`  to persist only selected fields.
 
-```js
+```ts
 import { persist, createJSONStorage } from 'zustand/middleware';
 
 const usePreferencesStore = create(
@@ -120,7 +120,7 @@ const usePreferencesStore = create(
 
 -   Enables immutable updates with a mutable API (like Redux Toolkit).
 
-```js
+```ts
 import { immer } from 'zustand/middleware/immer';
 
 const useNoteStore = create(
@@ -139,7 +139,7 @@ const useNoteStore = create(
 
 -   Log every change for audit/history.
 
-```js
+```ts
 const logMiddleware = (config) => (set, get, api) =>
   config((args) => {
     console.log('Before:', get());
@@ -158,7 +158,7 @@ const useNoteStore = create(
 
 -   Use  `version`  and  `migrate`  in  `persist`  to safely upgrade persisted state.
 
-```js
+```ts
 persist(
   (set) => ({
     notes: [],
@@ -182,7 +182,7 @@ persist(
 -   **Zustand**  manages local state and syncs with React Query.
 
 
-```js
+```tsx
 import { useQuery } from '@tanstack/react-query';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { create } from 'zustand';
@@ -232,7 +232,7 @@ function NotesList() {
 
 **A. Persisted Preferences Store with Migration**
 
-```js
+```ts
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 
@@ -260,7 +260,7 @@ const usePreferencesStore = create(
 
 **B. Notes Store with Devtools, Immer, and Logging**
 
-```js
+```ts
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 import { immer } from 'zustand/middleware/immer';
@@ -298,7 +298,7 @@ const useNoteStore = create(
 
 **C. Syncing Notes with React Query**
 
-```js
+```tsx
 import { useQuery } from '@tanstack/react-query';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import useNoteStore from './store/noteStore';
