@@ -1,7 +1,7 @@
 ---
-title: "When you are on your own but not alone: Learning on ViBe"
+title: "When you are on your own, but not alone: Learning on ViBe"
 author: Aastha Kashyap
-vinternship_id: AasthaKashyap_B_kashyapaastha2125@gmail.com
+vinternship_id:kashyapaastha2125@gmail.com
 ---
 
 When I started my Vinternship journey, I was both nervous and curious. I had never tried web development before — I didn’t know the basics, the terminology, or even where to begin. Everything felt new, and honestly, a little intimidating.
@@ -23,4 +23,8 @@ Somewhere along the way, it stopped feeling like just another course. It became 
 
 A heartfelt thanks to Sudarshan Iyengar sir for promoting learning on such an interesting platform and making it accessible, and Nandan Prabhudesai sir for explaining concepts so simply.  
 Thanks to Nitin Sankar sir, Rohit Sharma sir, Jinal Gupta ma'am, Riya Mehta ma'am, Minakshi V ma'am, and the entire VLED team, including the volunteers solving queries on Discord
-3. Scroll down
+
+---
+
+Author: [Aastha Kashyap](https://www.linkedin.com/in/aastha-kashyap-085039388){:target="_blank"}  
+LinkedIn Article: [Read on LinkedIn](https://www.linkedin.com/posts/activity-7444448009557450752-8rX8?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF9msCUBWHC3mxJRuzQ022IVCHBsTdSf7i4){:target="_blank"}  
