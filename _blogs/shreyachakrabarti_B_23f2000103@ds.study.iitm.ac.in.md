@@ -25,5 +25,5 @@ Itâ€™s the realization that learning is most effective when it is empathetic. Iâ
 
 ---
 
-Author: [Shreya Chakrabarti](https://www.linkedin.com/in/shreya-chakrabarti/){:target="_blank"}
+Author: [Shreya Chakrabarti](https://www.linkedin.com/in/shreya-chakrabarti-149a9b341/){:target="_blank"}
 LinkedIn Article: [Read on LinkedIn](https://www.linkedin.com/pulse/internship-felt-like-mentorship-shreya-chakrabarti--gz9zc/){:target="_blank"}
