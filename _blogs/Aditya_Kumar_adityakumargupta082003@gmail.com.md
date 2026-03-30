@@ -45,7 +45,7 @@ And eventually, I completed the VIBE course 100%.
 That completion wasn’t just a milestone—it was proof of discipline, persistence, and growth.
 
 🙏 **Gratitude & Reflection**
-I’m genuinely grateful for this experience to Sudarshan Iyengar  and Vicharanashala (Lab for Education Design)  for thoughtfully curating this internship and creating such a structured, impactful learning experience—not just for teaching me MERN stack, but for helping me overcome my fear of JavaScript and TypeScript.
+I’m genuinely grateful for this experience, and to Sudarshan Iyengar and Vicharanashala (Lab for Education Design) for thoughtfully curating this internship and creating such a structured, impactful learning experience—not just for teaching me MERN stack, but for helping me overcome my fear of JavaScript and TypeScript.
 
 What once felt like a weakness is now something I’m comfortable working with.
 
