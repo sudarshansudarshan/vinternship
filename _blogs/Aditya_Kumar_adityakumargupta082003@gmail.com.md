@@ -60,5 +60,5 @@ Because in the end, growth isn’t about what you already know—it’s about ho
 
 ---
 
-Author: [Aditya Kumar](https://www.linkedin.com/in/aditya-kr86/) {:target="_blank"}  
-LinkedIn Article: [Read on LinkedIn](https://www.linkedin.com/pulse/from-python-mern-how-internship-changed-my-learning-mindset-kumar-wio1c) {:target="_blank"}
+Author: [Aditya Kumar](https://www.linkedin.com/in/aditya-kr86/){:target="_blank"}  
+LinkedIn Article: [Read on LinkedIn](https://www.linkedin.com/pulse/from-python-mern-how-internship-changed-my-learning-mindset-kumar-wio1c){:target="_blank"}
