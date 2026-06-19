@@ -1,0 +1,11 @@
+﻿
+> client@0.0.0 build
+> tsc -b && vite build
+
+src/App.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/App.tsx(1,27): error TS6133: 'useEffect' is declared but its value is never read.
+src/App.tsx(7,10): error TS1484: 'Note' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/Editor.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/components/Editor.tsx(2,10): error TS1484: 'Note' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/Sidebar.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/Sidebar.tsx(2,10): error TS1484: 'Note' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
