@@ -71,7 +71,7 @@ By the end of this tutorial, you will:
 
 **Type-Safe Context Example: Theme**
 
- ```js
+ ```tsx
 import React, { useState, useContext } from 'react';
 
 // 1. Define the context type
@@ -104,7 +104,7 @@ export const useTheme = () => {
  ```
 
 **Usage:**
- ```js
+ ```tsx
 import { useTheme } from './ThemeProvider';
 
 function ThemeSwitcher() {
@@ -147,7 +147,7 @@ function ThemeSwitcher() {
  ```
  **1. Define the State Interface**
   
- ```js
+ ```ts
 // store/userStore.ts
 import { create } from 'zustand';
 
@@ -177,7 +177,7 @@ export default useUserStore;
 **2. Using the Store in Components**
 
  
- ```js
+ ```tsx
 import useUserStore from './store/userStore';
 
 function Profile() {
@@ -203,7 +203,7 @@ function Profile() {
 
 **3. Async Actions and Middleware**
 
- ```js
+ ```tsx
 interface Task {
   id: string;
   title: string;
@@ -257,7 +257,7 @@ const useTaskStore = create<TaskStore>((set) => ({
 
 **A. User Context Provider (Theme Example)**
 
- ```js
+ ```tsx
 // context/ThemeContext.tsx
 import React, { useState, useContext } from 'react';
 
@@ -286,7 +286,7 @@ export const useTheme = () => {
  ```
  
 **B. Zustand Store for Tasks**
-  ```js
+  ```ts
 // store/taskStore.ts
 import { create } from 'zustand';
 
@@ -321,7 +321,7 @@ export default useTaskStore;
  
 **C. Using Zustand Store in Components**
 
-```js
+```tsx
 import useTaskStore from './store/taskStore';
 
 function TaskList() {

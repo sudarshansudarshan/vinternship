@@ -97,7 +97,7 @@ module.exports = {
 
 **3. Writing a Component Test**
 
-```js
+```tsx
 // components/ArticleCard.tsx
 import React from 'react';
 
@@ -118,7 +118,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ title, author, onAppro
 ```
 
 
-```js
+```tsx
 // __tests__/ArticleCard.test.tsx
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
@@ -142,7 +142,7 @@ test('calls onApprove when button is clicked', () => {
 
 **4. Testing Hooks and Business Logic**
 
-```js
+```ts
 // hooks/useApproval.ts
 import { useState } from 'react';
 export function useApproval() {
@@ -153,7 +153,7 @@ export function useApproval() {
 ```
 
 
-```js
+```ts
 // __tests__/useApproval.test.ts
 import { renderHook, act } from '@testing-library/react';
 
@@ -244,7 +244,7 @@ npm install --save-dev @biomejs/biome
 **A. Article Approval Workflow**
 
 
-```js
+```tsx
 // components/ArticleApproval.tsx
 import React from 'react';
 import { ArticleCard } from './ArticleCard';
@@ -264,7 +264,7 @@ export function ArticleApproval({ article }) {
 **Test:**
 
 
-```js
+```tsx
 // __tests__/ArticleApproval.test.tsx
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
