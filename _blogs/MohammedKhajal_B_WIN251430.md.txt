@@ -1,0 +1,39 @@
+---
+title: My Vinternship Journey: Learning, Struggling, and Growing Step by Step
+author: Mohammed Khajal
+vinternship_id: WIN251430
+---
+
+Starting my winter internship under the guidance of Professor Sudarshan Iyengar at IIT Ropar has been a special experience for me. It is a virtual internship, but even through a screen, I felt that real learning was happening.
+
+This internship is for 10 weeks, and through it we are given access to the ViBe learning platform to learn the MERN stack. Before joining this program, I already had some good knowledge about full stack development and MERN stack. However, one thing that was completely new for me was TypeScript. I had zero experience with it, and in the beginning, it felt confusing and challenging.
+
+The way learning happens on ViBe is different from what I was used to. Instead of long lectures, there are very short videos, mostly one or two minutes long. After every video, there is a small quiz to check our understanding. At first, I wondered if such short videos would really help, but slowly I realized they make learning easier and more focused.
+
+Sometimes the platform feels a little frustrating, especially when I get answers wrong or do not understand something immediately. But I am learning that frustration is part of growth. Every time I try again, I understand things a little better.
+
+So far, I have completed around 60% of the course, and I can already see improvement in myself. From struggling with TypeScript in the beginning to now feeling more comfortable while learning React, it feels like real progress.
+
+We also have breakout sessions where we can interact with other interns and share ideas. I have attended a few of these sessions. Even though I feel shy and find it difficult to speak openly, listening to others has helped me learn a lot. I know this is an area where I want to improve and become more confident.
+
+There are also standup sessions and live sessions where we interact with seniors and mentors. Hearing their experiences motivates me and gives me a clearer picture of the industry and learning journey.
+
+This internship is teaching me more than just coding.  
+It is teaching me:
+
+• To be patient when things are hard  
+• To keep trying even when I feel frustrated  
+• To stay consistent in learning  
+• To improve confidence step by step  
+
+I still have more to learn in React and later MongoDB and Express, but I already feel more confident than when I started.
+
+This journey is not about being perfect.  
+It is about learning a little every day and growing slowly.
+
+I am grateful for this opportunity and excited to continue improving as a learner and future developer.
+
+---
+
+Author: [Mohammed Khajal](https://www.linkedin.com/in/khajal-mohammad-8900712bb){:target="_blank"}  
+LinkedIn Article: [Read on LinkedIn](https://www.linkedin.com/posts/khajal-mohammad-8900712bb_vinternship-fullstackdevelopment-mernstack-activity-7424748438354845696-vS-y){:target="_blank"}
