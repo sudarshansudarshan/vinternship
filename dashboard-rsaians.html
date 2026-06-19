@@ -1183,7 +1183,10 @@ document.querySelectorAll('#tab-health .menu-item').forEach(item => {
   document.getElementById("lb-search").addEventListener("input", () => {
     renderLeaderboardView(currentInner);
   });
-
+  document.getElementById("hp-search").addEventListener("input", () => {
+    renderHealthPoints();
+  })
+  
   // Boot
   loadAPI();
 
