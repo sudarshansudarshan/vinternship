@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Dijkstrians Endorsement Trees</title>
+	<title>Kruskalians Endorsement Trees</title>
 
 	<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 
@@ -84,14 +84,14 @@
 
 <body>
 	<div class="container">
-		<h2>📌 Dijkstrians Endorsement Trees</h2>
+		<h2>Kruskalians Endorsement Trees</h2>
 
 		<div class="controls">
 			<select id="categorySelect">
-				<option value="">Select a category…</option>
+				<option value="">Select a category...</option>
 			</select>
 			<select id="rootSelect">
-				<option value="">Select a root…</option>
+				<option value="">Select a root...</option>
 			</select>
 		</div>
 
@@ -103,7 +103,8 @@
 	</div>
 
 	<script>
-		const API_URL = "https://script.google.com/macros/s/AKfycbx2KF1jVgCUWxwMGXHasA3MrH3WnK_N530dSIvWBzIAnUvzp4yZ51vEzquCMFDkYvsSbA/exec";
+		// Set this to your Kruskalians Google Apps Script web app endpoint.
+		const API_URL = "https://script.google.com/macros/s/AKfycbxYlWjadc69dXpKWim_CrHIzDRBYdnw4iO1JgebMoQajF-1XgD0PX96m1y7hi9qpBVMQQ/exec";
 
 		const categorySelect = document.getElementById("categorySelect");
 		const rootSelect = document.getElementById("rootSelect");
@@ -139,7 +140,7 @@
 		});
 
 		if (!API_URL) {
-			treeEl.innerText = "Dijkstrians endorsement API URL is not configured yet.";
+			treeEl.innerText = "Kruskalians endorsement API URL is not configured yet.";
 		} else {
 			fetch(API_URL)
 				.then((res) => res.json())
@@ -169,7 +170,7 @@
 		});
 
 		function populateCategories() {
-			categorySelect.innerHTML = '<option value="">Select a category…</option>';
+			categorySelect.innerHTML = '<option value="">Select a category...</option>';
 
 			const categories = Object.keys(allNetworks);
 			if (!categories.length) {
@@ -191,7 +192,7 @@
 		}
 
 		function populateRoots(categoryKey) {
-			rootSelect.innerHTML = '<option value="">Select a root…</option>';
+			rootSelect.innerHTML = '<option value="">Select a root...</option>';
 
 			if (!categoryKey || !allNetworks[categoryKey] || typeof allNetworks[categoryKey] !== "object") {
 				return;
@@ -214,7 +215,7 @@
 
 			const roots = Object.keys(categoryGroup).sort((a, b) => a.localeCompare(b));
 			if (!roots.length) {
-				treeEl.innerText = `No roots found for ${categoryLabels[categoryKey] || categoryKey}`;
+				treeEl.innerText = "No roots found for " + (categoryLabels[categoryKey] || categoryKey);
 				return;
 			}
 
@@ -244,14 +245,14 @@
 			const w = bbox.width + pad * 2;
 			const h = bbox.height + pad * 2;
 
-			svg.setAttribute("viewBox", `${x} ${y} ${w} ${h}`);
+			svg.setAttribute("viewBox", x + " " + y + " " + w + " " + h);
 			svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
 			svg.removeAttribute("width");
 			svg.removeAttribute("height");
 		}
 
 		function escapeMermaidText(text) {
-			return String(text).replace(/"/g, "\\\"");
+			return String(text).replace(/"/g, '\\"');
 		}
 
 		function getFloatingRootOptions(categoryGroup) {
@@ -269,7 +270,7 @@
 			return floatingGroup.nodes
 				.filter((n) => (inDegree.get(n.id) || 0) === 0)
 				.map((n) => ({
-					value: `node:${n.id}`,
+					value: "node:" + n.id,
 					label: n.label || n.id
 				}));
 		}
@@ -331,11 +332,11 @@
 			let diagram = "graph TD\n";
 
 			group.nodes.forEach((n) => {
-				diagram += `${n.id}["${escapeMermaidText(n.label)}"]\n`;
+				diagram += n.id + '["' + escapeMermaidText(n.label) + '"]\n';
 			});
 
 			group.edges.forEach((e) => {
-				diagram += `${e.from} --> ${e.to}\n`;
+				diagram += e.from + " --> " + e.to + "\n";
 			});
 
 			treeEl.innerHTML = "";

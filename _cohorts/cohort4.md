@@ -11,7 +11,7 @@ dashboard_available: true
 color: "4F46E5"
 schedule:
   standups:
-    days: ["Monday", "Wednesday", "Friday"]
+    days: ["Friday"]
     time: "8:45 PM - 9:30 PM IST (duration may vary)"
   live-session: "Saturday after 2:00 PM and Sunday"
 ---
@@ -30,4 +30,5 @@ This cohort is exclusively for IITM BS students and focuses on building full-sta
 - [Activity Completion Confirmation Form](https://forms.gle/5F1LyWveNb2RwH1H7){:target="_blank"}
 - [Case Study Submission Form](https://forms.gle/SPS8s4bhXt6Nu8ddA){:target="_blank"}
 - [FAQ Activity Submission Form](https://docs.google.com/forms/d/e/1FAIpQLSfvGiK3WLH1q-tLbED_NO1lXijpRyjDEkL3gzhKd2rDO8jdnw/viewform){:target="_blank"}
+- [Endorsement Form](https://forms.gle/7mXSWMmD4R8kxNkY9){:target="_blank"}
 - [Project Selection Form](https://forms.gle/6AYZqscLR1SRGcsr6){:target="_blank"}

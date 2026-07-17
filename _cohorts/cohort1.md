@@ -6,7 +6,7 @@ permalink: /euclideans/
 display_name: "Euclideans"
 start_date: "15th Jan 2026"
 end_date: ""
-status: "Active"
+status: "Completed"
 dashboard_available: true
 color: "3B82F6"
 schedule:

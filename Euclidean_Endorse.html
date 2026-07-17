@@ -233,7 +233,14 @@
 			const bbox = svg.getBBox();
 			if (!bbox || !bbox.width || !bbox.height) return;
 
-			svg.setAttribute("viewBox", `${bbox.x} ${bbox.y} ${bbox.width} ${bbox.height}`);
+			// Add padding so node borders don't get clipped by a tight viewBox.
+			const pad = 24;
+			const x = bbox.x - pad;
+			const y = bbox.y - pad;
+			const w = bbox.width + pad * 2;
+			const h = bbox.height + pad * 2;
+
+			svg.setAttribute("viewBox", `${x} ${y} ${w} ${h}`);
 			svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
 			svg.removeAttribute("width");
 			svg.removeAttribute("height");

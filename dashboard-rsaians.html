@@ -230,6 +230,45 @@
     color: #555;
   }
 
+  .ticket-chip {
+    border-radius: 12px;
+    padding: 12px 28px;
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+    cursor: default;
+  }
+
+  .ticket-chip-gold {
+    background: linear-gradient(135deg, #fff9e6, #fff3cd);
+    border: 2.5px solid #e6ac00;
+    outline: 3px solid #FFD54F;
+    outline-offset: 3px;
+    color: #5a3e00;
+    box-shadow: 0 4px 14px rgba(230,172,0,0.35);
+  }
+
+  .ticket-chip-silver {
+    background: linear-gradient(135deg, #f8fafc, #e5e7eb);
+    border: 2.5px solid #9ca3af;
+    outline: 3px solid #d1d5db;
+    outline-offset: 3px;
+    color: #374151;
+    box-shadow: 0 4px 14px rgba(156,163,175,0.35);
+  }
+
+  .ticket-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .ticket-row:last-child {
+    margin-bottom: 0;
+  }
+
   /* Tickets bars */
   .ticket-bars {
     display: flex;
@@ -285,6 +324,24 @@
   background: #dfe2fd;
 }
 
+/* Back link (non-history) */
+.back-button {
+  display: inline-block;
+  background: #e8eaf6;
+  color: #1a237e;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.back-button:hover {
+  background: #dfe2fd;
+}
+
 /* Tabs stay centered */
 .tabs {
   display: flex;
@@ -311,13 +368,15 @@
 
 <!-- Top Tabs -->
 <div class="top-bar">
-  <button class="back-btn" onclick="history.back()">← Back</button>
+  <a href="../" class="back-button">← Back</a>
 
   <div class="tabs">
     <div class="tab active" data-tab="leaderboard">Leaderboard</div>
     <div class="tab" data-tab="cs">CS Progress</div>
     <div class="tab" data-tab="health">Health Points</div>
+    <div class="tab" data-tab="me">My Dashboard</div>
     <div class="tab" data-tab="tickets">Tickets</div>
+    <div class="tab" data-tab="endorsements">Endorsements</div>
   </div>
 
   <div class="top-bar-spacer"></div>
@@ -449,19 +508,181 @@
 </div>
 
 
-<!-- Tickets Tab (placeholder with bars) -->
+<!-- My Dashboard Tab -->
+<div class="tab-content" id="tab-me">
+
+  <div class="dashboard-inner">
+    <div class="dashboard-view" style="width:100%;">
+
+      <h2 style="color:#1a237e;margin-bottom:12px;">My Dashboard</h2>
+
+      <!-- EMAIL INPUT -->
+      <div style="margin-bottom:16px;">
+        <input
+          id="emailInput"
+          type="email"
+          placeholder="Enter your registered email"
+          style="
+            padding:10px 12px;
+            width:260px;
+            border-radius:8px;
+            border:1px solid #d1d5db;
+            margin-right:8px;
+          "
+        />
+        <button
+          onclick="setEmail()"
+          style="
+            padding:10px 14px;
+            border-radius:8px;
+            border:none;
+            background:#1a237e;
+            color:white;
+            font-weight:600;
+            cursor:pointer;
+          "
+        >
+          Load My Dashboard
+        </button>
+
+      </div>
+
+      <!-- RESULT CARDS -->
+
+       <div class="status-row">
+       <div class="pill">Rank: <span id="my-rank">–</span></div>
+       <div class="pill">CS: <span id="my-cs">–</span>%</div>
+       <div class="pill">Vibe: <span id="my-vibe">–</span>%</div>
+       <div class="pill">HP: <span id="my-hp">–</span></div>
+       <div class="pill">Overall: <span id="my-overall">–</span>%</div>
+       </div>
+
+       <div id="my-next-deadline"
+        class="pill"
+        style="margin:16px 0; font-weight:700;">
+       </div>
+
+
+        <!-- VIBE DETAILS -->
+        <h3 style="margin-top:24px;color:#1a237e;">Vibe Milestones</h3>
+        <div id="my-vibe-section" style="display:flex;flex-wrap:wrap;gap:10px;"></div>
+
+        <!-- CS DETAILS -->
+         <h3 style="margin-top:24px;color:#1a237e;">Case Study Milestones</h3>
+         <div id="my-cs-section" style="display:flex;flex-wrap:wrap;gap:10px;"></div>
+         <button
+           id="view-my-cs"
+           style="
+              margin-top:12px;
+              padding:10px 14px;
+              border-radius:8px;
+              border:none;
+              background:#1a237e;
+              color:white;
+              font-weight:600;
+              cursor:pointer;
+            "
+          >
+             View my CS details →
+          </button>
+
+
+        <!-- HP DAILY TREND -->
+         <h3 style="margin-top:24px;color:#1a237e;">HP Status</h3>
+         <div id="my-hp-status" class="pill" style="margin-bottom:12px;"></div>
+
+        <div id="my-hp-action"
+          style="
+            margin-top:10px;
+            padding:12px 16px;
+            border-radius:10px;
+            font-size:14px;
+            display:none;
+            ">
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Tickets Tab -->
 <div class="tab-content" id="tab-tickets">
   <div class="dashboard-inner">
     <div class="dashboard-view" style="width:100%;">
-      <div class="placeholder">
-        <h2 style="color:#1a237e;">Tickets</h2>
-        <div class="ticket-bars">
-          <div class="bar gold">Gold</div>
-          <div class="bar silver">Silver</div>
-          <div class="bar bronze">Bronze</div>
+      <h2 style="color:#1a237e; margin-bottom:24px;">🎟️ Ticket Holders</h2>
+
+      <!-- Gold Ticket -->
+      <div style="
+        background: linear-gradient(135deg, #fffde7, #fff8e1);
+        border: 2px solid #FFD54F;
+        border-radius: 16px;
+        padding: 24px 28px;
+        margin-bottom: 28px;
+        box-shadow: 0 4px 16px rgba(255,213,79,0.25);
+      ">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+          <span style="font-size:28px;">🥇</span>
+          <h3 style="margin:0; color:#b8860b; font-size:20px; letter-spacing:0.5px;">Gold Ticket Holders</h3>
+          <span style="
+            margin-left:auto;
+            background:#FFD54F;
+            color:#5a3e00;
+            font-weight:700;
+            padding:4px 12px;
+            border-radius:999px;
+            font-size:13px;
+          ">3 holders</span>
         </div>
-        <p class="soon">Will be added soon</p>
+
+        <div class="ticket-row">
+          <div class="ticket-chip ticket-chip-gold">🏅 Neelotpal Dutta</div>
+          <div class="ticket-chip ticket-chip-gold">🏅 Tanishq Uppal</div>
+          <div class="ticket-chip ticket-chip-gold">🏅 D Narendran</div>
+        </div>
       </div>
+
+      <!-- Silver Ticket -->
+      <div style="
+        background: linear-gradient(135deg, #f9fafb, #f3f4f6);
+        border: 2px solid #d1d5db;
+        border-radius: 16px;
+        padding: 24px 28px;
+        margin-bottom: 28px;
+        box-shadow: 0 4px 16px rgba(209,213,219,0.3);
+      ">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+          <span style="font-size:28px;">🥈</span>
+          <h3 style="margin:0; color:#4b5563; font-size:20px; letter-spacing:0.5px;">Silver Ticket Holders</h3>
+          <span style="
+            margin-left:auto;
+            background:#d1d5db;
+            color:#374151;
+            font-weight:700;
+            padding:4px 12px;
+            border-radius:999px;
+            font-size:13px;
+          ">4 holders</span>
+        </div>
+
+        <div class="ticket-row">
+          <div class="ticket-chip ticket-chip-silver">Darren Pereira</div>
+          <div class="ticket-chip ticket-chip-silver">Krishna Prajapati</div>
+          <div class="ticket-chip ticket-chip-silver">MD AARIZ FAROOQUI</div>
+          <div class="ticket-chip ticket-chip-silver">Akash Kumar</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Endorsements Tab -->
+<div class="tab-content" id="tab-endorsements">
+  <div class="dashboard-inner">
+    <div class="dashboard-view" style="width:100%; padding:0;">
+      <iframe src="RSAians_Endorse.html"
+        title="RSAians Endorsements"
+        style="width:100%; height:88vh; border:none; border-radius:12px;">
+      </iframe>
     </div>
   </div>
 </div>
@@ -965,6 +1186,343 @@ document.querySelectorAll('#tab-health .menu-item').forEach(item => {
 
   // Boot
   loadAPI();
+
+  const VIBE_MILESTONES = [
+  { label: "Vibe Phase 1", required: 25, deadline: "2026-02-21" },
+  { label: "Vibe Phase 2", required: 50, deadline: "2026-02-28" },
+  { label: "Vibe Phase 3", required: 75, deadline: "2026-03-07" },
+  { label: "Vibe Phase 4", required: 100, deadline: "2026-03-14" }
+];
+
+// ========= DAILY VIBE RULE =========
+const VIBE_START_DATE = new Date("2026-01-14"); // first day of vibe
+const DAILY_VIBE_REQUIRED = 3.33;
+
+const CS_MILESTONES = [
+  { label: "CS Week 1", cumulative: 6,  deadline: "2026-03-14" },
+  { label: "CS Week 2", cumulative: 18, deadline: "2026-03-21" },
+  { label: "CS Week 3", cumulative: 30, deadline: "2026-03-28" },
+  { label: "CS Week 4", cumulative: 42, deadline: "2026-04-04" }
+];
+
+function setEmail() {
+  const email = document.getElementById("emailInput").value.trim();
+
+  if (!email) {
+    alert("Please enter your email");
+    return;
+  }
+
+  localStorage.setItem("userEmail", email);
+  renderMyDashboard();
+}
+
+function getMyData() {
+  const email = localStorage.getItem("userEmail");
+  if (!email || !apiData || !apiData.dashboard) return null;
+
+  return apiData.dashboard.find(
+    r => r.Email && r.Email.toLowerCase() === email.toLowerCase()
+  );
+}
+
+function renderMyDashboard() {
+  const me = getMyData();
+
+  if (!me) {
+    document.getElementById("my-rank").textContent = "Not found";
+    return;
+  }
+
+  document.getElementById("my-rank").textContent = me.Rank;
+  document.getElementById("my-cs").textContent = me["Case Study Progress"];
+  document.getElementById("my-vibe").textContent = me["Vibe Progress"];
+  document.getElementById("my-hp").textContent = me["Health Points"];
+  document.getElementById("my-overall").textContent = me["Overall Progress"];
+
+  console.log("Rendering vibe milestones");
+  renderMyVibe();
+  renderMyCS();
+  renderMyHPStatus();
+  renderNextDeadline();
+}
+
+function getMyVibeProgress() {
+  const email = localStorage.getItem("userEmail");
+  if (!email || !apiData || !apiData.dashboard) return 0;
+
+  const row = apiData.dashboard.find(
+    r => r.Email && r.Email.toLowerCase() === email.toLowerCase()
+  );
+
+  return row ? Number(row["Vibe Progress"]) : 0;
+}
+
+function getExpectedVibeProgressToday() {
+  const today = new Date();
+  const daysPassed = Math.floor(
+    (today - VIBE_START_DATE) / (1000 * 60 * 60 * 24)
+  );
+
+  if (daysPassed <= 0) return 0;
+
+  return Math.min(100, daysPassed * DAILY_VIBE_REQUIRED);
+}
+
+function getDailyVibeCheck() {
+  const actual = getMyVibeProgress();
+  const expected = getExpectedVibeProgressToday();
+
+  if (actual >= expected) {
+    return {
+      onTrack: true,
+      message: `📈 Daily Vibe: On track (${actual.toFixed(1)}% ≥ ${expected.toFixed(1)}%)`
+    };
+  }
+
+  const deficit = (expected - actual).toFixed(1);
+
+  return {
+    onTrack: false,
+    message: `⚠️ Daily Vibe lagging by ${deficit}% (Expected ${expected.toFixed(1)}%)`
+  };
+}
+
+
+function computeVibeStatus() {
+  const current = getMyVibeProgress();
+  const now = new Date();
+
+  return VIBE_MILESTONES.map(m => ({
+    ...m,
+    current,
+    completed: current >= m.required,
+    isLate: now > new Date(m.deadline) && current < m.required
+  }));
+}
+
+function renderMyVibe() {
+  const container = document.getElementById("my-vibe-section");
+  const vibeData = computeVibeStatus();
+
+  container.innerHTML = vibeData.map(v => {
+    const shown = Math.min(v.current, v.required);
+
+    let status =
+      v.completed ? "✅ Completed"
+      : v.isLate ? "❌ Missed deadline"
+      : "⚠️ In progress";
+
+    return `
+      <div class="pill">
+        ${v.label} — ${shown}% / ${v.required}%
+        &nbsp;|&nbsp; ${status}
+        &nbsp;|&nbsp; Deadline: ${v.deadline}
+      </div>
+    `;
+  }).join("");
+}
+
+function getMyCSCount() {
+  const email = localStorage.getItem("userEmail");
+  if (!email || !apiData || !apiData.csProgress) return 0;
+
+  const row = apiData.csProgress.find(
+    r => r.Email && r.Email.toLowerCase() === email.toLowerCase()
+  );
+
+  if (!row) return 0;
+
+  let count = 0;
+
+  Object.keys(row).forEach(key => {
+    if (
+      key.includes("_CS") &&
+      !key.toLowerCase().includes("progress")
+    ) {
+      const val = row[key];
+
+      if (val === "Yes" || val === "✓" || val === true) {
+        count++;
+      }
+    }
+  });
+
+  return count;
+}
+
+function computeCSStatus() {
+  const submitted = getMyCSCount();
+  const now = new Date();
+
+  return CS_MILESTONES.map(m => {
+    const required = Number(m.cumulative);
+    const shown = Math.min(submitted, required);
+
+    return {
+      label: m.label,
+      submitted: shown,
+      required,
+      completed: submitted >= required,
+      isLate: now > new Date(m.deadline) && submitted < required,
+      deadline: m.deadline
+    };
+  });
+}
+
+function renderMyCS() {
+  const container = document.getElementById("my-cs-section");
+  if (!container) return;
+
+  const csData = computeCSStatus();
+
+  container.innerHTML = csData.map(cs => {
+    let status =
+      cs.completed ? "✅ Completed"
+      : cs.isLate ? "❌ Missed deadline"
+      : "⚠️ In progress";
+
+    return `
+      <div class="pill">
+        ${cs.label} — ${cs.submitted} / ${cs.required} CS
+        &nbsp;|&nbsp; ${status}
+        &nbsp;|&nbsp; Deadline: ${cs.deadline}
+      </div>
+    `;
+  }).join("");
+}
+
+function renderMyHPStatus() {
+  const statusEl = document.getElementById("my-hp-status");
+  const actionEl = document.getElementById("my-hp-action");
+
+  if (!statusEl || !actionEl || !hpData) return;
+
+  const email = localStorage.getItem("userEmail");
+  if (!email) return;
+
+  const me = hpData.leaderboard.find(
+    r => r.email && r.email.toLowerCase() === email.toLowerCase()
+  );
+
+  if (!me) return;
+
+  const isSafe = me.status === "SAFE";
+
+  // STATUS PILL
+  statusEl.innerHTML = `
+    HP STATUS: <strong>${me.status}</strong>
+    (Current: ${me.currentHP.toFixed(2)} | Base: ${me.baseHP.toFixed(2)})
+  `;
+
+  statusEl.style.background = isSafe ? "#C8E6C9" : "#FFCDD2";
+  statusEl.style.color = isSafe ? "#1B5E20" : "#B71C1C";
+
+  // ACTION GUIDANCE
+  actionEl.style.display = "block";
+
+  const vibeStatus = computeVibeStatus();
+const csStatus = computeCSStatus();
+
+// find first pending / missed items
+const pendingVibe = vibeStatus.find(v => !v.completed);
+const pendingCS = csStatus.find(c => !c.completed);
+
+let messages = [];
+// DAILY VIBE CHECK
+const dailyVibe = getDailyVibeCheck();
+messages.push(dailyVibe.message);
+
+
+if (pendingVibe) {
+  if (pendingVibe.isLate) {
+    messages.push(`❌ Missed ${pendingVibe.label} deadline`);
+  } else {
+    messages.push(`⏳ ${pendingVibe.label} in progress`);
+  }
+}
+
+if (pendingCS) {
+  if (pendingCS.isLate) {
+    messages.push(`❌ ${pendingCS.label} missed`);
+  } else {
+    messages.push(`⏳ ${pendingCS.label} incomplete (${pendingCS.submitted}/${pendingCS.required})`);
+  }
+}
+
+if (isSafe) {
+  actionEl.style.background = "#E8F5E9";
+  actionEl.style.color = "#1B5E20";
+  actionEl.innerHTML = `
+    ✅ You are SAFE.<br>
+    ${messages.length ? messages.join("<br>") : "All milestones on track."}
+  `;
+} else {
+  actionEl.style.background = "#FDECEA";
+  actionEl.style.color = "#B71C1C";
+  actionEl.innerHTML = `
+    ⚠️ You are UNSAFE. Focus areas:<br>
+    ${messages.join("<br>")}
+    <br><strong>👉 Priority:</strong> Complete the earliest pending milestone.
+  `;
+ }
+}
+
+function renderNextDeadline() {
+  const el = document.getElementById("my-next-deadline");
+  if (!el) return;
+
+  const vibe = computeVibeStatus();
+  const cs = computeCSStatus();
+
+  const pending = [...vibe, ...cs]
+    .filter(m => !m.completed)
+    .sort((a, b) => new Date(a.deadline) - new Date(b.deadline));
+
+
+  if (!pending.length) {
+    el.textContent = "No upcoming deadlines. You’re all caught up!";
+    el.style.background = "#E8F5E9";
+    el.style.color = "#1B5E20";
+    return;
+  }
+
+  const next = pending[0];
+  const daysLeft = Math.ceil(
+    (new Date(next.deadline) - new Date()) / (1000 * 60 * 60 * 24)
+  );
+
+  el.textContent = `⏰ Next Deadline: ${next.label} — ${next.deadline} (${daysLeft} days left)`;
+
+  if (daysLeft <= 0) {
+    el.style.background = "#FFCDD2";
+    el.style.color = "#B71C1C";
+  } else if (daysLeft <= 3) {
+    el.style.background = "#FFF3CD";
+    el.style.color = "#856404";
+  } else {
+    el.style.background = "#E3F2FD";
+    el.style.color = "#0D47A1";
+  }
+}
+
+document.getElementById("view-my-cs")?.addEventListener("click", () => {
+  const email = localStorage.getItem("userEmail");
+  if (!email) return;
+
+  // switch to CS tab
+  activateTopTab("cs");
+
+  // wait for CS tab to render
+  setTimeout(() => {
+    const search = document.getElementById("cs-search");
+    if (!search) return;
+
+    search.value = email;
+    search.dispatchEvent(new Event("input", { bubbles: true }));
+    search.focus();
+  }, 300);
+});
 </script>
 
 </body>

@@ -6,12 +6,12 @@ permalink: /dijkstrians/
 display_name: "Dijkstrians"
 start_date: "22nd Jan 2026"
 end_date: ""
-status: "Active"
+status: "Completed"
 dashboard_available: true
 color: "059669"
 schedule:
   standups:
-    days: ["Monday", "Wednesday", "Friday"]
+    days: ["Friday"]
     time: "8:45 PM - 9:30 PM IST (duration may vary)"
   live-session: "Saturday after 2:00 PM and Sunday"
 ---
