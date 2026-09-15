@@ -1,0 +1,7 @@
+---
+title: "Vlog by Siddartha demonstrating React Project"
+author: KARRI SIDDARTHA
+vinternship_id: WIN25916
+youtube_url: "https://youtu.be/d9OPzWNL-A0"
+---
+This video demonstrates my OMDb React Movies Search project end-to-end. I cover the project goal, tech stack, and key features including movie search, result cards, loading/error handling, and the detailed movie modal view powered by the OMDb API. I also explain important implementation details such as React Hooks (useState, useEffect), reusable component structure, API integration flow, and environment variable setup using .env for secure configuration. By the end of the video, viewers will understand how to build and present a complete React API-based application with a clean UI and production-ready setup.
